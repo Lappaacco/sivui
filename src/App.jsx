@@ -167,15 +167,16 @@ export default function App() {
           <NavItem label="Etusivu" href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
           <NavItem label="ILOJALOIN & minä" href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
           <NavItem label="Jalkaterapia" href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+          <NavItem label="Palveluni" href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
           <NavItem label="Turvallisuus ja hygienia" href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
           <NavItem label="Hinnasto" href="#hinnasto" active={activeSection === 'hinnasto'} onClick={handleNavClick} />
           <NavItem label="Yhteystiedot" href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
           <NavItem label="Ajanvaraus" href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
       )}
-      <div className="flex min-h-screen w-full overflow-hidden">
+      <div className="flex min-h-screen">
   {/* Sivupalkki tablet- ja desktop-koissa */}
-  <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0">
+  <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0 overflow-y-auto">
           <div className="p-6 flex items-center gap-3">
             <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-12 h-12" />
             <div>
@@ -187,6 +188,7 @@ export default function App() {
             <NavItem label="Etusivu" href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
             <NavItem label="ILOJALOIN & minä" href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
             <NavItem label="Jalkaterapia" href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+            <NavItem label="Palveluni" href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
             <NavItem label="Turvallisuus ja hygienia" href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
             <NavItem label="Hinnasto" href="#hinnasto" active={activeSection === 'hinnasto'} onClick={handleNavClick} />
             <NavItem label="Yhteystiedot" href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
@@ -194,9 +196,9 @@ export default function App() {
           </div>
         </nav>
         {/* Pääsisältö */}
-        <main className="flex-1 min-w-0 w-full overflow-x-hidden">
+        <main className="flex-1 overflow-x-hidden">
           {/* Hero-osio (täysleveä tausta, sisällä keskitetty sisältö max-w-6xl) */}
-          <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white overflow-hidden">
+          <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
               <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">Kepein askelin, Ilojaloin</h1>
@@ -266,23 +268,29 @@ export default function App() {
               <div className="prose max-w-full">
                 <p>
                   Jalkaterapeutiksi valmistuminen edellyttää <strong>terveydenhuollon koulutusta</strong>. 
-                  Suomessa koulutus järjestetään <strong>ammattikorkeakouluissa</strong>, ja se kestää tyypillisesti noin 3,5 vuotta, sisältäen sekä <strong>teoriaopintoja että laajaa käytännön harjoittelua</strong>. 
-                  Opintojen aikana opiskelija perehtyy <strong>jalan anatomiaan, fysiologiaan ja biomekaniikkaan</strong> sekä erilaisiin jalkoihin vaikuttaviin sairauksiin. 
-                  Lisäksi koulutus kattaa jalkojen tutkimisen ja analysoinnin, terveyden ylläpidon ja ennaltaehkäisevän hoidon, haavojen, ihomuutosten ja kynsiongelmien hoidon, 
-                  yksilöllisten tukien, pohjallisten ja varvasorteesien valmistamisen sekä liikunta- ja harjoitusohjelmien suunnittelun jalan ja alaraajojen tukemiseksi.
+                  Suomessa koulutus järjestetään <strong>ammattikorkeakouluissa</strong>, ja se kestää tyypillisesti 3,5 vuotta, sisältäen sekä <strong>teoriaopintoja että laajaa käytännön harjoittelua</strong>. 
+                  Opintojen aikana opiskelija perehtyy <strong>ihmisen anatomiaan, fysiologiaan ja biomekaniikkaan</strong> sekä erilaisiin jalkoihin vaikuttaviin sairauksiin. 
+                  Lisäksi koulutus kattaa jalkojen tutkimisen ja analysoinnin, terveyden ylläpidon ja ennaltaehkäisevän hoidon, haavojen, ihomuutosten ja kynsiongelmien hoidon, yksilöllisten tukien, pohjallisten ja varvasorteesien valmistamisen sekä liikunta- ja harjoitusohjelmien suunnittelun jalan ja alaraajojen tukemiseksi.
                 </p>
                 <div className="my-4" aria-hidden></div>
                 <p>
                   Jalkaterapia on kokonaisvaltaista hyvinvointia jaloillesi.
                   Se auttaa <strong>ehkäisemään ja hoitamaan erilaisia jalkavaivoja, kiputiloja ja virheasentoja</strong>, parantaa liikkumiskykyä, lievittää kipua ja edistää arjen sujuvuutta. 
-                  Koska jokainen jalka on yksilöllinen, hoito suunnitellaan aina asiakkaan tarpeiden mukaan.
+                  Koska jokainen jalka on yksilöllinen, hoito suunnitellaan aina asiakkaan tarpeiden mukaan. 
                 </p>
-                <div className="my-4" aria-hidden></div>
+              </div>
+            </div>
+          </section>
+
+          {/* Palveluni section */}
+          <section id="palveluni" className="py-12 md:py-20 px-4 bg-white">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Palveluni</h2>
+              <div className="prose max-w-full">
                 <p>
                   Ilojaloissa tarjoan <strong>monipuolisia jalkaterapiapalveluja</strong>, kuten:
                 </p>
                 <div className="my-4" aria-hidden></div>
-                <h3><strong>Palvelumme:</strong></h3>
                 <ul className="list-none space-y-2">
                   <li>🦶 <strong>Tutkimukset ja jalka-analyysit</strong> – kartoitetaan jalkojen kunto ja mahdolliset ongelmakohdat</li>
                   <li>💅 <strong>Kynnenoikaisuhoidot & kynsiproteesit</strong> – korjaavat ja suojaavat kynsiä</li>
@@ -291,17 +299,20 @@ export default function App() {
                   <li>🦵 <strong>Haavanhoito ja kevennyshoito</strong> – erityisesti kroonisten jalkahaavojen hoitoon</li>
                   <li>🦶 <strong>Syylänhoito</strong></li>
                   <li>🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong></li>
-                  <li>🦶 <strong>Yksilölliset harjoitteet</strong> – jalan lihasten ja liikkuvuuden vahvistamiseen</li>
+                  <li>🦶 <strong>Yksilölliset harjoitteet </strong></li>
                   <li>🩹 <strong>Urheilu- ja kinesioteippaus</strong></li>
                   <li>🩰 <strong>Pikapohjalliset ja yksilölliset varvasorteesit silikonimassasta</strong></li>
-                  <li>👟 <strong>Kenkäohjaus</strong> – tarkistetaan kenkien sopivuus, suositellaan sopivaa mallia ja mahdollisuus tilata laadukkaita paljasjalkakenkiä</li>
+                  <li>👟 <strong>Kenkäohjaus</strong> – tarkistetaan kenkien sopivuus, suositellaan sopivaa mallia tai ominaisuutta ja mahdollisuus tilata laadukkaita paljasjalkakenkiä kauttani</li>
                   <li>🛍️ <strong>Laadukkaat omahoitotuotteet</strong> – kotihoitoon ja jalkaterveyden ylläpitoon</li>
                   <li>❤️ <strong>Erikoisryhmien jalkaterapia</strong> – diabetes, reuma, psoriasis jne.</li>
+                  <li>🙂 <strong>Luennot</strong></li>
                 </ul>
                 <div className="my-4" aria-hidden></div>
                 <p>
                   Jokainen hoito suunnitellaan asiakkaan tarpeiden mukaan ja toteutetaan kiireettä, lämmöllä ja ammattitaidolla. 
-                  On tärkeää, että jalat voivat hyvin ja että asiakkaamme voivat liikkua kevyesti ja kivutta arjessa.
+                  Jalkaterapiaan voi tulla myös ilman varsinaista vaivaa tai kiputilaa. Myös ennaltaehkäisy on tärkeää. 
+                  Tuntemalla jalkasi osaat hoitaa ne hyvin ja vältyt tulevaisuudessa mahdollisesti ilmeneviltä ongelmilta. 
+                  Jalkaterveyttään voi aina parantaa ja se vaikuttaa koko hyvinvointiin!
                 </p>
               </div>
             </div>
