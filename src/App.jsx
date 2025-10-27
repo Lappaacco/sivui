@@ -107,9 +107,9 @@ export default function App() {
         observer.disconnect();
       }
       
-      // Automaattisesti klikkaa "Varaa aika" -nappia jos se ilmestyy
+      // Automaattisesti klikkaa "Ajanvaraus" -nappia (ei "Varaa aika" joka avaa valikon)
       const clickable = Array.from(root.querySelectorAll('button, a'));
-      const bookBtn = clickable.find((el) => el.innerText && /varaa\s*aika/i.test(el.innerText));
+      const bookBtn = clickable.find((el) => el.innerText && /^ajanvaraus$/i.test(el.innerText.trim()));
       if (bookBtn && !root.querySelector('iframe')) {
         bookBtn.click();
       }
@@ -383,8 +383,8 @@ export default function App() {
                   <tbody>
                     <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300" rowSpan="1">
-                        <strong>Jalkaterapia</strong>
-                      </td>
+                        <strong></strong>
+                      </td> 
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>Shoppailuvartti</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
