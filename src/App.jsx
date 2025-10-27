@@ -173,9 +173,9 @@ export default function App() {
           <NavItem label="Ajanvaraus" href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
       )}
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen w-full overflow-hidden">
   {/* Sivupalkki tablet- ja desktop-koissa */}
-  <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen">
+  <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0">
           <div className="p-6 flex items-center gap-3">
             <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-12 h-12" />
             <div>
@@ -194,9 +194,9 @@ export default function App() {
           </div>
         </nav>
         {/* Pääsisältö */}
-        <main className="flex-1">
+        <main className="flex-1 min-w-0 w-full overflow-x-hidden">
           {/* Hero-osio (täysleveä tausta, sisällä keskitetty sisältö max-w-6xl) */}
-          <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
+          <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white overflow-hidden">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
               <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">Kepein askelin, Ilojaloin</h1>

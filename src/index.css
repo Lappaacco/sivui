@@ -8,15 +8,14 @@
 	h1, h2, h3, h4, h5, h6 {
 		@apply font-heading;
 	}
+	
+	/* Varmista että kaikki elementit käyttävät border-box */
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
 }
 
 /* Lisätyylit: voit lisätä omia säätöjä tänne halutessasi */
-
-/* Estä sivun vaakasuuntainen scrollaus */
-html, body {
-	overflow-x: hidden;
-	max-width: 100%;
-}
 
 /* Responsiivinen root-fonttikoko: pienemmät laitteet 16px, suuremmat laitteet hieman suurempi */
 html {
