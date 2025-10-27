@@ -12,6 +12,12 @@
 
 /* Lisätyylit: voit lisätä omia säätöjä tänne halutessasi */
 
+/* Estä sivun vaakasuuntainen scrollaus */
+html, body {
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
 /* Responsiivinen root-fonttikoko: pienemmät laitteet 16px, suuremmat laitteet hieman suurempi */
 html {
 	font-size: 16px;
@@ -89,13 +95,20 @@ html {
 
 [data-vello-embed] iframe {
 	width: 100% !important;
-	min-height: 600px !important;
+	min-height: 800px !important;
 	max-width: 100% !important;
 	display: block !important;
 	flex: 1 1 auto !important;
 	border: 0 !important;
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+/* Mobiilissa vieläkin korkeampi */
+@media (max-width: 768px) {
+	[data-vello-embed] iframe {
+		min-height: 900px !important;
+	}
 }
 
 [data-vello-embed] * {

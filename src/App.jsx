@@ -641,7 +641,7 @@ export default function App() {
                 </svg>
               </a>
               <span>·</span>
-              <a href="/privacy.html" className="text-white underline hover:opacity-80">Tietosuojaseloste</a>
+              <a href="/sivui/privacy.html" className="text-white underline hover:opacity-80">Tietosuojaseloste</a>
             </div>
             </div>
           </footer>
