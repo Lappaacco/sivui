@@ -106,31 +106,6 @@ export default function App() {
         setVelloLoading(false);
         observer.disconnect();
       }
-      
-      // Automaattinen navigointi: ensin klikkaa "Varaa aika", sitten "Ajanvaraus"
-      if (!root.querySelector('iframe')) {
-        const clickable = Array.from(root.querySelectorAll('button, a'));
-        
-        // Etsi "Varaa aika" -nappi (päävalikko)
-        const mainBtn = clickable.find((el) => 
-          el.innerText && /varaa\s*aika/i.test(el.innerText.trim()) && 
-          !el.innerText.toLowerCase().includes('lahja')
-        );
-        
-        // Etsi "Ajanvaraus" -nappi (alavalikko)
-        const bookingBtn = clickable.find((el) => 
-          el.innerText && /^ajanvaraus$/i.test(el.innerText.trim())
-        );
-        
-        // Jos löytyy "Ajanvaraus", klikkaa sitä (olemme valikossa)
-        if (bookingBtn) {
-          bookingBtn.click();
-        } 
-        // Muuten klikkaa "Varaa aika" avataksesi valikon
-        else if (mainBtn) {
-          mainBtn.click();
-        }
-      }
     });
 
     observer.observe(root, { childList: true, subtree: true });

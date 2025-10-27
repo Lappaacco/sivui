@@ -78,7 +78,7 @@ html {
 	display: flex !important;
 	flex: 1 1 auto !important;
 	flex-direction: column !important;
-	overflow: auto !important;
+	overflow: visible !important;
 }
 
 [data-vello-embed] > *:not(script) {
@@ -90,6 +90,7 @@ html {
 	flex-direction: column !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	overflow: visible !important;
 }
 
 [data-vello-embed] iframe {
@@ -101,6 +102,8 @@ html {
 	border: 0 !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	overflow-y: auto !important;
+	-webkit-overflow-scrolling: touch !important;
 }
 
 /* Mobiilissa vieläkin korkeampi */
