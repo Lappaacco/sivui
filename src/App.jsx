@@ -107,11 +107,29 @@ export default function App() {
         observer.disconnect();
       }
       
-      // Automaattisesti klikkaa "Ajanvaraus" -nappia (ei "Varaa aika" joka avaa valikon)
-      const clickable = Array.from(root.querySelectorAll('button, a'));
-      const bookBtn = clickable.find((el) => el.innerText && /^ajanvaraus$/i.test(el.innerText.trim()));
-      if (bookBtn && !root.querySelector('iframe')) {
-        bookBtn.click();
+      // Automaattinen navigointi: ensin klikkaa "Varaa aika", sitten "Ajanvaraus"
+      if (!root.querySelector('iframe')) {
+        const clickable = Array.from(root.querySelectorAll('button, a'));
+        
+        // Etsi "Varaa aika" -nappi (päävalikko)
+        const mainBtn = clickable.find((el) => 
+          el.innerText && /varaa\s*aika/i.test(el.innerText.trim()) && 
+          !el.innerText.toLowerCase().includes('lahja')
+        );
+        
+        // Etsi "Ajanvaraus" -nappi (alavalikko)
+        const bookingBtn = clickable.find((el) => 
+          el.innerText && /^ajanvaraus$/i.test(el.innerText.trim())
+        );
+        
+        // Jos löytyy "Ajanvaraus", klikkaa sitä (olemme valikossa)
+        if (bookingBtn) {
+          bookingBtn.click();
+        } 
+        // Muuten klikkaa "Varaa aika" avataksesi valikon
+        else if (mainBtn) {
+          mainBtn.click();
+        }
       }
     });
 
@@ -381,7 +399,7 @@ export default function App() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-t">
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300" rowSpan="1">
                         <strong></strong>
                       </td> 
@@ -395,7 +413,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300">0€</td>
                     </tr>
-                    <tr className="border-t bg-gray-50">
+                    <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300" rowSpan="4">
                         <strong>Jalkaterapia</strong>
                       </td>
@@ -453,13 +471,13 @@ export default function App() {
                 </table>
               </div>
 
-              <div className="mt-8 p-6 bg-accentYellow rounded-lg">
+              <div className="mt-8 p-6 bg-offwhite rounded-lg">
                 <p className="text-lg">
                   <strong>HUOM!</strong> Jos sinua askarruttaa minkä ajan varaisit, aina voi soittaa ja kysyä! 
                   En vastaa puhelimeen, jos olen varattuna, mutta soitan kyllä takaisin, kun ehdin.
                 </p>
                 <p className="mt-2 text-lg">
-                  <strong>Puhelin:</strong>{' '}
+                  Puhelin:{' '}
                   <a href="tel:+358440684567" className="text-primary hover:underline font-semibold">
                     044 068 4567
                   </a>
