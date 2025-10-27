@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // Vite-konfiguraatio GitHub Pagesille
 export default defineConfig({
   plugins: [react()],
-  base: '/sivui/',
+  base: '/',
   build: {
     outDir: 'dist',
     rollupOptions: {
