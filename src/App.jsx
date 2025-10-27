@@ -169,7 +169,7 @@ export default function App() {
           <NavItem label="Jalkaterapia" href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
           <NavItem label="Palveluni" href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
           <NavItem label="Turvallisuus ja hygienia" href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
-          <NavItem label="Hinnasto" href="#hinnasto" active={activeSection === 'hinnasto'} onClick={handleNavClick} />
+          <NavItem label="Hinnoittelusta" href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
           <NavItem label="Yhteystiedot" href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
           <NavItem label="Ajanvaraus" href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
@@ -190,7 +190,7 @@ export default function App() {
             <NavItem label="Jalkaterapia" href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
             <NavItem label="Palveluni" href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
             <NavItem label="Turvallisuus ja hygienia" href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
-            <NavItem label="Hinnasto" href="#hinnasto" active={activeSection === 'hinnasto'} onClick={handleNavClick} />
+            <NavItem label="Hinnoittelusta" href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
             <NavItem label="Yhteystiedot" href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
             <NavItem label="Ajanvaraus" href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
           </div>
@@ -319,7 +319,7 @@ export default function App() {
           </section>
 
           {/* Turvallisuus ja hygienia section */}
-          <section id="hygienia" className="py-12 md:py-20 px-4 bg-white">
+          <section id="hygienia" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Turvallisuus ja hygienia</h2>
               <div className="prose max-w-full">
@@ -356,98 +356,110 @@ export default function App() {
             </div>
           </section>
 
-          {/* Hinnasto section */}
-          <section id="hinnasto" className="py-12 md:py-20 px-4 bg-offwhite">
+          {/* Hinnoittelusta section */}
+          <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Hinnasto</h2>
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Hinnoittelusta</h2>
+              <div className="prose max-w-full mb-8">
+                <p>
+                  Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. 
+                  Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous.
+                </p>
+                <p className="mt-4">
+                  <strong>Minulla käyvät hyvinvointiedut:</strong> E-passi, Edenred ja Smartum.
+                </p>
+              </div>
+
+              <h3 className="text-2xl font-heading text-primary mb-4">Hinnastoni</h3>
               <div className="overflow-x-auto">
-                <table className="min-w-full table-auto border-collapse">
+                <table className="min-w-full table-auto border-collapse border border-gray-300">
                   <thead>
                     <tr className="bg-primaryLight text-left">
-                      <th className="px-4 py-3 font-medium">Palvelu</th>
-                      <th className="px-4 py-3 font-medium">Kesto</th>
-                      <th className="px-4 py-3 font-medium">Hinta</th>
+                      <th className="px-4 py-3 font-medium border border-gray-300">Palvelu</th>
+                      <th className="px-4 py-3 font-medium border border-gray-300">Aika</th>
+                      <th className="px-4 py-3 font-medium border border-gray-300">Hinta</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-t">
-                      <td className="px-4 py-3">Jalkaterapia (yhden ongelman hoito)</td>
-                      <td className="px-4 py-3">30min</td>
-                      <td className="px-4 py-3">45€</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Shoppailuvartti</strong><br/>
+                        Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet<br/>
+                        Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen)<br/>
+                        Kenkien hankinta/sovitus
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">0 min</td>
+                      <td className="px-4 py-3 border border-gray-300">0 €</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3">Jalkaterapia (kattavampi hoito)</td>
-                      <td className="px-4 py-3">45min</td>
-                      <td className="px-4 py-3">65€</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Jalkaterapia</strong><br/>
+                        Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15€ materiaalimaksu)<br/>
+                        Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuotteisiin. Samoin kenkäasioita voidaan käydä läpi.
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">30 min</td>
+                      <td className="px-4 py-3 border border-gray-300">45 €</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3">Jalkaterapia (hoito ja tutkimus)</td>
-                      <td className="px-4 py-3">60min</td>
-                      <td className="px-4 py-3">85€</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Jalkaterapia</strong><br/>
+                        Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.<br/>
+                        Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa.
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">45 min</td>
+                      <td className="px-4 py-3 border border-gray-300">65 €</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3">Jalkaterapia (hoito, tutkimus ja voimisteluohjeiden anto tai apuvälineen valmistus)</td>
-                      <td className="px-4 py-3">90min</td>
-                      <td className="px-4 py-3">105€</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Jalkaterapia</strong><br/>
+                        Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.<br/>
+                        Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet.
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">60 min</td>
+                      <td className="px-4 py-3 border border-gray-300">85 €</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3">Lasten jalkaterapia</td>
-                      <td className="px-4 py-3">30min</td>
-                      <td className="px-4 py-3">30€</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Jalkaterapia</strong><br/>
+                        Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi.
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">75 min</td>
+                      <td className="px-4 py-3 border border-gray-300">105 €</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3">Hemmotteleva jalkojenhoito (ei omahoidonohjausta, ns. hiljainen palvelu) Sis. kylvetys, ihon- ja kynsien hoito ja hieronta</td>
-                      <td className="px-4 py-3">60min</td>
-                      <td className="px-4 py-3">65€</td>
+                      <td className="px-4 py-3 border border-gray-300"><strong>Lasten jalkaterapia</strong></td>
+                      <td className="px-4 py-3 border border-gray-300">30 min</td>
+                      <td className="px-4 py-3 border border-gray-300">35 €</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Luennot</strong><br/>
+                        Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">-</td>
+                      <td className="px-4 py-3 border border-gray-300">-</td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="my-4" aria-hidden></div>
-                <div className="mt-6">
-                  <h3 className="text-xl font-heading text-primary mb-3">Lisähinnasto</h3>
-                  <div className="overflow-x-auto">
-                    <table className="min-w-full table-auto border-collapse">
-                      <tbody>
-                        <tr className="border-t">
-                          <td className="px-4 py-3">Varvasorteesien materiaalimaksu</td>
-                          <td className="px-4 py-3">&nbsp;</td>
-                          <td className="px-4 py-3">10–50 €</td>
-                        </tr>
-                        <tr className="border-t bg-gray-50">
-                          <td className="px-4 py-3">Kynnenoikaisuhoito</td>
-                          <td className="px-4 py-3">&nbsp;</td>
-                          <td className="px-4 py-3">+20 € / kynsi</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="px-4 py-3">Kynsiproteesi</td>
-                          <td className="px-4 py-3">&nbsp;</td>
-                          <td className="px-4 py-3">+20 € / kynsi</td>
-                        </tr>
-                        <tr className="border-t bg-gray-50">
-                          <td className="px-4 py-3">Syylänhoito</td>
-                          <td className="px-4 py-3">&nbsp;</td>
-                          <td className="px-4 py-3">+15 € / syylä</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="px-4 py-3">Pikapohjalliset (materiaalin mukaan)</td>
-                          <td className="px-4 py-3">&nbsp;</td>
-                          <td className="px-4 py-3">20–80 €</td>
-                        </tr>
-                        <tr className="border-t bg-gray-50">
-                          <td className="px-4 py-3">Sormen kynsien leikkaus</td>
-                          <td className="px-4 py-3">&nbsp;</td>
-                          <td className="px-4 py-3">+7 €</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-accentYellow rounded-lg">
+                <p className="text-lg">
+                  <strong>HUOM!</strong> Jos sinua askarruttaa minkä ajan varaisit, aina voi soittaa ja kysyä! 
+                  En vastaa puhelimeen, jos olen varattuna, mutta soitan kyllä takaisin, kun ehdin.
+                </p>
+                <p className="mt-2 text-lg">
+                  <strong>Puhelin:</strong>{' '}
+                  <a href="tel:+358440684567" className="text-primary hover:underline font-semibold">
+                    0440684567
+                  </a>
+                </p>
               </div>
             </div>
           </section>
 
           {/* Yhteystieto-osio */}
-          <section id="contact" className="py-12 md:py-20 px-4 bg-white">
+          <section id="contact" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
@@ -595,7 +607,7 @@ export default function App() {
           </section>
           {/* Alatunniste */}
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section id="booking" className="py-16 md:py-20 px-4 bg-offwhite">
+          <section id="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">Ajanvaraus</h2>
               <p className="mb-4">
