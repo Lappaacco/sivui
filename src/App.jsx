@@ -363,7 +363,7 @@ export default function App() {
               <div className="prose max-w-full mb-8">
                 <p>
                   Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. 
-                  Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous.
+                  Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous. 
                 </p>
                 <p className="mt-4">
                   <strong>Minulla käyvät hyvinvointiedut:</strong> E-passi, Edenred ja Smartum.
@@ -382,62 +382,72 @@ export default function App() {
                   </thead>
                   <tbody>
                     <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Shoppailuvartti</strong><br/>
-                        Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet<br/>
-                        Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen)<br/>
-                        Kenkien hankinta/sovitus
+                      <td className="px-4 py-3 border border-gray-300" rowSpan="1">
+                        <strong>Jalkaterapia</strong>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">0 min</td>
-                      <td className="px-4 py-3 border border-gray-300">0 €</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Shoppailuvartti</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet</li>
+                          <li>Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen)</li>
+                          <li>Kenkien hankinta/sovitus</li>
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">0€</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia</strong><br/>
-                        Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15€ materiaalimaksu)<br/>
-                        Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuotteisiin. Samoin kenkäasioita voidaan käydä läpi.
+                      <td className="px-4 py-3 border border-gray-300" rowSpan="4">
+                        <strong>Jalkaterapia</strong>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">30 min</td>
-                      <td className="px-4 py-3 border border-gray-300">45 €</td>
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>30 min</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15€ materiaalimaksu)</li>
+                          <li>Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuotteisiin. Samoin kenkäasioita voidaan käydä läpi.</li>
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300">45€</td>
                     </tr>
                     <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia</strong><br/>
-                        Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.<br/>
-                        Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa.
+                        <strong>45 min</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.</li>
+                          <li>Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa.</li>
+                        </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">45 min</td>
-                      <td className="px-4 py-3 border border-gray-300">65 €</td>
+                      <td className="px-4 py-3 border border-gray-300">65€</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia</strong><br/>
-                        Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.<br/>
-                        Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet.
+                        <strong>60 min</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.</li>
+                          <li>Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet.</li>
+                        </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">60 min</td>
-                      <td className="px-4 py-3 border border-gray-300">85 €</td>
+                      <td className="px-4 py-3 border border-gray-300">85€</td>
                     </tr>
                     <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia</strong><br/>
-                        Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi.
+                        <strong>75 min</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi.</li>
+                        </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">75 min</td>
-                      <td className="px-4 py-3 border border-gray-300">105 €</td>
+                      <td className="px-4 py-3 border border-gray-300">105€</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300"><strong>Lasten jalkaterapia</strong></td>
-                      <td className="px-4 py-3 border border-gray-300">30 min</td>
-                      <td className="px-4 py-3 border border-gray-300">35 €</td>
+                      <td className="px-4 py-3 border border-gray-300"><strong>30 min</strong></td>
+                      <td className="px-4 py-3 border border-gray-300">35€</td>
                     </tr>
                     <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300"><strong>Luennot</strong></td>
                       <td className="px-4 py-3 border border-gray-300">
-                        <strong>Luennot</strong><br/>
                         Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">-</td>
-                      <td className="px-4 py-3 border border-gray-300">-</td>
+                      <td className="px-4 py-3 border border-gray-300"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -451,7 +461,7 @@ export default function App() {
                 <p className="mt-2 text-lg">
                   <strong>Puhelin:</strong>{' '}
                   <a href="tel:+358440684567" className="text-primary hover:underline font-semibold">
-                    0440684567
+                    044 068 4567
                   </a>
                 </p>
               </div>
