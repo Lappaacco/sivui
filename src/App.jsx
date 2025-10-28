@@ -106,20 +106,6 @@ export default function App() {
         setVelloLoading(false);
         observer.disconnect();
       }
-      
-      // Automaattisesti klikkaa "Varaa aika" -nappia jos se ilmestyy
-      if (!root.querySelector('iframe')) {
-        const clickable = Array.from(root.querySelectorAll('button, a, div[role="button"]'));
-        const bookBtn = clickable.find((el) => {
-          const text = el.innerText || el.textContent || '';
-          return /varaa\s*aika/i.test(text.trim()) && !/lahja/i.test(text.trim());
-        });
-        
-        if (bookBtn) {
-          console.log('Clicking Varaa aika button automatically');
-          setTimeout(() => bookBtn.click(), 100);
-        }
-      }
     });
 
     observer.observe(root, { childList: true, subtree: true });
