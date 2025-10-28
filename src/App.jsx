@@ -124,6 +124,48 @@ export default function App() {
     };
   }, []);
 
+  // Vello iframe scroll fix for mobile - allow page scroll when iframe reaches top/bottom
+  useEffect(() => {
+    const root = velloRef.current;
+    if (!root) return;
+
+    let startY = 0;
+    
+    const handleTouchStart = (e) => {
+      startY = e.touches[0].pageY;
+    };
+
+    const handleTouchMove = (e) => {
+      const iframe = root.querySelector('iframe');
+      if (!iframe) return;
+
+      const currentY = e.touches[0].pageY;
+      const deltaY = currentY - startY;
+      
+      // Get iframe's scroll position
+      const scrollTop = iframe.contentWindow?.scrollY || 0;
+      const scrollHeight = iframe.contentDocument?.documentElement?.scrollHeight || 0;
+      const clientHeight = iframe.contentWindow?.innerHeight || 0;
+      
+      const isAtTop = scrollTop <= 0;
+      const isAtBottom = scrollTop + clientHeight >= scrollHeight - 1;
+      
+      // If scrolling down at bottom, or scrolling up at top, allow page scroll
+      if ((deltaY < 0 && isAtBottom) || (deltaY > 0 && isAtTop)) {
+        // Let the page scroll naturally
+        return;
+      }
+    };
+
+    root.addEventListener('touchstart', handleTouchStart, { passive: true });
+    root.addEventListener('touchmove', handleTouchMove, { passive: true });
+
+    return () => {
+      root.removeEventListener('touchstart', handleTouchStart);
+      root.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, []);
+
   return (
     <>
       {/* Mobiiliotsikko */}
@@ -364,80 +406,80 @@ export default function App() {
               </div>
 
               <h3 className="text-2xl font-heading text-primary mb-4">Hinnastoni</h3>
-              <div className="overflow-x-auto">
-                <table className="min-w-full table-auto border-collapse border border-gray-300">
+              <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+                <table className="w-full table-auto border-collapse border border-gray-300 text-sm md:text-base">
                   <thead>
                     <tr className="bg-primaryLight text-left">
-                      <th className="px-4 py-3 font-medium border border-gray-300">Palvelu</th>
-                      <th className="px-4 py-3 font-medium border border-gray-300">Aika</th>
-                      <th className="px-4 py-3 font-medium border border-gray-300">Hinta</th>
+                      <th className="px-2 md:px-4 py-2 md:py-3 font-medium border border-gray-300">Palvelu</th>
+                      <th className="px-2 md:px-4 py-2 md:py-3 font-medium border border-gray-300">Aika</th>
+                      <th className="px-2 md:px-4 py-2 md:py-3 font-medium border border-gray-300">Hinta</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300" rowSpan="1">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300" rowSpan="1">
                         <strong></strong>
                       </td> 
-                      <td className="px-4 py-3 border border-gray-300">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
                         <strong>Shoppailuvartti</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
                           <li>Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet</li>
                           <li>Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen)</li>
                           <li>Kenkien hankinta/sovitus</li>
                         </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">0€</td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">0€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300" rowSpan="4">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300" rowSpan="4">
                         <strong>Jalkaterapia</strong>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
                         <strong>30 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
                           <li>Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15€ materiaalimaksu)</li>
                           <li>Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuotteisiin. Samoin kenkäasioita voidaan käydä läpi.</li>
                         </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">45€</td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">45€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
                         <strong>45 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
                           <li>Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.</li>
                           <li>Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa.</li>
                         </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">65€</td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">65€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
                         <strong>60 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
                           <li>Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.</li>
                           <li>Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet.</li>
                         </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">85€</td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">85€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
                         <strong>75 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
                           <li>Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi.</li>
                         </ul>
                       </td>
-                      <td className="px-4 py-3 border border-gray-300">105€</td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">105€</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300"><strong>Lasten jalkaterapia</strong></td>
-                      <td className="px-4 py-3 border border-gray-300"><strong>30 min</strong></td>
-                      <td className="px-4 py-3 border border-gray-300">35€</td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300"><strong>Lasten jalkaterapia</strong></td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300"><strong>30 min</strong></td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">35€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300"><strong>Luennot</strong></td>
-                      <td className="px-4 py-3 border border-gray-300">
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300"><strong>Luennot</strong></td>
+                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
                         Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!
                       </td>
                       <td className="px-4 py-3 border border-gray-300"></td>
@@ -449,7 +491,7 @@ export default function App() {
               <div className="mt-8 p-6 bg-offwhite rounded-lg">
                 <p className="text-lg">
                   <strong>HUOM!</strong> Jos sinua askarruttaa minkä ajan varaisit, aina voi soittaa ja kysyä! 
-                  En vastaa puhelimeen, jos olen varattuna, mutta soitan kyllä takaisin, kun ehdin.
+                  En vastaa puhelimeen, jos olen asiakastyössä, mutta soitan kyllä takaisin.
                 </p>
                 <p className="mt-2 text-lg">
                   Puhelin:{' '}
