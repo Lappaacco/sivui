@@ -106,6 +106,20 @@ export default function App() {
         setVelloLoading(false);
         observer.disconnect();
       }
+      
+      // Automaattisesti klikkaa "Varaa aika" -nappia jos se ilmestyy
+      if (!root.querySelector('iframe')) {
+        const clickable = Array.from(root.querySelectorAll('button, a, div[role="button"]'));
+        const bookBtn = clickable.find((el) => {
+          const text = el.innerText || el.textContent || '';
+          return /varaa\s*aika/i.test(text.trim()) && !/lahja/i.test(text.trim());
+        });
+        
+        if (bookBtn) {
+          console.log('Clicking Varaa aika button automatically');
+          setTimeout(() => bookBtn.click(), 100);
+        }
+      }
     });
 
     observer.observe(root, { childList: true, subtree: true });
@@ -217,7 +231,7 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Ilojaloin & minä</h2>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="rounded-lg bg-accentYellow h-64 flex items-center justify-center">
-                  <span className="text-gray-400">Kuvapaikka yrittäjälle</span>
+                  <span className="text-gray-400">Kuvapaikka</span>
                 </div>
                 <div className="prose max-w-full">
                   <p>
@@ -377,9 +391,9 @@ export default function App() {
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>Shoppailuvartti</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet</li>
-                          <li>Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen)</li>
-                          <li>Kenkien hankinta/sovitus</li>
+                          <li>Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet.</li>
+                          <li>Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen).</li>
+                          <li>Kenkien hankinta/sovitus.</li>
                         </ul>
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">0€</td>
@@ -388,8 +402,8 @@ export default function App() {
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 30 min</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15€ materiaalimaksu)</li>
-                          <li>Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuotteisiin. Samoin kenkäasioita voidaan käydä läpi.</li>
+                          <li>Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15e materiaalimaksu).</li>
+                          <li>Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuoteisiin. Samoin kenkäasioita voidaan käydä läpi.</li>
                         </ul>
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">45€</td>
