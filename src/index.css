@@ -109,8 +109,10 @@ html {
 /* Mobiilissa vieläkin korkeampi */
 @media (max-width: 768px) {
 	[data-vello-embed] iframe {
-		min-height: 750px !important;
-		height: 750px !important;
+		min-height: 600px !important;
+		height: 600px !important;
+		/* Salli sivun scrollaus kun iframe on scrollattu loppuun */
+		overscroll-behavior: contain !important;
 	}
 }
 
