@@ -70,52 +70,22 @@ html {
 	transition: opacity 150ms ease-in;
 }
 
-/* Vello embed - pakota täyttämään koko tila */
+/* Vello embed - yksinkertainen lähestyminen */
 [data-vello-embed] {
 	width: 100% !important;
-	height: 100% !important;
-	min-height: 0 !important;
-	display: flex !important;
-	flex: 1 1 auto !important;
-	flex-direction: column !important;
-	overflow: visible !important;
-}
-
-[data-vello-embed] > *:not(script) {
-	width: 100% !important;
 	min-height: 100% !important;
-	max-width: 100% !important;
-	display: flex !important;
-	flex: 1 1 auto !important;
-	flex-direction: column !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	overflow: visible !important;
 }
 
 [data-vello-embed] iframe {
 	width: 100% !important;
-	min-height: 800px !important;
-	max-width: 100% !important;
-	display: block !important;
-	flex: 1 1 auto !important;
+	min-height: 1000px !important;
 	border: 0 !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	overflow-y: auto !important;
-	-webkit-overflow-scrolling: touch !important;
+	display: block !important;
 }
 
-/* Mobiilissa vieläkin korkeampi */
+/* Mobiilissa korkeampi */
 @media (max-width: 768px) {
 	[data-vello-embed] iframe {
-		min-height: 600px !important;
-		height: 600px !important;
-		/* Salli sivun scrollaus kun iframe on scrollattu loppuun */
-		overscroll-behavior: contain !important;
+		min-height: 1200px !important;
 	}
-}
-
-[data-vello-embed] * {
-	box-sizing: border-box !important;
 }
