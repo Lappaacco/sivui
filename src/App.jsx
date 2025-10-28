@@ -365,71 +365,74 @@ export default function App() {
 
               <h3 className="text-2xl font-heading text-primary mb-4">Hinnastoni</h3>
               <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-                <table className="w-full table-auto border-collapse border border-gray-300 text-sm md:text-base">
+                <table className="w-full table-auto border-collapse border border-gray-300">
                   <thead>
                     <tr className="bg-primaryLight text-left">
-                      <th className="px-2 md:px-4 py-2 md:py-3 font-medium border border-gray-300">Palvelu</th>
-                      <th className="px-2 md:px-4 py-2 md:py-3 font-medium border border-gray-300">Hinta</th>
+                      <th className="px-4 py-3 font-medium border border-gray-300">Palvelu</th>
+                      <th className="px-4 py-3 font-medium border border-gray-300">Hinta</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>Shoppailuvartti</strong>
-                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
                           <li>Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet</li>
                           <li>Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen)</li>
                           <li>Kenkien hankinta/sovitus</li>
                         </ul>
                       </td>
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">0€</td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">0€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 30 min</strong>
-                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
                           <li>Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15€ materiaalimaksu)</li>
                           <li>Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuotteisiin. Samoin kenkäasioita voidaan käydä läpi.</li>
                         </ul>
                       </td>
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">45€</td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">45€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 45 min</strong>
-                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
                           <li>Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.</li>
                           <li>Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa.</li>
                         </ul>
                       </td>
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">65€</td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">65€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 60 min</strong>
-                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
                           <li>Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.</li>
                           <li>Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet.</li>
                         </ul>
                       </td>
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">85€</td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">85€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 75 min</strong>
-                        <ul className="list-disc ml-3 md:ml-5 mt-2 space-y-1 text-xs md:text-sm">
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
                           <li>Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi.</li>
                         </ul>
                       </td>
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">105€</td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">105€</td>
                     </tr>
                     <tr className="border-t bg-gray-50">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300"><strong>Lasten jalkaterapia 30 min</strong></td>
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300 whitespace-nowrap">35€</td>
+                      <td className="px-4 py-3 border border-gray-300"><strong>Lasten jalkaterapia 30 min</strong></td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">35€</td>
                     </tr>
                     <tr className="border-t">
-                      <td className="px-2 md:px-4 py-2 md:py-3 border border-gray-300">
-                        <strong>Luennot</strong> Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>Luennot</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!</li>
+                        </ul>
                       </td>
                       <td className="px-4 py-3 border border-gray-300"></td>
                     </tr>
@@ -477,6 +480,30 @@ export default function App() {
                   <p className="mb-4">
                     <strong>Y‑tunnus:</strong> 3288544-8
                   </p>
+                  <div className="mb-4 flex items-center gap-4">
+                    <a
+                      href="https://www.facebook.com/share/19H6mCR7Cg/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primaryLight transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/ilojaloin?igsh=MWdqMnB3bDg5MW90eA=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full hover:bg-primaryLight transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+                      </svg>
+                    </a>
+                  </div>
                   <p>
                     Ole yhteydessä kaikissa jalkaterapiaan liittyvissä kysymyksissä – autamme
                     mielellämme!
