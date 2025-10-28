@@ -109,8 +109,8 @@ html {
 /* Mobiilissa vieläkin korkeampi */
 @media (max-width: 768px) {
 	[data-vello-embed] iframe {
-		min-height: 1500px !important;
-		height: 1500px !important;
+		min-height: 750px !important;
+		height: 750px !important;
 	}
 }
 
