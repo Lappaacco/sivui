@@ -628,7 +628,7 @@ export default function App() {
                 {' '}
                 uuteen välilehteen.
               </p>
-              <div className="w-full h-[55vh] md:h-[75vh] lg:h-[85vh] border border-gray-200 rounded-lg overflow-hidden relative flex flex-col">
+              <div className="w-full min-h-[1500px] md:h-[75vh] lg:h-[85vh] border border-gray-200 rounded-lg overflow-visible relative flex flex-col">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
@@ -646,7 +646,7 @@ export default function App() {
                     </a>
                   </div>
                 )}
-                <div ref={velloRef} data-vello-embed className="w-full flex-1 overflow-auto" />
+                <div ref={velloRef} data-vello-embed className="w-full flex-1" />
               </div>             
             </div>
           </section>
