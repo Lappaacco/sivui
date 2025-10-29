@@ -193,7 +193,7 @@ export default function App() {
           {/* Hero-osio (täysleveä tausta, sisällä keskitetty sisältö max-w-6xl) */}
           <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
-              <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
+              <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" width="320" height="320" fetchpriority="high" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">Kepein askelin, Ilojaloin</h1>
               <p className="text-md md:text-lg lg:text-xl max-w-2xl mx-auto">
                 Hyvinvoinnin askeleet alkavat jaloista. Tervetuloa Ilojaloin jalkaterapiaan!
