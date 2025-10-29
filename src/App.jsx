@@ -373,7 +373,7 @@ export default function App() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-t bg-gray-50">
+                    <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>Shoppailuvartti</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
@@ -384,7 +384,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">0€</td>
                     </tr>
-                    <tr className="border-t">
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 30 min</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
@@ -404,7 +404,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">65€</td>
                     </tr>
-                    <tr className="border-t">
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>Jalkaterapia 60 min</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">

@@ -70,22 +70,16 @@ html {
 	transition: opacity 150ms ease-in;
 }
 
-/* Vello embed - yksinkertainen lähestyminen */
+/* Vello embed - täyttää koko containerin */
 [data-vello-embed] {
 	width: 100% !important;
-	min-height: 100% !important;
+	height: 100% !important;
+	display: block !important;
 }
 
 [data-vello-embed] iframe {
 	width: 100% !important;
-	min-height: 1000px !important;
+	height: 100% !important;
 	border: 0 !important;
 	display: block !important;
-}
-
-/* Mobiilissa korkeampi */
-@media (max-width: 768px) {
-	[data-vello-embed] iframe {
-		min-height: 1200px !important;
-	}
 }
