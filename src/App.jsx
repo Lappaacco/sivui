@@ -216,8 +216,8 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Ilojaloin & minä</h2>
               <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="rounded-lg bg-accentYellow h-64 flex items-center justify-center">
-                  <span className="text-gray-400">Kuvapaikka</span>
+                <div className="rounded-lg overflow-hidden">
+                  <img src="/yrittaja.png" alt="Jalkaterapeutti Satu Paunonen" className="w-full h-full object-cover" />
                 </div>
                 <div className="prose max-w-full">
                   <p>
