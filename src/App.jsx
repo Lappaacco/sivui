@@ -371,7 +371,7 @@ export default function App() {
                     <img 
                       src="/Edenred_logo_RGB_red.png" 
                       alt="Edenred" 
-                      className="h-8 object-contain"
+                      className="h-10 object-contain"
                     />
                     <img 
                       src="/SmartumPayLogoBLACK.png" 
@@ -443,7 +443,7 @@ export default function App() {
                     <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.regularCare.title')}</strong>
-                        {t('pricing.regularCare.duration') && <span className="text-gray-600 ml-2">{t('pricing.regularCare.duration')}</span>}
+                        {t('pricing.regularCare.duration') && <strong className="text-gray-600 ml-2">{t('pricing.regularCare.duration')}</strong>}
                         <ul className="list-disc ml-5 mt-2 space-y-1">
                           {t('pricing.regularCare.items', { returnObjects: true }).map((item, i) => (
                             <li key={i}>{item}</li>
@@ -490,8 +490,32 @@ export default function App() {
                     </tr>
                     <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.callus15.title')}</strong>
+                        {t('pricing.callus15.duration') && <strong className="text-gray-600 ml-2">{t('pricing.callus15.duration')}</strong>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.callus15.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus15.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.wart.title')}</strong>
+                        {t('pricing.wart.duration') && <strong className="text-gray-600 ml-2">{t('pricing.wart.duration')}</strong>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.wart.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.wart.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.callus30.title')}</strong>
-                        {t('pricing.callus30.duration') && <span className="text-gray-600 ml-2">{t('pricing.callus30.duration')}</span>}
+                        {t('pricing.callus30.duration') && <strong className="text-gray-600 ml-2">{t('pricing.callus30.duration')}</strong>}
                         <ul className="list-disc ml-5 mt-2 space-y-1">
                           {t('pricing.callus30.items', { returnObjects: true }).map((item, i) => (
                             <li key={i}>{item}</li>
@@ -499,6 +523,18 @@ export default function App() {
                         </ul>
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus30.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.nailCorrection.title')}</strong>
+                        {t('pricing.nailCorrection.duration') && <strong className="text-gray-600 ml-2">{t('pricing.nailCorrection.duration')}</strong>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.nailCorrection.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.nailCorrection.price')}</td>
                     </tr>
                     <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
@@ -685,10 +721,11 @@ export default function App() {
                     height="100%"
                     frameBorder="0"
                     style={{ border: 0 }}
-                    src="https://www.google.com/maps?q=Pitkänlahdenkatu+13,+65100+Vaasa&output=embed"
+                    src={`https://www.google.com/maps?q=Pitkänlahdenkatu+13,+65100+Vaasa&output=embed&hl=${i18n.language}`}
                     allowFullScreen
                     title={t('contact.mapTitle')}
                     onLoad={() => setMapLoading(false)}
+                    key={i18n.language}
                   ></iframe>
                   <div className="mt-3 text-sm text-right">
                     <a
