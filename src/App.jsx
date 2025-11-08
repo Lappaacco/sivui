@@ -669,6 +669,13 @@ export default function App() {
               </a>
               <span>·</span>
               <a href="/privacy.html" className="text-white underline hover:opacity-80">{t('footer.privacy')}</a>
+              <span>·</span>
+              <a 
+                href={i18n.language === 'sv' ? '/self-monitoring-sv.html' : i18n.language === 'en' ? '/self-monitoring-en.html' : '/self-monitoring.html'} 
+                className="text-white underline hover:opacity-80"
+              >
+                {t('footer.selfMonitoring')}
+              </a>
             </div>
             </div>
           </footer>

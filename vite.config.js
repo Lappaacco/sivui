@@ -11,7 +11,10 @@ export default defineConfig({
       input: {
         main: './index.html',
         privacy: './privacy.html',
-        thankyou: './thank-you.html'
+        thankyou: './thank-you.html',
+        selfmonitoring: './self-monitoring.html',
+        selfmonitoringsv: './self-monitoring-sv.html',
+        selfmonitoringen: './self-monitoring-en.html'
       }
     }
   }

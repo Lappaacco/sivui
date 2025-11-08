@@ -161,9 +161,10 @@
   },
   "footer": {
     "rights": "Ilojaloin Jalkaterapiapalvelut. Kaikki oikeudet pidätetään.",
-    "implementation": "Sivuston toteutus: <strong>Teemu Paunonen</strong>",
+    "implementation": "Verkkosivun toteutus: <strong>Teemu Paunonen</strong>",
     "social": "Seuraa somessa:",
-    "privacy": "Tietosuojaseloste"
+    "privacy": "Tietosuojaseloste",
+    "selfMonitoring": "Omavalvonta"
   },
   "meta": {
     "title": "Jalkaterapia Vaasa | Ilojaloin - Ammattitaitoinen Jalkaterapeutti",

@@ -28,24 +28,24 @@
   },
   "services": {
     "title": "My Services",
-    "intro": "At Ilojaloin, I offer <strong>comprehensive podiatry services</strong>, such as:",
+    "intro": "I offer comprehensive foot therapy services tailored to each client's individual needs. My goal is for every visit to bring relief and promote long-term foot health.",
     "items": [
-      "🦶 <strong>Examinations and foot analyses</strong> – assessment of foot health and potential problem areas",
-      "💅 <strong>Nail correction treatments & nail prosthetics</strong> – corrective and protective nail care",
-      "💅 <strong>Nail trimming & thinning</strong> – even challenging nails can be treated",
-      "🦶 <strong>Skin care</strong> – cracks, calluses, corns",
-      "🦵 <strong>Wound care and pressure relief</strong> – especially for chronic foot wounds",
-      "🦶 <strong>Wart treatment</strong>",
-      "🦶 <strong>Help with nail fungus or athlete's foot</strong>",
-      "🦶 <strong>Individual exercise programs</strong>",
-      "🩹 <strong>Sports and kinesio taping</strong>",
-      "🩰 <strong>Quick insoles and custom toe orthotics from silicone</strong>",
-      "👟 <strong>Shoe counseling</strong> – checking shoe fit, recommending suitable models or features, and the possibility to order quality barefoot shoes through me",
-      "🛍️ <strong>Quality home care products</strong> – for home care and maintaining foot health",
-      "❤️ <strong>Podiatry for special groups</strong> – diabetes, rheumatism, psoriasis, etc.",
-      "🙂 <strong>Lectures</strong>"
+      "🦶 <strong>Examinations and foot analyses</strong> – I assess your foot health and plan appropriate treatments",
+      "💅 <strong>Nail corrections</strong> – Treatment for ingrown, thickened, deformed, and fungal nails",
+      "🩹 <strong>Wound care</strong> – Treatment of foot wounds, ulcers, and cracked skin",
+      "🌽 <strong>Corn and callus treatment</strong> – Removal of painful corns and thick calluses",
+      "🦠 <strong>Plantar wart treatment</strong> – Gentle and effective methods",
+      "🏃 <strong>Sports and kinesio taping</strong> – Support for mobility and pain relief",
+      "🦴 <strong>Pain and structural problem treatment</strong> – Help for various foot and ankle issues",
+      "👟 <strong>Shoe counseling</strong> – Guidance in choosing footwear that supports foot health",
+      "🛠️ <strong>Orthotic guidance and custom insoles</strong> – Professional advice on insoles and custom orthotic fabrication",
+      "💆 <strong>Foot massage and relaxation</strong> – Beneficial for circulation and well-being",
+      "🩺 <strong>Diabetic and rheumatic foot care</strong> – Safe, professional treatment for special patient groups",
+      "👶 <strong>Pediatric podiatry</strong> – Gentle treatment for growing feet",
+      "🏠 <strong>Home visits</strong> – Available when needed",
+      "�️ <strong>Lectures</strong> – Educational presentations on foot health for groups and organizations"
     ],
-    "outro": "Each treatment is planned according to the client's needs and carried out without rush, with warmth and professionalism. You can also come for podiatry without a specific problem or pain condition. Prevention is also important. By knowing your feet, you can care for them properly and avoid potential future problems. Foot health can always be improved, and it affects overall well-being!"
+    "outro": "All treatments are carried out professionally, safely, and with respect for each client. If you're unsure which service suits you, contact me and we'll find the right solution together!"
   },
   "hygiene": {
     "title": "Safety and Hygiene",
@@ -163,8 +163,7 @@
     "rights": "Ilojaloin Podiatry. All rights reserved.",
     "implementation": "Website by <strong>Teemu Paunonen</strong>",
     "social": "Follow us on social media:",
-    "privacy": "Privacy Policy",
-    "selfMonitoring": "Self-Monitoring"
+    "privacy": "Privacy Policy"
   },
   "meta": {
     "title": "Podiatry Vaasa | Ilojaloin - Professional Foot Care",
