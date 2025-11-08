@@ -16,87 +16,46 @@
   },
   "about": {
     "title": "Ilojaloin & jag",
-    "intro": "Jag är <strong>Satu Paunonen, fotterapeut och företagare från Vasa</strong> – samt mamma till fyra barn. Motion, kreativitet och familj håller mig i balans, och människonära arbete är en hjärtesak för mig. Till min natur är jag lugn, vänlig och grundposit. Jag är nyfiken och entusiastisk över att lära mig nytt. Jag älskar att utveckla min yrkeskompetens och uppskattar att fotvård är ett område där man aldrig blir klar – det finns alltid något nytt att lära sig.",
-    "journey": "Jag blev fotterapeut genom egna erfarenheter. Sedan barndomen har jag lidit av plattfötter och olika fotbesvär. Genom dem insåg jag hur stor betydelse fötterna har för det övergripande välbefinnandet. Jag ville lära mig hur jag kunde hjälpa mig själv – och samtidigt andra – att må bättre.",
-    "education": "Jag utexaminerades som <strong>fotterapeut år 2015 från Mikkeli yrkeshögskola</strong> och har sedan dess arbetat på <strong>Vasa centralsjukhus internmedicinska poliklinik</strong>. Jag har också genomfört <strong>tejpningens grundkurs</strong> och fortsätter regelbundet att utveckla mig inom området.",
-    "passion": "Mitt hjärta brinner för att arbeta med fotterapi, och som företagare kan jag arbeta från hjärtat – på mitt eget sätt och i min egen takt. Det är viktigt för mig att kunden känner sig hörd och sedd. Jag vill erbjuda en lugn, trygg miljö där jag kan hjälpa varje kund individuellt och professionellt."
+    "paragraph1": "Jag är <strong>Satu Paunonen, fotterapeut och företagare från Vasa</strong> – samt mamma till fyra barn. Motion, kreativitet och familj håller mig i balans och människonära arbete är en hjärteangelägenhet för mig. Till min natur är jag lugn, vänlig och grundpositiv. Jag är nyfiken och en person som blir entusiastisk över att lära nytt. Jag älskar att utveckla min kompetens och uppskattar att fotvård är ett område där man aldrig blir färdig – det finns alltid något nytt att lära.",
+    "paragraph2": "Jag blev fotterapeut genom mina egna erfarenheter. Jag har lidit av plattfötter och olika fotbesvär sedan barndomen. Genom dem förstod jag hur stor betydelse fötterna har för det övergripande välbefinnandet. Jag ville lära mig hur jag kunde hjälpa mig själv – och samtidigt andra – att må bättre.",
+    "paragraph3": "Jag utexaminerades som <strong>fotterapeut år 2015 från Mikkeli yrkeshögskola</strong> och har sedan dess arbetat på <strong>Vasa centralsjukhus internmedicinska poliklinik</strong>. I mitt arbete har jag specialiserat mig på <strong>sårvård, fotterapi för diabetiker och reumatiker samt behandling av olika smärtor och felställningar</strong>. Tack vare denna arbetserfarenhet kan du sitta i min behandlingsstol med fullt förtroende – alla slags fötter har setts.",
+    "paragraph4": "Företagande har funnits i mina tankar länge – tanken på friheten att arbeta enligt mina egna värderingar, kreativt och människonära. Ilojaloin föddes ur viljan att hjälpa människor må bättre och främja fothälsa brett och förebyggande. Jag vill att varje möte ska vara ett steg mot en lättare, smärtfriare vardag."
   },
   "footTherapy": {
     "title": "Fotterapi",
-    "intro": "Fotterapi är en tjänst som tillhandahålls av en hälsovårdsprofessionell och fokuserar på fötters hälsa och välbefinnande. Fotterapeuten tar hand om fothud och nagelkorrigeringar samt planerar vårdplaner för olika fotbesvär. Vi behandlar bland annat:",
-    "treatments": {
-      "nails": "Nagelsjukdomar (svampinfektioner, nagelvallinflammation, inåtväxande naglar)",
-      "skin": "Hudskador och sjukdomar (diabetisk fot, sår, sprickor)",
-      "warts": "Vårtor och förhårdnade områden",
-      "pain": "Smärtproblem (hälsmärta, fotsulasmärta)",
-      "structural": "Strukturella problem (dysfunktioner, plattfötter, slitageområden)"
-    },
-    "outro": "I fotterapi är syftet att övergripande främja fötters hälsa, förebygga problem och förbättra livskvaliteten. Jag behandlar varje kund individuellt, med hänsyn till deras behov och situation."
+    "paragraph1": "Att utexamineras som fotterapeut kräver <strong>hälsovårdsutbildning</strong>. I Finland anordnas utbildningen vid <strong>yrkeshögskolor</strong> och varar vanligtvis 3,5 år, inklusive både <strong>teoretiska studier och omfattande praktisk träning</strong>. Under studierna fördjupar sig studenten i <strong>människans anatomi, fysiologi och biomekanik</strong> samt olika sjukdomar som påverkar fötterna. Dessutom täcker utbildningen undersökning och analys av fötter, upprätthållande av hälsa och förebyggande vård, behandling av sår, hudförändringar och nagelproblem, tillverkning av individuella stöd, sulor och tåavdelare samt planering av tränings- och övningsprogram för att stödja fot och nedre extremiteter.",
+    "paragraph2": "Fotterapi är helhetsbetonat välbefinnande för dina fötter. Det hjälper till att <strong>förebygga och behandla olika fotbesvär, smärttillstånd och felställningar</strong>, förbättrar rörligheten, lindrar smärta och främjar vardagens smidig het. Eftersom varje fot är unik planeras behandlingen alltid enligt kundens behov."
   },
   "services": {
     "title": "Mina tjänster",
-    "description": "Jag erbjuder ett brett utbud av fotterapitjänster som är utformade för att främja fötters hälsa och välbefinnande. Varje behandling skräddarsys efter kundens individuella behov.",
-    "basicCare": {
-      "title": "Fotvård grundbehandling",
-      "items": [
-        "Nagelklippning och filning",
-        "Hudskrubbning och borttagning av förhårdningslager",
-        "Fotvårds grundbehandling och massage",
-        "Återfuktning och vård"
-      ]
-    },
-    "nailCorrection": {
-      "title": "Nagelkorrigering",
-      "items": [
-        "Behandling av inåtväxande naglar",
-        "Metalltrådsbehandling (nagelstyrning)",
-        "Behandling av nagelvallinflammation"
-      ]
-    },
-    "warts": {
-      "title": "Vårtbehandling",
-      "items": [
-        "Borttagning och behandling av vårtor",
-        "Behandling av förhårdningar",
-        "Behandling av fotsulas tryckområden"
-      ]
-    },
-    "diabetic": {
-      "title": "Diabetisk fotvård",
-      "items": [
-        "Specialvård av diabetikerfötter",
-        "Sår och hudvård",
-        "Förebyggande vård"
-      ]
-    },
-    "consultation": {
-      "title": "Konsultationer och rådgivning",
-      "items": [
-        "Bedömning av fothälsa",
-        "Hemvårdsinstruktioner",
-        "Skorådgivning"
-      ]
-    }
+    "intro": "På Ilojaloin erbjuder jag <strong>mångsidiga fotterapitjänster</strong>, såsom:",
+    "items": [
+      "🦶 <strong>Undersökningar och fotanalyser</strong> – vi kartlägger fötterns tillstånd och eventuella problemområden",
+      "🦶 <strong>Nagelkorrigeringsbehandlingar & nagelproteser</strong> – korrigerar och skyddar naglarna",
+      "🦶 <strong>Förkortning & tunnande av naglar</strong> - även svåra naglar kan behandlas",
+      "🦶 <strong>Hudvård</strong> – sprickor, förhårdningar, liktornar",
+      "🩹 <strong>Sårvård och avlastningsbehandling</strong> – särskilt för behandling av kroniska fotsår",
+      "🦶 <strong>Liktornsbehandling</strong>",
+      "🦶 <strong>Hjälp med nagelsvamp eller fotsvamp</strong>",
+      "🦶 <strong>Individuella övningar</strong>",
+      "🏃 <strong>Sport- och kinesiotejpning</strong>",
+      "👟 <strong>Snabbsulor och individuella tåavdelare av silikonmassa</strong>",
+      "👟 <strong>Skorådgivning</strong> – vi kontrollerar skors passform, rekommenderar lämplig modell eller egenskap och möjlighet att beställa högkvalitativa barfotaskor genom mig",
+      "🧴 <strong>Högkvalitativa hemvårdsprodukter</strong> – för hemvård och upprätthållande av fothälsa",
+      "♿ <strong>Fotterapi för specialgrupper</strong> – diabetes, reumatism, psoriasis etc.",
+      "🗣️ <strong>Föreläsningar</strong>"
+    ],
+    "outro": "Varje behandling planeras enligt kundens behov och genomförs utan stress, med värme och professionalism. Man kan också komma till fotterapi utan egentligt besvär eller smärttillstånd. Även förebyggande vård är viktigt. Genom att känna till dina fötter kan du vårda dem väl och undvika problem som kan uppstå i framtiden. Fothälsan kan alltid förbättras och den påverkar hela välbefinnandet!"
   },
   "hygiene": {
     "title": "Säkerhet och hygien",
-    "intro": "Hygien och säkerhet är fotterapi grundpelare. Jag ser till att alla verktyg och arbetsförhållanden uppfyller de högsta hälsovårdskraven.",
-    "sterilization": {
-      "title": "Sterilisering av verktyg",
-      "description": "Alla instrument steriliseras efter användning med en autoklav som förstör alla bakterier, virus och sporer. Steriliseringen säkerställer att verktygen är helt rena och säkra för nästa användning."
-    },
-    "singleUse": {
-      "title": "Engångsmaterial",
-      "description": "Jag använder alltid engångshandskar och desinficerar händerna före och efter varje kund. Andra engångsmaterial, såsom filar och slipkuddar, används endast en gång och kasseras på lämpligt sätt."
-    },
-    "disinfection": {
-      "title": "Rengöring av lokaler",
-      "description": "Vårdlokaler och ytor desinficeras regelbundet med effektiva rengöringsmedel. Jag ser till att arbetsmiljön är ren, säker och trevlig för varje kund."
-    },
-    "safety": {
-      "title": "Kundsäkerhet",
-      "description": "Jag följer gällande hälsovårdens hygienriktlinjer och ser till att varje behandling utförs säkert och professionellt. Kundens välbefinnande och säkerhet är alltid i förgrunden."
-    }
+    "paragraph1": "Jag har marknadens högkvalitativaste och säkraste utrustning. Min behandlingsstol är stabil, robust och lyfter lätt upp till 200 kilo. Den sänks lågt så det är lätt att stiga upp. Den extra tjocka stoppningen garanterar en bekväm position under hela behandlingen.",
+    "paragraph2": "Vid slipning av hud och naglar använder jag en vattenborr som kyler och binder dammet – huden värms inte upp och slipningsdammet flyger inte omkring i luften. På detta sätt andas både du och jag ren luft.",
+    "paragraph3": "Min fotspegels låga konstruktion möjliggör noggrann bedömning av fötterns belastning och position.",
+    "paragraph4": "Alla mina verktyg underhålls noggrant med nya, professionella verktygsunderhållsenheter. Verktygen desinficeras i ultraljudstvättare, steriliseras i autoklav och förvaras i sterila påsar i ett stängt skåp.",
+    "paragraph5": "Lokalerna städas efter varje kund med effektiva medel som förstör bakterier, virus och svampar.",
+    "paragraph6": "<strong>Din säkerhet och välbefinnande är viktigast för mig.</strong>",
+    "paragraph7": "Jag tar lika noga hand om säkerheten för dina kunduppgifter. Jag använder <strong>Vello-patientdatasystem</strong>, som är <strong>datasäkert och Kanta-kompatibelt</strong>, så dina uppgifter förblir skyddade och konfidentiella."
   },
   "pricing": {
     "title": "Priser",

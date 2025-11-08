@@ -274,19 +274,19 @@ export default function App() {
                   <img src="/yrittaja.png" alt="Jalkaterapeutti Satu Paunonen" className="w-full h-full object-cover" />
                 </div>
                 <div className="prose max-w-full">
-                  <p dangerouslySetInnerHTML={{ __html: t('about.intro') }}></p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph1') }}></p>
 
                   <div className="my-4" aria-hidden></div>
 
-                  <p dangerouslySetInnerHTML={{ __html: t('about.journey') }}></p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph2') }}></p>
 
                   <div className="my-4" aria-hidden></div>
 
-                  <p dangerouslySetInnerHTML={{ __html: t('about.education') }}></p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph3') }}></p>
 
                   <div className="my-4" aria-hidden></div>
 
-                  <p dangerouslySetInnerHTML={{ __html: t('about.passion') }}></p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph4') }}></p>
                 </div>
               </div>
             </div>
@@ -297,17 +297,9 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
               <div className="prose max-w-full">
-                <p>{t('footTherapy.intro')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph1') }}></p>
                 <div className="my-4" aria-hidden></div>
-                <ul className="list-disc ml-6 space-y-2">
-                  <li>{t('footTherapy.treatments.nails')}</li>
-                  <li>{t('footTherapy.treatments.skin')}</li>
-                  <li>{t('footTherapy.treatments.warts')}</li>
-                  <li>{t('footTherapy.treatments.pain')}</li>
-                  <li>{t('footTherapy.treatments.structural')}</li>
-                </ul>
-                <div className="my-4" aria-hidden></div>
-                <p>{t('footTherapy.outro')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph2') }}></p>
               </div>
             </div>
           </section>
@@ -317,33 +309,17 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('services.title')}</h2>
               <div className="prose max-w-full">
-                <p>{t('services.description')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('services.intro') }}></p>
                 <div className="my-4" aria-hidden></div>
                 
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.basicCare.title')}</h3>
-                <ul className="list-disc ml-6 space-y-1">
-                  {t('services.basicCare.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
+                <ul className="list-none space-y-2">
+                  {t('services.items', { returnObjects: true }).map((item, i) => (
+                    <li key={i} dangerouslySetInnerHTML={{ __html: item }}></li>
+                  ))}
                 </ul>
 
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.nailCorrection.title')}</h3>
-                <ul className="list-disc ml-6 space-y-1">
-                  {t('services.nailCorrection.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
-                </ul>
-
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.warts.title')}</h3>
-                <ul className="list-disc ml-6 space-y-1">
-                  {t('services.warts.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
-                </ul>
-
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.diabetic.title')}</h3>
-                <ul className="list-disc ml-6 space-y-1">
-                  {t('services.diabetic.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
-                </ul>
-
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.consultation.title')}</h3>
-                <ul className="list-disc ml-6 space-y-1">
-                  {t('services.consultation.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
-                </ul>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('services.outro')}</p>
               </div>
             </div>
           </section>
@@ -353,20 +329,18 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
               <div className="prose max-w-full">
-                <p>{t('hygiene.intro')}</p>
+                <p>{t('hygiene.paragraph1')}</p>
                 <div className="my-4" aria-hidden></div>
-                
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.sterilization.title')}</h3>
-                <p>{t('hygiene.sterilization.description')}</p>
-                
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.singleUse.title')}</h3>
-                <p>{t('hygiene.singleUse.description')}</p>
-                
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.disinfection.title')}</h3>
-                <p>{t('hygiene.disinfection.description')}</p>
-                
-                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.safety.title')}</h3>
-                <p>{t('hygiene.safety.description')}</p>
+                <p>{t('hygiene.paragraph2')}</p>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('hygiene.paragraph3')}</p>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('hygiene.paragraph4')}</p>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('hygiene.paragraph5')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('hygiene.paragraph6') }}></p>
+                <div className="my-4" aria-hidden></div>
+                <p dangerouslySetInnerHTML={{ __html: t('hygiene.paragraph7') }}></p>
               </div>
             </div>
           </section>
@@ -681,7 +655,7 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto px-4">
             &copy; {currentYear} {t('footer.rights')}
             <div className="text-sm mt-2 flex items-center justify-center gap-2">
-              <span>{t('footer.implementation')}</span>
+              <span dangerouslySetInnerHTML={{ __html: t('footer.implementation') }}></span>
               <a 
                 href="https://www.linkedin.com/in/teemu-paunonen-722621129/" 
                 target="_blank" 

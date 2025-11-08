@@ -16,87 +16,46 @@
   },
   "about": {
     "title": "Ilojaloin & me",
-    "intro": "I am <strong>Satu Paunonen, podiatrist and entrepreneur from Vaasa</strong> – and a mother of four children. Exercise, creativity, and family keep me balanced, and people-oriented work is close to my heart. By nature, I am calm, friendly, and fundamentally positive. I am curious and enthusiastic about learning new things. I love developing my professional skills and appreciate that foot care is a field where you never finish learning – there's always something new to discover.",
-    "journey": "I became a podiatrist through my own experiences. Since childhood, I have suffered from flat feet and various foot problems. Through them, I realized how significant feet are for overall wellbeing. I wanted to learn how I could help myself – and at the same time others – to feel better.",
-    "education": "I graduated as a <strong>podiatrist in 2015 from Mikkeli University of Applied Sciences</strong> and have since worked at <strong>Vaasa Central Hospital's internal medicine outpatient clinic</strong>. I have also completed a <strong>basic taping course</strong> and continue to regularly develop myself in the field.",
-    "passion": "My heart burns for working with podiatry, and as an entrepreneur, I can work from the heart – in my own way and at my own pace. It's important to me that clients feel heard and seen. I want to offer a calm, safe space where I can help each client individually and professionally."
+    "paragraph1": "I am <strong>Satu Paunonen, a podiatrist and entrepreneur from Vaasa</strong> – as well as a mother of four children. Exercise, creativity, and family keep me balanced, and people-oriented work is a matter of the heart for me. By nature, I am calm, friendly, and fundamentally positive. I am curious and enthusiastic about learning new things. I love developing my professional skills and appreciate that foot care is a field where you never finish – there is always something new to learn.",
+    "paragraph2": "I became a podiatrist through my own experiences. I have suffered from flat feet and various foot ailments since childhood. Through them, I understood how significant feet are for overall well-being. I wanted to learn how I could help myself – and at the same time others – to feel better.",
+    "paragraph3": "I graduated as a <strong>podiatrist in 2015 from Mikkeli University of Applied Sciences</strong> and have since worked at <strong>Vaasa Central Hospital's internal medicine outpatient clinic</strong>. In my work, I have specialized in <strong>wound care, foot therapy for diabetics and rheumatism patients, and treatment of various pains and malpositions</strong>. Thanks to this work experience, you can sit in my treatment chair with complete confidence – all kinds of feet have been seen.",
+    "paragraph4": "Entrepreneurship has been on my mind for a long time – the idea of freedom to work according to my own values, creatively and in a people-oriented way. Ilojaloin was born from the desire to help people feel better and promote foot health broadly and preventively. I want every encounter to be a step towards a lighter, pain-free everyday life."
   },
   "footTherapy": {
-    "title": "Podiatry",
-    "intro": "Podiatry is a service provided by a healthcare professional that focuses on foot health and wellbeing. A podiatrist takes care of foot skin and nail corrections and plans treatment plans for various foot problems. We treat, among other things:",
-    "treatments": {
-      "nails": "Nail diseases (fungal infections, nail fold inflammation, ingrown nails)",
-      "skin": "Skin injuries and diseases (diabetic foot, ulcers, cracks)",
-      "warts": "Warts and callused areas",
-      "pain": "Pain problems (heel pain, plantar pain)",
-      "structural": "Structural problems (dysfunctions, flat feet, wear areas)"
-    },
-    "outro": "In podiatry, the purpose is to comprehensively promote foot health, prevent problems, and improve quality of life. I treat each client individually, taking into account their needs and situation."
+    "title": "Foot therapy",
+    "paragraph1": "Graduating as a podiatrist requires <strong>healthcare education</strong> that takes <strong>3.5 years</strong>. The studies include anatomy, physiology, and biomechanics. Therefore, I understand how feet work, why problems arise, and how to prevent and treat them. I am qualified to treat people with diabetes, rheumatism, circulation problems, and other special conditions.",
+    "paragraph2": "Foot therapy is preventive care that promotes mobility and quality of life. Regular care of feet, nails, and skin prevents problems before they become serious. My goal is for every visit to bring relief, and in the long term, keep you on your feet."
   },
   "services": {
     "title": "My Services",
-    "description": "I offer a wide range of podiatry services designed to promote foot health and wellbeing. Each treatment is tailored to the client's individual needs.",
-    "basicCare": {
-      "title": "Basic Foot Care",
-      "items": [
-        "Nail cutting and filing",
-        "Skin exfoliation and callus removal",
-        "Basic foot care and massage",
-        "Moisturizing and treatment"
-      ]
-    },
-    "nailCorrection": {
-      "title": "Nail Correction",
-      "items": [
-        "Treatment of ingrown nails",
-        "Metal wire treatment (nail guidance)",
-        "Treatment of nail fold inflammation"
-      ]
-    },
-    "warts": {
-      "title": "Wart Treatment",
-      "items": [
-        "Wart removal and treatment",
-        "Callus treatment",
-        "Treatment of plantar pressure areas"
-      ]
-    },
-    "diabetic": {
-      "title": "Diabetic Foot Care",
-      "items": [
-        "Specialized care for diabetic feet",
-        "Ulcer and skin treatment",
-        "Preventive care"
-      ]
-    },
-    "consultation": {
-      "title": "Consultations and Advice",
-      "items": [
-        "Foot health assessment",
-        "Home care instructions",
-        "Footwear advice"
-      ]
-    }
+    "intro": "I offer comprehensive foot therapy services tailored to each client's individual needs. My goal is for every visit to bring relief and promote long-term foot health.",
+    "items": [
+      "🦶 <strong>Examinations and foot analyses</strong> – I assess the condition of your feet and plan appropriate treatments",
+      "💅 <strong>Nail corrections</strong> – I treat ingrown, thickened, deformed, and fungal nails",
+      "🩹 <strong>Wound care</strong> – I care for foot wounds, ulcers, and cracked skin",
+      "🌽 <strong>Treatment of corns and calluses</strong> – I remove painful corns and thick calluses",
+      "🦠 <strong>Treatment of plantar warts</strong> – Gentle and effective methods",
+      "🏃 <strong>Sport and kinesio taping</strong> – Supporting mobility and pain relief",
+      "🦴 <strong>Treatment of pain and malpositions</strong> – I help with various foot and ankle problems",
+      "👟 <strong>Shoe guidance</strong> – I guide you to choose the right shoes that support foot health",
+      "🛠️ <strong>Orthotic guidance and custom insoles</strong> – I provide professional advice on insoles and can make individual custom insoles",
+      "💆 <strong>Foot massage and relaxation</strong> – Beneficial for circulation and well-being",
+      "🩺 <strong>Diabetic and rheumatic foot care</strong> – Safe and professional treatment for special groups",
+      "👶 <strong>Children's foot therapy</strong> – Gentle treatment for children's growing feet",
+      "🏥 <strong>Home visits</strong> – If necessary, I can come to your home",
+      "🗣️ <strong>Lectures</strong> – I provide informative lectures on foot health for various groups and communities"
+    ],
+    "outro": "All treatments are carried out professionally, safely, and with respect for each client. If you're unsure which service suits you, contact me and we'll find the right solution together!"
   },
   "hygiene": {
     "title": "Safety and Hygiene",
-    "intro": "Hygiene and safety are the cornerstones of podiatry. I ensure that all tools and working conditions meet the highest healthcare requirements.",
-    "sterilization": {
-      "title": "Tool Sterilization",
-      "description": "All instruments are sterilized after use with an autoclave that destroys all bacteria, viruses, and spores. Sterilization ensures that tools are completely clean and safe for the next use."
-    },
-    "singleUse": {
-      "title": "Single-Use Materials",
-      "description": "I always use disposable gloves and disinfect my hands before and after each client. Other single-use materials, such as files and polishing pads, are used only once and disposed of properly."
-    },
-    "disinfection": {
-      "title": "Facility Cleaning",
-      "description": "Treatment facilities and surfaces are regularly disinfected with effective cleaning agents. I ensure that the work environment is clean, safe, and pleasant for every client."
-    },
-    "safety": {
-      "title": "Client Safety",
-      "description": "I follow current healthcare hygiene guidelines and ensure that each treatment is carried out safely and professionally. Client wellbeing and safety are always a priority."
-    }
+    "paragraph1": "Hygiene and safety are the cornerstones of foot therapy. All my tools and work practices meet the strictest healthcare requirements. I ensure that every client receives treatment in a safe and clean environment.",
+    "paragraph2": "I work at the Vaasa Diaconia Institute on Sepänkatu 10. I share the facilities with other professionals, and the premises are clean and comfortable. <strong>My own equipment includes</strong>, among other things, a <strong>200-kilo treatment chair</strong> that is electronically adjustable and comfortably supports clients of all sizes. Treatments are carried out using a <strong>water drill</strong>, which is safer for nails than traditional cutting, and a <strong>grinder</strong> for precise skin and nail work.",
+    "paragraph3": "All instruments are washed in an <strong>ultrasonic cleaner</strong>, packed, and sterilized in an <strong>autoclave (class B, prion programs)</strong>. This ensures that tools are completely sterile and safe. Each instrument packet is marked with a batch number, and I document when and where the instruments were used.",
+    "paragraph4": "I document client visits in the <strong>Vello patient information system</strong>, and the information is transferred to Kanta services. This ensures that your care history is securely stored and available to you through your own Kanta pages.",
+    "paragraph5": "I always use disposable gloves and disinfect my hands before and after each client. Files, polishing pads, and other disposable materials are used only once and disposed of properly. Treatment rooms and surfaces are disinfected between each client.",
+    "paragraph6": "I regularly participate in continuing education to stay up-to-date with the latest practices and hygiene guidelines. <strong>My education and work experience guarantee that you receive professional and safe care</strong> – regardless of whether you come for basic care or the treatment of more challenging foot problems.",
+    "paragraph7": "If you have questions about hygiene practices or other aspects of treatment, I'm happy to answer them. Your safety and well-being are always a priority."
   },
   "pricing": {
     "title": "Pricing",
