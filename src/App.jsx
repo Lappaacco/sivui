@@ -405,6 +405,54 @@ export default function App() {
                     </tr>
                     <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.callus15.title')}</strong>
+                        {t('pricing.callus15.duration') && <span className="text-gray-600 ml-2">{t('pricing.callus15.duration')}</span>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.callus15.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus15.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.wart.title')}</strong>
+                        {t('pricing.wart.duration') && <span className="text-gray-600 ml-2">{t('pricing.wart.duration')}</span>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.wart.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.wart.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.callus30.title')}</strong>
+                        {t('pricing.callus30.duration') && <span className="text-gray-600 ml-2">{t('pricing.callus30.duration')}</span>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.callus30.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus30.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.nailCorrection.title')}</strong>
+                        {t('pricing.nailCorrection.duration') && <span className="text-gray-600 ml-2">{t('pricing.nailCorrection.duration')}</span>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.nailCorrection.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.nailCorrection.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.therapy30.title')}</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
                           {t('pricing.therapy30.items', { returnObjects: true }).map((item, i) => (
@@ -415,6 +463,18 @@ export default function App() {
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy30.price')}</td>
                     </tr>
                     <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.regularCare.title')}</strong>
+                        {t('pricing.regularCare.duration') && <span className="text-gray-600 ml-2">{t('pricing.regularCare.duration')}</span>}
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.regularCare.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.regularCare.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.therapy45.title')}</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
