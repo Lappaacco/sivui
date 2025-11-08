@@ -1,13 +1,23 @@
-<svg width="140" height="48" viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Edenred logo with real brand colors -->
-  <rect width="140" height="48" rx="6" fill="#E30613"/>
-  <!-- Edenred wordmark -->
-  <g transform="translate(20, 15)">
-    <path d="M0 2c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v1h-3V2.5c0-.28-.22-.5-.5-.5h-5c-.28 0-.5.22-.5.5v4c0 .28.22.5.5.5h5c.28 0 .5-.22.5-.5V6h3v1c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2z" fill="white"/>
-    <path d="M15 0h3v3h3v2h-3v4h-3V0z" fill="white"/>
-    <path d="M24 2c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2h-6c-1.1 0-2-.9-2-2V2zm3 .5v4c0 .28.22.5.5.5h3c.28 0 .5-.22.5-.5v-4c0-.28-.22-.5-.5-.5h-3c-.28 0-.5.22-.5.5z" fill="white"/>
-    <path d="M38 0h3l3 5V0h3v9h-3l-3-5v5h-3V0z" fill="white"/>
-    <path d="M51 2c0-1.1.9-2 2-2h6v9h-3V7h-3c-1.1 0-2-.9-2-2V2zm3 .5v2c0 .28.22.5.5.5H56V2h-1.5c-.28 0-.5.22-.5.5z" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40"><svg width="140" height="48" viewBox="0 0 140 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>  <!-- Edenred logo with real brand colors -->
+
+    <style>  <rect width="140" height="48" rx="6" fill="#E30613"/>
+
+      .edenred-bg { fill: #E30613; }  <!-- Edenred wordmark -->
+
+      .edenred-text { fill: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-weight: 700; }  <g transform="translate(20, 15)">
+
+    </style>    <path d="M0 2c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v1h-3V2.5c0-.28-.22-.5-.5-.5h-5c-.28 0-.5.22-.5.5v4c0 .28.22.5.5.5h5c.28 0 .5-.22.5-.5V6h3v1c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2z" fill="white"/>
+
+  </defs>    <path d="M15 0h3v3h3v2h-3v4h-3V0z" fill="white"/>
+
+  <rect class="edenred-bg" width="120" height="40" rx="4"/>    <path d="M24 2c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2h-6c-1.1 0-2-.9-2-2V2zm3 .5v4c0 .28.22.5.5.5h3c.28 0 .5-.22.5-.5v-4c0-.28-.22-.5-.5-.5h-3c-.28 0-.5.22-.5.5z" fill="white"/>
+
+  <text class="edenred-text" x="60" y="26" font-size="15" text-anchor="middle">Edenred</text>    <path d="M38 0h3l3 5V0h3v9h-3l-3-5v5h-3V0z" fill="white"/>
+
+</svg>    <path d="M51 2c0-1.1.9-2 2-2h6v9h-3V7h-3c-1.1 0-2-.9-2-2V2zm3 .5v2c0 .28.22.5.5.5H56V2h-1.5c-.28 0-.5.22-.5.5z" fill="white"/>
+
     <path d="M62 0h8v2h-5v1.5h4v2h-4V7h5v2h-8V0z" fill="white"/>
     <path d="M73 0h3v3h3V0h3v9h-3V5h-3v4h-3V0z" fill="white"/>
   </g>

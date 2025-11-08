@@ -263,7 +263,7 @@ export default function App() {
               </p>
               <div className="mt-8 flex justify-center">
                 <a
-                  href="https://vello.fi/ilojaloin-jalkaterapia"
+                  href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white"
@@ -360,9 +360,26 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
               <div className="prose max-w-full mb-8">
                 <p>{t('pricing.intro')}</p>
-                <p className="mt-4">
-                  <strong>{t('pricing.benefitsText')}</strong> E-passi, Edenred ja Smartum.
-                </p>
+                <div className="mt-6">
+                  <p className="mb-3">{t('pricing.benefitsText')}</p>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <img 
+                      src="/epassi-logo.svg" 
+                      alt="E-passi" 
+                      className="h-10 object-contain"
+                    />
+                    <img 
+                      src="/edenred-logo.svg" 
+                      alt="Edenred" 
+                      className="h-10 object-contain"
+                    />
+                    <img 
+                      src="/smartum-logo.svg" 
+                      alt="Smartum" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                </div>
               </div>
 
               <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.priceListTitle')}</h3>
@@ -647,7 +664,7 @@ export default function App() {
                 {velloFailed && (
                   <div className="absolute inset-0 z-30">
                     <a
-                      href="https://vello.fi/ilojaloin-jalkaterapia"
+                      href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full h-full flex items-center justify-center bg-primary text-white font-semibold rounded-md shadow-lg hover:opacity-95"
