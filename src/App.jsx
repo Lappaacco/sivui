@@ -359,23 +359,23 @@ export default function App() {
                 <p>{t('pricing.intro')}</p>
                 <div className="mt-6">
                   <p className="mb-3">{t('pricing.benefitsText')}</p>
-                  <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex flex-wrap items-center gap-4 md:gap-6">
                     <img 
                       src="/epassi-logo.svg" 
                       alt="E-passi" 
-                      className="h-10 object-contain"
+                      className="h-12 md:h-14 object-contain hover:opacity-90 transition-opacity"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
                     <img 
                       src="/edenred-logo.svg" 
                       alt="Edenred" 
-                      className="h-10 object-contain"
+                      className="h-12 md:h-14 object-contain hover:opacity-90 transition-opacity"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
                     <img 
                       src="/smartum-logo.svg" 
                       alt="Smartum" 
-                      className="h-10 object-contain"
+                      className="h-12 md:h-14 object-contain hover:opacity-90 transition-opacity"
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
                   </div>
