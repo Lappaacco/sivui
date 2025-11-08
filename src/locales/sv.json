@@ -35,7 +35,7 @@
       "💅 <strong>Förkortning & tunnande av naglar</strong> - även svåra naglar kan behandlas",
       "🦶 <strong>Hudvård</strong> – sprickor, förhårdningar, liktornar",
       "🦵 <strong>Sårvård och avlastningsbehandling</strong> – särskilt för behandling av kroniska fotsår",
-      "🦶 <strong>Liktornsbehandling</strong>",
+      "🦶 <strong>Vårta behandling - Verrutop ®</strong>",
       "🦶 <strong>Hjälp med nagelsvamp eller fotsvamp</strong>",
       "🦶 <strong>Individuella övningar</strong>",
       "🩹 <strong>Sport- och kinesiotejpning</strong>",
@@ -49,10 +49,10 @@
   },
   "hygiene": {
     "title": "Säkerhet och hygien",
-    "paragraph1": "Jag har marknadens högkvalitativaste och säkraste utrustning. Min behandlingsstol är stabil, robust och lyfter lätt upp till 200 kilo. Den sänks lågt så det är lätt att stiga upp. Den extra tjocka stoppningen garanterar en bekväm position under hela behandlingen.",
+    "paragraph1": "Jag har marknadens högkvalitativaste och säkraste utrustning. Min behandlingsstol är stabil, robust och lyfter lätt upp till 225 kilo. Den sänks lågt så det är lätt att stiga upp.",
     "paragraph2": "Vid slipning av hud och naglar använder jag en vattenborr som kyler och binder dammet – huden värms inte upp och slipningsdammet flyger inte omkring i luften. På detta sätt andas både du och jag ren luft.",
     "paragraph3": "Min fotspegels låga konstruktion möjliggör noggrann bedömning av fötterns belastning och position.",
-    "paragraph4": "Alla mina verktyg underhålls noggrant med nya, professionella verktygsunderhållsenheter. Verktygen desinficeras i ultraljudstvättare, steriliseras i autoklav och förvaras i sterila påsar i ett stängt skåp.",
+    "paragraph4": "Verktygen tvättas, desinficeras, torkas och underhålls. Sedan steriliseras de i autoklav och förvaras i en stängd låda. Verktygsskåpet hanteras alltid med rena händer.",
     "paragraph5": "Lokalerna städas efter varje kund med effektiva medel som förstör bakterier, virus och svampar.",
     "paragraph6": "<strong>Din säkerhet och välbefinnande är viktigast för mig.</strong>",
     "paragraph7": "Jag tar lika noga hand om säkerheten för dina kunduppgifter. Jag använder <strong>Vello-patientdatasystem</strong>, som är <strong>datasäkert och Kanta-kompatibelt</strong>, så dina uppgifter förblir skyddade och konfidentiella."
@@ -65,6 +65,58 @@
     "table": {
       "service": "Tjänst",
       "price": "Pris"
+    },
+    "callus15": {
+      "title": "Borttagning av liktorn/förhårdnad",
+      "items": [
+        "Om du vet att du bara behöver få en liktorn/förhårdnad borttagad, boka denna tid.",
+        "Ofta kan liktornen redan vara smärtsam, så här får du snabb lindring.",
+        "Om det finns flera liktornar eller förhårdnader eller om de är mycket tjocka, boka 30 minuter."
+      ],
+      "duration": "15 min",
+      "price": "25€"
+    },
+    "callus30": {
+      "title": "Borttagning av flera liktornar/förhårdnader",
+      "items": [
+        "Borttagning av flera eller tjockare liktornar/förhårdnader.",
+        "Omedelbar lindring."
+      ],
+      "duration": "30 min",
+      "price": "45€"
+    },
+    "nailCorrection": {
+      "title": "Nagelkorrigeringsbehandling",
+      "items": [
+        "Välj denna tjänst om du vet att du behöver nagelkorrigeringsbehandling.",
+        "Nagelkorrigeringsbehandling för missbildad eller inåtväxande nagel.",
+        "Jag använder titantrådkorrigeringsmetoden.",
+        "Tråden måste förnyas var 4–6:e vecka tills nageln är rätt."
+      ],
+      "duration": "30 min",
+      "price": "45€"
+    },
+    "wart": {
+      "title": "Vårta behandling (Verrutop)",
+      "items": [
+        "Om du vet att du bara vill ha vårta behandling, välj denna tjänst.",
+        "Jag använder Verrutop®-metoden, som är en effektiv, noggrann och säker vårtbehandlingsmetod för professionellt bruk.",
+        "Verrutop är en väl tolererad behandlingsmetod som fungerar genom att etsade vårtan med en kemikalie.",
+        "Behandlingen orsakar ingen smärta och kräver ingen bedövning."
+      ],
+      "duration": "15 min",
+      "price": "25€"
+    },
+    "regularCare": {
+      "title": "Vanlig fotvård",
+      "items": [
+        "Så kallad tyst tjänst.",
+        "Boka denna tjänst om du vill komma och koppla av i tystnad i en trivsam miljö och samtidigt få dina fötter vårdade av en professionell.",
+        "Tjänsten inkluderar fotbad, nagelvård, hudvård och fotmassage.",
+        "Ingen egentlig undersökning."
+      ],
+      "duration": "1 h",
+      "price": "65€"
     },
     "shopping": {
       "title": "Shoppingkvart",

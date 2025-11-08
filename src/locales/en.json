@@ -35,7 +35,7 @@
       "💅 <strong>Nail trimming & thinning</strong> – even challenging nails can be treated",
       "🦶 <strong>Skin care</strong> – cracks, calluses, corns",
       "🦵 <strong>Wound care and pressure relief</strong> – especially for chronic foot wounds",
-      "🦶 <strong>Wart treatment</strong>",
+      "🦶 <strong>Wart treatment - Verrutop ®</strong>",
       "🦶 <strong>Help with nail fungus or athlete's foot</strong>",
       "🦶 <strong>Individual exercise programs</strong>",
       "🩹 <strong>Sports and kinesio taping</strong>",
@@ -49,13 +49,13 @@
   },
   "hygiene": {
     "title": "Safety and Hygiene",
-    "paragraph1": "Hygiene and safety are the cornerstones of podiatry. All my tools and practices meet the strictest healthcare standards. I ensure every client receives treatment in a safe, clean environment.",
-    "paragraph2": "I work at the Vaasa Diaconia Institute at Sepänkatu 10. I share the facilities with other professionals, and the premises are clean and comfortable. <strong>My equipment includes</strong> a <strong>200-kg treatment chair</strong> that's electronically adjustable and comfortably accommodates clients of all sizes. Treatments are performed using a <strong>water drill</strong>, which is safer for nails than traditional cutting, and a <strong>grinder</strong> for precise skin and nail work.",
-    "paragraph3": "All instruments are washed in an <strong>ultrasonic cleaner</strong>, packaged, and sterilized in an <strong>autoclave (Class B, prion programs)</strong>. This ensures tools are completely sterile and safe. Each instrument package is labeled with a batch number, and I document when and where the instruments were used.",
-    "paragraph4": "I document client visits in the <strong>Vello patient information system</strong>, and the information transfers to Kanta services. This ensures your treatment history is securely stored and accessible through your Kanta portal.",
-    "paragraph5": "I always wear disposable gloves and disinfect my hands before and after each client. Files, polishing pads, and other disposable materials are single-use and properly disposed of. Treatment rooms and surfaces are disinfected between clients.",
-    "paragraph6": "I regularly participate in continuing education to stay current with best practices and hygiene guidelines. <strong>My education and work experience guarantee professional, safe care</strong> – whether you're coming for routine maintenance or treatment of complex foot problems.",
-    "paragraph7": "If you have questions about hygiene practices or any aspect of treatment, I'm happy to answer. Your safety and well-being are always my priority."
+    "paragraph1": "I have the highest quality and safest equipment on the market. My treatment chair is stable, sturdy, and easily lifts up to 225 kilograms. It lowers down, making it easy to get on.",
+    "paragraph2": "When grinding skin and nails, I use a water drill that cools and binds dust – the skin doesn't heat up and grinding dust doesn't fly around in the air. This way, both you and I breathe clean air.",
+    "paragraph3": "My foot mirror's low construction enables accurate assessment of foot load and position.",
+    "paragraph4": "The instruments are washed, disinfected, dried, and maintained. They are then sterilized in an autoclave and stored in a closed box. The instrument cabinet is always handled with clean hands.",
+    "paragraph5": "The premises are cleaned after each customer with effective agents that destroy bacteria, viruses, and fungi.",
+    "paragraph6": "<strong>Your safety and well-being are most important to me.</strong>",
+    "paragraph7": "I take equally careful care of the security of your customer data. I use the <strong>Vello patient data system</strong>, which is <strong>data-secure and Kanta-compatible</strong>, so your information remains protected and confidential."
   },
   "pricing": {
     "title": "Pricing",
@@ -65,6 +65,58 @@
     "table": {
       "service": "Service",
       "price": "Price"
+    },
+    "callus15": {
+      "title": "Callus/corn removal",
+      "items": [
+        "If you know you only need callus/corn removal, book this appointment.",
+        "Often the callus can already be painful, so this gives you quick relief.",
+        "If there are multiple calluses or corns or they are very thick, book 30 minutes."
+      ],
+      "duration": "15 min",
+      "price": "25€"
+    },
+    "callus30": {
+      "title": "Multiple callus/corn removal",
+      "items": [
+        "Removal of multiple or thicker calluses/corns.",
+        "Immediate relief."
+      ],
+      "duration": "30 min",
+      "price": "45€"
+    },
+    "nailCorrection": {
+      "title": "Nail correction treatment",
+      "items": [
+        "Choose this service if you know you need nail correction treatment.",
+        "Nail correction treatment for deformed or ingrown nails.",
+        "I use the titanium wire correction method.",
+        "The wire must be renewed every 4–6 weeks until the nail is correct."
+      ],
+      "duration": "30 min",
+      "price": "45€"
+    },
+    "wart": {
+      "title": "Wart treatment (Verrutop)",
+      "items": [
+        "If you know you only want wart treatment, choose this service.",
+        "I use the Verrutop® method, which is an effective, precise, and safe wart treatment method for professional use.",
+        "Verrutop is a well-tolerated treatment method that works by chemically cauterizing the wart.",
+        "The treatment does not cause pain and does not require anesthesia."
+      ],
+      "duration": "15 min",
+      "price": "25€"
+    },
+    "regularCare": {
+      "title": "Regular foot care",
+      "items": [
+        "A so-called quiet service.",
+        "Book this service if you want to come and relax in silence in a pleasant environment and get your feet treated by a professional.",
+        "The service includes foot bath, nail care, skin care, and foot massage.",
+        "No actual examination."
+      ],
+      "duration": "1 h",
+      "price": "65€"
     },
     "shopping": {
       "title": "Consultation Visit",

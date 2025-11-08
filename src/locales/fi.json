@@ -35,7 +35,7 @@
       "💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat",
       "🦶 <strong>Ihon hoito</strong> – halkeamat, kovettumat, känsät",
       "🦵 <strong>Haavanhoito ja kevennyshoito</strong> – erityisesti kroonisten jalkahaavojen hoitoon",
-      "🦶 <strong>Syyländhoito</strong>",
+      "🦶 <strong>Syylänhoito - Verrutop ®</strong>",
       "🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong>",
       "🦶 <strong>Yksilölliset harjoitteet</strong>",
       "🩹 <strong>Urheilu- ja kinesioteippaus</strong>",
@@ -49,10 +49,10 @@
   },
   "hygiene": {
     "title": "Turvallisuus ja hygienia",
-    "paragraph1": "Käytössäni on markkinoiden laadukkaimmat ja turvallisimmat laitteet. Hoitotuolini on vakaa, tukeva ja nostaa kevyesti jopa 200 kiloa. Se laskeutuu matalalle, joten kyytiin on helppo nousta. Erikoispaksu pehmuste takaa mukavan asennon koko hoidon ajaksi.",
+    "paragraph1": "Käytössäni on markkinoiden laadukkaimmat ja turvallisimmat laitteet. Hoitotuolini on vakaa, tukeva ja nostaa kevyesti jopa 225 kiloa. Se laskeutuu matalalle, joten kyytiin on helppo nousta.",
     "paragraph2": "Ihon ja kynsien hionnassa käytän vesiporaa, joka viilentää ja sitoo pölyn – iho ei kuumene eikä hiomap vaivaile ilmaan. Näin sekä sinä että minä hengitämme puhdasta ilmaa.",
     "paragraph3": "Jalkapeilini matala rakenne mahdollistaa jalkojen kuormituksen ja asennon tarkan arvioinnin.",
-    "paragraph4": "Kaikki välineeni huolletaan huolellisesti uusilla, ammattikäyttöön tarkoitetuilla välinehuoltolaitteilla. Välineet desinfioidaan ultraäänipesurissa, steriloidaan autoklaavissa ja säilytetään steriileissä pusseissa suljetussa kaapissa.",
+    "paragraph4": "Kaikki välineeni huolletaan huolellisesti uusilla, ammattikäyttöön tarkoitetuilla välinehuoltolaitteilla. Välineet pestään, desinfioidaan, kuivataan ja huolletaan. Sitten ne steriloidaan autoklaavissa ja säilytetään suljetussa laatikossa. Välinekaapilla käydään aina puhtain käsin.",
     "paragraph5": "Tilat siistitään jokaisen asiakkaan jälkeen tehokkailla aineilla, jotka tuhoavat bakteerit, virukset ja sienet.",
     "paragraph6": "<strong>Sinun turvallisuutesi ja hyvinvointisi ovat minulle tärkeintä.</strong>",
     "paragraph7": "Asiakastietojesi turvallisuudesta huolehdin yhtä tarkasti. Käytössäni on <strong>Vello-potilastietojärjestelmä</strong>, joka on <strong>tietoturvallinen ja Kanta-yhteensopiva</strong>, joten tietosi säilyvät suojattuina ja luottamuksellisina."
@@ -65,6 +65,58 @@
     "table": {
       "service": "Palvelu",
       "price": "Hinta"
+    },
+    "callus15": {
+      "title": "Känsän/kovettuman poisto",
+      "items": [
+        "Jos tiedät tarvitsevasi pelkän känsän/kovettuman poiston, varaa tämä aika.",
+        "Yleensä känsä voi olla jo kivuliaskin, joten tästä saat pikahelpotuksen.",
+        "Jos känsiä tai kovettumia on useampikin tai ne ovat hyvin paksut, varaa 30 minuuttia."
+      ],
+      "duration": "15 min",
+      "price": "25€"
+    },
+    "callus30": {
+      "title": "Useamman känsän/kovettuman poisto",
+      "items": [
+        "Useamman tai paksumpien känsien/kovettumien poisto.",
+        "Välitön helpotus."
+      ],
+      "duration": "30 min",
+      "price": "45€"
+    },
+    "nailCorrection": {
+      "title": "Kynnen oikaisuhoito",
+      "items": [
+        "Valitse tämä palvelu, jos tiedät tarvitsevasi kynnen oikaisuhoitoa.",
+        "Kynnen oikaisuhoito epämuodostuneelle tai sisäänpäin kasvaneelle kynnelle.",
+        "Käytän titaanilanka-oikaisumenetelmää.",
+        "Lanka täytyy uusia 4–6 viikon välein, kunnes kynsi on oikea."
+      ],
+      "duration": "30 min",
+      "price": "45€"
+    },
+    "wart": {
+      "title": "Syylänhoito (Verrutop)",
+      "items": [
+        "Jos tiedät, että haluat pelkän syylänhoidon, valitse tämä palvelu.",
+        "Käytän Verrutop®-menetelmää, joka on tehokas, tarkka ja turvallinen syylänhoitomenetelmä ammattilaiskäyttöön.",
+        "Verrutop on hyvin siedetty hoitomenetelmä, joka toimii syövyttämällä syylää kemikaalilla.",
+        "Hoito ei aiheuta kipua eikä vaadi puudutusta."
+      ],
+      "duration": "15 min",
+      "price": "25€"
+    },
+    "regularCare": {
+      "title": "Tavallinen jalkojenhoito",
+      "items": [
+        "Ns. hiljainen palvelu.",
+        "Varaa tämä palvelu, jos haluat tulla rentoutumaan hiljaisuuteen mukavaan miljööseen ja saat samalla jalat hoidetuksi ammattilaisen hoivissa.",
+        "Palveluun kuuluu jalkojen kylvetys, kynsien hoito, ihon hoito ja jalkojen hieronta.",
+        "Ei varsinaista tutkimusta."
+      ],
+      "duration": "1 h",
+      "price": "65€"
     },
     "shopping": {
       "title": "Shoppailuvartti",
