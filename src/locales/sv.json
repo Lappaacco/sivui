@@ -69,8 +69,8 @@
     "shopping": {
       "title": "Shoppingkvart",
       "items": [
-        "Vi kartlägger hemvårdens behov och rekommenderar hemvårdsprodukter.",
-        "Till exempel för justering av tåavdelare är det värt att boka denna tid (1 justeringsomgång gratis).",
+        "Vi kartlägger hemvårdens behov och rekommenderar produkter.",
+        "För justering av tåavdelare är det värt att boka denna tid (1 justeringsomgång gratis).",
         "Anskaffning/passning av skor."
       ],
       "price": "0€"
@@ -78,31 +78,31 @@
     "therapy30": {
       "title": "Fotterapi 30 min",
       "items": [
-        "Boka denna tid om du vet att du endast vill ha liktornsbehandling eller nagelkorrigeringsbehandling (+15€ materialkostnad).",
-        "Under denna tid hinner man också sköta prydliga fötter och ge hemvårdsinstruktioner och produktrekommendationer. Likaså kan skofrågor gås igenom."
+        "Boka denna tid för liktornsbehandling eller nagelkorrigering (+15€ materialkostnad).",
+        "Passar även för prydliga fötter med hemvårdsinstruktioner och produktrekommendationer."
       ],
       "price": "45€"
     },
     "therapy45": {
       "title": "Fotterapi 45 min",
       "items": [
-        "Boka denna tid om du har några smärtor eller besvär i fötterna, så undersöker vi dem mer ingående. Utöver undersökning kan det finnas tid för några åtgärder.",
-        "Även lite svårare fötters vård kan skötas under denna tid t.ex. Det finns viss förtjockning av hud/naglar."
+        "Boka denna tid vid smärtor eller besvär i fötterna för ingående undersökning.",
+        "Även lite svårare fötters vård kan skötas, t.ex. vid förtjockning av hud/naglar."
       ],
       "price": "65€"
     },
     "therapy60": {
       "title": "Fotterapi 60 min",
       "items": [
-        "Hinner redan undersöka fötterna och börja med nödvändiga åtgärder.",
-        "Boka också om det finns mycket att vårda på huden och naglarna t.ex. Många liktornar och tjocka förhårdnader eller mycket tjocka naglar."
+        "Tid för undersökning och nödvändiga åtgärder.",
+        "Boka om det finns mycket att vårda på huden och naglarna, t.ex. många liktornar eller mycket tjocka naglar."
       ],
       "price": "85€"
     },
     "therapy75": {
       "title": "Fotterapi 75 min",
       "items": [
-        "Under denna tid hinner man redan göra flera åtgärder utöver undersökning."
+        "Tid för flera åtgärder utöver undersökning."
       ],
       "price": "105€"
     },
