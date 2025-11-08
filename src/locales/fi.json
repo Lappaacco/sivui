@@ -1,0 +1,178 @@
+{
+  "nav": {
+    "home": "Etusivu",
+    "about": "ILOJALOIN & minä",
+    "footTherapy": "Jalkaterapia",
+    "services": "Palveluni",
+    "hygiene": "Turvallisuus ja hygienia",
+    "pricing": "Hinnoittelusta",
+    "contact": "Yhteystiedot",
+    "booking": "Ajanvaraus"
+  },
+  "hero": {
+    "title": "Jalkaterapia Vaasassa - Kepein askelin, Ilojaloin",
+    "subtitle": "Hyvinvoinnin askeleet alkavat jaloista. Tervetuloa Ilojaloin jalkaterapiaan!",
+    "bookButton": "Varaa aika!"
+  },
+  "about": {
+    "title": "Ilojaloin & minä",
+    "intro": "Olen <strong>Satu Paunonen, jalkaterapeutti ja yrittäjä Vaasasta</strong> – sekä neljän lapsen äiti. Liikunta, luovuus ja perhe pitävät minut tasapainossa ja ihmisläheinen työ on minulle sydämen asia. Luonteeltani olen rauhallinen, ystävällinen ja peruspositiivinen. Olen utelias ja uuden oppimisesta innostuva ihminen. Rakastan kehittää ammattitaitoani ja pidän siitä, että jalkojen hoito on ala, jossa ei koskaan tule valmiiksi – aina on jotain uutta opittavaa.",
+    "journey": "Päädyin jalkaterapeutiksi omien kokemusteni kautta. Olen lapsesta asti kärsinyt lattajaloista ja erilaisista jalkavaivoista. Niiden myötä ymmärsin, miten suuri merkitys jaloilla on kokonaisvaltaiseen hyvinvointiin. Halusin oppia, miten voisin auttaa itseäni – ja samalla muita – voimaan paremmin.",
+    "education": "Valmistuin <strong>jalkaterapeutiksi vuonna 2015 Mikkelin ammattikorkeakoulusta</strong> ja olen työskennellyt siitä lähtien <strong>Vaasan keskussairaalassa sisätautien poliklinikalla</strong>. Olen myös suorittanut <strong>teippauksen peruskurssin</strong> ja jatkanut itseni kehittämistä alalla säännöllisesti.",
+    "passion": "Sydämeni palaa jalkaterapian parissa toimimiselle, ja yrittäjänä pystyn tekemään työtä sydämeni kyllyydestä – omalla tavallani ja omaan tahtiini. Minulle on tärkeää, että asiakas kokee tulleensa kuulluksi ja nähdyksi. Haluan tarjota rauhallisen, turvallisen tilan, jossa voin auttaa jokaista asiakasta yksilöllisesti ja ammattitaitoisesti."
+  },
+  "footTherapy": {
+    "title": "Jalkaterapia",
+    "intro": "Jalkaterapia on terveydenhuollon ammattilaisen tarjoama palvelu, joka keskittyy jalkojen terveyteen ja hyvinvointiin. Jalkaterapeutti huolehtii jalkojen ihosta ja kynnenoikaisuista sekä suunnittelee hoitosuunnitelmia erilaisiin jalkavaivoihin. Hoidamme muun muassa:",
+    "treatments": {
+      "nails": "Kynsisairaudet (sieni-infektiot, kynsivallintulehdukset, sisäänkasvaneet kynnet)",
+      "skin": "Ihovauriot ja -sairaudet (diabeettinen jalka, haavaumat, halkeamat)",
+      "warts": "Syylät ja kovettuma-alueet",
+      "pain": "Kipuongelmat (kantapääkipu, jalkapohjan kipu)",
+      "structural": "Rakenteelliset ongelmat (vajaatoiminnot, lattajalat, kulumisalueet)"
+    },
+    "outro": "Jalkaterapiassa tarkoitus on edistää jalkojen terveyttä kokonaisvaltaisesti, ennaltaehkäistä ongelmia ja parantaa elämänlaatua. Käsittelen jokaisen asiakkaan yksilöllisesti, ottaen huomioon heidän tarpeensa ja tilanteensa."
+  },
+  "services": {
+    "title": "Palveluni",
+    "description": "Tarjoan laajan valikoiman jalkaterapiapalveluita, jotka on suunniteltu edistämään jalkojen terveyttä ja hyvinvointia. Jokainen hoito räätälöidään asiakkaan yksilöllisten tarpeiden mukaan.",
+    "basicCare": {
+      "title": "Jalkojen perushoito",
+      "items": [
+        "Kynsien leikkaus ja viilaus",
+        "Ihon kuorinta ja kovettumakerroksen poisto",
+        "Jalkojen perushoito ja hieronta",
+        "Kosteutus ja hoito"
+      ]
+    },
+    "nailCorrection": {
+      "title": "Kynnenoikaisu",
+      "items": [
+        "Sisäänkasvaneiden kynsien hoito",
+        "Metallilankahoito (kynnen ohjaus)",
+        "Kynsivallintulehduksen hoito"
+      ]
+    },
+    "warts": {
+      "title": "Syylien hoito",
+      "items": [
+        "Syylien poisto ja hoito",
+        "Kovettumien käsittely",
+        "Jalkaterän painealueiden hoito"
+      ]
+    },
+    "diabetic": {
+      "title": "Diabeetikon jalkahoito",
+      "items": [
+        "Diabeetikkojalkojen erityishoito",
+        "Haavaumat ja ihon hoito",
+        "Ennaltaehkäisevä hoito"
+      ]
+    },
+    "consultation": {
+      "title": "Konsultaatiot ja neuvonta",
+      "items": [
+        "Jalkojen terveyden arviointi",
+        "Kotihoito-ohjeet",
+        "Kenkäneuvonta"
+      ]
+    }
+  },
+  "hygiene": {
+    "title": "Turvallisuus ja hygienia",
+    "intro": "Hygienia ja turvallisuus ovat jalkaterapian peruspilareita. Pidän huolta siitä, että kaikki välineet ja työskentelyolosuhteet täyttävät korkeimmat terveydenhuollon vaatimukset.",
+    "sterilization": {
+      "title": "Välineiden sterilointi",
+      "description": "Kaikki instrumentit steriloidaan käytön jälkeen autoklaavin avulla, joka tuhoaa kaikki bakteerit, virukset ja itiöt. Sterilointi varmistaa, että välineet ovat täysin puhtaita ja turvallisia seuraavaa käyttökertaa varten."
+    },
+    "singleUse": {
+      "title": "Kertakäyttömateriaalit",
+      "description": "Käytän aina kertakäyttöhanskoja ja desinfioin kädet ennen ja jälkeen jokaisen asiakkaan. Muut kertakäyttömateriaalit, kuten viilat ja hiomatyynyt, käytetään vain kerran ja hävitetään asianmukaisesti."
+    },
+    "disinfection": {
+      "title": "Tilojen puhdistus",
+      "description": "Hoitotilat ja -pinnat desinfioidaan säännöllisesti tehokkain puhdistusainein. Pidän huolta siitä, että työympäristö on puhdas, turvallinen ja miellyttävä jokaiselle asiakkaalle."
+    },
+    "safety": {
+      "title": "Asiakkaan turvallisuus",
+      "description": "Noudan voimassa olevia terveydenhuollon hygieniaohjeita ja pidän huolta, että jokainen hoito toteutetaan turvallisesti ja ammattitaitoisesti. Asiakkaan hyvinvointi ja turvallisuus ovat aina etusijalla."
+    }
+  },
+  "pricing": {
+    "title": "Hinnoittelusta",
+    "basic": {
+      "title": "Jalkojen perushoito",
+      "time": "45 min",
+      "price": "55 €",
+      "includes": "Kynsien leikkaus, ihon kuorinta, kosteushoito"
+    },
+    "extended": {
+      "title": "Jalkojen perushoito + hieronta",
+      "time": "60 min",
+      "price": "70 €",
+      "includes": "Perushoito + rauhallinen jalkojen hieronta"
+    },
+    "firstTime": {
+      "title": "Ensikäyntimaksu",
+      "time": "45-60 min",
+      "price": "55-70 €",
+      "includes": "Sisältää kartoituksen ja hoidon"
+    },
+    "nailCorrection": {
+      "title": "Kynnenoikaisu",
+      "time": "30 min",
+      "price": "40 €",
+      "includes": "Sisäänkasvaneen kynnen hoito"
+    },
+    "note": "Hinnat voivat vaihdella tarpeen mukaan. Kysy lisää varauksen yhteydessä."
+  },
+  "contact": {
+    "title": "Yhteystiedot",
+    "intro": "Ole yhteydessä kaikissa jalkaterapiaan liittyvissä kysymyksissä – autamme mielellämme!",
+    "info": "Ota yhteyttä ja kysy lisätietoja! Vastaan mielellään kaikkiin kysymyksiin ja autan löytämään juuri sinulle sopivat hoitomuodot.",
+    "form": {
+      "title": "Anna palautetta",
+      "name": "Nimi",
+      "namePlaceholder": "Sinun nimesi",
+      "email": "Sähköposti",
+      "emailPlaceholder": "email@email.fi",
+      "message": "Viesti",
+      "messagePlaceholder": "Kirjoita palautteesi tähän...",
+      "send": "Lähetä palaute",
+      "successTitle": "Kiitos palautteesta!",
+      "successMessage": "Viestisi on lähetetty onnistuneesti.",
+      "sendAnother": "Lähetä uusi viesti",
+      "errorMessage": "Viestin lähetys epäonnistui. Yritä uudelleen tai lähetä sähköpostilla."
+    },
+    "details": {
+      "phone": "Puhelin",
+      "email": "Sähköposti",
+      "address": "Osoite",
+      "city": "65100 Vaasa",
+      "businessId": "Y-tunnus"
+    },
+    "mapTitle": "Kartta",
+    "mapLink": "Avaa kartta suuremmassa näkymässä",
+    "hours": {
+      "title": "Aukioloajat",
+      "weekdays": "Ma-Pe: 9:00-17:00",
+      "note": "Ajanvarauksen mukaan"
+    }
+  },
+  "bookingSection": {
+    "title": "Ajanvaraus",
+    "description": "Voit varata ajan kätevästi Vello-järjestelmän kautta alla olevasta kalenterista. Tai halutessasi voit avata <a href='https://vello.fi/ilojaloin-jalkaterapia' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Vellon oman ajanvaraussivun</a> uuteen välilehteen.",
+    "loading": "Ladataan ajanvarausta...",
+    "failed": "Avaa ajanvaraus Vellossa"
+  },
+  "footer": {
+    "rights": "Ilojaloin Jalkaterapiapalvelut. Kaikki oikeudet pidätetään.",
+    "implementation": "Sivuston toteutus: <strong>Teemu Paunonen</strong>",
+    "social": "Seuraa somessa:",
+    "privacy": "Tietosuojaseloste"
+  },
+  "meta": {
+    "title": "Jalkaterapia Vaasa | Ilojaloin - Ammattitaitoinen Jalkaterapeutti",
+    "description": "Jalkaterapia Vaasassa - Ilojaloin tarjoaa ammattitaitoista jalkahoitoa, kynnenoikaisua, syylänhoitoa ja haavanhoitoa. Jalkaterapeutti Satu Paunonen palvelee Vaasan alueella. Varaa aika helposti!"
+  }
+}

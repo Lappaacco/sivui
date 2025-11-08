@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 /**
  * Navigaatiolinkin komponentti. Vastaanottaa tekstin, kohteen ankkurin,
@@ -18,6 +19,7 @@ function NavItem({ label, href, active, onClick }) {
 }
 
 export default function App() {
+  const { t, i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [velloLoading, setVelloLoading] = useState(true);
@@ -26,7 +28,42 @@ export default function App() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const mobileMenuRef = useRef(null);
   const velloRef = useRef(null);
+
+  // Update SEO meta tags when language changes
+  useEffect(() => {
+    // Update document title
+    document.title = t('meta.title');
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', t('meta.description'));
+    }
+    
+    // Update Open Graph title
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', t('meta.title'));
+    }
+    
+    // Update Open Graph description
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', t('meta.description'));
+    }
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language, t]);
+
   const currentYear = new Date().getFullYear();
+
+  // Kielenvaihtofunktio
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
+    document.documentElement.lang = lng;
+  };
 
   // Päivitä aktiivinen osa vierityksen perusteella.
   // Käytetään requestAnimationFrame throttlingia ja rekisteröidään kuuntelija vain kerran.
@@ -135,15 +172,22 @@ export default function App() {
             <div className="text-xs italic text-gray-500 font-heading">Jalkaterapiapalvelut</div>
           </div>
         </a>
-        <button
-          type="button"
-          aria-label="Valikko"
-          aria-expanded={mobileMenuOpen}
-          className="text-primary focus:outline-none"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
+        <div className="flex items-center gap-2">
+          {/* Kielivalitsin */}
+          <div className="flex gap-1 text-xs">
+            <button onClick={() => changeLanguage('fi')} className={`px-2 py-1 rounded ${i18n.language === 'fi' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight'}`}>FI</button>
+            <button onClick={() => changeLanguage('sv')} className={`px-2 py-1 rounded ${i18n.language === 'sv' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight'}`}>SV</button>
+            <button onClick={() => changeLanguage('en')} className={`px-2 py-1 rounded ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight'}`}>EN</button>
+          </div>
+          <button
+            type="button"
+            aria-label="Valikko"
+            aria-expanded={mobileMenuOpen}
+            className="text-primary focus:outline-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
@@ -153,18 +197,19 @@ export default function App() {
             <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
+        </div>
       </header>
       {/* Mobiilivalikon lista */}
       {mobileMenuOpen && (
         <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm">
-          <NavItem label="Etusivu" href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
-          <NavItem label="ILOJALOIN & minä" href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
-          <NavItem label="Jalkaterapia" href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
-          <NavItem label="Palveluni" href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-          <NavItem label="Turvallisuus ja hygienia" href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
-          <NavItem label="Hinnoittelusta" href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
-          <NavItem label="Yhteystiedot" href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
-          <NavItem label="Ajanvaraus" href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+          <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
+          <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
+          <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+          <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
+          <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
+          <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+          <NavItem label={t('nav.contact')} href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
+          <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
       )}
       <div className="flex min-h-screen">
@@ -178,14 +223,23 @@ export default function App() {
             </div>
           </a>
           <div className="px-4">
-            <NavItem label="Etusivu" href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
-            <NavItem label="ILOJALOIN & minä" href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
-            <NavItem label="Jalkaterapia" href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
-            <NavItem label="Palveluni" href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-            <NavItem label="Turvallisuus ja hygienia" href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
-            <NavItem label="Hinnoittelusta" href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
-            <NavItem label="Yhteystiedot" href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
-            <NavItem label="Ajanvaraus" href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+            <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
+            <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
+            <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+            <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
+            <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
+            <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+            <NavItem label={t('nav.contact')} href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
+            <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+          </div>
+          {/* Kielivalitsin desktop */}
+          <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
+            <div className="text-xs text-gray-500 mb-2 font-heading">Language / Språk</div>
+            <div className="flex flex-col gap-1">
+              <button onClick={() => changeLanguage('fi')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'fi' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Suomi</button>
+              <button onClick={() => changeLanguage('sv')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'sv' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Svenska</button>
+              <button onClick={() => changeLanguage('en')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>English</button>
+            </div>
           </div>
         </nav>
         {/* Pääsisältö */}
@@ -194,9 +248,9 @@ export default function App() {
           <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
               <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" width="320" height="320" fetchpriority="high" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">Kepein askelin, Ilojaloin</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">{t('hero.title')}</h1>
               <p className="text-md md:text-lg lg:text-xl max-w-2xl mx-auto">
-                Hyvinvoinnin askeleet alkavat jaloista. Tervetuloa Ilojaloin jalkaterapiaan!
+                {t('hero.subtitle')}
               </p>
               <div className="mt-8 flex justify-center">
                 <a
@@ -205,7 +259,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white"
                 >
-                  Varaa aika!
+                  {t('hero.bookButton')}
                 </a>
               </div>
             </div>
@@ -214,41 +268,25 @@ export default function App() {
           {/* About section */}
           <section id="about" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Ilojaloin & minä</h2>
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('about.title')}</h2>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="rounded-lg overflow-hidden">
                   <img src="/yrittaja.png" alt="Jalkaterapeutti Satu Paunonen" className="w-full h-full object-cover" />
                 </div>
                 <div className="prose max-w-full">
-                  <p>
-                    Olen <strong>Satu Paunonen, jalkaterapeutti ja yrittäjä Vaasasta</strong> – 
-                    sekä neljän lapsen äiti. Liikunta, luovuus ja perhe pitävät minut tasapainossa ja ihmisläheinen työ on minulle sydämen asia. 
-                    Luonteeltani olen rauhallinen, ystävällinen ja peruspositiivinen. Olen utelias ja uuden oppimisesta innostuva ihminen. 
-                    Rakastan kehittää ammattitaitoani ja pidän siitä, että jalkojen hoito on ala, jossa ei koskaan tule valmiiksi – aina on jotain uutta opittavaa.
-                  </p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.intro') }}></p>
 
                   <div className="my-4" aria-hidden></div>
 
-                    <p>
-                      Päädyin jalkaterapeutiksi omien kokemusteni kautta. Olen lapsesta asti kärsinyt lattajaloista ja erilaisista jalkavaivoista. 
-                      Niiden myötä ymmärsin, miten suuri merkitys jaloilla on kokonaisvaltaiseen hyvinvointiin. Halusin oppia, miten voisin auttaa itseäni – ja samalla muita – voimaan paremmin.
-                    </p>
-
-                    <div className="my-4" aria-hidden></div>
-
-                    <p>
-                      Valmistuin <strong>jalkaterapeutiksi vuonna 2015 Mikkelin ammattikorkeakoulusta</strong> ja olen työskennellyt siitä lähtien <strong>Vaasan keskussairaalassa sisätautien poliklinikalla</strong>. 
-                      Työssäni olen erikoistunut <strong>haavanhoitoon, diabeetikkojen ja reumaa sairastavien jalkaterapiaan sekä erilaisten kipujen ja virheasentojen hoitoon</strong>. 
-                      Tämän työkokemuksen myötä voit istua hoitotuoliini täysin luottavaisin mielin – kaikenlaiset jalat on nähty. 
-                    </p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.journey') }}></p>
 
                   <div className="my-4" aria-hidden></div>
 
-                  <p>
-                    Yrittäjyys on ollut mielessäni jo pitkään – ajatus vapaudesta tehdä työtä omien arvojen mukaisesti, luovasti ja ihmisläheisesti. 
-                    Ilojaloin syntyi halusta auttaa ihmisiä voimaan paremmin ja edistää jalkojen terveyttä laajasti ja ennakoivasti. 
-                    Haluan, että jokainen kohtaaminen on askel kohti kevyempää, kivuttomampaa arkea.
-                  </p>
+                  <p dangerouslySetInnerHTML={{ __html: t('about.education') }}></p>
+
+                  <div className="my-4" aria-hidden></div>
+
+                  <p dangerouslySetInnerHTML={{ __html: t('about.passion') }}></p>
                 </div>
               </div>
             </div>
@@ -257,20 +295,19 @@ export default function App() {
           {/* Jalkaterapia section */}
           <section id="jalkaterapia" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Jalkaterapia</h2>
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
               <div className="prose max-w-full">
-                <p>
-                  Jalkaterapeutiksi valmistuminen edellyttää <strong>terveydenhuollon koulutusta</strong>. 
-                  Suomessa koulutus järjestetään <strong>ammattikorkeakouluissa</strong>, ja se kestää tyypillisesti 3,5 vuotta, sisältäen sekä <strong>teoriaopintoja että laajaa käytännön harjoittelua</strong>. 
-                  Opintojen aikana opiskelija perehtyy <strong>ihmisen anatomiaan, fysiologiaan ja biomekaniikkaan</strong> sekä erilaisiin jalkoihin vaikuttaviin sairauksiin. 
-                  Lisäksi koulutus kattaa jalkojen tutkimisen ja analysoinnin, terveyden ylläpidon ja ennaltaehkäisevän hoidon, haavojen, ihomuutosten ja kynsiongelmien hoidon, yksilöllisten tukien, pohjallisten ja varvasorteesien valmistamisen sekä liikunta- ja harjoitusohjelmien suunnittelun jalan ja alaraajojen tukemiseksi.
-                </p>
+                <p>{t('footTherapy.intro')}</p>
                 <div className="my-4" aria-hidden></div>
-                <p>
-                  Jalkaterapia on kokonaisvaltaista hyvinvointia jaloillesi.
-                  Se auttaa <strong>ehkäisemään ja hoitamaan erilaisia jalkavaivoja, kiputiloja ja virheasentoja</strong>, parantaa liikkumiskykyä, lievittää kipua ja edistää arjen sujuvuutta. 
-                  Koska jokainen jalka on yksilöllinen, hoito suunnitellaan aina asiakkaan tarpeiden mukaan. 
-                </p>
+                <ul className="list-disc ml-6 space-y-2">
+                  <li>{t('footTherapy.treatments.nails')}</li>
+                  <li>{t('footTherapy.treatments.skin')}</li>
+                  <li>{t('footTherapy.treatments.warts')}</li>
+                  <li>{t('footTherapy.treatments.pain')}</li>
+                  <li>{t('footTherapy.treatments.structural')}</li>
+                </ul>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('footTherapy.outro')}</p>
               </div>
             </div>
           </section>
@@ -278,35 +315,35 @@ export default function App() {
           {/* Palveluni section */}
           <section id="palveluni" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Palveluni</h2>
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('services.title')}</h2>
               <div className="prose max-w-full">
-                <p>
-                  Ilojaloissa tarjoan <strong>monipuolisia jalkaterapiapalveluja</strong>, kuten:
-                </p>
+                <p>{t('services.description')}</p>
                 <div className="my-4" aria-hidden></div>
-                <ul className="list-none space-y-2">
-                  <li>🦶 <strong>Tutkimukset ja jalka-analyysit</strong> – kartoitetaan jalkojen kunto ja mahdolliset ongelmakohdat</li>
-                  <li>💅 <strong>Kynnenoikaisuhoidot & kynsiproteesit</strong> – korjaavat ja suojaavat kynsiä</li>
-                  <li>💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat</li>
-                  <li>🦶 <strong>Ihon hoito</strong> – halkeamat, kovettumat, känsät</li>
-                  <li>🦵 <strong>Haavanhoito ja kevennyshoito</strong> – erityisesti kroonisten jalkahaavojen hoitoon</li>
-                  <li>🦶 <strong>Syylänhoito</strong></li>
-                  <li>🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong></li>
-                  <li>🦶 <strong>Yksilölliset harjoitteet </strong></li>
-                  <li>🩹 <strong>Urheilu- ja kinesioteippaus</strong></li>
-                  <li>🩰 <strong>Pikapohjalliset ja yksilölliset varvasorteesit silikonimassasta</strong></li>
-                  <li>👟 <strong>Kenkäohjaus</strong> – tarkistetaan kenkien sopivuus, suositellaan sopivaa mallia tai ominaisuutta ja mahdollisuus tilata laadukkaita paljasjalkakenkiä kauttani</li>
-                  <li>🛍️ <strong>Laadukkaat omahoitotuotteet</strong> – kotihoitoon ja jalkaterveyden ylläpitoon</li>
-                  <li>❤️ <strong>Erikoisryhmien jalkaterapia</strong> – diabetes, reuma, psoriasis jne.</li>
-                  <li>🙂 <strong>Luennot</strong></li>
+                
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.basicCare.title')}</h3>
+                <ul className="list-disc ml-6 space-y-1">
+                  {t('services.basicCare.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
                 </ul>
-                <div className="my-4" aria-hidden></div>
-                <p>
-                  Jokainen hoito suunnitellaan asiakkaan tarpeiden mukaan ja toteutetaan kiireettä, lämmöllä ja ammattitaidolla. 
-                  Jalkaterapiaan voi tulla myös ilman varsinaista vaivaa tai kiputilaa. Myös ennaltaehkäisy on tärkeää. 
-                  Tuntemalla jalkasi osaat hoitaa ne hyvin ja vältyt tulevaisuudessa mahdollisesti ilmeneviltä ongelmilta. 
-                  Jalkaterveyttään voi aina parantaa ja se vaikuttaa koko hyvinvointiin!
-                </p>
+
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.nailCorrection.title')}</h3>
+                <ul className="list-disc ml-6 space-y-1">
+                  {t('services.nailCorrection.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.warts.title')}</h3>
+                <ul className="list-disc ml-6 space-y-1">
+                  {t('services.warts.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.diabetic.title')}</h3>
+                <ul className="list-disc ml-6 space-y-1">
+                  {t('services.diabetic.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('services.consultation.title')}</h3>
+                <ul className="list-disc ml-6 space-y-1">
+                  {t('services.consultation.items', { returnObjects: true }).map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
               </div>
             </div>
           </section>
@@ -314,37 +351,22 @@ export default function App() {
           {/* Turvallisuus ja hygienia section */}
           <section id="hygienia" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Turvallisuus ja hygienia</h2>
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
               <div className="prose max-w-full">
-                <p>
-                  Käytössäni on markkinoiden laadukkaimmat ja turvallisimmat laitteet. Hoitotuolini on vakaa, tukeva ja nostaa kevyesti jopa 200 kiloa. 
-                  Se laskeutuu matalalle, joten kyytiin on helppo nousta. Erikoispaksu pehmuste takaa mukavan asennon koko hoidon ajaksi.
-                </p>
+                <p>{t('hygiene.intro')}</p>
                 <div className="my-4" aria-hidden></div>
-                <p>
-                  Ihon ja kynsien hionnassa käytän vesiporaa, joka viilentää ja sitoo pölyn – iho ei kuumene eikä hiomapöly leijaile ilmaan. Näin sekä sinä että minä hengitämme puhdasta ilmaa.
-                </p>
-                <div className="my-4" aria-hidden></div>
-                <p>
-                  Jalkapeilini matala rakenne mahdollistaa jalkojen kuormituksen ja asennon tarkan arvioinnin.
-                </p>
-                <div className="my-4" aria-hidden></div>
-                <p>
-                  Kaikki välineeni huolletaan huolellisesti uusilla, ammattikäyttöön tarkoitetuilla välinehuoltolaitteilla. 
-                  Välineet desinfioidaan ultraäänipesurissa, steriloidaan autoklaavissa ja säilytetään steriileissä pusseissa suljetussa kaapissa.
-                </p>
-                <div className="my-4" aria-hidden></div>
-                <p>
-                  Tilat siistitään jokaisen asiakkaan jälkeen tehokkailla aineilla, jotka tuhoavat bakteerit, virukset ja sienet.
-                </p>
-                <p>
-                  <strong>Sinun turvallisuutesi ja hyvinvointisi ovat minulle tärkeintä.</strong>
-                </p>
-                <div className="my-4" aria-hidden></div>
-                <p>
-                  Asiakastietojesi turvallisuudesta huolehdin yhtä tarkasti. 
-                  Käytössäni on <strong>Vello-potilastietojärjestelmä</strong>, joka on <strong>tietoturvallinen ja Kanta-yhteensopiva</strong>, joten tietosi säilyvät suojattuina ja luottamuksellisina.
-                </p>
+                
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.sterilization.title')}</h3>
+                <p>{t('hygiene.sterilization.description')}</p>
+                
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.singleUse.title')}</h3>
+                <p>{t('hygiene.singleUse.description')}</p>
+                
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.disinfection.title')}</h3>
+                <p>{t('hygiene.disinfection.description')}</p>
+                
+                <h3 className="text-xl font-heading text-primary mt-6 mb-3">{t('hygiene.safety.title')}</h3>
+                <p>{t('hygiene.safety.description')}</p>
               </div>
             </div>
           </section>
@@ -352,106 +374,43 @@ export default function App() {
           {/* Hinnoittelusta section */}
           <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Hinnoittelusta</h2>
-              <div className="prose max-w-full mb-8">
-                <p>
-                  Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. 
-                  Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous. 
-                </p>
-                <p className="mt-4">
-                  <strong>Minulla käyvät hyvinvointiedut:</strong> E-passi, Edenred ja Smartum.
-                </p>
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Jalkojen perushoito */}
+                <div className="bg-offwhite p-6 rounded-lg shadow">
+                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.basic.title')}</h3>
+                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.basic.price')}</p>
+                  <p className="text-sm text-gray-600 mb-3">{t('pricing.basic.time')}</p>
+                  <p className="text-gray-700">{t('pricing.basic.includes')}</p>
+                </div>
+
+                {/* Perushoito + hieronta */}
+                <div className="bg-offwhite p-6 rounded-lg shadow">
+                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.extended.title')}</h3>
+                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.extended.price')}</p>
+                  <p className="text-sm text-gray-600 mb-3">{t('pricing.extended.time')}</p>
+                  <p className="text-gray-700">{t('pricing.extended.includes')}</p>
+                </div>
+
+                {/* Ensikäynti */}
+                <div className="bg-offwhite p-6 rounded-lg shadow">
+                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.firstTime.title')}</h3>
+                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.firstTime.price')}</p>
+                  <p className="text-sm text-gray-600 mb-3">{t('pricing.firstTime.time')}</p>
+                  <p className="text-gray-700">{t('pricing.firstTime.includes')}</p>
+                </div>
+
+                {/* Kynnenoikaisu */}
+                <div className="bg-offwhite p-6 rounded-lg shadow">
+                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.nailCorrection.title')}</h3>
+                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.nailCorrection.price')}</p>
+                  <p className="text-sm text-gray-600 mb-3">{t('pricing.nailCorrection.time')}</p>
+                  <p className="text-gray-700">{t('pricing.nailCorrection.includes')}</p>
+                </div>
               </div>
 
-              <h3 className="text-2xl font-heading text-primary mb-4">Hinnastoni</h3>
-              <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-                <table className="w-full table-auto border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-primaryLight text-left">
-                      <th className="px-4 py-3 font-medium border border-gray-300">Palvelu</th>
-                      <th className="px-4 py-3 font-medium border border-gray-300">Hinta</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Shoppailuvartti</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet.</li>
-                          <li>Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen).</li>
-                          <li>Kenkien hankinta/sovitus.</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">0€</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia 30 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15e materiaalimaksu).</li>
-                          <li>Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuoteisiin. Samoin kenkäasioita voidaan käydä läpi.</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">45€</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia 45 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.</li>
-                          <li>Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa.</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">65€</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia 60 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.</li>
-                          <li>Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet.</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">85€</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Jalkaterapia 75 min</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi.</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">105€</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300"><strong>Lasten jalkaterapia 30 min</strong></td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">35€</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>Luennot</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="mt-8 p-6 bg-offwhite rounded-lg">
-                <p className="text-lg">
-                  <strong>HUOM!</strong> Jos sinua askarruttaa minkä ajan varaisit, aina voi soittaa ja kysyä! 
-                  En vastaa puhelimeen, jos olen asiakastyössä, mutta soitan kyllä takaisin.
-                </p>
-                <p className="mt-2 text-lg">
-                  Puhelin:{' '}
-                  <a href="tel:+358440684567" className="text-primary hover:underline font-semibold">
-                    044 068 4567
-                  </a>
-                </p>
-              </div>
+              <p className="mt-6 text-sm text-gray-600 italic">{t('pricing.note')}</p>
             </div>
           </section>
 
@@ -460,25 +419,25 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">Yhteystiedot</h2>
+                  <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('contact.title')}</h2>
                   <p className="mb-2">
-                    <strong>Osoite:</strong>{' '}
-                    <span className="text-gray-600">Pitkänlahdenkatu 13, 65100 Vaasa</span>
+                    <strong>{t('contact.details.address')}:</strong>{' '}
+                    <span className="text-gray-600">Pitkänlahdenkatu 13, {t('contact.details.city')}</span>
                   </p>
                   <p className="mb-2">
-                    <strong>Puhelin:</strong>{' '}
+                    <strong>{t('contact.details.phone')}:</strong>{' '}
                     <a href="tel:+358440684567" className="text-primary hover:underline">
                       +358 44 068 4567
                     </a>
                   </p>
                   <p className="mb-2">
-                    <strong>Sähköposti:</strong>{' '}
+                    <strong>{t('contact.details.email')}:</strong>{' '}
                     <a href="mailto:ilojaloin@ilojaloin.fi" className="text-primary hover:underline">
                       ilojaloin@ilojaloin.fi
                     </a>
                   </p>
                   <p className="mb-4">
-                    <strong>Y‑tunnus:</strong> 3288544-8
+                    <strong>{t('contact.details.businessId')}:</strong> 3288544-8
                   </p>
                   <div className="mb-4 flex items-center gap-4">
                     <a
@@ -506,22 +465,21 @@ export default function App() {
                     </a>
                   </div>
                   <p>
-                    Ole yhteydessä kaikissa jalkaterapiaan liittyvissä kysymyksissä – autamme
-                    mielellämme!
+                    {t('contact.intro')}
                   </p>
                   <div className="my-6">
-                    <h3 className="text-xl font-heading text-primary mb-3">Anna palautetta</h3>
+                    <h3 className="text-xl font-heading text-primary mb-3">{t('contact.form.title')}</h3>
                     <div className="border border-gray-200 rounded-lg p-4 bg-white max-w-md">
                       {formSubmitted ? (
                         <div className="text-center py-8">
                           <div className="text-5xl mb-4">✓</div>
-                          <h4 className="text-xl font-semibold text-primary mb-2">Kiitos palautteesta!</h4>
-                          <p className="text-gray-600 mb-4">Viestisi on lähetetty onnistuneesti.</p>
+                          <h4 className="text-xl font-semibold text-primary mb-2">{t('contact.form.successTitle')}</h4>
+                          <p className="text-gray-600 mb-4">{t('contact.form.successMessage')}</p>
                           <button
                             onClick={() => setFormSubmitted(false)}
                             className="text-primary hover:underline text-sm"
                           >
-                            Lähetä uusi viesti
+                            {t('contact.form.sendAnother')}
                           </button>
                         </div>
                       ) : (
@@ -540,10 +498,10 @@ export default function App() {
                                 setFormSubmitted(true);
                                 e.target.reset();
                               } else {
-                                alert('Viestin lähetys epäonnistui. Yritä uudelleen tai lähetä sähköpostilla.');
+                                alert(t('contact.form.errorMessage'));
                               }
                             } catch (error) {
-                              alert('Viestin lähetys epäonnistui. Yritä uudelleen tai lähetä sähköpostilla.');
+                              alert(t('contact.form.errorMessage'));
                             }
                           }}
                           className="space-y-3"
@@ -554,35 +512,35 @@ export default function App() {
                           <input type="checkbox" name="botcheck" className="hidden" />
 
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Nimi</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.name')}</label>
                             <input 
                               type="text" 
                               name="name"
                               required
                               className="block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:ring-primary focus:border-primary" 
-                              placeholder="Sinun nimesi"
+                              placeholder={t('contact.form.namePlaceholder')}
                             />
                           </div>
 
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Sähköposti</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.email')}</label>
                             <input 
                               type="email" 
                               name="email"
                               required
                               className="block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:ring-primary focus:border-primary" 
-                              placeholder="email@email.fi"
+                              placeholder={t('contact.form.emailPlaceholder')}
                             />
                           </div>
 
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Viesti</label>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.message')}</label>
                             <textarea 
                               name="message"
                               rows={5}
                               required
                               className="block w-full rounded-md border border-gray-300 shadow-sm px-3 py-2 focus:ring-primary focus:border-primary" 
-                              placeholder="Kirjoita palautteesi tähän..."
+                              placeholder={t('contact.form.messagePlaceholder')}
                             />
                           </div>
 
@@ -590,7 +548,7 @@ export default function App() {
                             type="submit"
                             className="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-md hover:bg-primaryLight transition-colors"
                           >
-                            Lähetä palaute
+                            {t('contact.form.send')}
                           </button>
                         </form>
                       )}
@@ -610,7 +568,7 @@ export default function App() {
                     style={{ border: 0 }}
                     src="https://www.google.com/maps?q=Pitkänlahdenkatu+13,+65100+Vaasa&output=embed"
                     allowFullScreen
-                    title="Kartta"
+                    title={t('contact.mapTitle')}
                     onLoad={() => setMapLoading(false)}
                   ></iframe>
                   <div className="mt-3 text-sm text-right">
@@ -620,7 +578,7 @@ export default function App() {
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
-                      Avaa kartta suuremmassa näkymässä
+                      {t('contact.mapLink')}
                     </a>
                   </div>
                 </div>
@@ -631,22 +589,8 @@ export default function App() {
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
           <section id="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl font-heading text-primary mb-6">Ajanvaraus</h2>
-              <p className="mb-4">
-                Voit varata ajan kätevästi Vello‑järjestelmän kautta alla olevasta kalenterista.{' '}
-                Tai halutessasi voit avata
-                {' '}
-                <a
-                  href="https://vello.fi/ilojaloin-jalkaterapia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  Vellon oman ajanvaraus­sivun
-                </a>
-                {' '}
-                uuteen välilehteen.
-              </p>
+              <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
+              <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
               <div className="w-full h-[600px] md:h-[75vh] lg:h-[85vh] border border-gray-200 rounded-lg overflow-auto relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
@@ -661,7 +605,7 @@ export default function App() {
                       rel="noopener noreferrer"
                       className="w-full h-full flex items-center justify-center bg-primary text-white font-semibold rounded-md shadow-lg hover:opacity-95"
                     >
-                      Avaa ajanvaraus Vellossa
+                      {t('bookingSection.failed')}
                     </a>
                   </div>
                 )}
@@ -671,9 +615,9 @@ export default function App() {
           </section>
           <footer className="py-6 bg-primary text-white text-center">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto px-4">
-            &copy; {currentYear} Ilojaloin Jalkaterapiapalvelut. Kaikki oikeudet pidätetään.
+            &copy; {currentYear} {t('footer.rights')}
             <div className="text-sm mt-2 flex items-center justify-center gap-2">
-              <span>Sivuston toteutus: <strong>Teemu Paunonen</strong></span>
+              <span>{t('footer.implementation')}</span>
               <a 
                 href="https://www.linkedin.com/in/teemu-paunonen-722621129/" 
                 target="_blank" 
@@ -686,7 +630,7 @@ export default function App() {
                 </svg>
               </a>
               <span>·</span>
-              <a href="/privacy.html" className="text-white underline hover:opacity-80">Tietosuojaseloste</a>
+              <a href="/privacy.html" className="text-white underline hover:opacity-80">{t('footer.privacy')}</a>
             </div>
             </div>
           </footer>

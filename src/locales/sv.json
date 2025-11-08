@@ -1,0 +1,178 @@
+{
+  "nav": {
+    "home": "Hem",
+    "about": "ILOJALOIN & jag",
+    "footTherapy": "Fotterapi",
+    "services": "Mina tjänster",
+    "hygiene": "Säkerhet och hygien",
+    "pricing": "Priser",
+    "contact": "Kontakt",
+    "booking": "Boka tid"
+  },
+  "hero": {
+    "title": "Fotterapi i Vasa - Med lätta steg, Ilojaloin",
+    "subtitle": "Välbefinnandets steg börjar från fötterna. Välkommen till Ilojaloin fotterapi!",
+    "bookButton": "Boka tid!"
+  },
+  "about": {
+    "title": "Ilojaloin & jag",
+    "intro": "Jag är <strong>Satu Paunonen, fotterapeut och företagare från Vasa</strong> – samt mamma till fyra barn. Motion, kreativitet och familj håller mig i balans, och människonära arbete är en hjärtesak för mig. Till min natur är jag lugn, vänlig och grundposit. Jag är nyfiken och entusiastisk över att lära mig nytt. Jag älskar att utveckla min yrkeskompetens och uppskattar att fotvård är ett område där man aldrig blir klar – det finns alltid något nytt att lära sig.",
+    "journey": "Jag blev fotterapeut genom egna erfarenheter. Sedan barndomen har jag lidit av plattfötter och olika fotbesvär. Genom dem insåg jag hur stor betydelse fötterna har för det övergripande välbefinnandet. Jag ville lära mig hur jag kunde hjälpa mig själv – och samtidigt andra – att må bättre.",
+    "education": "Jag utexaminerades som <strong>fotterapeut år 2015 från Mikkeli yrkeshögskola</strong> och har sedan dess arbetat på <strong>Vasa centralsjukhus internmedicinska poliklinik</strong>. Jag har också genomfört <strong>tejpningens grundkurs</strong> och fortsätter regelbundet att utveckla mig inom området.",
+    "passion": "Mitt hjärta brinner för att arbeta med fotterapi, och som företagare kan jag arbeta från hjärtat – på mitt eget sätt och i min egen takt. Det är viktigt för mig att kunden känner sig hörd och sedd. Jag vill erbjuda en lugn, trygg miljö där jag kan hjälpa varje kund individuellt och professionellt."
+  },
+  "footTherapy": {
+    "title": "Fotterapi",
+    "intro": "Fotterapi är en tjänst som tillhandahålls av en hälsovårdsprofessionell och fokuserar på fötters hälsa och välbefinnande. Fotterapeuten tar hand om fothud och nagelkorrigeringar samt planerar vårdplaner för olika fotbesvär. Vi behandlar bland annat:",
+    "treatments": {
+      "nails": "Nagelsjukdomar (svampinfektioner, nagelvallinflammation, inåtväxande naglar)",
+      "skin": "Hudskador och sjukdomar (diabetisk fot, sår, sprickor)",
+      "warts": "Vårtor och förhårdnade områden",
+      "pain": "Smärtproblem (hälsmärta, fotsulasmärta)",
+      "structural": "Strukturella problem (dysfunktioner, plattfötter, slitageområden)"
+    },
+    "outro": "I fotterapi är syftet att övergripande främja fötters hälsa, förebygga problem och förbättra livskvaliteten. Jag behandlar varje kund individuellt, med hänsyn till deras behov och situation."
+  },
+  "services": {
+    "title": "Mina tjänster",
+    "description": "Jag erbjuder ett brett utbud av fotterapitjänster som är utformade för att främja fötters hälsa och välbefinnande. Varje behandling skräddarsys efter kundens individuella behov.",
+    "basicCare": {
+      "title": "Fotvård grundbehandling",
+      "items": [
+        "Nagelklippning och filning",
+        "Hudskrubbning och borttagning av förhårdningslager",
+        "Fotvårds grundbehandling och massage",
+        "Återfuktning och vård"
+      ]
+    },
+    "nailCorrection": {
+      "title": "Nagelkorrigering",
+      "items": [
+        "Behandling av inåtväxande naglar",
+        "Metalltrådsbehandling (nagelstyrning)",
+        "Behandling av nagelvallinflammation"
+      ]
+    },
+    "warts": {
+      "title": "Vårtbehandling",
+      "items": [
+        "Borttagning och behandling av vårtor",
+        "Behandling av förhårdningar",
+        "Behandling av fotsulas tryckområden"
+      ]
+    },
+    "diabetic": {
+      "title": "Diabetisk fotvård",
+      "items": [
+        "Specialvård av diabetikerfötter",
+        "Sår och hudvård",
+        "Förebyggande vård"
+      ]
+    },
+    "consultation": {
+      "title": "Konsultationer och rådgivning",
+      "items": [
+        "Bedömning av fothälsa",
+        "Hemvårdsinstruktioner",
+        "Skorådgivning"
+      ]
+    }
+  },
+  "hygiene": {
+    "title": "Säkerhet och hygien",
+    "intro": "Hygien och säkerhet är fotterapi grundpelare. Jag ser till att alla verktyg och arbetsförhållanden uppfyller de högsta hälsovårdskraven.",
+    "sterilization": {
+      "title": "Sterilisering av verktyg",
+      "description": "Alla instrument steriliseras efter användning med en autoklav som förstör alla bakterier, virus och sporer. Steriliseringen säkerställer att verktygen är helt rena och säkra för nästa användning."
+    },
+    "singleUse": {
+      "title": "Engångsmaterial",
+      "description": "Jag använder alltid engångshandskar och desinficerar händerna före och efter varje kund. Andra engångsmaterial, såsom filar och slipkuddar, används endast en gång och kasseras på lämpligt sätt."
+    },
+    "disinfection": {
+      "title": "Rengöring av lokaler",
+      "description": "Vårdlokaler och ytor desinficeras regelbundet med effektiva rengöringsmedel. Jag ser till att arbetsmiljön är ren, säker och trevlig för varje kund."
+    },
+    "safety": {
+      "title": "Kundsäkerhet",
+      "description": "Jag följer gällande hälsovårdens hygienriktlinjer och ser till att varje behandling utförs säkert och professionellt. Kundens välbefinnande och säkerhet är alltid i förgrunden."
+    }
+  },
+  "pricing": {
+    "title": "Priser",
+    "basic": {
+      "title": "Fotvård grundbehandling",
+      "time": "45 min",
+      "price": "55 €",
+      "includes": "Nagelklippning, hudskrubbning, återfuktning"
+    },
+    "extended": {
+      "title": "Fotvård grundbehandling + massage",
+      "time": "60 min",
+      "price": "70 €",
+      "includes": "Grundbehandling + lugn fotmassage"
+    },
+    "firstTime": {
+      "title": "Förstabesöksavgift",
+      "time": "45-60 min",
+      "price": "55-70 €",
+      "includes": "Inkluderar kartläggning och behandling"
+    },
+    "nailCorrection": {
+      "title": "Nagelkorrigering",
+      "time": "30 min",
+      "price": "40 €",
+      "includes": "Behandling av inåtväxande nagel"
+    },
+    "note": "Priserna kan variera efter behov. Fråga mer vid bokning."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Kontakta oss i alla frågor som rör fotterapi – vi hjälper gärna till!",
+    "info": "Ta kontakt och fråga efter mer information! Jag svarar gärna på alla frågor och hjälper dig hitta de vårdformer som passar just dig.",
+    "form": {
+      "title": "Ge feedback",
+      "name": "Namn",
+      "namePlaceholder": "Ditt namn",
+      "email": "E-post",
+      "emailPlaceholder": "email@email.fi",
+      "message": "Meddelande",
+      "messagePlaceholder": "Skriv din feedback här...",
+      "send": "Skicka feedback",
+      "successTitle": "Tack för din feedback!",
+      "successMessage": "Ditt meddelande har skickats framgångsrikt.",
+      "sendAnother": "Skicka ett nytt meddelande",
+      "errorMessage": "Meddelandet kunde inte skickas. Försök igen eller skicka via e-post."
+    },
+    "details": {
+      "phone": "Telefon",
+      "email": "E-post",
+      "address": "Adress",
+      "city": "65100 Vasa",
+      "businessId": "FO-nummer"
+    },
+    "mapTitle": "Karta",
+    "mapLink": "Öppna kartan i större vy",
+    "hours": {
+      "title": "Öppettider",
+      "weekdays": "Mån-Fre: 9:00-17:00",
+      "note": "Efter tidsbokning"
+    }
+  },
+  "bookingSection": {
+    "title": "Tidsbokning",
+    "description": "Du kan boka tid bekvämt via Vello-systemet från kalendern nedan. Eller om du vill kan du öppna <a href='https://vello.fi/ilojaloin-jalkaterapia' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Vellos egen bokningssida</a> i en ny flik.",
+    "loading": "Laddar bokning...",
+    "failed": "Öppna bokning i Vello"
+  },
+  "footer": {
+    "rights": "Ilojaloin Fotterapitjänster. Alla rättigheter förbehålls.",
+    "implementation": "Webbplatsutveckling: <strong>Teemu Paunonen</strong>",
+    "social": "Följ på sociala medier:",
+    "privacy": "Integritetspolicy"
+  },
+  "meta": {
+    "title": "Fotterapi Vasa | Ilojaloin - Professionell Fotterapeut",
+    "description": "Fotterapi i Vasa - Ilojaloin erbjuder professionell fotvård, nagelkorrigering, vårtbehandling och sårbehandling. Fotterapeut Satu Paunonen betjänar Vasaregionen. Boka tid enkelt!"
+  }
+}
