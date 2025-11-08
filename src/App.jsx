@@ -364,19 +364,19 @@ export default function App() {
                   <p className="mb-3">{t('pricing.benefitsText')}</p>
                   <div className="flex flex-wrap items-center gap-4">
                     <img 
-                      src="/epassi-logo.svg" 
+                      src="/Epassi Logo.png" 
                       alt="E-passi" 
-                      className="h-10 object-contain"
+                      className="h-8 object-contain"
                     />
                     <img 
-                      src="/edenred-logo.svg" 
+                      src="/Edenred_logo_RGB_red.png" 
                       alt="Edenred" 
-                      className="h-10 object-contain"
+                      className="h-8 object-contain"
                     />
                     <img 
-                      src="/smartum-logo.svg" 
+                      src="/SmartumPayLogoBLACK.png" 
                       alt="Smartum" 
-                      className="h-10 object-contain"
+                      className="h-8 object-contain"
                     />
                   </div>
                 </div>
