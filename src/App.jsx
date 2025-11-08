@@ -120,7 +120,7 @@ export default function App() {
     }
   }, [mobileMenuOpen]);
 
-  // Inject Vello embed script - yksinkertaistettu versio ilman manuaalista layoutia
+    // Inject Vello embed script - yksinkertaistettu versio ilman manuaalista layoutia
   useEffect(() => {
     const root = velloRef.current;
     if (!root) return;
@@ -128,19 +128,22 @@ export default function App() {
     // Määritä Vellon kieli nykyisen i18n-kielen mukaan
     const velloLang = i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi';
 
-    // estä moninkertainen skriptin lisääminen
-    const existing = document.querySelector('script[src="https://static.vello.fi/embed/v1.js"][data-url="ilojaloin-jalkaterapia"]');
-    if (!existing) {
-      const s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://static.vello.fi/embed/v1.js';
-      s.setAttribute('data-url', 'ilojaloin-jalkaterapia');
-      s.setAttribute('data-lang', velloLang);
-      root.appendChild(s);
-    } else {
-      // Jos skripti jo olemassa, päivitä vain kieli-attribuutti
-      existing.setAttribute('data-lang', velloLang);
+    // Poista vanha skripti ja iframe kokonaan kun kieli vaihtuu
+    const existingScript = document.querySelector('script[src="https://static.vello.fi/embed/v1.js"][data-url="ilojaloin-jalkaterapia"]');
+    if (existingScript) {
+      existingScript.remove();
     }
+    
+    // Tyhjennä root-elementti
+    root.innerHTML = '';
+    
+    // Lisää uusi skripti oikealla kielellä
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://static.vello.fi/embed/v1.js';
+    s.setAttribute('data-url', 'ilojaloin-jalkaterapia');
+    s.setAttribute('data-lang', velloLang);
+    root.appendChild(s);
 
     // Tarkkaile milloin iframe ilmestyy
     const observer = new MutationObserver(() => {
@@ -242,9 +245,9 @@ export default function App() {
             <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
               <div className="text-xs text-gray-500 mb-2 font-heading">Kieli / Språk / Language</div>
               <div className="flex flex-col gap-1">
-              <button onClick={() => changeLanguage('fi')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'fi' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Suomi</button>
-              <button onClick={() => changeLanguage('sv')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'sv' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Svenska</button>
-              <button onClick={() => changeLanguage('en')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>English</button>
+              <button onClick={() => changeLanguage('fi')} className={`px-3 py-2 rounded text-sm font-semibold transition text-left ${i18n.language === 'fi' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Suomi</button>
+              <button onClick={() => changeLanguage('sv')} className={`px-3 py-2 rounded text-sm font-semibold transition text-left ${i18n.language === 'sv' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Svenska</button>
+              <button onClick={() => changeLanguage('en')} className={`px-3 py-2 rounded text-sm font-semibold transition text-left ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>English</button>
             </div>
           </div>
         </nav>
@@ -352,34 +355,14 @@ export default function App() {
           </section>
 
           {/* Hinnoittelusta section */}
-          <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-white">
+                    <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
               <div className="prose max-w-full mb-8">
                 <p>{t('pricing.intro')}</p>
-                <div className="mt-6">
-                  <p className="mb-3">{t('pricing.benefitsText')}</p>
-                  <div className="flex flex-wrap items-center gap-4 md:gap-6">
-                    <img 
-                      src="/epassi-logo.svg" 
-                      alt="E-passi" 
-                      className="h-12 md:h-14 object-contain hover:opacity-90 transition-opacity"
-                      onError={(e) => { e.target.style.display = 'none'; }}
-                    />
-                    <img 
-                      src="/edenred-logo.svg" 
-                      alt="Edenred" 
-                      className="h-12 md:h-14 object-contain hover:opacity-90 transition-opacity"
-                      onError={(e) => { e.target.style.display = 'none'; }}
-                    />
-                    <img 
-                      src="/smartum-logo.svg" 
-                      alt="Smartum" 
-                      className="h-12 md:h-14 object-contain hover:opacity-90 transition-opacity"
-                      onError={(e) => { e.target.style.display = 'none'; }}
-                    />
-                  </div>
-                </div>
+                <p className="mt-4">
+                  <strong>{t('pricing.benefitsText')}</strong> E-passi, Edenred ja Smartum.
+                </p>
               </div>
 
               <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.priceListTitle')}</h3>
