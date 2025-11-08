@@ -69,7 +69,6 @@
     "callus15": {
       "title": "Callus/corn removal",
       "items": [
-        "If you know you only need callus/corn removal, book this appointment.",
         "Often the callus can already be painful, so this gives you quick relief.",
         "If there are multiple calluses or corns or they are very thick, book 30 minutes."
       ],
@@ -88,10 +87,9 @@
     "nailCorrection": {
       "title": "Nail correction treatment",
       "items": [
-        "Choose this service if you know you need nail correction treatment.",
         "Nail correction treatment for deformed or ingrown nails.",
         "I use the titanium wire correction method.",
-        "The wire must be renewed every 4–6 weeks until the nail is correct."
+        "The wire must be renewed every 2-3 months and kept for the entire nail growth period of 6-12 months."
       ],
       "duration": "30 min",
       "price": "45€"
@@ -99,10 +97,8 @@
     "wart": {
       "title": "Wart treatment (Verrutop)",
       "items": [
-        "If you know you only want wart treatment, choose this service.",
-        "I use the Verrutop® method, which is an effective, precise, and safe wart treatment method for professional use.",
-        "Verrutop is a well-tolerated treatment method that works by chemically cauterizing the wart.",
-        "The treatment does not cause pain and does not require anesthesia."
+        "I use the Verrutop® method, which is an effective, precise, and safe wart treatment method for professional use. Verrutop is a well-tolerated wart treatment solution for external use that only affects wart tissue.",
+        "Treatments are usually needed 2-5 times."
       ],
       "duration": "15 min",
       "price": "25€"
@@ -112,10 +108,10 @@
       "items": [
         "A so-called quiet service.",
         "Book this service if you want to come and relax in silence in a pleasant environment and get your feet treated by a professional.",
-        "The service includes foot bath, nail care, skin care, and foot massage.",
-        "No actual examination."
+        "The service includes foot bath, skin and nail care, and finally a relaxing moisturizing massage for the soles and ankles within the time frame.",
+        "If you want, I will give tips for self-care."
       ],
-      "duration": "1 h",
+      "duration": "60 min",
       "price": "65€"
     },
     "shopping": {
@@ -223,3 +219,4 @@
     "description": "Professional podiatry in Vaasa - Ilojaloin offers expert foot care, nail correction, wart treatment, and wound care. Podiatrist Satu Paunonen. Book your appointment today!"
   }
 }
+

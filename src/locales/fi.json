@@ -69,7 +69,6 @@
     "callus15": {
       "title": "Känsän/kovettuman poisto",
       "items": [
-        "Jos tiedät tarvitsevasi pelkän känsän/kovettuman poiston, varaa tämä aika.",
         "Yleensä känsä voi olla jo kivuliaskin, joten tästä saat pikahelpotuksen.",
         "Jos känsiä tai kovettumia on useampikin tai ne ovat hyvin paksut, varaa 30 minuuttia."
       ],
@@ -88,10 +87,9 @@
     "nailCorrection": {
       "title": "Kynnen oikaisuhoito",
       "items": [
-        "Valitse tämä palvelu, jos tiedät tarvitsevasi kynnen oikaisuhoitoa.",
         "Kynnen oikaisuhoito epämuodostuneelle tai sisäänpäin kasvaneelle kynnelle.",
         "Käytän titaanilanka-oikaisumenetelmää.",
-        "Lanka täytyy uusia 4–6 viikon välein, kunnes kynsi on oikea."
+        "Lanka täytyy uusia 2-3 kk välein ja sitä pidetään koko kynnen kasvukauden ajan 6-12 kk."
       ],
       "duration": "30 min",
       "price": "45€"
@@ -99,10 +97,8 @@
     "wart": {
       "title": "Syylänhoito (Verrutop)",
       "items": [
-        "Jos tiedät, että haluat pelkän syylänhoidon, valitse tämä palvelu.",
-        "Käytän Verrutop®-menetelmää, joka on tehokas, tarkka ja turvallinen syylänhoitomenetelmä ammattilaiskäyttöön.",
-        "Verrutop on hyvin siedetty hoitomenetelmä, joka toimii syövyttämällä syylää kemikaalilla.",
-        "Hoito ei aiheuta kipua eikä vaadi puudutusta."
+        "Käytän Verrutop®-menetelmää, joka on tehokas, tarkka ja turvallinen syylänhoitomenetelmä ammattilaiskäyttöön. Verrutop on hyvin siedetty, ulkoiseen käyttöön tarkoitettu syylienhoitoliuos, joka vaikuttaa ainoastaan syyläkudoksessa.",
+        "Hoitokertoja tarvitaan yleensä 2-5."
       ],
       "duration": "15 min",
       "price": "25€"
@@ -112,10 +108,10 @@
       "items": [
         "Ns. hiljainen palvelu.",
         "Varaa tämä palvelu, jos haluat tulla rentoutumaan hiljaisuuteen mukavaan miljööseen ja saat samalla jalat hoidetuksi ammattilaisen hoivissa.",
-        "Palveluun kuuluu jalkojen kylvetys, kynsien hoito, ihon hoito ja jalkojen hieronta.",
-        "Ei varsinaista tutkimusta."
+        "Palveluun kuuluu jalkojen kylvetys, ihon ja kynsien hoito sekä lopuksi ajan puitteissa rentouttava rasvaushieronta jalkaterille ja nilkoille.",
+        "Jos haluat, annan vinkit omahoitoon."
       ],
-      "duration": "1 h",
+      "duration": "60 min",
       "price": "65€"
     },
     "shopping": {
@@ -223,3 +219,4 @@
     "description": "Jalkaterapia Vaasassa - Ilojaloin tarjoaa ammattitaitoista jalkahoitoa, kynnenoikaisua, syylänhoitoa ja haavanhoitoa. Jalkaterapeutti Satu Paunonen palvelee Vaasan alueella. Varaa aika helposti!"
   }
 }
+

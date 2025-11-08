@@ -69,7 +69,6 @@
     "callus15": {
       "title": "Borttagning av liktorn/förhårdnad",
       "items": [
-        "Om du vet att du bara behöver få en liktorn/förhårdnad borttagad, boka denna tid.",
         "Ofta kan liktornen redan vara smärtsam, så här får du snabb lindring.",
         "Om det finns flera liktornar eller förhårdnader eller om de är mycket tjocka, boka 30 minuter."
       ],
@@ -88,10 +87,9 @@
     "nailCorrection": {
       "title": "Nagelkorrigeringsbehandling",
       "items": [
-        "Välj denna tjänst om du vet att du behöver nagelkorrigeringsbehandling.",
         "Nagelkorrigeringsbehandling för missbildad eller inåtväxande nagel.",
         "Jag använder titantrådkorrigeringsmetoden.",
-        "Tråden måste förnyas var 4–6:e vecka tills nageln är rätt."
+        "Tråden måste förnyas var 2-3 månad och hållas under hela nagelns växttid 6-12 månader."
       ],
       "duration": "30 min",
       "price": "45€"
@@ -99,10 +97,8 @@
     "wart": {
       "title": "Vårta behandling (Verrutop)",
       "items": [
-        "Om du vet att du bara vill ha vårta behandling, välj denna tjänst.",
-        "Jag använder Verrutop®-metoden, som är en effektiv, noggrann och säker vårtbehandlingsmetod för professionellt bruk.",
-        "Verrutop är en väl tolererad behandlingsmetod som fungerar genom att etsade vårtan med en kemikalie.",
-        "Behandlingen orsakar ingen smärta och kräver ingen bedövning."
+        "Jag använder Verrutop®-metoden, som är en effektiv, noggrann och säker vårtbehandlingsmetod för professionellt bruk. Verrutop är en väl tolererad vårtbehandlingslösning för utvärtes bruk som endast verkar på vårtvävnad.",
+        "Behandlingar behövs vanligtvis 2-5 gånger."
       ],
       "duration": "15 min",
       "price": "25€"
@@ -112,10 +108,10 @@
       "items": [
         "Så kallad tyst tjänst.",
         "Boka denna tjänst om du vill komma och koppla av i tystnad i en trivsam miljö och samtidigt få dina fötter vårdade av en professionell.",
-        "Tjänsten inkluderar fotbad, nagelvård, hudvård och fotmassage.",
-        "Ingen egentlig undersökning."
+        "Tjänsten inkluderar fotbad, hud- och nagelvård samt avslutningsvis en avslappande smörjmassage för fotsulor och vrister inom tidsramen.",
+        "Om du vill, ger jag tips för egenvård."
       ],
-      "duration": "1 h",
+      "duration": "60 min",
       "price": "65€"
     },
     "shopping": {
@@ -223,3 +219,4 @@
     "description": "Fotterapi i Vasa - Ilojaloin erbjuder professionell fotvård, nagelkorrigering, vårtbehandling och sårbehandling. Fotterapeut Satu Paunonen betjänar Vasaregionen. Boka tid enkelt!"
   }
 }
+
