@@ -11,6 +11,8 @@ export default defineConfig({
       input: {
         main: './index.html',
         privacy: './privacy.html',
+        privacysv: './privacy-sv.html',
+        privacyen: './privacy-en.html',
         thankyou: './thank-you.html',
         selfmonitoring: './self-monitoring.html',
         selfmonitoringsv: './self-monitoring-sv.html',

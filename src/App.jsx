@@ -233,9 +233,9 @@ export default function App() {
             <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
           </div>
           {/* Kielivalitsin desktop */}
-          <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
-            <div className="text-xs text-gray-500 mb-2 font-heading">Language / Språk</div>
-            <div className="flex flex-col gap-1">
+            <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
+              <div className="text-xs text-gray-500 mb-2 font-heading">Kieli / Språk / Language</div>
+              <div className="flex flex-col gap-1">
               <button onClick={() => changeLanguage('fi')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'fi' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Suomi</button>
               <button onClick={() => changeLanguage('sv')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'sv' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Svenska</button>
               <button onClick={() => changeLanguage('en')} className={`px-3 py-2 rounded text-sm font-semibold transition ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>English</button>
@@ -668,7 +668,12 @@ export default function App() {
                 </svg>
               </a>
               <span>·</span>
-              <a href="/privacy.html" className="text-white underline hover:opacity-80">{t('footer.privacy')}</a>
+              <a 
+                href={i18n.language === 'sv' ? '/privacy-sv.html' : i18n.language === 'en' ? '/privacy-en.html' : '/privacy.html'} 
+                className="text-white underline hover:opacity-80"
+              >
+                {t('footer.privacy')}
+              </a>
               <span>·</span>
               <a 
                 href={i18n.language === 'sv' ? '/self-monitoring-sv.html' : i18n.language === 'en' ? '/self-monitoring-en.html' : '/self-monitoring.html'} 
