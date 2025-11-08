@@ -100,31 +100,66 @@
   },
   "pricing": {
     "title": "Hinnoittelusta",
-    "basic": {
-      "title": "Jalkojen perushoito",
-      "time": "45 min",
-      "price": "55 €",
-      "includes": "Kynsien leikkaus, ihon kuorinta, kosteushoito"
+    "intro": "Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous.",
+    "benefits": "Minulla käyvät hyvinvointiedut: E-passi, Edenred ja Smartum.",
+    "priceListTitle": "Hinnastoni",
+    "table": {
+      "service": "Palvelu",
+      "price": "Hinta"
     },
-    "extended": {
-      "title": "Jalkojen perushoito + hieronta",
-      "time": "60 min",
-      "price": "70 €",
-      "includes": "Perushoito + rauhallinen jalkojen hieronta"
+    "shopping": {
+      "title": "Shoppailuvartti",
+      "items": [
+        "Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet.",
+        "Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen).",
+        "Kenkien hankinta/sovitus."
+      ],
+      "price": "0€"
     },
-    "firstTime": {
-      "title": "Ensikäyntimaksu",
-      "time": "45-60 min",
-      "price": "55-70 €",
-      "includes": "Sisältää kartoituksen ja hoidon"
+    "therapy30": {
+      "title": "Jalkaterapia 30 min",
+      "items": [
+        "Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15e materiaalimaksu).",
+        "Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuoteisiin. Samoin kenkäasioita voidaan käydä läpi."
+      ],
+      "price": "45€"
     },
-    "nailCorrection": {
-      "title": "Kynnenoikaisu",
-      "time": "30 min",
-      "price": "40 €",
-      "includes": "Sisäänkasvaneen kynnen hoito"
+    "therapy45": {
+      "title": "Jalkaterapia 45 min",
+      "items": [
+        "Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.",
+        "Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa."
+      ],
+      "price": "65€"
     },
-    "note": "Hinnat voivat vaihdella tarpeen mukaan. Kysy lisää varauksen yhteydessä."
+    "therapy60": {
+      "title": "Jalkaterapia 60 min",
+      "items": [
+        "Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.",
+        "Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet."
+      ],
+      "price": "85€"
+    },
+    "therapy75": {
+      "title": "Jalkaterapia 75 min",
+      "items": [
+        "Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi."
+      ],
+      "price": "105€"
+    },
+    "children": {
+      "title": "Lasten jalkaterapia 30 min",
+      "price": "35€"
+    },
+    "lectures": {
+      "title": "Luennot",
+      "description": "Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!"
+    },
+    "note": {
+      "title": "HUOM!",
+      "description": "Jos sinua askarruttaa minkä ajan varaisit, aina voi soittaa ja kysyä! En vastaa puhelimeen, jos olen asiakastyössä, mutta soitan kyllä takaisin.",
+      "phone": "Puhelin:"
+    }
   },
   "contact": {
     "title": "Yhteystiedot",

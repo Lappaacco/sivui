@@ -100,31 +100,66 @@
   },
   "pricing": {
     "title": "Pricing",
-    "basic": {
-      "title": "Basic Foot Care",
-      "time": "45 min",
-      "price": "55 €",
-      "includes": "Nail cutting, skin exfoliation, moisturizing"
+    "intro": "Podiatry is time-based. In one hour, I can accomplish many things beyond skin and nail care, which justifies the higher price compared to, for example, pedicurists' pricing. Podiatry is healthcare, and therefore I need your personal information. I have a documentation obligation and record your visit in Omakanta (national health records). This takes time, as do preparations and final cleanup.",
+    "benefits": "I accept wellness benefits: E-passi, Edenred, and Smartum.",
+    "priceListTitle": "My Price List",
+    "table": {
+      "service": "Service",
+      "price": "Price"
     },
-    "extended": {
-      "title": "Basic Foot Care + Massage",
-      "time": "60 min",
-      "price": "70 €",
-      "includes": "Basic care + relaxing foot massage"
+    "shopping": {
+      "title": "Shopping Quarter",
+      "items": [
+        "We assess home care needs and recommend home care products.",
+        "For example, for toe spacer adjustments, it's worth booking this time (1 adjustment session free).",
+        "Shoe purchasing/fitting."
+      ],
+      "price": "0€"
     },
-    "firstTime": {
-      "title": "First Visit Fee",
-      "time": "45-60 min",
-      "price": "55-70 €",
-      "includes": "Includes assessment and treatment"
+    "therapy30": {
+      "title": "Podiatry 30 min",
+      "items": [
+        "Book this time if you know you only want corn treatment or nail correction treatment (+15€ material fee).",
+        "This time also allows for tidy feet care and providing home care guidance and product recommendations. Shoe matters can also be discussed."
+      ],
+      "price": "45€"
     },
-    "nailCorrection": {
-      "title": "Nail Correction",
-      "time": "30 min",
-      "price": "40 €",
-      "includes": "Ingrown nail treatment"
+    "therapy45": {
+      "title": "Podiatry 45 min",
+      "items": [
+        "Book this time if you have any pain or problems in your feet, so we can examine them more thoroughly. In addition to examination, there may be time for some procedures.",
+        "Also slightly more challenging feet can be treated in this time, e.g., there is some thickening of skin/nails."
+      ],
+      "price": "65€"
     },
-    "note": "Prices may vary as needed. Ask for more information when booking."
+    "therapy60": {
+      "title": "Podiatry 60 min",
+      "items": [
+        "Enough time to examine feet and start necessary procedures.",
+        "Book also if there is a lot to care for on the skin and nails, e.g., many corns and thick calluses, or very thick nails."
+      ],
+      "price": "85€"
+    },
+    "therapy75": {
+      "title": "Podiatry 75 min",
+      "items": [
+        "In this time, there's enough for several procedures in addition to examination."
+      ],
+      "price": "105€"
+    },
+    "children": {
+      "title": "Children's Podiatry 30 min",
+      "price": "35€"
+    },
+    "lectures": {
+      "title": "Lectures",
+      "description": "I offer foot health lectures for various associations, schools, and workplaces. Contact me and we'll arrange it!"
+    },
+    "note": {
+      "title": "NOTE!",
+      "description": "If you're wondering which time to book, you can always call and ask! I don't answer the phone if I'm with a client, but I'll definitely call back.",
+      "phone": "Phone:"
+    }
   },
   "contact": {
     "title": "Contact",

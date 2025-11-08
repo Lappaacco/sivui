@@ -375,42 +375,106 @@ export default function App() {
           <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Jalkojen perushoito */}
-                <div className="bg-offwhite p-6 rounded-lg shadow">
-                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.basic.title')}</h3>
-                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.basic.price')}</p>
-                  <p className="text-sm text-gray-600 mb-3">{t('pricing.basic.time')}</p>
-                  <p className="text-gray-700">{t('pricing.basic.includes')}</p>
-                </div>
-
-                {/* Perushoito + hieronta */}
-                <div className="bg-offwhite p-6 rounded-lg shadow">
-                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.extended.title')}</h3>
-                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.extended.price')}</p>
-                  <p className="text-sm text-gray-600 mb-3">{t('pricing.extended.time')}</p>
-                  <p className="text-gray-700">{t('pricing.extended.includes')}</p>
-                </div>
-
-                {/* Ensikäynti */}
-                <div className="bg-offwhite p-6 rounded-lg shadow">
-                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.firstTime.title')}</h3>
-                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.firstTime.price')}</p>
-                  <p className="text-sm text-gray-600 mb-3">{t('pricing.firstTime.time')}</p>
-                  <p className="text-gray-700">{t('pricing.firstTime.includes')}</p>
-                </div>
-
-                {/* Kynnenoikaisu */}
-                <div className="bg-offwhite p-6 rounded-lg shadow">
-                  <h3 className="text-xl font-heading text-primary mb-2">{t('pricing.nailCorrection.title')}</h3>
-                  <p className="text-2xl font-bold text-primary mb-2">{t('pricing.nailCorrection.price')}</p>
-                  <p className="text-sm text-gray-600 mb-3">{t('pricing.nailCorrection.time')}</p>
-                  <p className="text-gray-700">{t('pricing.nailCorrection.includes')}</p>
-                </div>
+              <div className="prose max-w-full mb-8">
+                <p>{t('pricing.intro')}</p>
+                <p className="mt-4">
+                  <strong>{t('pricing.benefits')}</strong>
+                </p>
               </div>
 
-              <p className="mt-6 text-sm text-gray-600 italic">{t('pricing.note')}</p>
+              <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.priceListTitle')}</h3>
+              <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
+                <table className="w-full table-auto border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-primaryLight text-left">
+                      <th className="px-4 py-3 font-medium border border-gray-300">{t('pricing.table.service')}</th>
+                      <th className="px-4 py-3 font-medium border border-gray-300">{t('pricing.table.price')}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.shopping.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.shopping.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.shopping.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.therapy30.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.therapy30.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy30.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.therapy45.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.therapy45.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy45.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.therapy60.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.therapy60.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy60.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.therapy75.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.therapy75.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy75.price')}</td>
+                    </tr>
+                    <tr className="border-t bg-gray-50">
+                      <td className="px-4 py-3 border border-gray-300"><strong>{t('pricing.children.title')}</strong></td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.children.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.lectures.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          <li>{t('pricing.lectures.description')}</li>
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="mt-8 p-6 bg-offwhite rounded-lg">
+                <p className="text-lg">
+                  <strong>{t('pricing.note.title')}</strong> {t('pricing.note.description')}
+                </p>
+                <p className="mt-2 text-lg">
+                  {t('pricing.note.phone')}{' '}
+                  <a href="tel:+358440684567" className="text-primary hover:underline font-semibold">
+                    044 068 4567
+                  </a>
+                </p>
+              </div>
             </div>
           </section>
 
