@@ -60,7 +60,7 @@
   "pricing": {
     "title": "Pricing",
     "intro": "Podiatry services are time-based. In one hour, I can accomplish much more than basic skin and nail care, which justifies the higher cost compared to cosmetic pedicures. Podiatry is healthcare, so I need your personal information. I have documentation requirements and record your visit in the national health records (Kanta). This, along with preparation and cleanup, takes time.",
-    "benefits": "I accept wellness vouchers: E-passi, Edenred, and Smartum.",
+    "benefitsText": "I accept wellness vouchers:",
     "priceListTitle": "Price List",
     "table": {
       "service": "Service",

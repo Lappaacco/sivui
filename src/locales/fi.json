@@ -60,7 +60,7 @@
   "pricing": {
     "title": "Hinnoittelusta",
     "intro": "Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous.",
-    "benefits": "Minulla käyvät hyvinvointiedut: E-passi, Edenred ja Smartum.",
+    "benefitsText": "Minulla käyvät hyvinvointiedut:",
     "priceListTitle": "Hinnastoni",
     "table": {
       "service": "Palvelu",

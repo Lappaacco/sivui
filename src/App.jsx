@@ -357,9 +357,29 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
               <div className="prose max-w-full mb-8">
                 <p>{t('pricing.intro')}</p>
-                <p className="mt-4">
-                  <strong>{t('pricing.benefits')}</strong>
-                </p>
+                <div className="mt-6">
+                  <p className="mb-3">{t('pricing.benefitsText')}</p>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <img 
+                      src="/epassi-logo.svg" 
+                      alt="E-passi" 
+                      className="h-10 object-contain"
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                    <img 
+                      src="/edenred-logo.svg" 
+                      alt="Edenred" 
+                      className="h-10 object-contain"
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                    <img 
+                      src="/smartum-logo.svg" 
+                      alt="Smartum" 
+                      className="h-10 object-contain"
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                  </div>
+                </div>
               </div>
 
               <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.priceListTitle')}</h3>

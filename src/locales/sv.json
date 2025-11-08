@@ -59,8 +59,8 @@
   },
   "pricing": {
     "title": "Priser",
-    "intro": "Fotterapi är tidsbaserad. På en timme hinner jag med många saker utöver hud- och nagelvård, vilket är min motivering för högre pris jämfört med till exempel fotterapeuters prissättning. Fotterapi är hälsovård och därför behöver jag dina personuppgifter. Jag har journalföringsplikt och registrerar ditt besök i Omakanta. Det tar sin tid, liksom förberedelser och slutstädning.",
-    "benefits": "Hos mig gäller välfärdsförmåner: E-passi, Edenred och Smartum.",
+    "intro": "Fotterapi är tidsbaserad. Under en timme hinner jag redan med många saker utöver hud- och nagelvård, vilket är min motivering för högre priser jämfört med till exempel fotvårdsspecialister. Fotterapi är hälsovård och därför behöver jag dina personuppgifter. Jag har journalföringsskyldighet och registrerar ditt besök i Omakanta. Det tar sin tid, liksom förberedelser och slutstädning.",
+    "benefitsText": "Hos mig gäller välfärdsförmåner:",
     "priceListTitle": "Min prislista",
     "table": {
       "service": "Tjänst",
