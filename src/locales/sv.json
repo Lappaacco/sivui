@@ -52,13 +52,13 @@
   },
   "hygiene": {
     "title": "Säkerhet och hygien",
-    "paragraph1": "Jag har marknadens högkvalitativaste och säkraste utrustning. Min behandlingsstol är stabil, robust och lyfter lätt upp till 225 kilo. Den sänks lågt så det är lätt att stiga upp.",
+    "paragraph1": "Jag har marknadens högkvalitativaste och säkraste utrustning. Min behandlingsstol är stabil, robust och lyfter upp till 250 kilo. Den sänks lågt så det är lätt att stiga upp.",
     "paragraph2": "Vid slipning av hud och naglar använder jag en vattenborr som kyler och binder dammet – huden värms inte upp och slipningsdammet flyger inte omkring i luften. På detta sätt andas både du och jag ren luft.",
     "paragraph3": "Min fotspegels låga konstruktion möjliggör noggrann bedömning av fötterns belastning och position.",
-    "paragraph4": "Verktygen tvättas, desinficeras, torkas och underhålls. Sedan steriliseras de i autoklav och förvaras i en stängd låda. Verktygsskåpet hanteras alltid med rena händer.",
+    "paragraph4": "Alla mina verktyg underhålls noggrant med nya, professionella verktygsunderhållsapparater. Verktygen desinficeras, tvättas, torkas och underhålls. Sedan steriliseras de i autoklav och förvaras i en sluten låda. Verktygsskåpet hanteras alltid med rena händer.",
     "paragraph5": "Lokalerna städas efter varje kund med effektiva medel som förstör bakterier, virus och svampar.",
-    "paragraph6": "<strong>Din säkerhet och välbefinnande är viktigast för mig.</strong>",
-    "paragraph7": "Jag tar lika noga hand om säkerheten för dina kunduppgifter. Jag använder <strong>Vello-patientdatasystem</strong>, som är <strong>datasäkert och Kanta-kompatibelt</strong>, så dina uppgifter förblir skyddade och konfidentiella."
+    "paragraph6": "<strong>Din säkerhet och ditt välbefinnande är viktigast för mig.</strong>",
+    "paragraph7": "Jag tar lika stor omsorg om säkerheten för dina kunduppgifter. Jag använder <strong>Vello-patientdatasystem</strong>, som är <strong>datasäkert och Kanta-kompatibelt</strong>, så dina uppgifter förblir skyddade och konfidentiella."
   },
   "pricing": {
     "title": "Priser",
@@ -98,9 +98,10 @@
       "price": "45€"
     },
     "wart": {
-      "title": "Vårta behandling (Verrutop)",
+      "title": "Vårta behandling (Verrutop®)",
       "items": [
-        "Jag använder Verrutop®-metoden, som är en effektiv, noggrann och säker vårtbehandlingsmetod för professionellt bruk. Verrutop är en väl tolererad vårtbehandlingslösning för utvärtes bruk som endast verkar på vårtvävnad.",
+        "Jag använder Verrutop®-metoden, som är en effektiv, noggrann och säker vårtbehandlingsmetod för professionellt bruk.",
+        "Verrutop är en väl tolererad vårtbehandlingslösning för utvärtes bruk som endast verkar på vårtvävnad.",
         "Behandlingar behövs vanligtvis 2-5 gånger."
       ],
       "duration": "15 min",
@@ -163,11 +164,15 @@
     },
     "lectures": {
       "title": "Föreläsningar",
-      "description": "Jag erbjuder föreläsningar om fothälsa för olika föreningar, skolor och arbetsplatser. Ta kontakt så kommer vi överens!"
+      "description": "Jag erbjuder föreläsningar om fothälsa för olika föreningar, skolor och arbetsgemenskaper. Kontakta mig så kommer vi överens!"
+    },
+    "cancellation": {
+      "title": "Avbokningsvillkor",
+      "policy": "Bokningen kan avbokas kostnadsfritt 24 timmar före bokningens början. Därefter görs avbokningar per telefon och tidsombokning till exempel vid sjukdom. Om du uteblir helt från mottagningen utan att meddela, debiteras 100% av priset för den bokade tjänsten."
     },
     "note": {
       "title": "OBS!",
-      "description": "Om du undrar vilken tid du ska boka, kan du alltid ringa och fråga! Jag svarar inte på telefonen om jag är i kundarbete, men jag ringer gärna tillbaka.",
+      "description": "Om du funderar på vilken tid du skulle boka, kan du alltid ringa och fråga! Jag svarar inte i telefon om jag arbetar med kunder, men jag ringer tillbaka.",
       "phone": "Telefon:"
     }
   },

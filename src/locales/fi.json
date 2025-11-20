@@ -52,10 +52,9 @@
   },
   "hygiene": {
     "title": "Turvallisuus ja hygienia",
-    "paragraph1": "Käytössäni on markkinoiden laadukkaimmat ja turvallisimmat laitteet. Hoitotuolini on vakaa, tukeva ja nostaa kevyesti jopa 225 kiloa. Se laskeutuu matalalle, joten kyytiin on helppo nousta.",
-    "paragraph2": "Ihon ja kynsien hionnassa käytän vesiporaa, joka viilentää ja sitoo pölyn – iho ei kuumene eikä hiomap vaivaile ilmaan. Näin sekä sinä että minä hengitämme puhdasta ilmaa.",
-    "paragraph3": "Jalkapeilini matala rakenne mahdollistaa jalkojen kuormituksen ja asennon tarkan arvioinnin.",
-    "paragraph4": "Kaikki välineeni huolletaan huolellisesti uusilla, ammattikäyttöön tarkoitetuilla välinehuoltolaitteilla. Välineet pestään, desinfioidaan, kuivataan ja huolletaan. Sitten ne steriloidaan autoklaavissa ja säilytetään suljetussa laatikossa. Välinekaapilla käydään aina puhtain käsin.",
+    "paragraph1": "Käytössäni on markkinoiden laadukkaimmat ja turvallisimmat laitteet. Hoitotuolini on vakaa, tukeva ja nostaa jopa 250 kiloa. Se laskeutuu matalalle, joten kyytiin on helppo nousta.",
+    "paragraph2": "Ihon ja kynsien hionnassa käytän vesiporaa, joka viilentää ja sitoo pölyn – iho ei kuumene eikä hiomapöly leijaile ilmaan. Näin sekä sinä, että minä hengitämme puhdasta ilmaa.",
+    "paragraph4": "Kaikki välineeni huolletaan huolellisesti uusilla, ammattikäyttöön tarkoitetuilla välinehuoltolaitteilla. Välineet desinfioidaan, pestään, kuivataan ja huolletaan. Sitten ne steriloidaan autoklaavissa ja säilytetään suljetussa laatikossa. Välinekaapilla käydään aina puhtain käsin.",
     "paragraph5": "Tilat siistitään jokaisen asiakkaan jälkeen tehokkailla aineilla, jotka tuhoavat bakteerit, virukset ja sienet.",
     "paragraph6": "<strong>Sinun turvallisuutesi ja hyvinvointisi ovat minulle tärkeintä.</strong>",
     "paragraph7": "Asiakastietojesi turvallisuudesta huolehdin yhtä tarkasti. Käytössäni on <strong>Vello-potilastietojärjestelmä</strong>, joka on <strong>tietoturvallinen ja Kanta-yhteensopiva</strong>, joten tietosi säilyvät suojattuina ja luottamuksellisina."
@@ -98,7 +97,7 @@
       "price": "45€"
     },
     "wart": {
-      "title": "Syylänhoito (Verrutop)",
+      "title": "Syylänhoito (Verrutop®)",
       "items": [
         "Käytän Verrutop®-menetelmää, joka on tehokas, tarkka ja turvallinen syylänhoitomenetelmä ammattilaiskäyttöön. Verrutop on hyvin siedetty, ulkoiseen käyttöön tarkoitettu syylienhoitoliuos, joka vaikuttaa ainoastaan syyläkudoksessa.",
         "Hoitokertoja tarvitaan yleensä 2-5."
@@ -164,6 +163,10 @@
     "lectures": {
       "title": "Luennot",
       "description": "Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!"
+    },
+    "cancellation": {
+      "title": "Peruutusehdot",
+      "policy": "Varauksen voi peruuttaa maksuttomasti 24h ennen varauksen alkua. Sen jälkeen tehdyt peruutukset puhelimella ja ajan siirrolla esimerkiksi sairastumistapauksessa. Jos jätät kokonaan saapumatta vastaanotolle ilmoittamatta, peritään 100% varatun palvelun hinnasta."
     },
     "note": {
       "title": "HUOM!",

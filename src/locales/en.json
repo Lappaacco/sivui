@@ -52,10 +52,10 @@
   },
   "hygiene": {
     "title": "Safety and Hygiene",
-    "paragraph1": "I have the highest quality and safest equipment on the market. My treatment chair is stable, sturdy, and easily lifts up to 225 kilograms. It lowers down, making it easy to get on.",
+    "paragraph1": "I have the highest quality and safest equipment on the market. My treatment chair is stable, sturdy, and lifts up to 250 kilograms. It lowers down, making it easy to get on.",
     "paragraph2": "When grinding skin and nails, I use a water drill that cools and binds dust – the skin doesn't heat up and grinding dust doesn't fly around in the air. This way, both you and I breathe clean air.",
     "paragraph3": "My foot mirror's low construction enables accurate assessment of foot load and position.",
-    "paragraph4": "The instruments are washed, disinfected, dried, and maintained. They are then sterilized in an autoclave and stored in a closed box. The instrument cabinet is always handled with clean hands.",
+    "paragraph4": "All my instruments are carefully maintained with new, professional instrument maintenance equipment. The instruments are disinfected, washed, dried, and maintained. They are then sterilized in an autoclave and stored in a closed box. The instrument cabinet is always handled with clean hands.",
     "paragraph5": "The premises are cleaned after each customer with effective agents that destroy bacteria, viruses, and fungi.",
     "paragraph6": "<strong>Your safety and well-being are most important to me.</strong>",
     "paragraph7": "I take equally careful care of the security of your customer data. I use the <strong>Vello patient data system</strong>, which is <strong>data-secure and Kanta-compatible</strong>, so your information remains protected and confidential."
@@ -98,7 +98,7 @@
       "price": "45€"
     },
     "wart": {
-      "title": "Wart treatment (Verrutop)",
+      "title": "Wart treatment (Verrutop®)",
       "items": [
         "I use the Verrutop® method, which is an effective, precise, and safe wart treatment method for professional use. Verrutop is a well-tolerated wart treatment solution for external use that only affects wart tissue.",
         "Treatments are usually needed 2-5 times."
@@ -164,6 +164,10 @@
     "lectures": {
       "title": "Lectures",
       "description": "I offer foot health presentations for associations, schools, and workplaces. Contact me to arrange!"
+    },
+    "cancellation": {
+      "title": "Cancellation Policy",
+      "policy": "Appointments can be cancelled free of charge 24 hours before the appointment begins. Cancellations after that are made by phone and appointment rescheduling, for example in case of illness. If you completely fail to show up for the appointment without notice, 100% of the booked service price will be charged."
     },
     "note": {
       "title": "NOTE!",
