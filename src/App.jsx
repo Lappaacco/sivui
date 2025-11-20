@@ -525,6 +525,12 @@ export default function App() {
               </div>
 
               <div className="mt-8 p-6 bg-offwhite rounded-lg">
+                <p className="text-lg mb-4">
+                  <strong>{t('pricing.cancellation.title')}</strong>
+                </p>
+                <p className="text-base mb-6">
+                  {t('pricing.cancellation.policy')}
+                </p>
                 <p className="text-lg">
                   <strong>{t('pricing.note.title')}</strong> {t('pricing.note.description')}
                 </p>
