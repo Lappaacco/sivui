@@ -760,11 +760,11 @@ export default function App() {
             </div>
           </section>
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section id="booking" className="py-16 md:py-20 px-4 bg-white">
+          <section id="booking" className="py-16 md:py-20 px-4 pb-32 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
-              <div className="w-full h-[600px] md:h-[75vh] lg:h-[85vh] rounded-lg overflow-hidden relative">
+              <div className="w-full h-[600px] md:h-[75vh] lg:h-[85vh] rounded-lg overflow-hidden relative mb-8">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
