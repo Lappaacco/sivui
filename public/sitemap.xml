@@ -6,11 +6,11 @@
   <!-- Main pages with language alternatives -->
   <url>
     <loc>https://ilojaloin.fi/</loc>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/" />
-    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/?lang=fi" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/?lang=sv" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ilojaloin.fi/" />
-    <lastmod>2025-11-22</lastmod>
+    <lastmod>2025-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

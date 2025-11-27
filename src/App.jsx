@@ -72,6 +72,27 @@ export default function App() {
     // Always point canonical to the base URL without query parameters
     canonicalLink.setAttribute('href', 'https://ilojaloin.fi/');
     
+    // Add hreflang tags for multilingual SEO
+    // Remove existing hreflang tags
+    document.querySelectorAll('link[hreflang]').forEach(link => link.remove());
+    
+    // Add hreflang tags for all language versions
+    const languages = ['fi', 'sv', 'en'];
+    languages.forEach(lang => {
+      const hreflangLink = document.createElement('link');
+      hreflangLink.setAttribute('rel', 'alternate');
+      hreflangLink.setAttribute('hreflang', lang);
+      hreflangLink.setAttribute('href', `https://ilojaloin.fi/?lang=${lang}`);
+      document.head.appendChild(hreflangLink);
+    });
+    
+    // Add x-default hreflang
+    const defaultLink = document.createElement('link');
+    defaultLink.setAttribute('rel', 'alternate');
+    defaultLink.setAttribute('hreflang', 'x-default');
+    defaultLink.setAttribute('href', 'https://ilojaloin.fi/');
+    document.head.appendChild(defaultLink);
+    
     // Update HTML lang attribute
     document.documentElement.lang = i18n.language;
   }, [i18n.language, t]);
