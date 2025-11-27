@@ -72,27 +72,6 @@ export default function App() {
     // Always point canonical to the base URL without query parameters
     canonicalLink.setAttribute('href', 'https://ilojaloin.fi/');
     
-    // Add hreflang tags for multilingual SEO
-    // Remove existing hreflang tags
-    document.querySelectorAll('link[hreflang]').forEach(link => link.remove());
-    
-    // Add hreflang tags for all language versions
-    const languages = ['fi', 'sv', 'en'];
-    languages.forEach(lang => {
-      const hreflangLink = document.createElement('link');
-      hreflangLink.setAttribute('rel', 'alternate');
-      hreflangLink.setAttribute('hreflang', lang);
-      hreflangLink.setAttribute('href', `https://ilojaloin.fi/?lang=${lang}`);
-      document.head.appendChild(hreflangLink);
-    });
-    
-    // Add x-default hreflang
-    const defaultLink = document.createElement('link');
-    defaultLink.setAttribute('rel', 'alternate');
-    defaultLink.setAttribute('hreflang', 'x-default');
-    defaultLink.setAttribute('href', 'https://ilojaloin.fi/');
-    document.head.appendChild(defaultLink);
-    
     // Update HTML lang attribute
     document.documentElement.lang = i18n.language;
   }, [i18n.language, t]);
@@ -780,9 +759,8 @@ export default function App() {
               </div>
             </div>
           </section>
-          {/* Alatunniste */}
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section id="booking" className="py-16 md:py-20 px-4 pb-24 bg-white">
+          <section id="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
