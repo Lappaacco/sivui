@@ -31,6 +31,9 @@ export default function App() {
 
   // Update SEO meta tags when language changes
   useEffect(() => {
+    // Update HTML lang attribute
+    document.documentElement.lang = i18n.language;
+    
     // Update document title
     document.title = t('meta.title');
     
@@ -51,6 +54,23 @@ export default function App() {
     if (ogDescription) {
       ogDescription.setAttribute('content', t('meta.description'));
     }
+    
+    // Update Open Graph locale
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) {
+      const localeMap = { fi: 'fi_FI', sv: 'sv_SE', en: 'en_US' };
+      ogLocale.setAttribute('content', localeMap[i18n.language] || 'fi_FI');
+    }
+    
+    // Update canonical URL to remove query parameters
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    // Always point canonical to the base URL without query parameters
+    canonicalLink.setAttribute('href', 'https://ilojaloin.fi/');
     
     // Update HTML lang attribute
     document.documentElement.lang = i18n.language;
@@ -212,11 +232,11 @@ export default function App() {
       {mobileMenuOpen && (
         <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm">
           <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
-          <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
-          <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
           <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-          <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+          <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+          <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
+          <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
           <NavItem label={t('nav.contact')} href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
           <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
@@ -233,11 +253,11 @@ export default function App() {
           </a>
           <div className="px-4">
             <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
-            <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
-            <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
             <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-            <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
             <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+            <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+            <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
+            <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
             <NavItem label={t('nav.contact')} href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
             <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
           </div>
@@ -271,44 +291,22 @@ export default function App() {
                   {t('hero.bookButton')}
                 </a>
               </div>
-            </div>
-          </section>
-
-          {/* About section */}
-          <section id="about" className="py-12 md:py-20 px-4 bg-white">
-            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('about.title')}</h2>
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="rounded-lg overflow-hidden">
-                  <img src="/yrittaja.png" alt="Jalkaterapeutti Satu Paunonen" className="w-full h-full object-cover" />
-                </div>
-                <div className="prose max-w-full">
-                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph1') }}></p>
-
-                  <div className="my-4" aria-hidden></div>
-
-                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph2') }}></p>
-
-                  <div className="my-4" aria-hidden></div>
-
-                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph3') }}></p>
-
-                  <div className="my-4" aria-hidden></div>
-
-                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph4') }}></p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Jalkaterapia section */}
-          <section id="jalkaterapia" className="py-12 md:py-20 px-4 bg-offwhite">
-            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
-              <div className="prose max-w-full">
-                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph1') }}></p>
-                <div className="my-4" aria-hidden></div>
-                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph2') }}></p>
+              
+              {/* Black Friday Banner */}
+              <div className="mt-6 max-w-2xl mx-auto">
+                <a
+                  href="https://vello.fi/ilojaloin-jalkaterapia/lahjakortit"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black text-white px-6 py-4 rounded-lg shadow-lg text-center hover:bg-gray-900 transition-colors cursor-pointer"
+                >
+                  <p className="text-lg md:text-xl font-bold mb-1">
+                    {t('hero.blackFriday.title')}
+                  </p>
+                  <p className="text-sm md:text-base">
+                    {t('hero.blackFriday.validity')}
+                  </p>
+                </a>
               </div>
             </div>
           </section>
@@ -333,29 +331,8 @@ export default function App() {
             </div>
           </section>
 
-          {/* Turvallisuus ja hygienia section */}
-          <section id="hygienia" className="py-12 md:py-20 px-4 bg-offwhite">
-            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
-              <div className="prose max-w-full">
-                <p>{t('hygiene.paragraph1')}</p>
-                <div className="my-4" aria-hidden></div>
-                <p>{t('hygiene.paragraph2')}</p>
-                <div className="my-4" aria-hidden></div>
-                <p>{t('hygiene.paragraph3')}</p>
-                <div className="my-4" aria-hidden></div>
-                <p>{t('hygiene.paragraph4')}</p>
-                <div className="my-4" aria-hidden></div>
-                <p>{t('hygiene.paragraph5')}</p>
-                <p dangerouslySetInnerHTML={{ __html: t('hygiene.paragraph6') }}></p>
-                <div className="my-4" aria-hidden></div>
-                <p dangerouslySetInnerHTML={{ __html: t('hygiene.paragraph7') }}></p>
-              </div>
-            </div>
-          </section>
-
           {/* Hinnoittelusta section */}
-                    <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-white">
+                    <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
               <div className="prose max-w-full mb-8">
@@ -382,7 +359,6 @@ export default function App() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.priceListTitle')}</h3>
               <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
                 <table className="w-full table-auto border-collapse border border-gray-300">
                   <thead>
@@ -442,6 +418,17 @@ export default function App() {
                     </tr>
                     <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
+                        <strong>{t('pricing.diabetes.title')}</strong>
+                        <ul className="list-disc ml-5 mt-2 space-y-1">
+                          {t('pricing.diabetes.items', { returnObjects: true }).map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </td>
+                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.diabetes.price')}</td>
+                    </tr>
+                    <tr className="border-t">
+                      <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.regularCare.title')}</strong>
                         {t('pricing.regularCare.duration') && <strong className="ml-2">{t('pricing.regularCare.duration')}</strong>}
                         <ul className="list-disc ml-5 mt-2 space-y-1">
@@ -452,7 +439,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.regularCare.price')}</td>
                     </tr>
-                    <tr className="border-t">
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.nailCorrection.title')}</strong>
                         {t('pricing.nailCorrection.duration') && <strong className="ml-2">{t('pricing.nailCorrection.duration')}</strong>}
@@ -464,7 +451,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.nailCorrection.price')}</td>
                     </tr>
-                    <tr className="border-t bg-gray-50">
+                    <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.wart.title')}</strong>
                         {t('pricing.wart.duration') && <strong className="ml-2">{t('pricing.wart.duration')}</strong>}
@@ -476,7 +463,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.wart.price')}</td>
                     </tr>
-                    <tr className="border-t">
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.callus15.title')}</strong>
                         {t('pricing.callus15.duration') && <strong className="ml-2">{t('pricing.callus15.duration')}</strong>}
@@ -488,7 +475,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus15.price')}</td>
                     </tr>
-                    <tr className="border-t bg-gray-50">
+                    <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.callus30.title')}</strong>
                         {t('pricing.callus30.duration') && <strong className="ml-2">{t('pricing.callus30.duration')}</strong>}
@@ -500,7 +487,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus30.price')}</td>
                     </tr>
-                    <tr className="border-t">
+                    <tr className="border-t bg-gray-50">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.shopping.title')}</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
@@ -511,7 +498,7 @@ export default function App() {
                       </td>
                       <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.shopping.price')}</td>
                     </tr>
-                    <tr className="border-t bg-gray-50">
+                    <tr className="border-t">
                       <td className="px-4 py-3 border border-gray-300">
                         <strong>{t('pricing.lectures.title')}</strong>
                         <ul className="list-disc ml-5 mt-2 space-y-1">
@@ -524,13 +511,16 @@ export default function App() {
                 </table>
               </div>
 
-              <div className="mt-8 p-6 bg-offwhite rounded-lg">
+              <div className="mt-8 p-6 bg-white rounded-lg shadow-md">
                 <p className="text-lg mb-4">
                   <strong>{t('pricing.cancellation.title')}</strong>
                 </p>
-                <p className="text-base mb-6">
+                <p className="text-base">
                   {t('pricing.cancellation.policy')}
                 </p>
+              </div>
+
+              <div className="mt-8 p-6 bg-white rounded-lg shadow-md">
                 <p className="text-lg">
                   <strong>{t('pricing.note.title')}</strong> {t('pricing.note.description')}
                 </p>
@@ -540,6 +530,64 @@ export default function App() {
                     044 068 4567
                   </a>
                 </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Jalkaterapia section */}
+          <section id="jalkaterapia" className="py-12 md:py-20 px-4 bg-white">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
+              <div className="prose max-w-full">
+                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph1') }}></p>
+                <div className="my-4" aria-hidden></div>
+                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph2') }}></p>
+              </div>
+            </div>
+          </section>
+
+          {/* About section */}
+          <section id="about" className="py-12 md:py-20 px-4 bg-offwhite">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('about.title')}</h2>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="rounded-lg overflow-hidden">
+                  <img src="/yrittaja.png" alt="Jalkaterapeutti Satu Paunonen" className="w-full h-full object-cover" />
+                </div>
+                <div className="prose max-w-full">
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph1') }}></p>
+
+                  <div className="my-4" aria-hidden></div>
+
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph2') }}></p>
+
+                  <div className="my-4" aria-hidden></div>
+
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph3') }}></p>
+
+                  <div className="my-4" aria-hidden></div>
+
+                  <p dangerouslySetInnerHTML={{ __html: t('about.paragraph4') }}></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Turvallisuus ja hygienia section */}
+          <section id="hygienia" className="py-12 md:py-20 px-4 bg-white">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
+              <div className="prose max-w-full">
+                <p>{t('hygiene.paragraph1')}</p>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('hygiene.paragraph2')}</p>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('hygiene.paragraph4')}</p>
+                <div className="my-4" aria-hidden></div>
+                <p>{t('hygiene.paragraph5')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('hygiene.paragraph6') }}></p>
+                <div className="my-4" aria-hidden></div>
+                <p dangerouslySetInnerHTML={{ __html: t('hygiene.paragraph7') }}></p>
               </div>
             </div>
           </section>
@@ -713,11 +761,11 @@ export default function App() {
           </section>
           {/* Alatunniste */}
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section id="booking" className="py-16 md:py-20 px-4 bg-white">
+          <section id="booking" className="py-16 md:py-20 px-4 pb-24 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
-              <div className="w-full h-[600px] md:h-[75vh] lg:h-[85vh] border border-gray-200 rounded-lg overflow-auto relative">
+              <div className="w-full h-[600px] md:h-[75vh] lg:h-[85vh] rounded-lg overflow-hidden relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>

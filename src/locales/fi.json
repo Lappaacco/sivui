@@ -1,11 +1,11 @@
 {
   "nav": {
     "home": "Etusivu",
-    "about": "ILOJALOIN & minä",
+    "about": "Ilojaloin & minä",
     "footTherapy": "Jalkaterapia",
-    "services": "Palveluni",
-    "hygiene": "Turvallisuus ja hygienia",
-    "pricing": "Hinnoittelusta",
+    "services": "Palvelut",
+    "hygiene": "Turvallisuus & hygienia",
+    "pricing": "Hinnasto",
     "contact": "Yhteystiedot",
     "booking": "Ajanvaraus"
   },
@@ -15,7 +15,11 @@
   "hero": {
     "title": "Jalkaterapia Vaasassa - Kepein askelin, Ilojaloin",
     "subtitle": "Hyvinvoinnin askeleet alkavat jaloista. Tervetuloa Ilojaloin jalkaterapiaan!",
-    "bookButton": "Varaa aika!"
+    "bookButton": "Varaa aika!",
+    "blackFriday": {
+      "title": "ILOJALOIN - Black Week - Lahjakortit -20%",
+      "validity": "(Tarjous voimassa 23.11.-30.11.2025)"
+    }
   },
   "about": {
     "title": "Ilojaloin & minä",
@@ -30,7 +34,7 @@
     "paragraph2": "Jalkaterapia on kokonaisvaltaista hyvinvointia jaloillesi. Se auttaa <strong>ehkäisemään ja hoitamaan erilaisia jalkavaivoja, kiputiloja ja virheasentoja</strong>, parantaa liikkumiskykyä, lievittää kipua ja edistää arjen sujuvuutta. Koska jokainen jalka on yksilöllinen, hoito suunnitellaan aina asiakkaan tarpeiden mukaan."
   },
   "services": {
-    "title": "Palveluni",
+    "title": "Palvelut",
     "intro": "Ilojaloissa tarjoan <strong>monipuolisia jalkaterapiapalveluja</strong>, kuten:",
     "items": [
       "🦶 <strong>Tutkimukset ja jalka-analyysit</strong> – kartoitetaan jalkojen kunto ja mahdolliset ongelmakohdat",
@@ -60,7 +64,7 @@
     "paragraph7": "Asiakastietojesi turvallisuudesta huolehdin yhtä tarkasti. Käytössäni on <strong>Vello-potilastietojärjestelmä</strong>, joka on <strong>tietoturvallinen ja Kanta-yhteensopiva</strong>, joten tietosi säilyvät suojattuina ja luottamuksellisina."
   },
   "pricing": {
-    "title": "Hinnoittelusta",
+    "title": "Hinnasto",
     "intro": "Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous.",
     "benefitsText": "Minulla käyvät hyvinvointiedut:",
     "priceListTitle": "Hinnastoni",
@@ -159,6 +163,13 @@
     "children": {
       "title": "Lasten jalkaterapia 30 min",
       "price": "35€"
+    },
+    "diabetes": {
+      "title": "Diabeetikon jalkaterapia 45 min",
+      "items": [
+        "Jalkaterapiakäynti diabestesta sairastavalle (1. tai 2.-tyyppi). Tehdään jalkojen tutkimus ja määrillään riskiluokka (0-3) jalkahaavan synnylle. Tämä kannattaa tehdä vuosittain, mutta useammin, jos riski on kohonnut. Lisäksi ohjausta ja motivointia jalkojen omahoitoon, kenkäresepti ja tarvittaessa iho- ja kynsiioireiden hoitoa."
+      ],
+      "price": "65€"
     },
     "lectures": {
       "title": "Luennot",

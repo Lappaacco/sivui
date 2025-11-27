@@ -1,10 +1,10 @@
 {
   "nav": {
     "home": "Home",
-    "about": "ILOJALOIN & me",
+    "about": "Ilojaloin & me",
     "footTherapy": "Podiatry",
-    "services": "My Services",
-    "hygiene": "Safety and Hygiene",
+    "services": "Services",
+    "hygiene": "Safety & Hygiene",
     "pricing": "Pricing",
     "contact": "Contact",
     "booking": "Book Appointment"
@@ -15,7 +15,11 @@
   "hero": {
     "title": "Podiatry in Vaasa - Light Steps with Ilojaloin",
     "subtitle": "Well-being starts from your feet. Welcome to Ilojaloin podiatry!",
-    "bookButton": "Book Now!"
+    "bookButton": "Book Now!",
+    "blackFriday": {
+      "title": "ILOJALOIN - Black Week - Gift Cards -20%",
+      "validity": "(Offer valid 23.11.-30.11.2025)"
+    }
   },
   "about": {
     "title": "Ilojaloin & me",
@@ -30,7 +34,7 @@
     "paragraph2": "Podiatry is preventive care that promotes mobility and quality of life. Regular foot, nail, and skin care prevents problems before they become serious. My goal is for every visit to bring relief, and in the long run, keep you on your feet."
   },
   "services": {
-    "title": "My Services",
+    "title": "Services",
     "intro": "At Ilojaloin, I offer <strong>comprehensive podiatry services</strong>, such as:",
     "items": [
       "🦶 <strong>Examinations and foot analyses</strong> – assessment of foot health and potential problem areas",
@@ -54,7 +58,6 @@
     "title": "Safety and Hygiene",
     "paragraph1": "I have the highest quality and safest equipment on the market. My treatment chair is stable, sturdy, and lifts up to 250 kilograms. It lowers down, making it easy to get on.",
     "paragraph2": "When grinding skin and nails, I use a water drill that cools and binds dust – the skin doesn't heat up and grinding dust doesn't fly around in the air. This way, both you and I breathe clean air.",
-    "paragraph3": "My foot mirror's low construction enables accurate assessment of foot load and position.",
     "paragraph4": "All my instruments are carefully maintained with new, professional instrument maintenance equipment. The instruments are disinfected, washed, dried, and maintained. They are then sterilized in an autoclave and stored in a closed box. The instrument cabinet is always handled with clean hands.",
     "paragraph5": "The premises are cleaned after each customer with effective agents that destroy bacteria, viruses, and fungi.",
     "paragraph6": "<strong>Your safety and well-being are most important to me.</strong>",
@@ -158,8 +161,15 @@
       "price": "105€"
     },
     "children": {
-      "title": "Pediatric Podiatry (30 min)",
+      "title": "Children's Podiatry 30 min",
       "price": "35€"
+    },
+    "diabetes": {
+      "title": "Diabetic Podiatry 45 min",
+      "items": [
+        "Podiatry visit for people with diabetes (type 1 or 2). Foot examination and determination of risk class (0-3) for foot ulcer development. This should be done annually, but more often if the risk is elevated. Additionally, guidance and motivation for foot self-care, shoe prescription, and treatment of skin and nail symptoms if needed."
+      ],
+      "price": "65€"
     },
     "lectures": {
       "title": "Lectures",

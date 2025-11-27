@@ -6,41 +6,11 @@
   <!-- Main pages with language alternatives -->
   <url>
     <loc>https://ilojaloin.fi/</loc>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/?lang=fi" />
-    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/?lang=sv" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ilojaloin.fi/" />
-    <lastmod>2025-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ilojaloin.fi/?lang=fi</loc>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/?lang=fi" />
-    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/?lang=sv" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/?lang=en" />
-    <lastmod>2025-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ilojaloin.fi/?lang=sv</loc>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/?lang=fi" />
-    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/?lang=sv" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/?lang=en" />
-    <lastmod>2025-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ilojaloin.fi/?lang=en</loc>
-    <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/?lang=fi" />
-    <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/?lang=sv" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/?lang=en" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -51,7 +21,7 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/privacy.html" />
     <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/privacy-sv.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/privacy-en.html" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -61,7 +31,7 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/privacy.html" />
     <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/privacy-sv.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/privacy-en.html" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -71,7 +41,7 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/privacy.html" />
     <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/privacy-sv.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/privacy-en.html" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -82,7 +52,7 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/self-monitoring.html" />
     <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/self-monitoring-sv.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/self-monitoring-en.html" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -92,7 +62,7 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/self-monitoring.html" />
     <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/self-monitoring-sv.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/self-monitoring-en.html" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -102,7 +72,7 @@
     <xhtml:link rel="alternate" hreflang="fi" href="https://ilojaloin.fi/self-monitoring.html" />
     <xhtml:link rel="alternate" hreflang="sv" href="https://ilojaloin.fi/self-monitoring-sv.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ilojaloin.fi/self-monitoring-en.html" />
-    <lastmod>2025-11-08</lastmod>
+    <lastmod>2025-11-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

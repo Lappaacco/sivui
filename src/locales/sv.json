@@ -1,11 +1,11 @@
 {
   "nav": {
     "home": "Hem",
-    "about": "ILOJALOIN & jag",
+    "about": "Ilojaloin & jag",
     "footTherapy": "Fotterapi",
-    "services": "Mina tjänster",
-    "hygiene": "Säkerhet och hygien",
-    "pricing": "Priser",
+    "services": "Tjänster",
+    "hygiene": "Säkerhet & hygien",
+    "pricing": "Prislista",
     "contact": "Kontakt",
     "booking": "Boka tid"
   },
@@ -15,7 +15,11 @@
   "hero": {
     "title": "Fotterapi i Vasa - Med lätta steg, Ilojaloin",
     "subtitle": "Välbefinnandets steg börjar från fötterna. Välkommen till Ilojaloin fotterapi!",
-    "bookButton": "Boka tid!"
+    "bookButton": "Boka tid!",
+    "blackFriday": {
+      "title": "ILOJALOIN - Black Week - Presentkort -20%",
+      "validity": "(Erbjudandet gäller 23.11.-30.11.2025)"
+    }
   },
   "about": {
     "title": "Ilojaloin & jag",
@@ -30,7 +34,7 @@
     "paragraph2": "Fotterapi är helhetsbetonat välbefinnande för dina fötter. Det hjälper till att <strong>förebygga och behandla olika fotbesvär, smärttillstånd och felställningar</strong>, förbättrar rörligheten, lindrar smärta och främjar vardagens smidig het. Eftersom varje fot är unik planeras behandlingen alltid enligt kundens behov."
   },
   "services": {
-    "title": "Mina tjänster",
+    "title": "Tjänster",
     "intro": "På Ilojaloin erbjuder jag <strong>mångsidiga fotterapitjänster</strong>, såsom:",
     "items": [
       "🦶 <strong>Undersökningar och fotanalyser</strong> – vi kartlägger fötterns tillstånd och eventuella problemområden",
@@ -54,14 +58,13 @@
     "title": "Säkerhet och hygien",
     "paragraph1": "Jag har marknadens högkvalitativaste och säkraste utrustning. Min behandlingsstol är stabil, robust och lyfter upp till 250 kilo. Den sänks lågt så det är lätt att stiga upp.",
     "paragraph2": "Vid slipning av hud och naglar använder jag en vattenborr som kyler och binder dammet – huden värms inte upp och slipningsdammet flyger inte omkring i luften. På detta sätt andas både du och jag ren luft.",
-    "paragraph3": "Min fotspegels låga konstruktion möjliggör noggrann bedömning av fötterns belastning och position.",
     "paragraph4": "Alla mina verktyg underhålls noggrant med nya, professionella verktygsunderhållsapparater. Verktygen desinficeras, tvättas, torkas och underhålls. Sedan steriliseras de i autoklav och förvaras i en sluten låda. Verktygsskåpet hanteras alltid med rena händer.",
     "paragraph5": "Lokalerna städas efter varje kund med effektiva medel som förstör bakterier, virus och svampar.",
     "paragraph6": "<strong>Din säkerhet och ditt välbefinnande är viktigast för mig.</strong>",
     "paragraph7": "Jag tar lika stor omsorg om säkerheten för dina kunduppgifter. Jag använder <strong>Vello-patientdatasystem</strong>, som är <strong>datasäkert och Kanta-kompatibelt</strong>, så dina uppgifter förblir skyddade och konfidentiella."
   },
   "pricing": {
-    "title": "Priser",
+    "title": "Prislista",
     "intro": "Fotterapi är tidsbaserad. Under en timme hinner jag redan med många saker utöver hud- och nagelvård, vilket är min motivering för högre priser jämfört med till exempel fotvårdsspecialister. Fotterapi är hälsovård och därför behöver jag dina personuppgifter. Jag har journalföringsskyldighet och registrerar ditt besök i Omakanta. Det tar sin tid, liksom förberedelser och slutstädning.",
     "benefitsText": "Hos mig gäller välfärdsförmåner:",
     "priceListTitle": "Min prislista",
@@ -161,6 +164,13 @@
     "children": {
       "title": "Barn 30 min",
       "price": "35€"
+    },
+    "diabetes": {
+      "title": "Fotterapi för diabetiker 45 min",
+      "items": [
+        "Fotterapibesök för person med diabetes (typ 1 eller 2). Undersökning av fötterna och bestämning av riskklass (0-3) för fotsårsutveckling. Detta bör göras årligen, men oftare om risken är förhöjd. Dessutom vägledning och motivering för egenvård av fötterna, skorecept och vid behov behandling av hud- och nagelsymtom."
+      ],
+      "price": "65€"
     },
     "lectures": {
       "title": "Föreläsningar",
