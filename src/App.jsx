@@ -125,14 +125,9 @@ export default function App() {
     setMobileMenuOpen(false);
   };
 
-  // Focus mobile menu without scrolling when it opens
+  // Focus mobile menu when it opens
   useEffect(() => {
     if (mobileMenuOpen && mobileMenuRef.current) {
-      try {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch (e) {
-        window.scrollTo(0, 0);
-      }
       setTimeout(() => {
         const firstLink = mobileMenuRef.current.querySelector('a, button');
         if (firstLink) firstLink.focus();
@@ -213,7 +208,10 @@ export default function App() {
             aria-label="Valikko"
             aria-expanded={mobileMenuOpen}
             className="text-primary focus:outline-none"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={(e) => {
+              e.preventDefault();
+              setMobileMenuOpen(!mobileMenuOpen);
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +228,7 @@ export default function App() {
       </header>
       {/* Mobiilivalikon lista */}
       {mobileMenuOpen && (
-        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm">
+        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10">
           <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
           <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
@@ -292,22 +290,6 @@ export default function App() {
                 </a>
               </div>
               
-              {/* Black Friday Banner */}
-              <div className="mt-6 max-w-2xl mx-auto">
-                <a
-                  href="https://vello.fi/ilojaloin-jalkaterapia/lahjakortit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block bg-black text-white px-6 py-4 rounded-lg shadow-lg text-center hover:bg-gray-900 transition-colors cursor-pointer"
-                >
-                  <p className="text-lg md:text-xl font-bold mb-1">
-                    {t('hero.blackFriday.title')}
-                  </p>
-                  <p className="text-sm md:text-base">
-                    {t('hero.blackFriday.validity')}
-                  </p>
-                </a>
-              </div>
             </div>
           </section>
 
@@ -332,204 +314,50 @@ export default function App() {
           </section>
 
           {/* Hinnoittelusta section */}
-                    <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricing.title')}</h2>
-              <div className="prose max-w-full mb-8">
-                <p>{t('pricing.intro')}</p>
-                <div className="mt-6">
-                  <p className="mb-3">{t('pricing.benefitsText')}</p>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <img 
-                      src="/Epassi Logo.png" 
-                      alt="E-passi" 
-                      className="h-8 object-contain"
-                    />
-                    <img 
-                      src="/Edenred_logo_RGB_red.png" 
-                      alt="Edenred" 
-                      className="h-10 object-contain"
-                    />
-                    <img 
-                      src="/SmartumPayLogoBLACK.png" 
-                      alt="Smartum" 
-                      className="h-8 object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0">
-                <table className="w-full table-auto border-collapse border border-gray-300">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('pricing.title')}</h2>
+              
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 bg-white">
                   <thead>
-                    <tr className="bg-primaryLight text-left">
-                      <th className="px-4 py-3 font-medium border border-gray-300">{t('pricing.table.service')}</th>
-                      <th className="px-4 py-3 font-medium border border-gray-300">{t('pricing.table.price')}</th>
+                    <tr className="bg-primaryLight">
+                      <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.serviceLabel')}</th>
+                      <th className="px-4 py-3 text-right font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.therapy30.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.therapy30.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy30.price')}</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.therapy45.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.therapy45.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy45.price')}</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.therapy60.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.therapy60.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy60.price')}</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.therapy75.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.therapy75.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.therapy75.price')}</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300"><strong>{t('pricing.children.title')}</strong></td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.children.price')}</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.diabetes.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.diabetes.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.diabetes.price')}</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.regularCare.title')}</strong>
-                        {t('pricing.regularCare.duration') && <strong className="ml-2">{t('pricing.regularCare.duration')}</strong>}
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.regularCare.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.regularCare.price')}</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.nailCorrection.title')}</strong>
-                        {t('pricing.nailCorrection.duration') && <strong className="ml-2">{t('pricing.nailCorrection.duration')}</strong>}
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.nailCorrection.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.nailCorrection.price')}</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.wart.title')}</strong>
-                        {t('pricing.wart.duration') && <strong className="ml-2">{t('pricing.wart.duration')}</strong>}
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.wart.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.wart.price')}</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.callus15.title')}</strong>
-                        {t('pricing.callus15.duration') && <strong className="ml-2">{t('pricing.callus15.duration')}</strong>}
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.callus15.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus15.price')}</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.callus30.title')}</strong>
-                        {t('pricing.callus30.duration') && <strong className="ml-2">{t('pricing.callus30.duration')}</strong>}
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.callus30.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.callus30.price')}</td>
-                    </tr>
-                    <tr className="border-t bg-gray-50">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.shopping.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          {t('pricing.shopping.items', { returnObjects: true }).map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300 whitespace-nowrap">{t('pricing.shopping.price')}</td>
-                    </tr>
-                    <tr className="border-t">
-                      <td className="px-4 py-3 border border-gray-300">
-                        <strong>{t('pricing.lectures.title')}</strong>
-                        <ul className="list-disc ml-5 mt-2 space-y-1">
-                          <li>{t('pricing.lectures.description')}</li>
-                        </ul>
-                      </td>
-                      <td className="px-4 py-3 border border-gray-300"></td>
-                    </tr>
+                    {t('pricing.services', { returnObjects: true }).map((service, index) => (
+                      <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                        <td className="px-4 py-3 border border-gray-300">{service.name}</td>
+                        <td className="px-4 py-3 text-right border border-gray-300 whitespace-nowrap font-semibold">{service.price}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
 
-              <div className="mt-8 p-6 bg-white rounded-lg shadow-md">
-                <p className="text-lg mb-4">
-                  <strong>{t('pricing.cancellation.title')}</strong>
-                </p>
-                <p className="text-base">
-                  {t('pricing.cancellation.policy')}
-                </p>
-              </div>
-
-              <div className="mt-8 p-6 bg-white rounded-lg shadow-md">
-                <p className="text-lg">
-                  <strong>{t('pricing.note.title')}</strong> {t('pricing.note.description')}
-                </p>
-                <p className="mt-2 text-lg">
-                  {t('pricing.note.phone')}{' '}
-                  <a href="tel:+358440684567" className="text-primary hover:underline font-semibold">
-                    044 068 4567
-                  </a>
-                </p>
+              <div className="mt-12">
+                <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.additionalTitle')}</h3>
+                <p className="text-sm text-gray-600 mb-4">{t('pricing.additionalSubtitle')}</p>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 bg-white">
+                    <thead>
+                      <tr className="bg-primaryLight">
+                        <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.serviceLabel')}</th>
+                        <th className="px-4 py-3 text-right font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {t('pricing.additional', { returnObjects: true }).map((item, index) => (
+                        <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                          <td className="px-4 py-3 border border-gray-300">{item.name}</td>
+                          <td className="px-4 py-3 text-right border border-gray-300 whitespace-nowrap font-semibold">{item.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </section>
@@ -760,11 +588,11 @@ export default function App() {
             </div>
           </section>
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section id="booking" className="py-16 md:py-20 px-4 pb-32 bg-white">
+          <section id="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
-              <div className="w-full h-[600px] md:h-[75vh] lg:h-[85vh] rounded-lg overflow-hidden relative mb-8">
+              <div className="w-full h-[700px] md:h-[800px] lg:h-[900px] rounded-lg relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
@@ -782,7 +610,7 @@ export default function App() {
                     </a>
                   </div>
                 )}
-                <div ref={velloRef} data-vello-embed className="w-full min-h-full" />
+                <div ref={velloRef} data-vello-embed className="w-full h-full" />
               </div>             
             </div>
           </section>

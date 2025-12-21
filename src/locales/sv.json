@@ -13,13 +13,9 @@
     "subtitle": "Fotterapitjänster"
   },
   "hero": {
-    "title": "Fotterapi i Vasa - Med lätta steg, Ilojaloin",
-    "subtitle": "Välbefinnandets steg börjar från fötterna. Välkommen till Ilojaloin fotterapi!",
-    "bookButton": "Boka tid!",
-    "blackFriday": {
-      "title": "ILOJALOIN - Black Week - Presentkort -20%",
-      "validity": "(Erbjudandet gäller 23.11.-30.11.2025)"
-    }
+    "title": "Fotterapi i Vasa - Leende på läpparna och friska fötter",
+    "subtitle": "Hallux valgus, hammartår, främre fotsmärta och hälsmärta samt hud- och nagelbesvär - individuell och professionell vård för dina fötters välbefinnande.",
+    "bookButton": "Boka tid!"
   },
   "about": {
     "title": "Ilojaloin & jag",
@@ -65,126 +61,32 @@
   },
   "pricing": {
     "title": "Prislista",
-    "intro": "Fotterapi är tidsbaserad. Under en timme hinner jag redan med många saker utöver hud- och nagelvård, vilket är min motivering för högre priser jämfört med till exempel fotvårdsspecialister. Fotterapi är hälsovård och därför behöver jag dina personuppgifter. Jag har journalföringsskyldighet och registrerar ditt besök i Omakanta. Det tar sin tid, liksom förberedelser och slutstädning.",
-    "benefitsText": "Hos mig gäller välfärdsförmåner:",
-    "priceListTitle": "Min prislista",
-    "table": {
-      "service": "Tjänst",
-      "price": "Pris"
-    },
-    "callus15": {
-      "title": "Borttagning av liktorn/förhårdnad",
-      "items": [
-        "Ofta kan liktornen redan vara smärtsam, så här får du snabb lindring.",
-        "Om det finns flera liktornar eller förhårdnader eller om de är mycket tjocka, boka 30 minuter."
-      ],
-      "duration": "15 min",
-      "price": "25€"
-    },
-    "callus30": {
-      "title": "Borttagning av flera liktornar/förhårdnader",
-      "items": [
-        "Borttagning av flera eller tjockare liktornar/förhårdnader.",
-        "Omedelbar lindring."
-      ],
-      "duration": "30 min",
-      "price": "45€"
-    },
-    "nailCorrection": {
-      "title": "Nagelkorrigeringsbehandling",
-      "items": [
-        "Nagelkorrigeringsbehandling för missbildad eller inåtväxande nagel.",
-        "Jag använder titantrådkorrigeringsmetoden.",
-        "Tråden måste förnyas var 2-3 månad och hållas under hela nagelns växttid 6-12 månader."
-      ],
-      "duration": "30 min",
-      "price": "45€"
-    },
-    "wart": {
-      "title": "Vårta behandling (Verrutop®)",
-      "items": [
-        "Jag använder Verrutop®-metoden, som är en effektiv, noggrann och säker vårtbehandlingsmetod för professionellt bruk.",
-        "Verrutop är en väl tolererad vårtbehandlingslösning för utvärtes bruk som endast verkar på vårtvävnad.",
-        "Behandlingar behövs vanligtvis 2-5 gånger."
-      ],
-      "duration": "15 min",
-      "price": "25€"
-    },
-    "regularCare": {
-      "title": "Vanlig fotvård",
-      "items": [
-        "Så kallad tyst tjänst.",
-        "Boka denna tjänst om du vill komma och koppla av i tystnad i en trivsam miljö och samtidigt få dina fötter vårdade av en professionell.",
-        "Tjänsten inkluderar fotbad, hud- och nagelvård samt avslutningsvis en avslappande smörjmassage för fotsulor och vrister inom tidsramen.",
-        "Om du vill, ger jag tips för egenvård."
-      ],
-      "duration": "60 min",
-      "price": "65€"
-    },
-    "shopping": {
-      "title": "Shoppingkvart",
-      "items": [
-        "Vi kartlägger hemvårdens behov och rekommenderar produkter.",
-        "För justering av tåavdelare är det värt att boka denna tid (1 justeringsomgång gratis).",
-        "Anskaffning/passning av skor."
-      ],
-      "price": "0€"
-    },
-    "therapy30": {
-      "title": "Fotterapi 30 min",
-      "items": [
-        "Boka denna tid för liktornsbehandling eller nagelkorrigering (+15€ materialkostnad).",
-        "Passar även för prydliga fötter med hemvårdsinstruktioner och produktrekommendationer."
-      ],
-      "price": "45€"
-    },
-    "therapy45": {
-      "title": "Fotterapi 45 min",
-      "items": [
-        "Boka denna tid vid smärtor eller besvär i fötterna för ingående undersökning.",
-        "Även lite svårare fötters vård kan skötas, t.ex. vid förtjockning av hud/naglar."
-      ],
-      "price": "65€"
-    },
-    "therapy60": {
-      "title": "Fotterapi 60 min",
-      "items": [
-        "Tid för undersökning och nödvändiga åtgärder.",
-        "Boka om det finns mycket att vårda på huden och naglarna, t.ex. många liktornar eller mycket tjocka naglar."
-      ],
-      "price": "85€"
-    },
-    "therapy75": {
-      "title": "Fotterapi 75 min",
-      "items": [
-        "Tid för flera åtgärder utöver undersökning."
-      ],
-      "price": "105€"
-    },
-    "children": {
-      "title": "Barn 30 min",
-      "price": "35€"
-    },
-    "diabetes": {
-      "title": "Fotterapi för diabetiker 45 min",
-      "items": [
-        "Fotterapibesök för person med diabetes (typ 1 eller 2). Undersökning av fötterna och bestämning av riskklass (0-3) för fotsårsutveckling. Detta bör göras årligen, men oftare om risken är förhöjd. Dessutom vägledning och motivering för egenvård av fötterna, skorecept och vid behov behandling av hud- och nagelsymtom."
-      ],
-      "price": "65€"
-    },
-    "lectures": {
-      "title": "Föreläsningar",
-      "description": "Jag erbjuder föreläsningar om fothälsa för olika föreningar, skolor och arbetsgemenskaper. Kontakta mig så kommer vi överens!"
-    },
-    "cancellation": {
-      "title": "Avbokningsvillkor",
-      "policy": "Bokningen kan avbokas kostnadsfritt 24 timmar före bokningens början. Därefter görs avbokningar per telefon och tidsombokning till exempel vid sjukdom. Om du uteblir helt från mottagningen utan att meddela, debiteras 100% av priset för den bokade tjänsten."
-    },
-    "note": {
-      "title": "OBS!",
-      "description": "Om du funderar på vilken tid du skulle boka, kan du alltid ringa och fråga! Jag svarar inte i telefon om jag arbetar med kunder, men jag ringer tillbaka.",
-      "phone": "Telefon:"
-    }
+    "serviceLabel": "Tjänst",
+    "priceLabel": "Pris",
+    "services": [
+      { "name": "Fotterapi 30min", "price": "45 €" },
+      { "name": "Fotterapi 45 min", "price": "65 €" },
+      { "name": "Fotterapi 60 min", "price": "85 €" },
+      { "name": "Fotterapi 75 min", "price": "105 €" },
+      { "name": "Barnfotterapi 30 min", "price": "35 €" },
+      { "name": "Diabetisk fotterapi 60 min", "price": "70 €" },
+      { "name": "Vanlig fotvård 60 min", "price": "65 €" },
+      { "name": "Avlägsnande av en liktorns/förhårdnad 15 min", "price": "25 €" },
+      { "name": "Avlägsnande av liktorn/förhårdnader 30 min", "price": "40 €" },
+      { "name": "Vårtbehandling (Verrutop®) ca 30 min", "price": "40 €" },
+      { "name": "Nagelkorrigeringsbehandling ca 30 min", "price": "40 €" },
+      { "name": "Nagelprotes ca 30 min", "price": "40 €" },
+      { "name": "Shoppingkvart", "price": "0 €" }
+    ],
+    "additionalTitle": "Tilläggsprislista",
+    "additionalSubtitle": "(materialavgift i samband med fotterapi)",
+    "additional": [
+      { "name": "Vårtbehandling", "price": "15 €" },
+      { "name": "Nagelkorrigering", "price": "15 €" },
+      { "name": "Nagelprotes", "price": "15 €" },
+      { "name": "Silikonortos (tåstöd)", "price": "20-50 €" },
+      { "name": "Snabbinlägg", "price": "10-50 €" }
+    ]
   },
   "contact": {
     "title": "Kontakt",

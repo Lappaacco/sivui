@@ -13,13 +13,9 @@
     "subtitle": "Podiatry Services"
   },
   "hero": {
-    "title": "Podiatry in Vaasa - Light Steps with Ilojaloin",
-    "subtitle": "Well-being starts from your feet. Welcome to Ilojaloin podiatry!",
-    "bookButton": "Book Now!",
-    "blackFriday": {
-      "title": "ILOJALOIN - Black Week - Gift Cards -20%",
-      "validity": "(Offer valid 23.11.-30.11.2025)"
-    }
+    "title": "Podiatry in Vaasa - Happy Feet, Happy You",
+    "subtitle": "Bunions, hammer toes, ball of foot and heel pain, as well as skin and nail problems - personalized and expert care for your foot health.",
+    "bookButton": "Book Now!"
   },
   "about": {
     "title": "Ilojaloin & me",
@@ -65,125 +61,32 @@
   },
   "pricing": {
     "title": "Pricing",
-    "intro": "Podiatry services are time-based. In one hour, I can accomplish much more than basic skin and nail care, which justifies the higher cost compared to cosmetic pedicures. Podiatry is healthcare, so I need your personal information. I have documentation requirements and record your visit in the national health records (Kanta). This, along with preparation and cleanup, takes time.",
-    "benefitsText": "I accept wellness vouchers:",
-    "priceListTitle": "Price List",
-    "table": {
-      "service": "Service",
-      "price": "Price"
-    },
-    "callus15": {
-      "title": "Callus/corn removal",
-      "items": [
-        "Often the callus can already be painful, so this gives you quick relief.",
-        "If there are multiple calluses or corns or they are very thick, book 30 minutes."
-      ],
-      "duration": "15 min",
-      "price": "25€"
-    },
-    "callus30": {
-      "title": "Multiple callus/corn removal",
-      "items": [
-        "Removal of multiple or thicker calluses/corns.",
-        "Immediate relief."
-      ],
-      "duration": "30 min",
-      "price": "45€"
-    },
-    "nailCorrection": {
-      "title": "Nail correction treatment",
-      "items": [
-        "Nail correction treatment for deformed or ingrown nails.",
-        "I use the titanium wire correction method.",
-        "The wire must be renewed every 2-3 months and kept for the entire nail growth period of 6-12 months."
-      ],
-      "duration": "30 min",
-      "price": "45€"
-    },
-    "wart": {
-      "title": "Wart treatment (Verrutop®)",
-      "items": [
-        "I use the Verrutop® method, which is an effective, precise, and safe wart treatment method for professional use. Verrutop is a well-tolerated wart treatment solution for external use that only affects wart tissue.",
-        "Treatments are usually needed 2-5 times."
-      ],
-      "duration": "15 min",
-      "price": "25€"
-    },
-    "regularCare": {
-      "title": "Regular foot care",
-      "items": [
-        "A so-called quiet service.",
-        "Book this service if you want to come and relax in silence in a pleasant environment and get your feet treated by a professional.",
-        "The service includes foot bath, skin and nail care, and finally a relaxing moisturizing massage for the soles and ankles within the time frame.",
-        "If you want, I will give tips for self-care."
-      ],
-      "duration": "60 min",
-      "price": "65€"
-    },
-    "shopping": {
-      "title": "Consultation Visit",
-      "items": [
-        "Assessment of home care needs and product recommendations.",
-        "For example, toe spacer fittings (1 adjustment session included).",
-        "Shoe shopping assistance and fitting guidance."
-      ],
-      "price": "Free"
-    },
-    "therapy30": {
-      "title": "30-Minute Appointment",
-      "items": [
-        "Book this if you need only corn removal or nail correction (+€15 material fee).",
-        "Also suitable for routine foot care with home care guidance and product recommendations. Shoe-related questions welcome."
-      ],
-      "price": "45€"
-    },
-    "therapy45": {
-      "title": "45-Minute Appointment",
-      "items": [
-        "Book this if you have foot pain or problems requiring thorough examination. May include time for some treatments.",
-        "Also suitable for more challenging feet with moderate skin or nail thickening."
-      ],
-      "price": "65€"
-    },
-    "therapy60": {
-      "title": "60-Minute Appointment",
-      "items": [
-        "Adequate time for foot examination and necessary treatments.",
-        "Book if you have extensive skin and nail care needs, such as multiple corns, thick calluses, or very thick nails."
-      ],
-      "price": "85€"
-    },
-    "therapy75": {
-      "title": "75-Minute Appointment",
-      "items": [
-        "Allows time for multiple treatments in addition to examination."
-      ],
-      "price": "105€"
-    },
-    "children": {
-      "title": "Children's Podiatry 30 min",
-      "price": "35€"
-    },
-    "diabetes": {
-      "title": "Diabetic Podiatry 45 min",
-      "items": [
-        "Podiatry visit for people with diabetes (type 1 or 2). Foot examination and determination of risk class (0-3) for foot ulcer development. This should be done annually, but more often if the risk is elevated. Additionally, guidance and motivation for foot self-care, shoe prescription, and treatment of skin and nail symptoms if needed."
-      ],
-      "price": "65€"
-    },
-    "lectures": {
-      "title": "Lectures",
-      "description": "I offer foot health presentations for associations, schools, and workplaces. Contact me to arrange!"
-    },
-    "cancellation": {
-      "title": "Cancellation Policy",
-      "policy": "Appointments can be cancelled free of charge 24 hours before the appointment begins. Cancellations after that are made by phone and appointment rescheduling, for example in case of illness. If you completely fail to show up for the appointment without notice, 100% of the booked service price will be charged."
-    },
-    "note": {
-      "title": "NOTE!",
-      "description": "Not sure which appointment length to book? Just call and ask! If I'm with a client, I'll call you back.",
-      "phone": "Phone:"
-    }
+    "serviceLabel": "Service",
+    "priceLabel": "Price",
+    "services": [
+      { "name": "Podiatry 30min", "price": "45 €" },
+      { "name": "Podiatry 45 min", "price": "65 €" },
+      { "name": "Podiatry 60 min", "price": "85 €" },
+      { "name": "Podiatry 75 min", "price": "105 €" },
+      { "name": "Children's podiatry 30 min", "price": "35 €" },
+      { "name": "Diabetic foot therapy 60 min", "price": "70 €" },
+      { "name": "Regular foot care 60 min", "price": "65 €" },
+      { "name": "Removal of corn/callus 15 min", "price": "25 €" },
+      { "name": "Removal of corns/calluses 30 min", "price": "40 €" },
+      { "name": "Wart treatment (Verrutop®) approx. 30 min", "price": "40 €" },
+      { "name": "Nail correction treatment approx. 30 min", "price": "40 €" },
+      { "name": "Nail prosthesis approx. 30 min", "price": "40 €" },
+      { "name": "Shopping quarter", "price": "0 €" }
+    ],
+    "additionalTitle": "Additional pricing",
+    "additionalSubtitle": "(material fee in connection with podiatry)",
+    "additional": [
+      { "name": "Wart treatment", "price": "15 €" },
+      { "name": "Nail correction", "price": "15 €" },
+      { "name": "Nail prosthesis", "price": "15 €" },
+      { "name": "Silicone orthosis (toe support)", "price": "20-50 €" },
+      { "name": "Quick insoles", "price": "10-50 €" }
+    ]
   },
   "contact": {
     "title": "Contact",

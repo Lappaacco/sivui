@@ -13,13 +13,9 @@
     "subtitle": "Jalkaterapiapalvelut"
   },
   "hero": {
-    "title": "Jalkaterapia Vaasassa - Kepein askelin, Ilojaloin",
-    "subtitle": "Hyvinvoinnin askeleet alkavat jaloista. Tervetuloa Ilojaloin jalkaterapiaan!",
-    "bookButton": "Varaa aika!",
-    "blackFriday": {
-      "title": "ILOJALOIN - Black Week - Lahjakortit -20%",
-      "validity": "(Tarjous voimassa 23.11.-30.11.2025)"
-    }
+    "title": "Jalkaterapiaa Vaasassa - Hymy huulilla ja jalat kunnossa",
+    "subtitle": "Vaivasenluut, vasaravarpaat, päkiä- ja kantakivut sekä iho- ja kynsivaivat - yksilöllistä ja asiantuntevaa hoitoa jalkojesi hyvinvointiin.",
+    "bookButton": "Varaa aika!"
   },
   "about": {
     "title": "Ilojaloin & minä",
@@ -65,125 +61,32 @@
   },
   "pricing": {
     "title": "Hinnasto",
-    "intro": "Jalkaterapia on aikaveloitteista. Tunnissa ehdin jo monta asiaa ihon- ja kynsienhoidon lisäksi, mikä on perusteluni korkeammalle hinnalle verraten esimerkiksi jalkojenhoitajien hinnoitteluun. Jalkaterapia on terveydenhuoltoa ja siksi tarvitsen henkilötietosi. Minulla on kirjausvelvoite ja kirjaan käyntisi tiedot Omakantaan. Se vie aikansa, samoin valmistelut ja loppusiivous.",
-    "benefitsText": "Minulla käyvät hyvinvointiedut:",
-    "priceListTitle": "Hinnastoni",
-    "table": {
-      "service": "Palvelu",
-      "price": "Hinta"
-    },
-    "callus15": {
-      "title": "Känsän/kovettuman poisto",
-      "items": [
-        "Yleensä känsä voi olla jo kivuliaskin, joten tästä saat pikahelpotuksen.",
-        "Jos känsiä tai kovettumia on useampikin tai ne ovat hyvin paksut, varaa 30 minuuttia."
-      ],
-      "duration": "15 min",
-      "price": "25€"
-    },
-    "callus30": {
-      "title": "Useamman känsän/kovettuman poisto",
-      "items": [
-        "Useamman tai paksumpien känsien/kovettumien poisto.",
-        "Välitön helpotus."
-      ],
-      "duration": "30 min",
-      "price": "45€"
-    },
-    "nailCorrection": {
-      "title": "Kynnen oikaisuhoito",
-      "items": [
-        "Kynnen oikaisuhoito epämuodostuneelle tai sisäänpäin kasvaneelle kynnelle.",
-        "Käytän titaanilanka-oikaisumenetelmää.",
-        "Lanka täytyy uusia 2-3 kk välein ja sitä pidetään koko kynnen kasvukauden ajan 6-12 kk."
-      ],
-      "duration": "30 min",
-      "price": "45€"
-    },
-    "wart": {
-      "title": "Syylänhoito (Verrutop®)",
-      "items": [
-        "Käytän Verrutop®-menetelmää, joka on tehokas, tarkka ja turvallinen syylänhoitomenetelmä ammattilaiskäyttöön. Verrutop on hyvin siedetty, ulkoiseen käyttöön tarkoitettu syylienhoitoliuos, joka vaikuttaa ainoastaan syyläkudoksessa.",
-        "Hoitokertoja tarvitaan yleensä 2-5."
-      ],
-      "duration": "15 min",
-      "price": "25€"
-    },
-    "regularCare": {
-      "title": "Tavallinen jalkojenhoito",
-      "items": [
-        "Ns. hiljainen palvelu.",
-        "Varaa tämä palvelu, jos haluat tulla rentoutumaan hiljaisuuteen mukavaan miljööseen ja saat samalla jalat hoidetuksi ammattilaisen hoivissa.",
-        "Palveluun kuuluu jalkojen kylvetys, ihon ja kynsien hoito sekä lopuksi ajan puitteissa rentouttava rasvaushieronta jalkaterille ja nilkoille.",
-        "Jos haluat, annan vinkit omahoitoon."
-      ],
-      "duration": "60 min",
-      "price": "65€"
-    },
-    "shopping": {
-      "title": "Shoppailuvartti",
-      "items": [
-        "Kartoitetaan omahoidon tarve ja suositellaan omahoitotuotteet.",
-        "Myös esimerkiksi varvasorteesin muokkaukselle kannattaa varata tämä aika (1 muokkauskerta ilmainen).",
-        "Kenkien hankinta/sovitus."
-      ],
-      "price": "0€"
-    },
-    "therapy30": {
-      "title": "Jalkaterapia 30 min",
-      "items": [
-        "Varaa tämä aika, jos tiedät, että haluat ainoastaan syylänhoidon tai kynnenoikaisuhoidon (+15e materiaalimaksu).",
-        "Tässä ajassa ehtii myös hoitamaan siistit jalat ja antamaan omahoidonohjausta ja suositukset tuoteisiin. Samoin kenkäasioita voidaan käydä läpi."
-      ],
-      "price": "45€"
-    },
-    "therapy45": {
-      "title": "Jalkaterapia 45 min",
-      "items": [
-        "Varaa tämä aika jos sinulla on mitään kipuja tai vaivoja jaloissa, niin tutkitaan niitä enemmän. Tutkimisen lisäksi voi olla aikaa johonkin toimenpiteisiin.",
-        "Myös hieman hankalampien jalkojen hoito voi hoitua tässä ajassa esim. On iholla/kynsissä jonkinverran paksuuntumaa."
-      ],
-      "price": "65€"
-    },
-    "therapy60": {
-      "title": "Jalkaterapia 60 min",
-      "items": [
-        "Ehtii jo tutkia jalat ja alkaa tarvittaviin toimenpiteisiin.",
-        "Varaa myös jos iholla ja kynsissä on paljon hoidettavaa esim. Paljon känsiä ja paksuja kovettumia tai on hyvin paksut kynnet."
-      ],
-      "price": "85€"
-    },
-    "therapy75": {
-      "title": "Jalkaterapia 75 min",
-      "items": [
-        "Tässä ajassa ehtii jo muutamankin toimenpiteen tehdä tutkimisen lisäksi."
-      ],
-      "price": "105€"
-    },
-    "children": {
-      "title": "Lasten jalkaterapia 30 min",
-      "price": "35€"
-    },
-    "diabetes": {
-      "title": "Diabeetikon jalkaterapia 45 min",
-      "items": [
-        "Jalkaterapiakäynti diabestesta sairastavalle (1. tai 2.-tyyppi). Tehdään jalkojen tutkimus ja määrillään riskiluokka (0-3) jalkahaavan synnylle. Tämä kannattaa tehdä vuosittain, mutta useammin, jos riski on kohonnut. Lisäksi ohjausta ja motivointia jalkojen omahoitoon, kenkäresepti ja tarvittaessa iho- ja kynsiioireiden hoitoa."
-      ],
-      "price": "65€"
-    },
-    "lectures": {
-      "title": "Luennot",
-      "description": "Tarjoan jalkaterveysaiheisia luentoja erilaisille yhdistyksille, kouluille ja työyhteisöille. Ota yhteyttä, niin sovitaan!"
-    },
-    "cancellation": {
-      "title": "Peruutusehdot",
-      "policy": "Varauksen voi peruuttaa maksuttomasti 24h ennen varauksen alkua. Sen jälkeen tehdyt peruutukset puhelimella ja ajan siirrolla esimerkiksi sairastumistapauksessa. Jos jätät kokonaan saapumatta vastaanotolle ilmoittamatta, peritään 100% varatun palvelun hinnasta."
-    },
-    "note": {
-      "title": "HUOM!",
-      "description": "Jos sinua askarruttaa minkä ajan varaisit, aina voi soittaa ja kysyä! En vastaa puhelimeen, jos olen asiakastyössä, mutta soitan kyllä takaisin.",
-      "phone": "Puhelin:"
-    }
+    "serviceLabel": "Palvelu",
+    "priceLabel": "Hinta",
+    "services": [
+      { "name": "Jalkaterapia 30min", "price": "45 €" },
+      { "name": "Jalkaterapia 45 min", "price": "65 €" },
+      { "name": "Jalkaterapia 60 min", "price": "85 €" },
+      { "name": "Jalkaterapia 75 min", "price": "105 €" },
+      { "name": "Lasten jalkaterapia 30 min", "price": "35 €" },
+      { "name": "Diabeetikon jalkaterapia 60 min", "price": "70 €" },
+      { "name": "Tavallinen jalkojenhoito 60 min", "price": "65 €" },
+      { "name": "Känsän/kovettuman poisto 15 min", "price": "25 €" },
+      { "name": "Känsien/kovettumien poisto 30 min", "price": "40 €" },
+      { "name": "Syylänhoito (Verrutop®) n. 30 min", "price": "40 €" },
+      { "name": "Kynnenoikaisuhoito n. 30 min", "price": "40 €" },
+      { "name": "Kynsiproteesi n. 30 min", "price": "40 €" },
+      { "name": "Shoppailuvartti", "price": "0 €" }
+    ],
+    "additionalTitle": "Lisähinnasto",
+    "additionalSubtitle": "(materiaalimaksu jalkaterapian yhteydessä)",
+    "additional": [
+      { "name": "Syylänhoito", "price": "15 €" },
+      { "name": "Kynnenoikaisu", "price": "15 €" },
+      { "name": "Kynsiproteesi", "price": "15 €" },
+      { "name": "Silikoniorteesi (varvastuki)", "price": "20-50 €" },
+      { "name": "Pikapohjalliset", "price": "10-50 €" }
+    ]
   },
   "contact": {
     "title": "Yhteystiedot",

@@ -16,7 +16,8 @@ export default defineConfig({
         thankyou: './thank-you.html',
         selfmonitoring: './self-monitoring.html',
         selfmonitoringsv: './self-monitoring-sv.html',
-        selfmonitoringen: './self-monitoring-en.html'
+        selfmonitoringen: './self-monitoring-en.html',
+        arvonta: './arvonta.html'
       }
     }
   }

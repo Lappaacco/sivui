@@ -4,10 +4,16 @@ import fi from './locales/fi.json';
 import sv from './locales/sv.json';
 import en from './locales/en.json';
 
-// Hae tallennettu kieli tai käytä selaimen kieltä
+// Tarkista URL-parametri ensin
+const urlParams = new URLSearchParams(window.location.search);
+const urlLang = urlParams.get('lang');
+
+// Hae tallennettu kieli
 const savedLanguage = localStorage.getItem('language');
-const browserLanguage = navigator.language.split('-')[0]; // 'fi-FI' -> 'fi'
-const defaultLanguage = savedLanguage || (browserLanguage === 'sv' || browserLanguage === 'en' ? browserLanguage : 'fi');
+
+// Oletuskieli on AINA suomi, ellei käyttäjä ole aktiivisesti valinnut toista
+// URL-parametri tai tallennettu valinta ohittaa oletuksen
+const defaultLanguage = urlLang || savedLanguage || 'fi';
 
 i18n
   .use(initReactI18next)
@@ -18,7 +24,7 @@ i18n
       en: { translation: en }
     },
     lng: defaultLanguage,
-    fallbackLng: 'fi',
+    fallbackLng: 'fi', // Fallback on aina suomi
     interpolation: {
       escapeValue: false // React already escapes
     }
