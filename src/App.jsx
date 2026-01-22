@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
  */
 function NavItem({ label, targetId, active, onClick }) {
   const baseClasses =
-    'block px-4 py-2 mt-2 rounded-lg transition-colors font-semibold font-heading';
+    'block px-4 py-2 mt-2 rounded-lg transition-colors font-semibold font-heading cursor-pointer';
   const activeClasses = 'bg-primary text-white shadow';
   const inactiveClasses = 'text-primary hover:bg-primaryLight hover:text-white';
   const className = `${baseClasses} ${active ? activeClasses : inactiveClasses}`;
@@ -17,14 +17,18 @@ function NavItem({ label, targetId, active, onClick }) {
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Poista hash URL:sta
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname);
+      }
     }
     if (onClick) onClick();
   };
   
   return (
-    <a href="#" className={className} onClick={handleClick}>
+    <button type="button" className={className} onClick={handleClick}>
       {label}
-    </a>
+    </button>
   );
 }
 
@@ -199,20 +203,26 @@ export default function App() {
     <>
       {/* Mobiiliotsikko */}
       <header className="md:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-20">
-        <a 
-          href="#" 
+        <button
+          type="button"
           onClick={(e) => {
             e.preventDefault();
-            document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const element = document.getElementById('home');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.pathname);
+              }
+            }
           }}
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 cursor-pointer bg-transparent border-0 p-0"
         >
           <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-10 h-10" />
           <div>
             <div className="text-xl font-heading text-primary">ILOJALOIN</div>
             <div className="text-xs italic text-gray-500 font-heading">{t('logo.subtitle')}</div>
           </div>
-        </a>
+        </button>
         <div className="flex items-center gap-2">
           {/* Kielivalitsin */}
           <div className="flex gap-1 text-xs">
@@ -259,20 +269,26 @@ export default function App() {
       <div className="flex min-h-screen">
   {/* Sivupalkki tablet- ja desktop-koissa */}
   <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0 overflow-y-auto">
-          <a 
-            href="#" 
+          <button
+            type="button"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              const element = document.getElementById('home');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (window.history.replaceState) {
+                  window.history.replaceState(null, null, window.location.pathname);
+                }
+              }
             }}
-            className="p-6 flex items-center gap-3 block"
+            className="p-6 flex items-center gap-3 block w-full text-left cursor-pointer bg-transparent border-0"
           >
             <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-12 h-12" />
             <div>
               <div className="text-2xl font-heading text-primary mb-1">ILOJALOIN</div>
               <div className="text-sm italic text-gray-500 font-heading">{t('logo.subtitle')}</div>
             </div>
-          </a>
+          </button>
           <div className="px-4">
             <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
             <NavItem label={t('nav.services')} targetId="palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
