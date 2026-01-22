@@ -398,7 +398,7 @@ export default function App() {
                   <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
                     <div className="flex justify-between items-start gap-3">
                       <div className="text-sm text-gray-700 break-words flex-1">{service.name}</div>
-                      <div className="text-base font-semibold text-primary whitespace-nowrap">{service.price}</div>
+                      <div className="text-base font-semibold text-primary break-words text-right">{service.price}</div>
                     </div>
                   </div>
                 ))}
@@ -434,7 +434,7 @@ export default function App() {
                     <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
                       <div className="flex justify-between items-start gap-3">
                         <div className="text-sm text-gray-700 break-words flex-1">{item.name}</div>
-                        <div className="text-base font-semibold text-primary whitespace-nowrap">{item.price}</div>
+                        <div className="text-base font-semibold text-primary break-words text-right">{item.price}</div>
                       </div>
                     </div>
                   ))}
