@@ -398,8 +398,8 @@ export default function App() {
               <div className="md:hidden space-y-3">
                 {t('pricing.services', { returnObjects: true }).map((service, index) => (
                   <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                    <div className="text-sm text-gray-700 mb-2">{service.name}</div>
-                    <div className="text-lg font-semibold text-primary">{service.price}</div>
+                    <div className="text-sm text-gray-700 mb-2 break-words">{service.name}</div>
+                    <div className="text-lg font-semibold text-primary text-left">{service.price}</div>
                   </div>
                 ))}
               </div>
@@ -432,8 +432,8 @@ export default function App() {
                 <div className="md:hidden space-y-3">
                   {t('pricing.additional', { returnObjects: true }).map((item, index) => (
                     <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                      <div className="text-sm text-gray-700 mb-2">{item.name}</div>
-                      <div className="text-lg font-semibold text-primary">{item.price}</div>
+                      <div className="text-sm text-gray-700 mb-2 break-words">{item.name}</div>
+                      <div className="text-lg font-semibold text-primary text-left">{item.price}</div>
                     </div>
                   ))}
                 </div>
