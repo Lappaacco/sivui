@@ -5,14 +5,24 @@ import { useTranslation } from 'react-i18next';
  * Navigaatiolinkin komponentti. Vastaanottaa tekstin, kohteen ankkurin,
  * aktiivisuuden sekä valinnaisen onClick-tapahtumakäsittelijän.
  */
-function NavItem({ label, href, active, onClick }) {
+function NavItem({ label, targetId, active, onClick }) {
   const baseClasses =
     'block px-4 py-2 mt-2 rounded-lg transition-colors font-semibold font-heading';
   const activeClasses = 'bg-primary text-white shadow';
   const inactiveClasses = 'text-primary hover:bg-primaryLight hover:text-white';
   const className = `${baseClasses} ${active ? activeClasses : inactiveClasses}`;
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    if (onClick) onClick();
+  };
+  
   return (
-    <a href={href} className={className} onClick={onClick}>
+    <a href="#" className={className} onClick={handleClick}>
       {label}
     </a>
   );
@@ -189,7 +199,14 @@ export default function App() {
     <>
       {/* Mobiiliotsikko */}
       <header className="md:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-20">
-        <a href="#home" className="flex items-center gap-3">
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
+          className="flex items-center gap-3"
+        >
           <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-10 h-10" />
           <div>
             <div className="text-xl font-heading text-primary">ILOJALOIN</div>
@@ -229,20 +246,27 @@ export default function App() {
       {/* Mobiilivalikon lista */}
       {mobileMenuOpen && (
         <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10">
-          <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
-          <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-          <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
-          <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
-          <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
-          <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
-          <NavItem label={t('nav.contact')} href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
-          <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+          <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
+          <NavItem label={t('nav.services')} targetId="palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
+          <NavItem label={t('nav.pricing')} targetId="hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+          <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+          <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
+          <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
+          <NavItem label={t('nav.contact')} targetId="contact" active={activeSection === 'contact'} onClick={handleNavClick} />
+          <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
       )}
       <div className="flex min-h-screen">
   {/* Sivupalkki tablet- ja desktop-koissa */}
   <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0 overflow-y-auto">
-          <a href="#home" className="p-6 flex items-center gap-3 block">
+          <a 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('home')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
+            className="p-6 flex items-center gap-3 block"
+          >
             <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-12 h-12" />
             <div>
               <div className="text-2xl font-heading text-primary mb-1">ILOJALOIN</div>
@@ -250,14 +274,14 @@ export default function App() {
             </div>
           </a>
           <div className="px-4">
-            <NavItem label={t('nav.home')} href="#home" active={activeSection === 'home'} onClick={handleNavClick} />
-            <NavItem label={t('nav.services')} href="#palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-            <NavItem label={t('nav.pricing')} href="#hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
-            <NavItem label={t('nav.footTherapy')} href="#jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
-            <NavItem label={t('nav.about')} href="#about" active={activeSection === 'about'} onClick={handleNavClick} />
-            <NavItem label={t('nav.hygiene')} href="#hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
-            <NavItem label={t('nav.contact')} href="#contact" active={activeSection === 'contact'} onClick={handleNavClick} />
-            <NavItem label={t('nav.booking')} href="#booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+            <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
+            <NavItem label={t('nav.services')} targetId="palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
+            <NavItem label={t('nav.pricing')} targetId="hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+            <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
+            <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
+            <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
+            <NavItem label={t('nav.contact')} targetId="contact" active={activeSection === 'contact'} onClick={handleNavClick} />
+            <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
           </div>
           {/* Kielivalitsin desktop */}
             <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
