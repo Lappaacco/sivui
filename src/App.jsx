@@ -374,7 +374,8 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('pricing.title')}</h2>
               
-              <div className="overflow-x-auto">
+              {/* Desktop taulukko */}
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300 bg-white">
                   <thead>
                     <tr className="bg-primaryLight">
@@ -393,10 +394,22 @@ export default function App() {
                 </table>
               </div>
 
+              {/* Mobiili korttinäkymä */}
+              <div className="md:hidden space-y-3">
+                {t('pricing.services', { returnObjects: true }).map((service, index) => (
+                  <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                    <div className="text-sm text-gray-700 mb-2">{service.name}</div>
+                    <div className="text-lg font-semibold text-primary">{service.price}</div>
+                  </div>
+                ))}
+              </div>
+
               <div className="mt-12">
                 <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.additionalTitle')}</h3>
                 <p className="text-sm text-gray-600 mb-4">{t('pricing.additionalSubtitle')}</p>
-                <div className="overflow-x-auto">
+                
+                {/* Desktop taulukko */}
+                <div className="hidden md:block overflow-x-auto">
                   <table className="w-full border-collapse border border-gray-300 bg-white">
                     <thead>
                       <tr className="bg-primaryLight">
@@ -413,6 +426,16 @@ export default function App() {
                       ))}
                     </tbody>
                   </table>
+                </div>
+
+                {/* Mobiili korttinäkymä */}
+                <div className="md:hidden space-y-3">
+                  {t('pricing.additional', { returnObjects: true }).map((item, index) => (
+                    <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
+                      <div className="text-sm text-gray-700 mb-2">{item.name}</div>
+                      <div className="text-lg font-semibold text-primary">{item.price}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
