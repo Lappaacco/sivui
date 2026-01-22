@@ -271,8 +271,8 @@ export default function App() {
       {mobileMenuOpen && (
         <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10">
           <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
-          <NavItem label={t('nav.services')} targetId="palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-          <NavItem label={t('nav.pricing')} targetId="hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+          <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
+          <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
           <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
           <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
           <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
@@ -300,8 +300,8 @@ export default function App() {
           </div>
           <div className="px-4">
             <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
-            <NavItem label={t('nav.services')} targetId="palveluni" active={activeSection === 'palveluni'} onClick={handleNavClick} />
-            <NavItem label={t('nav.pricing')} targetId="hinnoittelusta" active={activeSection === 'hinnoittelusta'} onClick={handleNavClick} />
+            <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
+            <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
             <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
             <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
             <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
@@ -343,7 +343,7 @@ export default function App() {
           </section>
 
           {/* Palveluni section */}
-          <section id="palveluni" className="py-12 md:py-20 px-4 bg-white">
+          <section id="services" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('services.title')}</h2>
               <div className="prose max-w-full">
@@ -363,7 +363,7 @@ export default function App() {
           </section>
 
           {/* Hinnoittelusta section */}
-          <section id="hinnoittelusta" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section id="pricing" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('pricing.title')}</h2>
               
