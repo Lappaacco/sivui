@@ -13,9 +13,16 @@ function NavItem({ label, targetId, active, onClick }) {
   const className = `${baseClasses} ${active ? activeClasses : inactiveClasses}`;
   
   const handleClick = () => {
-    const element = document.getElementById(targetId);
+    const element = document.querySelector(`[data-section="${targetId}"]`);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const offset = 80; // Header offset
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
     if (onClick) onClick();
   };
@@ -103,7 +110,7 @@ export default function App() {
   // Päivitä aktiivinen osa vierityksen perusteella.
   // Käytetään requestAnimationFrame throttlingia ja rekisteröidään kuuntelija vain kerran.
   useEffect(() => {
-    const sections = Array.from(document.querySelectorAll('section'));
+    const sections = Array.from(document.querySelectorAll('[data-section]'));
     let ticking = false;
 
     function updateActive() {
@@ -111,7 +118,7 @@ export default function App() {
       for (const sec of sections) {
         const rect = sec.getBoundingClientRect();
         if (rect.top <= 120 && rect.bottom >= 120) {
-          current = sec.getAttribute('id') || current;
+          current = sec.getAttribute('data-section') || current;
           break;
         }
       }
@@ -224,9 +231,9 @@ export default function App() {
       <header className="md:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-20">
         <div
           onClick={() => {
-            const element = document.getElementById('home');
+            const element = document.querySelector('[data-section="home"]');
             if (element) {
-              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }
           }}
           className="flex items-center gap-3 cursor-pointer"
@@ -285,9 +292,9 @@ export default function App() {
   <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0 overflow-y-auto">
           <div
             onClick={() => {
-              const element = document.getElementById('home');
+              const element = document.querySelector('[data-section="home"]');
               if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
             className="p-6 flex items-center gap-3 cursor-pointer"
@@ -321,7 +328,7 @@ export default function App() {
         {/* Pääsisältö */}
         <main className="flex-1 overflow-x-hidden">
           {/* Hero-osio (täysleveä tausta, sisällä keskitetty sisältö max-w-6xl) */}
-          <section id="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
+          <section data-section="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
               <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" width="320" height="320" fetchpriority="high" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">{t('hero.title')}</h1>
@@ -343,7 +350,7 @@ export default function App() {
           </section>
 
           {/* Palveluni section */}
-          <section id="services" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="services" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('services.title')}</h2>
               <div className="prose max-w-full">
@@ -363,7 +370,7 @@ export default function App() {
           </section>
 
           {/* Hinnoittelusta section */}
-          <section id="pricing" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="pricing" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('pricing.title')}</h2>
               
@@ -412,7 +419,7 @@ export default function App() {
           </section>
 
           {/* Jalkaterapia section */}
-          <section id="jalkaterapia" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="jalkaterapia" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
               <div className="prose max-w-full">
@@ -424,7 +431,7 @@ export default function App() {
           </section>
 
           {/* About section */}
-          <section id="about" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="about" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('about.title')}</h2>
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -451,7 +458,7 @@ export default function App() {
           </section>
 
           {/* Turvallisuus ja hygienia section */}
-          <section id="hygienia" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="hygienia" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
               <div className="prose max-w-full">
@@ -470,7 +477,7 @@ export default function App() {
           </section>
 
           {/* Yhteystieto-osio */}
-          <section id="contact" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="contact" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
@@ -637,7 +644,7 @@ export default function App() {
             </div>
           </section>
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section id="booking" className="py-16 md:py-20 px-4 bg-white">
+          <section data-section="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
