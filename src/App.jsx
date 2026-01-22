@@ -349,7 +349,6 @@ export default function App() {
             </div>
           </section>
 
-          {/* Palveluni section */}
           <section data-section="services" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('services.title')}</h2>
@@ -369,7 +368,6 @@ export default function App() {
             </div>
           </section>
 
-          {/* Hinnoittelusta section */}
           <section data-section="pricing" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('pricing.title')}</h2>
