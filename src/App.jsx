@@ -380,26 +380,28 @@ export default function App() {
                   <thead>
                     <tr className="bg-primaryLight">
                       <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.serviceLabel')}</th>
-                      <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
+                      <th className="px-4 py-3 text-right font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {t('pricing.services', { returnObjects: true }).map((service, index) => (
                       <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                         <td className="px-4 py-3 border border-gray-300">{service.name}</td>
-                        <td className="px-4 py-3 text-left border border-gray-300 font-semibold">{service.price}</td>
+                        <td className="px-4 py-3 text-right border border-gray-300 font-semibold">{service.price}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
 
-              {/* Mobiili korttinäkymä */}
+              {/* Mobiili korttinäkymä - hinnat oikealla, kaikki rivittyy */}
               <div className="md:hidden space-y-3">
                 {t('pricing.services', { returnObjects: true }).map((service, index) => (
-                  <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                    <div className="text-sm text-gray-700 mb-2 break-words">{service.name}</div>
-                    <div className="text-lg font-semibold text-primary text-left">{service.price}</div>
+                  <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="flex justify-between items-start gap-3">
+                      <div className="text-sm text-gray-700 break-words flex-1">{service.name}</div>
+                      <div className="text-base font-semibold text-primary whitespace-nowrap">{service.price}</div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -414,26 +416,28 @@ export default function App() {
                     <thead>
                       <tr className="bg-primaryLight">
                         <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.serviceLabel')}</th>
-                        <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
+                        <th className="px-4 py-3 text-right font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
                       </tr>
                     </thead>
                     <tbody>
                       {t('pricing.additional', { returnObjects: true }).map((item, index) => (
                         <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                           <td className="px-4 py-3 border border-gray-300">{item.name}</td>
-                          <td className="px-4 py-3 text-left border border-gray-300 font-semibold">{item.price}</td>
+                          <td className="px-4 py-3 text-right border border-gray-300 font-semibold">{item.price}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
 
-                {/* Mobiili korttinäkymä */}
+                {/* Mobiili korttinäkymä - hinnat oikealla, kaikki rivittyy */}
                 <div className="md:hidden space-y-3">
                   {t('pricing.additional', { returnObjects: true }).map((item, index) => (
-                    <div key={index} className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                      <div className="text-sm text-gray-700 mb-2 break-words">{item.name}</div>
-                      <div className="text-lg font-semibold text-primary text-left">{item.price}</div>
+                    <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                      <div className="flex justify-between items-start gap-3">
+                        <div className="text-sm text-gray-700 break-words flex-1">{item.name}</div>
+                        <div className="text-base font-semibold text-primary whitespace-nowrap">{item.price}</div>
+                      </div>
                     </div>
                   ))}
                 </div>
