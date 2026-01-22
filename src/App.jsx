@@ -139,6 +139,24 @@ export default function App() {
     setMobileMenuOpen(false);
   };
 
+  // Poista hash URL:sta automaattisesti jos se ilmestyy
+  useEffect(() => {
+    const removeHash = () => {
+      if (window.location.hash) {
+        window.history.replaceState(null, null, window.location.pathname);
+      }
+    };
+    
+    // Kuuntele hashchange-eventtejä
+    window.addEventListener('hashchange', removeHash);
+    // Tarkista heti kun komponentti mounttaa
+    removeHash();
+    
+    return () => {
+      window.removeEventListener('hashchange', removeHash);
+    };
+  }, []);
+
   // Focus mobile menu when it opens
   useEffect(() => {
     if (mobileMenuOpen && mobileMenuRef.current) {
