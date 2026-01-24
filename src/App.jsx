@@ -15,7 +15,10 @@ function NavItem({ label, targetId, active, onClick }) {
   const handleClick = () => {
     const element = document.querySelector(`[data-section="${targetId}"]`);
     if (element) {
-      const offset = 80; // Header offset
+      // Mobiili: Header (~73px) + mobiilivalikon korkeus
+      // Desktop: Pieni offset koska sivupalkki ei ole ylhäällä
+      const isMobile = window.innerWidth < 768;
+      const offset = isMobile ? 100 : 20;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
       
