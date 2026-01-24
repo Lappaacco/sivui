@@ -280,6 +280,7 @@ export default function App() {
           <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
           <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
+          <NavItem label={t('nav.pricingInfo')} targetId="pricingInfo" active={activeSection === 'pricingInfo'} onClick={handleNavClick} />
           <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
           <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
           <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
@@ -309,6 +310,7 @@ export default function App() {
             <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
             <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
             <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
+            <NavItem label={t('nav.pricingInfo')} targetId="pricingInfo" active={activeSection === 'pricingInfo'} onClick={handleNavClick} />
             <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
             <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
             <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
