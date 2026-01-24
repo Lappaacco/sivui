@@ -13,21 +13,29 @@ function NavItem({ label, targetId, active, onClick }) {
   const className = `${baseClasses} ${active ? activeClasses : inactiveClasses}`;
   
   const handleClick = () => {
-    const element = document.querySelector(`[data-section="${targetId}"]`);
-    if (element) {
-      // Mobiili: Header (~73px) + mobiilivalikon korkeus + ylimääräinen tila
-      // Desktop: Pieni offset koska sivupalkki ei ole ylhäällä
-      const isMobile = window.innerWidth < 768;
-      const offset = isMobile ? 150 : 20;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    const isMobile = window.innerWidth < 768;
+    
+    // Sulje mobiilivalikko ensin
     if (onClick) onClick();
+    
+    // Odota hetki että valikko sulkeutuu ennen scrollia (mobiililla)
+    const scrollDelay = isMobile ? 100 : 0;
+    
+    setTimeout(() => {
+      const element = document.querySelector(`[data-section="${targetId}"]`);
+      if (element) {
+        // Mobiili: Vain header (~80px) koska valikko on jo suljettu
+        // Desktop: Pieni offset koska sivupalkki ei ole ylhäällä
+        const offset = isMobile ? 80 : 20;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, scrollDelay);
   };
   
   return (
