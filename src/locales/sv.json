@@ -90,6 +90,16 @@
       { "name": "Snabbinlägg", "price": "10-70 €" }
     ]
   },
+  "pricingInfo": {
+    "title": "Om prissättningen",
+    "question": "Varför är mina mottagningspriser på denna nivå?",
+    "paragraph1": "Jag är en högskoleutbildad specialist på nedre extremiteter, och min prissättning baserar sig på kompetens, ansvar och hur jag möter varje kund.",
+    "paragraph2": "På mottagningen är jag 100 % närvarande för dig. Jag svarar inte på telefonsamtal eller sköter andra ärenden under besöket, utan koncentrerar mig helt på vården av dina fötter och nedre extremiteter. Jag arbetar effektivt men inte stressat – på så sätt används din tid optimalt och vi hinner ofta åstadkomma mycket även under ett kortare besök.",
+    "paragraph3": "Jag frågar alltid om dina önskemål och behov: vad du särskilt vill få vårdat och hur du vill prioritera tiden. Vården planeras tillsammans med dig.",
+    "paragraph4": "Efter besöket sköter jag grundlig städning och instrumentvård, så att varje kund får en säker och hygienisk vårdmiljö. Som hälsovårdspersonal är jag bunden av sekretess och dokumentationsskyldighet, och uppgifterna från ditt besök registreras i Kanta-systemet. Detta arbete sker utanför mottagningstiden och är en del av helheten.",
+    "paragraph5": "Dessutom ansvarar jag som företagare bland annat för system, instrumentvårdsutrustning, städmaterial samt andra kostnader för verksamheten.",
+    "paragraph6": "Min prissättning återspeglar framför allt att du får sakkunnig, lugn och individuell vård där ditt välbefinnande står i centrum."
+  },
   "contact": {
     "title": "Kontakt",
     "intro": "Kontakta oss i alla frågor som rör fotterapi – vi hjälper gärna till!",

@@ -90,6 +90,16 @@
       { "name": "Pikapohjalliset", "price": "10-70 €" }
     ]
   },
+  "pricingInfo": {
+    "title": "Hinnoittelusta",
+    "question": "Miksi vastaanottoni hinnat ovat tätä tasoa?",
+    "paragraph1": "Olen korkeakoulutettu alaraajojen asiantuntija, ja hinnoitteluni perustuu osaamiseen, vastuuseen ja siihen, miten kohtaan jokaisen asiakkaan.",
+    "paragraph2": "Vastaanotolla olen 100 % läsnä sinua varten. En vastaa puheluihin tai hoida muita asioita käynnin aikana, vaan keskityn täysin sinun jalkojesi ja alaraajojesi hoitoon. Työskentelen tehokkaasti, mutta en kiirehdi – näin aikasi tulee käytettyä mahdollisimman hyvin ja saamme usein paljon aikaan jo lyhyemmälläkin käynnillä.",
+    "paragraph3": "Kysyn aina toiveesi ja tarpeesi: mitä haluat erityisesti hoidettavan ja miten haluat ajan priorisoitavan. Hoito suunnitellaan yhdessä sinun kanssasi.",
+    "paragraph4": "Käynnin jälkeen huolehdin perusteellisesta siivouksesta ja välinehuollosta, jotta jokainen asiakas saa turvallisen ja hygieenisen hoitoympäristön. Terveydenhuollon ammattilaisena minua sitoo salassapitovelvollisuus sekä kirjaamisvelvollisuus, ja käyntisi tiedot kirjataan Kanta-järjestelmään. Tämäkin työ tapahtuu vastaanottoajan ulkopuolella ja on osa kokonaisuutta.",
+    "paragraph5": "Lisäksi yrittäjänä vastaan muun muassa järjestelmistä, välinehuollon laitteista, siivoustarvikkeista sekä muista yritystoiminnan kuluista.",
+    "paragraph6": "Hinnoitteluni heijastaa ennen kaikkea sitä, että saat asiantuntevaa, rauhallista ja yksilöllistä hoitoa, jossa sinun hyvinvointisi on keskiössä."
+  },
   "contact": {
     "title": "Yhteystiedot",
     "intro": "Ole yhteydessä kaikissa jalkaterapiaan liittyvissä kysymyksissä – autamme mielellämme!",

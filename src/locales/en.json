@@ -90,6 +90,16 @@
       { "name": "Quick insoles", "price": "10-70 €" }
     ]
   },
+  "pricingInfo": {
+    "title": "About Pricing",
+    "question": "Why are my practice prices at this level?",
+    "paragraph1": "I am a university-educated lower limb specialist, and my pricing is based on expertise, responsibility, and how I meet each client.",
+    "paragraph2": "At the practice, I am 100% present for you. I don't answer phone calls or handle other matters during the appointment, but focus entirely on caring for your feet and lower limbs. I work efficiently but without rushing – this way your time is used optimally and we often accomplish a lot even in a shorter appointment.",
+    "paragraph3": "I always ask about your wishes and needs: what you particularly want treated and how you want to prioritize the time. Treatment is planned together with you.",
+    "paragraph4": "After the appointment, I take care of thorough cleaning and instrument maintenance, so that every client receives a safe and hygienic treatment environment. As a healthcare professional, I am bound by confidentiality and documentation obligations, and your appointment information is recorded in the Kanta system. This work happens outside of appointment time and is part of the whole.",
+    "paragraph5": "Additionally, as an entrepreneur, I am responsible for systems, instrument maintenance equipment, cleaning supplies, and other business expenses.",
+    "paragraph6": "My pricing primarily reflects that you receive expert, calm, and personalized care where your well-being is at the center."
+  },
   "contact": {
     "title": "Contact",
     "intro": "Have questions about podiatry? Get in touch – I'm here to help!",

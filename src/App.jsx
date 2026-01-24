@@ -450,8 +450,24 @@ export default function App() {
             </div>
           </section>
 
+          {/* Hinnoittelusta section */}
+          <section data-section="pricingInfo" className="py-12 md:py-20 px-4 bg-white">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('pricingInfo.title')}</h2>
+              <div className="prose max-w-full">
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-4">{t('pricingInfo.question')}</h3>
+                <p className="mb-4">{t('pricingInfo.paragraph1')}</p>
+                <p className="mb-4">{t('pricingInfo.paragraph2')}</p>
+                <p className="mb-4">{t('pricingInfo.paragraph3')}</p>
+                <p className="mb-4">{t('pricingInfo.paragraph4')}</p>
+                <p className="mb-4">{t('pricingInfo.paragraph5')}</p>
+                <p className="font-semibold">{t('pricingInfo.paragraph6')}</p>
+              </div>
+            </div>
+          </section>
+
           {/* Jalkaterapia section */}
-          <section data-section="jalkaterapia" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="jalkaterapia" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
               <div className="prose max-w-full">
@@ -463,7 +479,7 @@ export default function App() {
           </section>
 
           {/* About section */}
-          <section data-section="about" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="about" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('about.title')}</h2>
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -490,7 +506,7 @@ export default function App() {
           </section>
 
           {/* Turvallisuus ja hygienia section */}
-          <section data-section="hygienia" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="hygienia" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
               <div className="prose max-w-full">
@@ -509,7 +525,7 @@ export default function App() {
           </section>
 
           {/* Yhteystieto-osio */}
-          <section data-section="contact" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="contact" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
@@ -676,7 +692,7 @@ export default function App() {
             </div>
           </section>
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section data-section="booking" className="py-16 md:py-20 px-4 bg-white">
+          <section data-section="booking" className="py-16 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
