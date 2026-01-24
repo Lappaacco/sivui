@@ -70,7 +70,7 @@
       { "name": "Podiatry 45 min", "price": "68 €" },
       { "name": "Podiatry 60 min", "price": "88 €" },
       { "name": "Podiatry 75 min", "price": "108 €" },
-      { "name": "Children's podiatry 45 min", "price": "50 €" },
+      { "name": "Children's podiatry 30-45 min", "price": "50 €" },
       { "name": "Diabetic foot therapy 60 min", "price": "80 €" },
       { "name": "Regular foot care 60 min", "price": "70 €" },
       { "name": "Longer regular foot care 90 min", "price": "120 €" },
@@ -103,7 +103,7 @@
   },
   "contact": {
     "title": "Contact",
-    "intro": "Have questions about podiatry? Get in touch – I'm here to help!",
+    "intro": "Get in touch with any questions about podiatry – I'm happy to help!",
     "info": "Feel free to contact me for more information! I'm happy to answer your questions and help you find the right treatments.",
     "form": {
       "title": "Give Feedback",

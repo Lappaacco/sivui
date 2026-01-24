@@ -70,7 +70,7 @@
       { "name": "Jalkaterapia 45 min", "price": "68 €" },
       { "name": "Jalkaterapia 60 min", "price": "88 €" },
       { "name": "Jalkaterapia 75 min", "price": "108 €" },
-      { "name": "Lasten jalkaterapia 30 min", "price": "50 €" },
+      { "name": "Lasten jalkaterapia 30-45 min", "price": "50 €" },
       { "name": "Diabeetikon jalkaterapia 60 min", "price": "80 €" },
       { "name": "Tavallinen jalkojenhoito 60 min", "price": "70 €" },
       { "name": "Pidempi tavallinen jalkojenhoito 90 min", "price": "120 €" },
@@ -103,7 +103,7 @@
   },
   "contact": {
     "title": "Yhteystiedot",
-    "intro": "Ole yhteydessä kaikissa jalkaterapiaan liittyvissä kysymyksissä – autamme mielellämme!",
+    "intro": "Ole yhteydessä kaikissa jalkaterapiaan liittyvissä kysymyksissä – autan mielelläni!",
     "info": "Ota yhteyttä ja kysy lisätietoja! Vastaan mielellään kaikkiin kysymyksiin ja autan löytämään juuri sinulle sopivat hoitomuodot.",
     "form": {
       "title": "Anna palautetta",

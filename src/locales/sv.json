@@ -70,7 +70,7 @@
       { "name": "Fotterapi 45 min", "price": "68 €" },
       { "name": "Fotterapi 60 min", "price": "88 €" },
       { "name": "Fotterapi 75 min", "price": "108 €" },
-      { "name": "Barnfotterapi 45 min", "price": "50 €" },
+      { "name": "Barnfotterapi 30-45 min", "price": "50 €" },
       { "name": "Diabetisk fotterapi 60 min", "price": "80 €" },
       { "name": "Vanlig fotvård 60 min", "price": "70 €" },
       { "name": "Längre vanlig fotvård 90 min", "price": "120 €" },
@@ -103,7 +103,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "intro": "Kontakta oss i alla frågor som rör fotterapi – vi hjälper gärna till!",
+    "intro": "Kontakta mig i alla frågor som rör fotterapi – jag hjälper gärna!",
     "info": "Ta kontakt och fråga efter mer information! Jag svarar gärna på alla frågor och hjälper dig hitta de vårdformer som passar just dig.",
     "form": {
       "title": "Ge feedback",
