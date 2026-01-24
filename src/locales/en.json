@@ -13,8 +13,9 @@
     "subtitle": "Podiatry Services"
   },
   "hero": {
-    "title": "Podiatry in Vaasa - Happy Feet, Happy You",
-    "subtitle": "Bunions, hammer toes, ball of foot and heel pain, as well as skin and nail problems - personalized and expert care for your foot health.",
+    "title": "Podiatry in Vaasa - Healthy Feet",
+    "subtitle": "Whether you have bunions, hammer toes, ball or heel pain, skin or nail problems, or simply want to promote your foot health - welcome to the foot therapist's office!",
+    "promotion": "24.-31.1. foot therapy 45-75 min, foot care or diabetic foot therapy - free foot cream (12,50€) for those booking appointments in February!",
     "bookButton": "Book Now!"
   },
   "about": {
@@ -64,7 +65,7 @@
     "serviceLabel": "Service",
     "priceLabel": "Price",
     "services": [
-      { "name": "Podiatry 30min", "price": "48 €" },
+      { "name": "Podiatry 30min", "price": "50 €" },
       { "name": "Podiatry 45 min", "price": "68 €" },
       { "name": "Podiatry 60 min", "price": "88 €" },
       { "name": "Podiatry 75 min", "price": "108 €" },

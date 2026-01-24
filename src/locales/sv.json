@@ -13,8 +13,9 @@
     "subtitle": "Fotterapitjänster"
   },
   "hero": {
-    "title": "Fotterapi i Vasa - Leende på läpparna och friska fötter",
-    "subtitle": "Hallux valgus, hammartår, främre fotsmärta och hälsmärta samt hud- och nagelbesvär - individuell och professionell vård för dina fötters välbefinnande.",
+    "title": "Fotterapi i Vasa - Friska fötter",
+    "subtitle": "Har du hallux valgus, hammartå, smärtor i fotsula eller häl, hud- eller nagelproblem, eller vill du helt enkelt främja dina fötters hälsa - välkommen till fotterapeutens mottagning!",
+    "promotion": "24.-31.1. fotterapi 45-75 min, fotvård eller fotterapi för diabetiker - gratis fotkräm (12,50€) för dig som bokar tid till februari!",
     "bookButton": "Boka tid!"
   },
   "about": {
@@ -64,7 +65,7 @@
     "serviceLabel": "Tjänst",
     "priceLabel": "Pris",
     "services": [
-      { "name": "Fotterapi 30min", "price": "48 €" },
+      { "name": "Fotterapi 30min", "price": "50 €" },
       { "name": "Fotterapi 45 min", "price": "68 €" },
       { "name": "Fotterapi 60 min", "price": "88 €" },
       { "name": "Fotterapi 75 min", "price": "108 €" },

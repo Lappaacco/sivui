@@ -13,8 +13,9 @@
     "subtitle": "Jalkaterapiapalvelut"
   },
   "hero": {
-    "title": "Jalkaterapiaa Vaasassa - Hymy huulilla ja jalat kunnossa",
-    "subtitle": "Vaivasenluut, vasaravarpaat, päkiä- ja kantakivut sekä iho- ja kynsivaivat - yksilöllistä ja asiantuntevaa hoitoa jalkojesi hyvinvointiin.",
+    "title": "Jalkaterapiaa Vaasassa - Jalat kunnossa",
+    "subtitle": "Oli sinulla vaivasenluut, vasaravarvas, päkiä- tai kantakipuja, iho- tai kynsiongelmia tai haluat muuten vain tulla edistämään jalkojesi terveyttä, tervetuloa jalkaterapeutin vastaanotolle!",
+    "promotion": "24.-31.1. jalkaterapia 45-75 min, jalkojenhoito tai diabeetikon jalkaterapia- ajan helmikuun puolelle varanneille ilmainen jalkarasva (12,50€)!",
     "bookButton": "Varaa aika!"
   },
   "about": {
@@ -43,7 +44,7 @@
       "🦶 <strong>Yksilölliset harjoitteet</strong>",
       "🩹 <strong>Urheilu- ja kinesioteippaus</strong>",
       "🩰 <strong>Pikapohjalliset ja yksilölliset varvasorteesit silikonimassasta</strong>",
-      "👟 <strong>Kenkäohjaus</strong> – tarkistetaan kenkien sopivuus, suositellaan sopivaa mallia tai ominaisuutta ja mahdollisuus tilata laadukkaita paljasjalkakenkkiä kauttani",
+      "👟 <strong>Kenkäohjaus</strong> – tarkistetaan kenkien sopivuus, suositellaan sopivaa mallia tai ominaisuutta ja mahdollisuus tilata laadukkaita paljasjalkakenkiä kauttani",
       "🛍️ <strong>Laadukkaat omahoitotuotteet</strong> – kotihoitoon ja jalkaterveyden ylläpitoon",
       "❤️ <strong>Erikoisryhmien jalkaterapia</strong> – diabetes, reuma, psoriasis jne.",
       "🙂 <strong>Luennot</strong>"
@@ -64,7 +65,7 @@
     "serviceLabel": "Palvelu",
     "priceLabel": "Hinta",
     "services": [
-      { "name": "Jalkaterapia 30 min", "price": "48 €" },
+      { "name": "Jalkaterapia 30 min", "price": "50 €" },
       { "name": "Jalkaterapia 45 min", "price": "68 €" },
       { "name": "Jalkaterapia 60 min", "price": "88 €" },
       { "name": "Jalkaterapia 75 min", "price": "108 €" },
