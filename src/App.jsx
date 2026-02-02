@@ -348,13 +348,6 @@ export default function App() {
               <p className="text-md md:text-lg lg:text-xl max-w-2xl mx-auto">
                 {t('hero.subtitle')}
               </p>
-              {t('hero.promotion') && (
-                <div className="mt-6 max-w-2xl mx-auto">
-                  <p className="text-sm md:text-base bg-white/20 backdrop-blur-sm border-2 border-white/40 rounded-lg px-4 py-3 font-medium">
-                    🎁 {t('hero.promotion')}
-                  </p>
-                </div>
-              )}
               <div className="mt-8 flex justify-center">
                 <a
                   href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
