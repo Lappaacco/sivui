@@ -708,25 +708,22 @@ export default function App() {
               
               {/* Grid layout for images */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Placeholder - replace with actual images from public/images/ or public/gallery/ */}
-                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Kuva 1</p>
-                </div>
-                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Kuva 2</p>
-                </div>
-                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Kuva 3</p>
-                </div>
-                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Kuva 4</p>
-                </div>
-                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Kuva 5</p>
-                </div>
-                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                  <p className="text-gray-500 text-sm">Kuva 6</p>
-                </div>
+                {[1, 2, 3, 4, 5, 6].map((num) => (
+                  <div key={num} className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <img 
+                      src={`/gallery/galleria${num}.jpg`}
+                      alt={`Ilojaloin jalkaterapia - kuva ${num}`}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    {/* Caption placeholder - add translations to gallery.images[num].caption later */}
+                    {/* {t(`gallery.image${num}.caption`) && (
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm">
+                        {t(`gallery.image${num}.caption`)}
+                      </div>
+                    )} */}
+                  </div>
+                ))}
               </div>
             </div>
           </section>
