@@ -140,12 +140,12 @@
     "title": "Galleri",
     "description": "En titt på min mottagning och arbetsmiljö.",
     "images": [
-      { "caption": "Mottagningsutrymme" },
-      { "caption": "Behandlingsstol" },
-      { "caption": "Arbetsredskap" },
-      { "caption": "Behandlingsmiljö" },
-      { "caption": "Mottagning" },
-      { "caption": "Detaljer" }
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" }
     ]
   },
   "bookingSection": {

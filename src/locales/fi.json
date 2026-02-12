@@ -140,12 +140,12 @@
     "title": "Galleria",
     "description": "Kurkistus vastaanottooni ja työskentely-ympäristööni.",
     "images": [
-      { "caption": "Vastaanottotila" },
-      { "caption": "Hoitotuoli" },
-      { "caption": "Työvälineet" },
-      { "caption": "Hoitoympäristö" },
-      { "caption": "Vastaanotto" },
-      { "caption": "Yksityiskohtia" }
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" }
     ]
   },
   "bookingSection": {

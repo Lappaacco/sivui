@@ -140,12 +140,12 @@
     "title": "Gallery",
     "description": "A glimpse into my practice and working environment.",
     "images": [
-      { "caption": "Reception area" },
-      { "caption": "Treatment chair" },
-      { "caption": "Tools" },
-      { "caption": "Treatment environment" },
-      { "caption": "Reception" },
-      { "caption": "Details" }
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" },
+      { "caption": "" }
     ]
   },
   "bookingSection": {

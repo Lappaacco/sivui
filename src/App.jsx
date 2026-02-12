@@ -796,13 +796,9 @@ export default function App() {
                   <div className="relative">
                     <img
                       src={`/gallery/galleria${lightboxIndex + 1}.jpg`}
-                      alt={t('gallery.images', { returnObjects: true })[lightboxIndex]?.caption}
+                      alt={`Galleriakuva ${lightboxIndex + 1}`}
                       className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
                     />
-                    {/* Caption */}
-                    <div className="text-center text-white text-base md:text-xl mt-4 font-medium">
-                      {t('gallery.images', { returnObjects: true })[lightboxIndex]?.caption}
-                    </div>
                   </div>
 
                   {/* Next arrow - mobile: on image, desktop: outside */}
