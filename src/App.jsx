@@ -779,14 +779,14 @@ export default function App() {
               {/* Main image area */}
               <div className="flex-1 flex items-center justify-center px-4 md:px-16 pb-32 pt-16">
                 <div className="relative max-w-6xl w-full">
-                  {/* Previous arrow */}
+                  {/* Previous arrow - mobile: on image, desktop: outside */}
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       const images = t('gallery.images', { returnObjects: true });
                       setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
                     }}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white hover:text-gray-300 text-5xl md:text-6xl z-10"
+                    className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-12 text-white hover:text-gray-300 text-4xl md:text-6xl z-10 bg-black/50 md:bg-transparent w-10 h-10 md:w-auto md:h-auto rounded-full flex items-center justify-center md:block"
                     aria-label="Edellinen"
                   >
                     ‹
@@ -800,19 +800,19 @@ export default function App() {
                       className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
                     />
                     {/* Caption */}
-                    <div className="text-center text-white text-lg md:text-xl mt-4 font-medium">
+                    <div className="text-center text-white text-base md:text-xl mt-4 font-medium">
                       {t('gallery.images', { returnObjects: true })[lightboxIndex]?.caption}
                     </div>
                   </div>
 
-                  {/* Next arrow */}
+                  {/* Next arrow - mobile: on image, desktop: outside */}
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       const images = t('gallery.images', { returnObjects: true });
                       setLightboxIndex((lightboxIndex + 1) % images.length);
                     }}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white hover:text-gray-300 text-5xl md:text-6xl z-10"
+                    className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-12 text-white hover:text-gray-300 text-4xl md:text-6xl z-10 bg-black/50 md:bg-transparent w-10 h-10 md:w-auto md:h-auto rounded-full flex items-center justify-center md:block"
                     aria-label="Seuraava"
                   >
                     ›
@@ -821,40 +821,42 @@ export default function App() {
               </div>
 
               {/* Thumbnail carousel at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black/80 py-6 px-4">
-                <div className="max-w-6xl mx-auto flex items-center justify-center gap-2 overflow-x-auto scrollbar-hide">
-                  {t('gallery.images', { returnObjects: true }).map((img, index) => {
-                    // Circular scroll: show 2-3 images on each side
-                    const images = t('gallery.images', { returnObjects: true });
-                    const totalImages = images.length;
-                    const visibleRange = 7; // Show 7 thumbnails total (3 left + current + 3 right)
-                    const halfRange = Math.floor(visibleRange / 2);
-                    
-                    // Calculate if this thumbnail should be visible
-                    let distance = Math.abs(index - lightboxIndex);
-                    let circularDistance = Math.min(distance, totalImages - distance);
-                    let isVisible = circularDistance <= halfRange;
+              <div className="absolute bottom-0 left-0 right-0 bg-black/80 py-4 md:py-6 px-4">
+                <div className="max-w-6xl mx-auto">
+                  <div className="flex items-center justify-center gap-2 overflow-x-hidden">
+                    {t('gallery.images', { returnObjects: true }).map((img, index) => {
+                      // Circular scroll: show 2-3 images on each side
+                      const images = t('gallery.images', { returnObjects: true });
+                      const totalImages = images.length;
+                      const visibleRange = window.innerWidth < 640 ? 5 : 7; // 5 on mobile, 7 on desktop
+                      const halfRange = Math.floor(visibleRange / 2);
+                      
+                      // Calculate if this thumbnail should be visible
+                      let distance = Math.abs(index - lightboxIndex);
+                      let circularDistance = Math.min(distance, totalImages - distance);
+                      let isVisible = circularDistance <= halfRange;
 
-                    if (!isVisible) return null;
+                      if (!isVisible) return null;
 
-                    return (
-                      <button
-                        key={index}
-                        onClick={() => setLightboxIndex(index)}
-                        className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
-                          index === lightboxIndex 
-                            ? 'ring-4 ring-primary scale-110' 
-                            : 'opacity-60 hover:opacity-100'
-                        }`}
-                      >
-                        <img
-                          src={`/gallery/galleria${index + 1}.jpg`}
-                          alt={img.caption}
-                          className="w-full h-full object-cover"
-                        />
-                      </button>
-                    );
-                  })}
+                      return (
+                        <button
+                          key={index}
+                          onClick={() => setLightboxIndex(index)}
+                          className={`flex-shrink-0 w-14 h-14 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+                            index === lightboxIndex 
+                              ? 'ring-2 md:ring-4 ring-primary scale-110' 
+                              : 'opacity-60 hover:opacity-100'
+                          }`}
+                        >
+                          <img
+                            src={`/gallery/galleria${index + 1}.jpg`}
+                            alt={img.caption}
+                            className="w-full h-full object-cover"
+                          />
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
