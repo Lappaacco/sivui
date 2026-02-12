@@ -138,7 +138,15 @@
   },
   "gallery": {
     "title": "Galleri",
-    "description": "En titt på min mottagning och arbetsmiljö."
+    "description": "En titt på min mottagning och arbetsmiljö.",
+    "images": [
+      { "caption": "Mottagningsutrymme" },
+      { "caption": "Behandlingsstol" },
+      { "caption": "Arbetsredskap" },
+      { "caption": "Behandlingsmiljö" },
+      { "caption": "Mottagning" },
+      { "caption": "Detaljer" }
+    ]
   },
   "bookingSection": {
     "title": "Tidsbokning",

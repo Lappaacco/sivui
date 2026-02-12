@@ -59,6 +59,8 @@ export default function App() {
   const [velloFailed, setVelloFailed] = useState(false);
   const [mapLoading, setMapLoading] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
   const mobileMenuRef = useRef(null);
   const velloRef = useRef(null);
 
@@ -175,6 +177,31 @@ export default function App() {
       window.removeEventListener('hashchange', removeHash);
     };
   }, []);
+
+  // Keyboard navigation for lightbox
+  useEffect(() => {
+    if (!lightboxOpen) return;
+
+    const handleKeyDown = (e) => {
+      const images = t('gallery.images', { returnObjects: true });
+      if (e.key === 'Escape') {
+        setLightboxOpen(false);
+      } else if (e.key === 'ArrowLeft') {
+        setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
+      } else if (e.key === 'ArrowRight') {
+        setLightboxIndex((lightboxIndex + 1) % images.length);
+      }
+    };
+
+    // Disable body scroll when lightbox is open
+    document.body.style.overflow = 'hidden';
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [lightboxOpen, lightboxIndex, t]);
 
   // Focus mobile menu when it opens
   useEffect(() => {
@@ -706,27 +733,132 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-4">{t('gallery.title')}</h2>
               <p className="text-gray-600 mb-8">{t('gallery.description')}</p>
               
-              {/* Grid layout for images */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[1, 2, 3, 4, 5, 6].map((num) => (
-                  <div key={num} className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+              {/* Thumbnail grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                {t('gallery.images', { returnObjects: true }).map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setLightboxIndex(index);
+                      setLightboxOpen(true);
+                    }}
+                    className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                  >
                     <img 
-                      src={`/gallery/galleria${num}.jpg`}
-                      alt={`Ilojaloin jalkaterapia - kuva ${num}`}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      src={`/gallery/galleria${index + 1}.jpg`}
+                      alt={img.caption}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       loading="lazy"
                     />
-                    {/* Caption placeholder - add translations to gallery.images[num].caption later */}
-                    {/* {t(`gallery.image${num}.caption`) && (
-                      <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm">
-                        {t(`gallery.image${num}.caption`)}
-                      </div>
-                    )} */}
-                  </div>
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-2xl">🔍</span>
+                    </div>
+                  </button>
                 ))}
               </div>
             </div>
           </section>
+
+          {/* Lightbox Modal */}
+          {lightboxOpen && (
+            <div 
+              className="fixed inset-0 bg-black/95 z-50 flex flex-col"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) setLightboxOpen(false);
+              }}
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setLightboxOpen(false)}
+                className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center"
+                aria-label="Sulje"
+              >
+                ×
+              </button>
+
+              {/* Main image area */}
+              <div className="flex-1 flex items-center justify-center px-4 md:px-16 pb-32 pt-16">
+                <div className="relative max-w-6xl w-full">
+                  {/* Previous arrow */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const images = t('gallery.images', { returnObjects: true });
+                      setLightboxIndex((lightboxIndex - 1 + images.length) % images.length);
+                    }}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white hover:text-gray-300 text-5xl md:text-6xl z-10"
+                    aria-label="Edellinen"
+                  >
+                    ‹
+                  </button>
+
+                  {/* Image */}
+                  <div className="relative">
+                    <img
+                      src={`/gallery/galleria${lightboxIndex + 1}.jpg`}
+                      alt={t('gallery.images', { returnObjects: true })[lightboxIndex]?.caption}
+                      className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
+                    />
+                    {/* Caption */}
+                    <div className="text-center text-white text-lg md:text-xl mt-4 font-medium">
+                      {t('gallery.images', { returnObjects: true })[lightboxIndex]?.caption}
+                    </div>
+                  </div>
+
+                  {/* Next arrow */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const images = t('gallery.images', { returnObjects: true });
+                      setLightboxIndex((lightboxIndex + 1) % images.length);
+                    }}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white hover:text-gray-300 text-5xl md:text-6xl z-10"
+                    aria-label="Seuraava"
+                  >
+                    ›
+                  </button>
+                </div>
+              </div>
+
+              {/* Thumbnail carousel at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black/80 py-6 px-4">
+                <div className="max-w-6xl mx-auto flex items-center justify-center gap-2 overflow-x-auto scrollbar-hide">
+                  {t('gallery.images', { returnObjects: true }).map((img, index) => {
+                    // Circular scroll: show 2-3 images on each side
+                    const images = t('gallery.images', { returnObjects: true });
+                    const totalImages = images.length;
+                    const visibleRange = 7; // Show 7 thumbnails total (3 left + current + 3 right)
+                    const halfRange = Math.floor(visibleRange / 2);
+                    
+                    // Calculate if this thumbnail should be visible
+                    let distance = Math.abs(index - lightboxIndex);
+                    let circularDistance = Math.min(distance, totalImages - distance);
+                    let isVisible = circularDistance <= halfRange;
+
+                    if (!isVisible) return null;
+
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => setLightboxIndex(index)}
+                        className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden transition-all duration-300 ${
+                          index === lightboxIndex 
+                            ? 'ring-4 ring-primary scale-110' 
+                            : 'opacity-60 hover:opacity-100'
+                        }`}
+                      >
+                        <img
+                          src={`/gallery/galleria${index + 1}.jpg`}
+                          alt={img.caption}
+                          className="w-full h-full object-cover"
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
           <section data-section="booking" className="py-16 md:py-20 px-4 bg-white">

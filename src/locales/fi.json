@@ -138,7 +138,15 @@
   },
   "gallery": {
     "title": "Galleria",
-    "description": "Kurkistus vastaanottooni ja työskentely-ympäristööni."
+    "description": "Kurkistus vastaanottooni ja työskentely-ympäristööni.",
+    "images": [
+      { "caption": "Vastaanottotila" },
+      { "caption": "Hoitotuoli" },
+      { "caption": "Työvälineet" },
+      { "caption": "Hoitoympäristö" },
+      { "caption": "Vastaanotto" },
+      { "caption": "Yksityiskohtia" }
+    ]
   },
   "bookingSection": {
     "title": "Ajanvaraus",
