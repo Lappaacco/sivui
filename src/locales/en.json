@@ -8,6 +8,7 @@
     "pricing": "Pricing",
     "pricingInfo": "About Pricing",
     "contact": "Contact",
+    "gallery": "Gallery",
     "booking": "Book Appointment"
   },
   "logo": {
@@ -77,7 +78,6 @@
       { "name": "Basic foot care - Major operation 75 min", "price": "90 €" },
       { "name": "Basic foot care - Full service 90 min", "price": "105 €" },
       { "name": "Removal of corn/callus 15 min", "price": "30 €" },
-      { "name": "Removal of corns/calluses 30 min", "price": "45 €" },
       { "name": "Wart treatment (Verrutop®) approx. 30 min", "price": "45 € (second ampoule +20 €)" },
       { "name": "Nail correction treatment approx. 45 min", "price": "50 € (second nail +20 €)" },
       { "name": "Nail prosthesis approx. 45-60 min", "price": "60 € (second nail +30 €)" },
@@ -135,6 +135,10 @@
       "weekdays": "Mon-Fri: 9:00-17:00",
       "note": "By appointment"
     }
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "A glimpse into my practice and working environment."
   },
   "bookingSection": {
     "title": "Book Appointment",

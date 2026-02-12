@@ -8,6 +8,7 @@
     "pricing": "Prislista",
     "pricingInfo": "Om prissättningen",
     "contact": "Kontakt",
+    "gallery": "Galleri",
     "booking": "Boka tid"
   },
   "logo": {
@@ -77,7 +78,6 @@
       { "name": "Grundläggande fotvård - Storoperation 75 min", "price": "90 €" },
       { "name": "Grundläggande fotvård - Fullservice 90 min", "price": "105 €" },
       { "name": "Avlägsnande av en liktorns/förhårdnad 15 min", "price": "30 €" },
-      { "name": "Avlägsnande av liktorn/förhårdnader 30 min", "price": "45 €" },
       { "name": "Vårtbehandling (Verrutop®) ca 30 min", "price": "45 € (andra ampullen +20 €)" },
       { "name": "Nagelkorrigeringsbehandling ca 45 min", "price": "50 € (andra nageln +20 €)" },
       { "name": "Nagelprotes ca 45-60 min", "price": "60 € (andra nageln +30 €)" },
@@ -135,6 +135,10 @@
       "weekdays": "Mån-Fre: 9:00-17:00",
       "note": "Efter tidsbokning"
     }
+  },
+  "gallery": {
+    "title": "Galleri",
+    "description": "En titt på min mottagning och arbetsmiljö."
   },
   "bookingSection": {
     "title": "Tidsbokning",

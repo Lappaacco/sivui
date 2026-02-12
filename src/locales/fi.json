@@ -8,6 +8,7 @@
     "pricing": "Hinnasto",
     "pricingInfo": "Hinnoittelusta",
     "contact": "Yhteystiedot",
+    "gallery": "Galleria",
     "booking": "Ajanvaraus"
   },
   "logo": {
@@ -77,7 +78,6 @@
       { "name": "Perusjalkahoito - Suuroperaatio 75 min", "price": "90 €" },
       { "name": "Perusjalkahoito - Täyshuolto 90 min", "price": "105 €" },
       { "name": "Känsän/kovettuman poisto 15 min", "price": "30 €" },
-      { "name": "Känsien/kovettumien poisto 30 min", "price": "45 €" },
       { "name": "Syylänhoito (Verrutop®) n. 30 min", "price": "45 € (toinen ampulli +20 €)" },
       { "name": "Kynnenoikaisuhoito n. 45 min", "price": "50 € (toinen kynsi +20 €)" },
       { "name": "Kynsiproteesi n. 45-60 min", "price": "60 € (toinen kynsi +30 €)" },
@@ -135,6 +135,10 @@
       "weekdays": "Ma-Pe: 9:00-17:00",
       "note": "Ajanvarauksen mukaan"
     }
+  },
+  "gallery": {
+    "title": "Galleria",
+    "description": "Kurkistus vastaanottooni ja työskentely-ympäristööni."
   },
   "bookingSection": {
     "title": "Ajanvaraus",

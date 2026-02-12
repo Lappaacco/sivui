@@ -296,6 +296,7 @@ export default function App() {
           <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
           <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
           <NavItem label={t('nav.contact')} targetId="contact" active={activeSection === 'contact'} onClick={handleNavClick} />
+          <NavItem label={t('nav.gallery')} targetId="gallery" active={activeSection === 'gallery'} onClick={handleNavClick} />
           <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
       )}
@@ -326,6 +327,7 @@ export default function App() {
             <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
             <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
             <NavItem label={t('nav.contact')} targetId="contact" active={activeSection === 'contact'} onClick={handleNavClick} />
+            <NavItem label={t('nav.gallery')} targetId="gallery" active={activeSection === 'gallery'} onClick={handleNavClick} />
             <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
           </div>
           {/* Kielivalitsin desktop */}
@@ -697,8 +699,40 @@ export default function App() {
               </div>
             </div>
           </section>
+
+          {/* Gallery section */}
+          <section data-section="gallery" className="py-12 md:py-20 px-4 bg-offwhite">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-4">{t('gallery.title')}</h2>
+              <p className="text-gray-600 mb-8">{t('gallery.description')}</p>
+              
+              {/* Grid layout for images */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {/* Placeholder - replace with actual images from public/images/ or public/gallery/ */}
+                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500 text-sm">Kuva 1</p>
+                </div>
+                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500 text-sm">Kuva 2</p>
+                </div>
+                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500 text-sm">Kuva 3</p>
+                </div>
+                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500 text-sm">Kuva 4</p>
+                </div>
+                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500 text-sm">Kuva 5</p>
+                </div>
+                <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
+                  <p className="text-gray-500 text-sm">Kuva 6</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section data-section="booking" className="py-16 md:py-20 px-4 bg-offwhite">
+          <section data-section="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
