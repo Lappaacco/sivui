@@ -151,8 +151,10 @@
   "bookingSection": {
     "title": "Ajanvaraus",
     "description": "Voit varata ajan kätevästi Vello-järjestelmän kautta alla olevasta kalenterista. Tai halutessasi voit avata <a href='https://vello.fi/ilojaloin-jalkaterapia' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Vellon oman ajanvaraussivun</a> uuteen välilehteen.",
+    "giftCardInfo": "Lahjakortit ovat ostettavissa Vellon kautta sähköisesti tai ota yhteyttä puhelimitse, jos haluat fyysisen version lahjakortista!",
     "loading": "Ladataan ajanvarausta...",
-    "failed": "Avaa ajanvaraus Vellossa"
+    "failed": "Avaa ajanvaraus Vellossa",
+    "clickToActivate": "Klikkaa aktivoidaksesi ajanvarauksen"
   },
   "footer": {
     "rights": "Ilojaloin Jalkaterapiapalvelut. Kaikki oikeudet pidätetään.",

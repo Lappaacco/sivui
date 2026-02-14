@@ -151,8 +151,10 @@
   "bookingSection": {
     "title": "Book Appointment",
     "description": "Book your appointment conveniently through the Vello system calendar below. Alternatively, you can open <a href='https://vello.fi/ilojaloin-jalkaterapia' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Vello's booking page</a> in a new tab.",
+    "giftCardInfo": "Gift cards are available electronically through Vello or contact me by phone if you want a physical version of the gift card!",
     "loading": "Loading booking system...",
-    "failed": "Open Vello booking"
+    "failed": "Open Vello booking",
+    "clickToActivate": "Click to activate booking"
   },
   "footer": {
     "rights": "Ilojaloin Podiatry. All rights reserved.",

@@ -57,6 +57,7 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [velloLoading, setVelloLoading] = useState(true);
   const [velloFailed, setVelloFailed] = useState(false);
+  const [velloActive, setVelloActive] = useState(false);
   const [mapLoading, setMapLoading] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -863,6 +864,14 @@ export default function App() {
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
+              
+              {/* Gift card info */}
+              <div className="bg-primary/10 border-2 border-primary rounded-lg p-4 mb-6">
+                <p className="text-gray-800 font-medium text-center">
+                  🎁 {t('bookingSection.giftCardInfo')}
+                </p>
+              </div>
+
               <div className="w-full h-[700px] md:h-[800px] lg:h-[900px] rounded-lg relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
@@ -879,6 +888,17 @@ export default function App() {
                     >
                       {t('bookingSection.failed')}
                     </a>
+                  </div>
+                )}
+                {/* Overlay to prevent iframe scroll-locking - click to activate */}
+                {!velloActive && !velloLoading && !velloFailed && (
+                  <div 
+                    onClick={() => setVelloActive(true)}
+                    className="absolute inset-0 z-10 cursor-pointer bg-transparent border-2 border-primary/30 rounded-lg flex items-center justify-center hover:bg-primary/5 transition-colors"
+                  >
+                    <div className="bg-white/95 px-6 py-3 rounded-lg shadow-lg border border-primary">
+                      <p className="text-primary font-semibold">👆 {t('bookingSection.clickToActivate')}</p>
+                    </div>
                   </div>
                 )}
                 <div ref={velloRef} data-vello-embed className="w-full h-full" />
