@@ -869,7 +869,7 @@ export default function App() {
                 🎁 {t('bookingSection.giftCardInfo')}
               </p>
 
-              <div className="w-full h-[650px] md:h-[700px] lg:h-[750px] relative">
+              <div className="w-full h-[550px] md:h-[600px] lg:h-[650px] relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
