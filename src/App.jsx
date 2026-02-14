@@ -869,8 +869,8 @@ export default function App() {
                 🎁 {t('bookingSection.giftCardInfo')}
               </p>
 
-              {/* Vello embed container - large fixed height to show full calendar view */}
-              <div className="w-full h-[1200px] md:h-[1300px] lg:h-[1400px] relative">
+              {/* Vello embed container - extra large height for desktop */}
+              <div className="w-full h-[1100px] md:h-[1400px] lg:h-[1600px] relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
