@@ -869,15 +869,15 @@ export default function App() {
                 🎁 {t('bookingSection.giftCardInfo')}
               </p>
 
-              {/* Vello embed container - no fixed height, let Vello's script handle it */}
-              <div className="w-full relative">
+              {/* Vello embed container - min height but can grow */}
+              <div className="w-full min-h-[800px] md:min-h-[900px] lg:min-h-[1000px] relative">
                 {velloLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20 min-h-[600px]">
+                  <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
                   </div>
                 )}
                 {velloFailed && (
-                  <div className="w-full min-h-[400px] flex items-center justify-center">
+                  <div className="absolute inset-0 z-30 flex items-center justify-center">
                     <a
                       href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
                       target="_blank"
@@ -888,7 +888,7 @@ export default function App() {
                     </a>
                   </div>
                 )}
-                <div ref={velloRef} data-vello-embed className="w-full" />
+                <div ref={velloRef} data-vello-embed />
               </div>             
             </div>
           </section>
