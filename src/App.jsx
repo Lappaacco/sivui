@@ -865,14 +865,15 @@ export default function App() {
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
               
-              {/* Gift card info */}
-              <div className="bg-primary/10 border-2 border-primary rounded-lg p-4 mb-6">
-                <p className="text-gray-800 font-medium text-center">
-                  🎁 {t('bookingSection.giftCardInfo')}
-                </p>
-              </div>
+              {/* Gift card info - left aligned */}
+              <p className="text-gray-700 mb-6">
+                🎁 {t('bookingSection.giftCardInfo')}
+              </p>
 
-              <div className="w-full h-[700px] md:h-[800px] lg:h-[900px] rounded-lg relative">
+              <div 
+                className="w-full h-[700px] md:h-[800px] lg:h-[900px] rounded-lg relative"
+                onMouseLeave={() => setVelloActive(false)}
+              >
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
@@ -890,16 +891,12 @@ export default function App() {
                     </a>
                   </div>
                 )}
-                {/* Overlay to prevent iframe scroll-locking - click to activate */}
+                {/* Overlay to prevent iframe scroll-locking - auto-deactivates when mouse leaves */}
                 {!velloActive && !velloLoading && !velloFailed && (
                   <div 
                     onClick={() => setVelloActive(true)}
-                    className="absolute inset-0 z-10 cursor-pointer bg-transparent border-2 border-primary/30 rounded-lg flex items-center justify-center hover:bg-primary/5 transition-colors"
-                  >
-                    <div className="bg-white/95 px-6 py-3 rounded-lg shadow-lg border border-primary">
-                      <p className="text-primary font-semibold">👆 {t('bookingSection.clickToActivate')}</p>
-                    </div>
-                  </div>
+                    className="absolute inset-0 z-10 cursor-pointer bg-black/5 rounded-lg"
+                  />
                 )}
                 <div ref={velloRef} data-vello-embed className="w-full h-full" />
               </div>             
