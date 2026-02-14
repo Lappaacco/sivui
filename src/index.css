@@ -70,16 +70,14 @@ html {
 	transition: opacity 150ms ease-in;
 }
 
-/* Vello embed - täyttää koko containerin */
+/* Vello embed - annetaan Vellon scriptin hallita korkeutta */
 [data-vello-embed] {
 	width: 100% !important;
-	height: 100% !important;
 	display: block !important;
 }
 
 [data-vello-embed] iframe {
 	width: 100% !important;
-	height: 100% !important;
 	border: 0 !important;
 	display: block !important;
 }
