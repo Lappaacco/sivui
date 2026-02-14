@@ -57,14 +57,12 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [velloLoading, setVelloLoading] = useState(true);
   const [velloFailed, setVelloFailed] = useState(false);
-  const [velloActive, setVelloActive] = useState(true);
   const [mapLoading, setMapLoading] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const mobileMenuRef = useRef(null);
   const velloRef = useRef(null);
-  const scrollTimeoutRef = useRef(null);
 
   // Update SEO meta tags when language changes
   useEffect(() => {
@@ -177,35 +175,6 @@ export default function App() {
     
     return () => {
       window.removeEventListener('hashchange', removeHash);
-    };
-  }, []);
-
-  // Smart scroll: Disable iframe pointer events during page scroll to prevent scroll-lock
-  useEffect(() => {
-    const handleScroll = () => {
-      // Disable iframe interaction while scrolling
-      setVelloActive(false);
-      
-      // Clear existing timeout
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-      
-      // Re-enable iframe after scroll stops (800ms delay)
-      scrollTimeoutRef.current = setTimeout(() => {
-        setVelloActive(true);
-      }, 800);
-    };
-
-    window.addEventListener('wheel', handleScroll, { passive: true });
-    window.addEventListener('touchmove', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('touchmove', handleScroll);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
     };
   }, []);
 
@@ -900,7 +869,7 @@ export default function App() {
                 🎁 {t('bookingSection.giftCardInfo')}
               </p>
 
-              <div className="w-full h-[700px] md:h-[800px] lg:h-[900px] relative overflow-hidden">
+              <div className="w-full h-[1000px] md:h-[1200px] lg:h-[1400px] relative">
                 {velloLoading && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                     <div className="loader" aria-hidden></div>
@@ -918,16 +887,7 @@ export default function App() {
                     </a>
                   </div>
                 )}
-                {/* Transparent overlay that disables iframe during scrolling */}
-                {!velloActive && !velloLoading && !velloFailed && (
-                  <div className="absolute inset-0 z-10 pointer-events-none bg-transparent" />
-                )}
-                <div 
-                  ref={velloRef} 
-                  data-vello-embed 
-                  className="w-full h-full"
-                  style={{ pointerEvents: velloActive ? 'auto' : 'none' }}
-                />
+                <div ref={velloRef} data-vello-embed className="w-full h-full" />
               </div>             
             </div>
           </section>
