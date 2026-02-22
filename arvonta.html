@@ -596,6 +596,29 @@
     <script>
         let participants = [];
         let isDrawing = false;
+        const STORAGE_KEY = 'ilojaloin_arvonta_participants';
+
+        // Tallenna lista localStorageen
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(participants));
+            } catch (e) {
+                console.error('Virhe tallennuksessa:', e);
+            }
+        }
+
+        // Lataa lista localStoragesta
+        function loadFromLocalStorage() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    participants = JSON.parse(saved);
+                }
+            } catch (e) {
+                console.error('Virhe latauksessa:', e);
+                participants = [];
+            }
+        }
 
         function setDrawingState(state) {
             isDrawing = state;
@@ -690,6 +713,9 @@
                 `;
                 }).join('');
             }
+            
+            // Tallenna lista aina kun se päivittyy
+            saveToLocalStorage();
         }
 
         // Aloita arvonta
@@ -821,6 +847,7 @@
             
             if (confirm('Haluatko varmasti tyhjentää koko listan?')) {
                 participants = [];
+                localStorage.removeItem(STORAGE_KEY);
                 updateList();
             }
         }
@@ -1027,7 +1054,8 @@
             animate();
         }
 
-        // Alusta lista
+        // Lataa tallennettu lista ja alusta näkymä
+        loadFromLocalStorage();
         updateList();
     </script>
 </body>
