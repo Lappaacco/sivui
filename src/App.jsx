@@ -938,15 +938,15 @@ export default function App() {
               </button>
 
               {/* Booking content area */}
-              <div className="flex-1 flex items-center justify-center p-4 overflow-y-auto">
-                <div className="w-full max-w-5xl bg-white rounded-lg shadow-2xl overflow-hidden" style={{ maxHeight: '90vh' }}>
+              <div className="flex-1 flex items-center justify-center p-2 md:p-4 overflow-y-auto">
+                <div className="w-full max-w-[95vw] md:max-w-7xl bg-white rounded-lg shadow-2xl flex flex-col" style={{ maxHeight: '95vh' }}>
                   {/* Header */}
-                  <div className="bg-primary text-white p-6">
-                    <h2 className="text-2xl font-heading">{t('bookingSection.title')}</h2>
+                  <div className="bg-primary text-white p-3 md:p-6 flex-shrink-0">
+                    <h2 className="text-xl md:text-2xl font-heading">{t('bookingSection.title')}</h2>
                   </div>
                   
                   {/* Vello embed container */}
-                  <div className="w-full h-[600px] md:h-[700px] lg:h-[800px] relative bg-gray-50">
+                  <div className="w-full flex-1 relative bg-gray-50 overflow-y-auto min-h-0">
                     {velloLoading && (
                       <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                         <div className="loader" aria-hidden></div>
