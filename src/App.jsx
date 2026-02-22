@@ -58,7 +58,6 @@ export default function App() {
   const [velloModalOpen, setVelloModalOpen] = useState(false);
   const [velloLoading, setVelloLoading] = useState(false);
   const [velloFailed, setVelloFailed] = useState(false);
-  const [velloZoom, setVelloZoom] = useState(1);
   const [mapLoading, setMapLoading] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -207,11 +206,7 @@ export default function App() {
 
   // Keyboard navigation and scroll lock for Vello modal
   useEffect(() => {
-    if (!velloModalOpen) {
-      // Reset zoom when modal closes
-      setVelloZoom(1);
-      return;
-    }
+    if (!velloModalOpen) return;
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -423,7 +418,7 @@ export default function App() {
                   href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="inline-flex items-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
                 >
                   {t('hero.bookButton')}
                 </a>
@@ -915,17 +910,28 @@ export default function App() {
                 🎁 {t('bookingSection.giftCardInfo')}
               </p>
 
-              {/* Open booking modal button */}
-              <div className="text-center">
-                <button
-                  onClick={() => setVelloModalOpen(true)}
-                  className="bg-primary text-white font-semibold px-12 py-6 rounded-lg shadow-lg hover:opacity-95 text-xl transition-all hover:scale-105"
-                >
-                  📅 {t('bookingSection.openBooking') || 'Avaa ajanvaraus'}
-                </button>
-                <p className="mt-4 text-gray-600">
-                  {t('bookingSection.clickToOpen') || 'Klikkaa nappia avataksesi ajanvarauksen'}
-                </p>
+              {/* Vello preview - clickable to open modal */}
+              <div 
+                onClick={() => setVelloModalOpen(true)}
+                className="relative cursor-pointer rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow group"
+                style={{ maxWidth: '1000px', margin: '0 auto' }}
+              >
+                {/* Preview iframe container */}
+                <div className="relative w-full" style={{ height: '500px', pointerEvents: 'none' }}>
+                  <iframe
+                    src={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
+                    className="w-full h-full border-0"
+                    title="Ajanvaraus preview"
+                  />
+                </div>
+                
+                {/* Overlay with click prompt */}
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors flex flex-col items-center justify-center">
+                  <div className="bg-white/95 px-8 py-6 rounded-lg shadow-2xl text-center transform group-hover:scale-105 transition-transform">
+                    <p className="text-2xl font-heading text-primary mb-2">📅 {t('bookingSection.title')}</p>
+                    <p className="text-gray-700">{t('bookingSection.clickToOpen') || 'Klikkaa avataksesi ajanvarauksen'}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -946,34 +952,6 @@ export default function App() {
               >
                 ×
               </button>
-
-              {/* Zoom controls - only on desktop */}
-              <div className="hidden md:flex absolute top-4 left-1/2 -translate-x-1/2 z-50 gap-2">
-                <button
-                  onClick={() => setVelloZoom(Math.max(0.5, velloZoom - 0.1))}
-                  className="bg-white/90 hover:bg-white text-gray-800 font-bold w-10 h-10 rounded-lg shadow-lg transition-all hover:scale-105"
-                  aria-label="Loitonna"
-                  title="Loitonna"
-                >
-                  −
-                </button>
-                <button
-                  onClick={() => setVelloZoom(1)}
-                  className="bg-white/90 hover:bg-white text-gray-800 text-sm font-semibold px-3 h-10 rounded-lg shadow-lg transition-all hover:scale-105"
-                  aria-label="Palauta"
-                  title="Palauta alkuperäinen koko"
-                >
-                  {Math.round(velloZoom * 100)}%
-                </button>
-                <button
-                  onClick={() => setVelloZoom(Math.min(2, velloZoom + 0.1))}
-                  className="bg-white/90 hover:bg-white text-gray-800 font-bold w-10 h-10 rounded-lg shadow-lg transition-all hover:scale-105"
-                  aria-label="Lähennä"
-                  title="Lähennä"
-                >
-                  +
-                </button>
-              </div>
 
               {/* Booking content area */}
               <div 
@@ -1014,7 +992,6 @@ export default function App() {
                       ref={velloRef} 
                       data-vello-embed 
                       className="w-full h-full min-h-[600px]"
-                      style={{ transform: `scale(${velloZoom})`, transformOrigin: 'top center' }}
                     />
                   </div>
                 </div>
