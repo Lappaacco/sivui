@@ -277,6 +277,9 @@
             padding: 20px;
             max-height: 400px;
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-y;
+            padding-bottom: 24px;
         }
 
         .participants-list h3 {
@@ -545,9 +548,29 @@
 
     <script>
         let participants = [];
+        let isDrawing = false;
+
+        function setDrawingState(state) {
+            isDrawing = state;
+            const drawBtn = document.getElementById('drawBtn');
+            const drawMultiBtn = document.getElementById('drawMultiBtn');
+            const nameInput = document.getElementById('nameInput');
+            const winnerCountInput = document.getElementById('winnerCount');
+
+            if (drawBtn) drawBtn.disabled = state;
+            if (drawMultiBtn) drawMultiBtn.disabled = state;
+            if (nameInput) nameInput.disabled = state;
+            if (winnerCountInput) winnerCountInput.disabled = state;
+
+            updateList();
+        }
 
         // Lisää osallistuja
         function addParticipant() {
+            if (isDrawing) {
+                alert('Arvonta on käynnissä — et voi lisätä nimiä.');
+                return;
+            }
             const input = document.getElementById('nameInput');
             const name = input.value.trim();
             
@@ -569,6 +592,10 @@
 
         // Poista osallistuja
         function removeParticipant(index) {
+            if (isDrawing) {
+                alert('Arvonta on käynnissä — et voi poistaa nimiä.');
+                return;
+            }
             participants.splice(index, 1);
             updateList();
         }
@@ -581,8 +608,10 @@
             const drawMultiBtn = document.getElementById('drawMultiBtn');
             
             count.textContent = participants.length;
-            drawBtn.disabled = participants.length < 2;
-            drawMultiBtn.disabled = participants.length < 2;
+            if (!isDrawing) {
+                drawBtn.disabled = participants.length < 2;
+                drawMultiBtn.disabled = participants.length < 2;
+            }
             
             if (participants.length === 0) {
                 list.innerHTML = `
@@ -594,41 +623,49 @@
                     </div>
                 `;
             } else {
-                list.innerHTML = participants.map((name, index) => `
+                list.innerHTML = participants.map((name, index) => {
+                    const removeBtn = isDrawing ? '<button class="btn-remove" disabled>Poista</button>' : `<button class="btn-remove" onclick="removeParticipant(${index})">Poista</button>`;
+                    return `
                     <div class="participant-item">
                         <span class="participant-name">${name}</span>
                         <div>
                             <span class="participant-number">#${index + 1}</span>
-                            <button class="btn-remove" onclick="removeParticipant(${index})">Poista</button>
+                            ${removeBtn}
                         </div>
                     </div>
-                `).join('');
+                `;
+                }).join('');
             }
         }
 
         // Aloita arvonta
         function startDraw() {
             const drawBtn = document.getElementById('drawBtn');
-            drawBtn.disabled = true;
-            drawBtn.classList.add('drumroll');
-            drawBtn.textContent = 'Arvotaan...';
+            setDrawingState(true);
+            if (drawBtn) {
+                drawBtn.classList.add('drumroll');
+                drawBtn.textContent = 'Arvotaan...';
+            }
             
             // Animoitu arvonta
             let counter = 0;
             const maxCount = 20;
             const interval = setInterval(() => {
                 const randomIndex = Math.floor(Math.random() * participants.length);
-                drawBtn.textContent = participants[randomIndex];
+                if (drawBtn) drawBtn.textContent = participants[randomIndex];
                 counter++;
                 
                 if (counter >= maxCount) {
                     clearInterval(interval);
                     const winnerIndex = Math.floor(Math.random() * participants.length);
                     const winner = participants[winnerIndex];
+                    setDrawingState(false);
                     showWinner(winner);
-                    drawBtn.classList.remove('drumroll');
-                    drawBtn.textContent = 'Arvo Voittaja';
-                    drawBtn.disabled = false;
+                    if (drawBtn) {
+                        drawBtn.classList.remove('drumroll');
+                        drawBtn.textContent = 'Arvo Voittaja';
+                        drawBtn.disabled = false;
+                    }
                 }
             }, 100);
         }
@@ -649,9 +686,11 @@
             }
             
             const drawMultiBtn = document.getElementById('drawMultiBtn');
-            drawMultiBtn.disabled = true;
-            drawMultiBtn.classList.add('drumroll');
-            drawMultiBtn.textContent = 'Arvotaan...';
+            setDrawingState(true);
+            if (drawMultiBtn) {
+                drawMultiBtn.classList.add('drumroll');
+                drawMultiBtn.textContent = 'Arvotaan...';
+            }
             
             // Animoitu arvonta
             let counter = 0;
@@ -674,10 +713,13 @@
                         availableParticipants.splice(randomIndex, 1);
                     }
                     
+                    setDrawingState(false);
                     showMultipleWinners(winners);
-                    drawMultiBtn.classList.remove('drumroll');
-                    drawMultiBtn.textContent = 'Arvo Useita Voittajia';
-                    drawMultiBtn.disabled = false;
+                    if (drawMultiBtn) {
+                        drawMultiBtn.classList.remove('drumroll');
+                        drawMultiBtn.textContent = 'Arvo Useita Voittajia';
+                        drawMultiBtn.disabled = false;
+                    }
                 }
             }, 100);
         }
@@ -717,6 +759,10 @@
 
         // Tyhjennä kaikki
         function resetAll() {
+            if (isDrawing) {
+                alert('Arvonta on käynnissä — et voi tyhjentää listaa.');
+                return;
+            }
             if (participants.length === 0) return;
             
             if (confirm('Haluatko varmasti tyhjentää koko listan?')) {
@@ -742,6 +788,10 @@
 
         // Lisää useita osallistujia kerralla
         function addBulkParticipants() {
+            if (isDrawing) {
+                alert('Arvonta on käynnissä — et voi lisätä nimiä.');
+                return;
+            }
             const bulkInput = document.getElementById('bulkInput');
             const text = bulkInput.value.trim();
             
