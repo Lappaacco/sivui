@@ -956,7 +956,7 @@ export default function App() {
                   </div>
                   
                   {/* Vello embed container */}
-                  <div className="w-full flex-1 relative bg-gray-50 overflow-hidden">
+                  <div className="w-full flex-1 relative bg-gray-50 overflow-hidden min-h-0">
                     {velloLoading && (
                       <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                         <div className="loader" aria-hidden></div>
@@ -977,7 +977,7 @@ export default function App() {
                         </div>
                       </div>
                     )}
-                    <div ref={velloRef} data-vello-embed className="w-full h-full" />
+                    <div ref={velloRef} data-vello-embed className="absolute inset-0 w-full h-full" />
                   </div>
                 </div>
               </div>
