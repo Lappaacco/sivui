@@ -353,6 +353,45 @@
             align-items: center;
         }
 
+        /* Blocking overlay shown while draw is running to prevent interactions */
+        .blocking-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 900;
+            justify-content: center;
+            align-items: center;
+            pointer-events: auto;
+            color: white;
+            font-weight: 700;
+        }
+
+        .blocking-overlay.active {
+            display: flex;
+        }
+
+        .blocking-box {
+            background: rgba(255,255,255,0.06);
+            padding: 18px 26px;
+            border-radius: 12px;
+            backdrop-filter: blur(4px);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(255,255,255,0.25);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
         .winner-overlay.active {
             display: flex;
         }
@@ -546,6 +585,14 @@
         </div>
     </div>
 
+    <!-- Blocking overlay shown while draw is running -->
+    <div class="blocking-overlay" id="blockingOverlay" aria-hidden="true">
+        <div class="blocking-box">
+            <div class="spinner" aria-hidden="true"></div>
+            <div>Arvonta käynnissä — odota hetki...</div>
+        </div>
+    </div>
+
     <script>
         let participants = [];
         let isDrawing = false;
@@ -561,6 +608,13 @@
             if (drawMultiBtn) drawMultiBtn.disabled = state;
             if (nameInput) nameInput.disabled = state;
             if (winnerCountInput) winnerCountInput.disabled = state;
+
+            // Toggle blocking overlay to prevent interactions during draw
+            const blocking = document.getElementById('blockingOverlay');
+            if (blocking) {
+                if (state) blocking.classList.add('active');
+                else blocking.classList.remove('active');
+            }
 
             updateList();
         }
