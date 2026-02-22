@@ -55,7 +55,8 @@ export default function App() {
   const { t, i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [velloLoading, setVelloLoading] = useState(true);
+  const [velloModalOpen, setVelloModalOpen] = useState(false);
+  const [velloLoading, setVelloLoading] = useState(false);
   const [velloFailed, setVelloFailed] = useState(false);
   const [mapLoading, setMapLoading] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -203,6 +204,26 @@ export default function App() {
     };
   }, [lightboxOpen, lightboxIndex, t]);
 
+  // Keyboard navigation and scroll lock for Vello modal
+  useEffect(() => {
+    if (!velloModalOpen) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setVelloModalOpen(false);
+      }
+    };
+
+    // Disable body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [velloModalOpen]);
+
   // Focus mobile menu when it opens
   useEffect(() => {
     if (mobileMenuOpen && mobileMenuRef.current) {
@@ -213,15 +234,21 @@ export default function App() {
     }
   }, [mobileMenuOpen]);
 
-    // Inject Vello embed script - yksinkertaistettu versio ilman manuaalista layoutia
+    // Inject Vello embed script only when modal is open
   useEffect(() => {
+    if (!velloModalOpen) return;
+    
     const root = velloRef.current;
     if (!root) return;
+
+    // Reset loading states
+    setVelloLoading(true);
+    setVelloFailed(false);
 
     // Määritä Vellon kieli nykyisen i18n-kielen mukaan
     const velloLang = i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi';
 
-    // Poista vanha skripti ja iframe kokonaan kun kieli vaihtuu
+    // Poista vanha skripti ja iframe kokonaan
     const existingScript = document.querySelector('script[src="https://static.vello.fi/embed/v1.js"][data-url="ilojaloin-jalkaterapia"]');
     if (existingScript) {
       existingScript.remove();
@@ -260,8 +287,17 @@ export default function App() {
     return () => {
       observer.disconnect();
       clearTimeout(fallbackTimer);
+      
+      // Clean up when modal closes
+      if (root) {
+        root.innerHTML = '';
+      }
+      const script = document.querySelector('script[src=\"https://static.vello.fi/embed/v1.js\"][data-url=\"ilojaloin-jalkaterapia\"]');
+      if (script) {
+        script.remove();
+      }
     };
-  }, [i18n.language]); // Päivitä kun kieli vaihtuu
+  }, [velloModalOpen, i18n.language]);
 
   return (
     <>
@@ -869,29 +905,75 @@ export default function App() {
                 🎁 {t('bookingSection.giftCardInfo')}
               </p>
 
-              {/* Vello embed container - extra large height for desktop */}
-              <div className="w-full h-[1100px] md:h-[1400px] lg:h-[1600px] relative">
-                {velloLoading && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
-                    <div className="loader" aria-hidden></div>
-                  </div>
-                )}
-                {velloFailed && (
-                  <div className="absolute inset-0 z-30 flex items-center justify-center">
-                    <a
-                      href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-primary text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:opacity-95 text-lg"
-                    >
-                      {t('bookingSection.failed')}
-                    </a>
-                  </div>
-                )}
-                <div ref={velloRef} data-vello-embed />
-              </div>             
+              {/* Open booking modal button */}
+              <div className="text-center">
+                <button
+                  onClick={() => setVelloModalOpen(true)}
+                  className="bg-primary text-white font-semibold px-12 py-6 rounded-lg shadow-lg hover:opacity-95 text-xl transition-all hover:scale-105"
+                >
+                  📅 {t('bookingSection.openBooking') || 'Avaa ajanvaraus'}
+                </button>
+                <p className="mt-4 text-gray-600">
+                  {t('bookingSection.clickToOpen') || 'Klikkaa nappia avataksesi ajanvarauksen'}
+                </p>
+              </div>
             </div>
           </section>
+
+          {/* Vello Booking Modal */}
+          {velloModalOpen && (
+            <div 
+              className="fixed inset-0 bg-black/95 z-50 flex flex-col"
+              onClick={(e) => {
+                if (e.target === e.currentTarget) setVelloModalOpen(false);
+              }}
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setVelloModalOpen(false)}
+                className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-50 w-12 h-12 flex items-center justify-center"
+                aria-label="Sulje"
+              >
+                ×
+              </button>
+
+              {/* Booking content area */}
+              <div className="flex-1 flex items-center justify-center p-4 overflow-y-auto">
+                <div className="w-full max-w-5xl bg-white rounded-lg shadow-2xl overflow-hidden" style={{ maxHeight: '90vh' }}>
+                  {/* Header */}
+                  <div className="bg-primary text-white p-6">
+                    <h2 className="text-2xl font-heading">{t('bookingSection.title')}</h2>
+                  </div>
+                  
+                  {/* Vello embed container */}
+                  <div className="w-full h-[600px] md:h-[700px] lg:h-[800px] relative bg-gray-50">
+                    {velloLoading && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
+                        <div className="loader" aria-hidden></div>
+                      </div>
+                    )}
+                    {velloFailed && (
+                      <div className="absolute inset-0 z-30 flex items-center justify-center p-8">
+                        <div className="text-center">
+                          <p className="mb-4 text-gray-700">{t('bookingSection.failed')}</p>
+                          <a
+                            href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-primary text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:opacity-95 text-lg inline-block"
+                          >
+                            Avaa Vello
+                          </a>
+                        </div>
+                      </div>
+                    )}
+                    <div ref={velloRef} data-vello-embed className="w-full h-full" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           <footer className="py-6 bg-primary text-white text-center">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto px-4">
             &copy; {currentYear} {t('footer.rights')}

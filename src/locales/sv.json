@@ -153,7 +153,9 @@
     "description": "Du kan boka tid bekvämt via Vello-systemet från kalendern nedan. Eller om du vill kan du öppna <a href='https://vello.fi/ilojaloin-jalkaterapia' target='_blank' rel='noopener noreferrer' class='text-primary hover:underline'>Vellos egen bokningssida</a> i en ny flik.",
     "giftCardInfo": "Presentkort kan köpas elektroniskt via Vello eller kontakta mig per telefon om du vill ha en fysisk version av presentkortet!",
     "loading": "Laddar bokning...",
-    "failed": "Öppna bokning i Vello"
+    "failed": "Öppna bokning i Vello",
+    "openBooking": "Öppna bokning",
+    "clickToOpen": "Klicka på knappen för att öppna bokningen"
   },
   "footer": {
     "rights": "Ilojaloin Fotterapitjänster. Alla rättigheter förbehålls.",
