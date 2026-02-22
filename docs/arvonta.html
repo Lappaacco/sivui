@@ -376,17 +376,18 @@
 
         .blocking-box {
             background: rgba(255,255,255,0.06);
-            padding: 18px 26px;
+            padding: 24px 36px;
             border-radius: 12px;
             backdrop-filter: blur(4px);
             display: flex;
-            gap: 12px;
+            gap: 16px;
             align-items: center;
+            font-size: 1.3em;
         }
 
         .spinner {
-            width: 18px;
-            height: 18px;
+            width: 24px;
+            height: 24px;
             border: 3px solid rgba(255,255,255,0.25);
             border-top-color: white;
             border-radius: 50%;
@@ -449,7 +450,7 @@
         .winner-name.multi-winners {
             font-size: 2em;
             animation: none;
-            text-align: left;
+            text-align: center;
             white-space: pre-line;
         }
 
@@ -531,6 +532,17 @@
             
             .input-group {
                 flex-direction: column;
+            }
+            
+            .blocking-box {
+                padding: 18px 26px;
+                gap: 12px;
+                font-size: 1em;
+            }
+            
+            .spinner {
+                width: 18px;
+                height: 18px;
             }
         }
     </style>
