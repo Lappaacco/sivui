@@ -58,6 +58,7 @@ export default function App() {
   const [velloModalOpen, setVelloModalOpen] = useState(false);
   const [velloLoading, setVelloLoading] = useState(false);
   const [velloFailed, setVelloFailed] = useState(false);
+  const [velloZoom, setVelloZoom] = useState(1);
   const [mapLoading, setMapLoading] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -206,7 +207,11 @@ export default function App() {
 
   // Keyboard navigation and scroll lock for Vello modal
   useEffect(() => {
-    if (!velloModalOpen) return;
+    if (!velloModalOpen) {
+      // Reset zoom when modal closes
+      setVelloZoom(1);
+      return;
+    }
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -942,6 +947,34 @@ export default function App() {
                 ×
               </button>
 
+              {/* Zoom controls - only on desktop */}
+              <div className="hidden md:flex absolute top-4 left-1/2 -translate-x-1/2 z-50 gap-2">
+                <button
+                  onClick={() => setVelloZoom(Math.max(0.5, velloZoom - 0.1))}
+                  className="bg-white/90 hover:bg-white text-gray-800 font-bold w-10 h-10 rounded-lg shadow-lg transition-all hover:scale-105"
+                  aria-label="Loitonna"
+                  title="Loitonna"
+                >
+                  −
+                </button>
+                <button
+                  onClick={() => setVelloZoom(1)}
+                  className="bg-white/90 hover:bg-white text-gray-800 text-sm font-semibold px-3 h-10 rounded-lg shadow-lg transition-all hover:scale-105"
+                  aria-label="Palauta"
+                  title="Palauta alkuperäinen koko"
+                >
+                  {Math.round(velloZoom * 100)}%
+                </button>
+                <button
+                  onClick={() => setVelloZoom(Math.min(2, velloZoom + 0.1))}
+                  className="bg-white/90 hover:bg-white text-gray-800 font-bold w-10 h-10 rounded-lg shadow-lg transition-all hover:scale-105"
+                  aria-label="Lähennä"
+                  title="Lähennä"
+                >
+                  +
+                </button>
+              </div>
+
               {/* Booking content area */}
               <div 
                 className="flex-1 flex items-center justify-center p-2 md:p-6"
@@ -956,7 +989,7 @@ export default function App() {
                   </div>
                   
                   {/* Vello embed container */}
-                  <div className="w-full flex-1 relative bg-gray-50 overflow-hidden min-h-0">
+                  <div className="w-full flex-1 relative bg-gray-50 overflow-auto min-h-0">
                     {velloLoading && (
                       <div className="absolute inset-0 flex items-center justify-center bg-white/70 z-20">
                         <div className="loader" aria-hidden></div>
@@ -977,7 +1010,12 @@ export default function App() {
                         </div>
                       </div>
                     )}
-                    <div ref={velloRef} data-vello-embed className="absolute inset-0 w-full h-full" />
+                    <div 
+                      ref={velloRef} 
+                      data-vello-embed 
+                      className="w-full h-full min-h-[600px]"
+                      style={{ transform: `scale(${velloZoom})`, transformOrigin: 'top center' }}
+                    />
                   </div>
                 </div>
               </div>
