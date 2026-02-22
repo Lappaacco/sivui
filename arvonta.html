@@ -351,6 +351,9 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
         }
 
         /* Blocking overlay shown while draw is running to prevent interactions */
@@ -402,6 +405,14 @@
             animation: winnerAppear 1s ease;
             position: relative;
             z-index: 1002;
+            max-height: 90vh;
+            max-width: 90vw;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            padding: 20px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
         }
 
         @keyframes winnerAppear {
@@ -429,6 +440,17 @@
             text-shadow: 0 0 30px rgba(74, 151, 233, 0.8);
             margin: 30px 0;
             animation: pulse 2s infinite;
+            max-height: 60vh;
+            overflow-y: auto;
+            padding: 10px;
+            line-height: 1.3;
+        }
+
+        .winner-name.multi-winners {
+            font-size: 2em;
+            animation: none;
+            text-align: left;
+            white-space: pre-line;
         }
 
         @keyframes pulse {
@@ -457,6 +479,7 @@
             cursor: pointer;
             transition: all 0.3s;
             font-weight: 600;
+            flex-shrink: 0;
         }
 
         .close-winner:hover {
@@ -806,7 +829,9 @@
 
         // Näytä voittaja
         function showWinner(winner) {
-            document.getElementById('winnerName').textContent = winner;
+            const winnerNameEl = document.getElementById('winnerName');
+            winnerNameEl.textContent = winner;
+            winnerNameEl.classList.remove('multi-winners');
             document.getElementById('winnerOverlay').classList.add('active');
             startFireworks();
         }
@@ -814,7 +839,9 @@
         // Näytä useita voittajia
         function showMultipleWinners(winners) {
             const winnerText = winners.map((name, i) => `${i + 1}. ${name}`).join('\n');
-            document.getElementById('winnerName').innerHTML = winnerText.replace(/\n/g, '<br>');
+            const winnerNameEl = document.getElementById('winnerName');
+            winnerNameEl.innerHTML = winnerText.replace(/\n/g, '<br>');
+            winnerNameEl.classList.add('multi-winners');
             document.getElementById('winnerOverlay').classList.add('active');
             startFireworks();
         }
@@ -822,6 +849,7 @@
         // Sulje voittaja-overlay
         function closeWinner() {
             document.getElementById('winnerOverlay').classList.remove('active');
+            document.getElementById('winnerName').classList.remove('multi-winners');
             stopFireworks();
         }
 
