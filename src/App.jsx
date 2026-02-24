@@ -419,6 +419,12 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                  onClick={() => {
+                    // Track booking conversion when user clicks to open Vello
+                    if (window.gtag) {
+                      window.gtag('event', 'conversion', {'send_to': 'AW-17958980715/ALQKCK67u_0bEOuYwfNC'});
+                    }
+                  }}
                 >
                   {t('hero.bookButton')}
                 </a>
@@ -912,7 +918,13 @@ export default function App() {
 
               {/* Vello preview - clickable to open modal */}
               <div 
-                onClick={() => setVelloModalOpen(true)}
+                onClick={() => {
+                  setVelloModalOpen(true);
+                  // Track booking conversion when user opens Vello modal
+                  if (window.gtag) {
+                    window.gtag('event', 'conversion', {'send_to': 'AW-17958980715/ALQKCK67u_0bEOuYwfNC'});
+                  }
+                }}
                 className="relative cursor-pointer rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow group"
                 style={{ maxWidth: '1000px', margin: '0 auto' }}
               >
