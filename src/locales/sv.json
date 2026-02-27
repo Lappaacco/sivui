@@ -66,7 +66,7 @@
     "serviceLabel": "Tjänst",
     "priceLabel": "Pris",
     "services": [
-      { "name": "Fotterapi 30min", "price": "50 €" },
+      { "name": "Fotterapi 30 min", "price": "50 €" },
       { "name": "Fotterapi 45 min", "price": "65 €" },
       { "name": "Fotterapi 60 min", "price": "85 €" },
       { "name": "Fotterapi 75 min", "price": "105 €" },
@@ -78,6 +78,7 @@
       { "name": "Grundläggande fotvård - Storoperation 75 min", "price": "90 €" },
       { "name": "Grundläggande fotvård - Fullservice 90 min", "price": "105 €" },
       { "name": "Avlägsnande av en liktorns/förhårdnad 15 min", "price": "30 €" },
+      { "name": "Vårtfrysningsbehandling ca 30 min", "price": "65 €" },
       { "name": "Vårtbehandling (Verrutop®) ca 30 min", "price": "45 € (andra ampullen +20 €)" },
       { "name": "Nagelkorrigeringsbehandling ca 45 min", "price": "50 € (andra nageln +20 €)" },
       { "name": "Nagelprotes ca 45-60 min", "price": "60 € (andra nageln +30 €)" },
@@ -140,6 +141,7 @@
     "title": "Galleri",
     "description": "En titt på min mottagning och arbetsmiljö.",
     "images": [
+      { "caption": "" },
       { "caption": "" },
       { "caption": "" },
       { "caption": "" },

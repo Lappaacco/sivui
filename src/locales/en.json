@@ -66,7 +66,7 @@
     "serviceLabel": "Service",
     "priceLabel": "Price",
     "services": [
-      { "name": "Podiatry 30min", "price": "50 €" },
+      { "name": "Podiatry 30 min", "price": "50 €" },
       { "name": "Podiatry 45 min", "price": "65 €" },
       { "name": "Podiatry 60 min", "price": "85€" },
       { "name": "Podiatry 75 min", "price": "105 €" },
@@ -78,6 +78,7 @@
       { "name": "Basic foot care - Major operation 75 min", "price": "90 €" },
       { "name": "Basic foot care - Full service 90 min", "price": "105 €" },
       { "name": "Removal of corn/callus 15 min", "price": "30 €" },
+      { "name": "Wart freezing treatment approx. 30 min", "price": "65 €" },
       { "name": "Wart treatment (Verrutop®) approx. 30 min", "price": "45 € (second ampoule +20 €)" },
       { "name": "Nail correction treatment approx. 45 min", "price": "50 € (second nail +20 €)" },
       { "name": "Nail prosthesis approx. 45-60 min", "price": "60 € (second nail +30 €)" },
@@ -140,6 +141,7 @@
     "title": "Gallery",
     "description": "A glimpse into my practice and working environment.",
     "images": [
+      { "caption": "" },
       { "caption": "" },
       { "caption": "" },
       { "caption": "" },
