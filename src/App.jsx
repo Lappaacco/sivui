@@ -360,6 +360,7 @@ export default function App() {
           <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
           <NavItem label={t('nav.contact')} targetId="contact" active={activeSection === 'contact'} onClick={handleNavClick} />
           <NavItem label={t('nav.gallery')} targetId="gallery" active={activeSection === 'gallery'} onClick={handleNavClick} />
+          <NavItem label={t('nav.additionalInfo')} targetId="additionalInfo" active={activeSection === 'additionalInfo'} onClick={handleNavClick} />
           <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
         </nav>
       )}
@@ -391,6 +392,7 @@ export default function App() {
             <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
             <NavItem label={t('nav.contact')} targetId="contact" active={activeSection === 'contact'} onClick={handleNavClick} />
             <NavItem label={t('nav.gallery')} targetId="gallery" active={activeSection === 'gallery'} onClick={handleNavClick} />
+            <NavItem label={t('nav.additionalInfo')} targetId="additionalInfo" active={activeSection === 'additionalInfo'} onClick={handleNavClick} />
             <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
           </div>
           {/* Kielivalitsin desktop */}
