@@ -40,7 +40,7 @@
       "💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat",
       "🦶 <strong>Ihon hoito</strong> – halkeamat, kovettumat, känsät",
       "🦵 <strong>Haavanhoito ja kevennyshoito</strong> – erityisesti kroonisten jalkahaavojen hoitoon",
-      "🦶 <strong>Syylänhoito - Verrutop®</strong>",
+      "🦶 <strong>Syylänhoito - Jäädytyshoito tai Verrutop®</strong>",
       "🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong>",
       "🦶 <strong>Yksilölliset harjoitteet</strong>",
       "🩹 <strong>Urheilu- ja kinesioteippaus</strong>",
@@ -149,6 +149,29 @@
       { "caption": "" },
       { "caption": "" }
     ]
+  },
+  "additionalInfo": {
+    "title": "Lisätietoa",
+    "wart": {
+      "title": "Syylä",
+      "paragraph1": "Syylät ovat harmittomia, Human papillomavirus:n (HPV) aiheuttamia ihokasvaimia. Ne ovat hyvin yleisiä ja voivat esiintyä kaiken ikäisillä.",
+      "paragraph2": "Kaikkia syyliä ei välttämättä tarvitse hoitaa. Usein on mahdollista antaa elimistön muodostaa tarvittavat vasta-aineet, jolloin syylä häviää ajan myötä itsestään.",
+      "paragraph3": "Monesti syylä kuitenkin sijaitsee painealueella – esimerkiksi jalkapohjassa – jolloin se voi aiheuttaa kipua kävelessä. Tällaisissa tilanteissa hoito on perusteltua, jotta syylän poistumista voidaan nopeuttaa ja kipua helpottaa."
+    },
+    "wartTreatment": {
+      "title": "Syylän hoito",
+      "paragraph1": "Minulla on tarjota kaksi eri hoitomenetelmää syylien hoitoon. Molemmat ovat ammattituotteita ja tarkoitettu vain ammattilaiskäyttöön:",
+      "method1": "Hapotushoito Verrutop®",
+      "method2": "Syylän jäädytyshoito (tehokkaampi kuin apteekin itsehoitomenetelmät)",
+      "paragraph2": "Molempiin hoitoihin kuuluu aluksi syyläkudoksen mekaaninen poisto, joka parantaa hoidon tehoa ja lopputulosta.",
+      "paragraph3": "Syylään ei aina ole yhtä ainoaa ja heti tehokasta hoitoa. Usein tarvitaan useampi hoitokerta ja käynti vastaanotolla. Joskus lopputuloksena voi olla, että pieni osa syylästä jää jäljelle, mutta suurin osa saadaan poistettua ja kipu helpottuu merkittävästi."
+    },
+    "freezingTreatment": {
+      "title": "Syylän jäädytyshoito",
+      "paragraph1": "Käytän ammattimaista jäädytyslaitetta, joka tuottaa jopa –89 °C nestetyppeä. Jäädytyksessä syyläsolut tuhotaan kylmän avulla. Hoidon jälkeen iho alkaa parantaa itseään alhaalta päin, ja yleensä parin viikon kuluessa syylä kuoriutuu pois ja tilalle muodostuu tervettä ihoa.",
+      "paragraph2": "Jos kyseessä on kookas tai sitkeä syylä, jäädytyshoitoja voidaan tarvita useampi.",
+      "paragraph3": "Jäädytys voi tuntua hetkellisesti kivuliaalta. Lapsilla on mahdollisuus käyttää ennen hoitoa puuduttavaa Emla-laastaria, joka helpottaa hoidon aikaisia tuntemuksia."
+    }
   },
   "bookingSection": {
     "title": "Ajanvaraus",

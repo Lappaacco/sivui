@@ -40,7 +40,7 @@
       "💅 <strong>Förkortning & tunnande av naglar</strong> - även svåra naglar kan behandlas",
       "🦶 <strong>Hudvård</strong> – sprickor, förhårdningar, liktornar",
       "🦵 <strong>Sårvård och avlastningsbehandling</strong> – särskilt för behandling av kroniska fotsår",
-      "🦶 <strong>Vårta behandling - Verrutop®</strong>",
+      "🦶 <strong>Vårtbehandling - Frysbehandling eller Verrutop®</strong>",
       "🦶 <strong>Hjälp med nagelsvamp eller fotsvamp</strong>",
       "🦶 <strong>Individuella övningar</strong>",
       "🩹 <strong>Sport- och kinesiotejpning</strong>",
@@ -149,6 +149,29 @@
       { "caption": "" },
       { "caption": "" }
     ]
+  },
+  "additionalInfo": {
+    "title": "Mer information",
+    "wart": {
+      "title": "Vårtor",
+      "paragraph1": "Vårtor är ofarliga hudtumörer som orsakas av Human papillomavirus (HPV). De är mycket vanliga och kan förekomma i alla åldrar.",
+      "paragraph2": "Alla vårtor behöver inte nödvändigtvis behandlas. Ofta är det möjligt att låta kroppen bilda nödvändiga antikroppar, varvid vårtan försvinner av sig själv med tiden.",
+      "paragraph3": "Ofta är vårtan dock belägen på ett tryckområde – till exempel på fotsulan – vilket kan orsaka smärta när man går. I sådana situationer är behandling motiverad för att påskynda vårtans försvinnande och lindra smärtan."
+    },
+    "wartTreatment": {
+      "title": "Behandling av vårtor",
+      "paragraph1": "Jag har att erbjuda två olika behandlingsmetoder för behandling av vårtor. Båda är professionella produkter och avsedda endast för professionellt bruk:",
+      "method1": "Syrabehandling Verrutop®",
+      "method2": "Frysbehandling av vårtor (effektivare än apotek självbehandlingsmetoder)",
+      "paragraph2": "Båda behandlingarna inkluderar inledningsvis mekanisk avlägsnande av vårtvävnad, vilket förbättrar behandlingens effektivitet och slutresultat.",
+      "paragraph3": "Det finns inte alltid en enda omedelbart effektiv behandling för vårtor. Ofta krävs flera behandlingstillfällen och besök på mottagningen. Ibland kan slutresultatet vara att en liten del av vårtan kvarstår, men merparten kan avlägsnas och smärtan lindras avsevärt."
+    },
+    "freezingTreatment": {
+      "title": "Frysbehandling av vårtor",
+      "paragraph1": "Jag använder en professionell frysutrustning som producerar flytande kväve upp till –89 °C. Vid frysning förstörs vårtcellerna med hjälp av kyla. Efter behandlingen börjar huden läka sig själv från botten, och vanligtvis inom ett par veckor flagnar vårtan bort och ersätts av frisk hud.",
+      "paragraph2": "Om det handlar om en stor eller envis vårta kan flera frysbehandlingar behövas.",
+      "paragraph3": "Frysningen kan kännas tillfälligt smärtsam. Barn har möjlighet att använda ett bedövande Emla-plåster före behandlingen, vilket lindrar känslorna under behandlingen."
+    }
   },
   "bookingSection": {
     "title": "Tidsbokning",

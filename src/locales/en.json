@@ -40,7 +40,7 @@
       "💅 <strong>Nail trimming & thinning</strong> – even challenging nails can be treated",
       "🦶 <strong>Skin care</strong> – cracks, calluses, corns",
       "🦵 <strong>Wound care and pressure relief</strong> – especially for chronic foot wounds",
-      "🦶 <strong>Wart treatment - Verrutop®</strong>",
+      "🦶 <strong>Wart treatment - Freezing treatment or Verrutop®</strong>",
       "🦶 <strong>Help with nail fungus or athlete's foot</strong>",
       "🦶 <strong>Individual exercise programs</strong>",
       "🩹 <strong>Sports and kinesio taping</strong>",
@@ -149,6 +149,29 @@
       { "caption": "" },
       { "caption": "" }
     ]
+  },
+  "additionalInfo": {
+    "title": "Additional Information",
+    "wart": {
+      "title": "Warts",
+      "paragraph1": "Warts are harmless skin growths caused by the Human papillomavirus (HPV). They are very common and can occur at any age.",
+      "paragraph2": "Not all warts necessarily need to be treated. Often it is possible to allow the body to form the necessary antibodies, whereby the wart will disappear on its own over time.",
+      "paragraph3": "However, the wart is often located in a pressure area – for example on the sole of the foot – which can cause pain when walking. In such situations, treatment is justified to accelerate the disappearance of the wart and relieve pain."
+    },
+    "wartTreatment": {
+      "title": "Wart Treatment",
+      "paragraph1": "I have two different treatment methods available for wart treatment. Both are professional products and intended only for professional use:",
+      "method1": "Acid treatment Verrutop®",
+      "method2": "Wart freezing treatment (more effective than pharmacy self-treatment methods)",
+      "paragraph2": "Both treatments initially include mechanical removal of wart tissue, which improves the treatment's effectiveness and outcome.",
+      "paragraph3": "There is not always one single immediately effective treatment for warts. Often several treatment sessions and visits to the clinic are needed. Sometimes the end result may be that a small part of the wart remains, but the majority can be removed and the pain is significantly relieved."
+    },
+    "freezingTreatment": {
+      "title": "Wart Freezing Treatment",
+      "paragraph1": "I use professional freezing equipment that produces liquid nitrogen up to –89 °C. During freezing, wart cells are destroyed with the help of cold. After treatment, the skin begins to heal itself from the bottom, and usually within a couple of weeks the wart peels off and is replaced by healthy skin.",
+      "paragraph2": "If it is a large or stubborn wart, multiple freezing treatments may be needed.",
+      "paragraph3": "Freezing can feel temporarily painful. Children have the option to use a numbing Emla patch before treatment, which eases the sensations during treatment."
+    }
   },
   "bookingSection": {
     "title": "Book Appointment",

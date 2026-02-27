@@ -905,6 +905,41 @@ export default function App() {
             </div>
           )}
 
+          {/* Additional Info section */}
+          <section data-section="additionalInfo" className="py-12 md:py-20 px-4 bg-white">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('additionalInfo.title')}</h2>
+              
+              {/* Wart subsection */}
+              <div className="mb-12">
+                <h3 className="text-2xl md:text-3xl font-heading text-primary mb-4">{t('additionalInfo.wart.title')}</h3>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.wart.paragraph1')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.wart.paragraph2')}</p>
+                <p className="text-gray-700">{t('additionalInfo.wart.paragraph3')}</p>
+              </div>
+
+              {/* Wart Treatment subsection */}
+              <div className="mb-12">
+                <h3 className="text-2xl md:text-3xl font-heading text-primary mb-4">{t('additionalInfo.wartTreatment.title')}</h3>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.wartTreatment.paragraph1')}</p>
+                <ul className="list-disc list-inside mb-4 text-gray-700">
+                  <li>{t('additionalInfo.wartTreatment.method1')}</li>
+                  <li>{t('additionalInfo.wartTreatment.method2')}</li>
+                </ul>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.wartTreatment.paragraph2')}</p>
+                <p className="text-gray-700">{t('additionalInfo.wartTreatment.paragraph3')}</p>
+              </div>
+
+              {/* Freezing Treatment subsection */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-heading text-primary mb-4">{t('additionalInfo.freezingTreatment.title')}</h3>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.freezingTreatment.paragraph1')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.freezingTreatment.paragraph2')}</p>
+                <p className="text-gray-700">{t('additionalInfo.freezingTreatment.paragraph3')}</p>
+              </div>
+            </div>
+          </section>
+
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
           <section data-section="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
