@@ -40,8 +40,7 @@
       "💅 <strong>Kynnenoikaisuhoidot & kynsiproteesit</strong> – korjaavat ja suojaavat kynsiä",
       "💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat",
       "🦶 <strong>Ihon hoito</strong> – halkeamat, kovettumat, känsät",
-      "🦵 <strong>Haavanhoito ja kevennyshoito</strong> – erityisesti kroonisten jalkahaavojen hoitoon",
-      "🦶 <strong>Syylänhoito - Jäädytyshoito tai Verrutop®</strong>",
+      " <strong>Syylänhoito - Jäädytyshoito tai Verrutop®</strong>",
       "🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong>",
       "🦶 <strong>Yksilölliset harjoitteet</strong>",
       "🩹 <strong>Urheilu- ja kinesioteippaus</strong>",
@@ -93,7 +92,10 @@
       { "name": "Kynsiproteesi", "price": "20 €" },
       { "name": "Silikoniorteesi (varvastuki)", "price": "20-60 €" },
       { "name": "Pikapohjalliset", "price": "10-70 €" }
-    ]
+    ],
+    "paymentTitle": "Maksutavat",
+    "paymentMethods": "Kortti ja käteinen",
+    "healthBenefitsText": "Minulla käyvät myös terveysedut:"
   },
   "pricingInfo": {
     "title": "Hinnoittelusta",
@@ -128,6 +130,7 @@
       "email": "Sähköposti",
       "address": "Osoite",
       "city": "65100 Vaasa",
+      "addressDetails": "Wasa Wellness sisäänkäynti sisäpihalta metalliportaista.",
       "businessId": "Y-tunnus"
     },
     "mapTitle": "Kartta",

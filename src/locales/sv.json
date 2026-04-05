@@ -40,8 +40,7 @@
       "💅 <strong>Nagelkorrigeringsbehandlingar & nagelproteser</strong> – korrigerar och skyddar naglarna",
       "💅 <strong>Förkortning & tunnande av naglar</strong> - även svåra naglar kan behandlas",
       "🦶 <strong>Hudvård</strong> – sprickor, förhårdningar, liktornar",
-      "🦵 <strong>Sårvård och avlastningsbehandling</strong> – särskilt för behandling av kroniska fotsår",
-      "🦶 <strong>Vårtbehandling - Frysbehandling eller Verrutop®</strong>",
+      " <strong>Vårtbehandling - Frysbehandling eller Verrutop®</strong>",
       "🦶 <strong>Hjälp med nagelsvamp eller fotsvamp</strong>",
       "🦶 <strong>Individuella övningar</strong>",
       "🩹 <strong>Sport- och kinesiotejpning</strong>",
@@ -93,7 +92,10 @@
       { "name": "Nagelprotes", "price": "20 €" },
       { "name": "Silikonortos (tåstöd)", "price": "20-60 €" },
       { "name": "Snabbinlägg", "price": "10-70 €" }
-    ]
+    ],
+    "paymentTitle": "Betalningsmetoder",
+    "paymentMethods": "Kort och kontanter",
+    "healthBenefitsText": "Jag accepterar även hälsoförmåner:"
   },
   "pricingInfo": {
     "title": "Om prissättningen",
@@ -128,6 +130,7 @@
       "email": "E-post",
       "address": "Adress",
       "city": "65100 Vasa",
+      "addressDetails": "Wasa Wellness ingång från innergården via metalltrappan.",
       "businessId": "FO-nummer"
     },
     "mapTitle": "Karta",

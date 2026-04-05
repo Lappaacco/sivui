@@ -40,8 +40,7 @@
       "💅 <strong>Nail correction treatments & nail prosthetics</strong> – corrective and protective nail care",
       "💅 <strong>Nail trimming & thinning</strong> – even challenging nails can be treated",
       "🦶 <strong>Skin care</strong> – cracks, calluses, corns",
-      "🦵 <strong>Wound care and pressure relief</strong> – especially for chronic foot wounds",
-      "🦶 <strong>Wart treatment - Freezing treatment or Verrutop®</strong>",
+      " <strong>Wart treatment - Freezing treatment or Verrutop®</strong>",
       "🦶 <strong>Help with nail fungus or athlete's foot</strong>",
       "🦶 <strong>Individual exercise programs</strong>",
       "🩹 <strong>Sports and kinesio taping</strong>",
@@ -93,7 +92,10 @@
       { "name": "Nail prosthesis", "price": "20 €" },
       { "name": "Silicone orthosis (toe support)", "price": "20-60 €" },
       { "name": "Quick insoles", "price": "10-70 €" }
-    ]
+    ],
+    "paymentTitle": "Payment Methods",
+    "paymentMethods": "Card and cash",
+    "healthBenefitsText": "I also accept health benefits:"
   },
   "pricingInfo": {
     "title": "About Pricing",
@@ -128,6 +130,7 @@
       "email": "Email",
       "address": "Address",
       "city": "65100 Vaasa",
+      "addressDetails": "Wasa Wellness entrance from the courtyard via metal stairs.",
       "businessId": "Business ID"
     },
     "mapTitle": "Map",
