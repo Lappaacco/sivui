@@ -94,8 +94,8 @@
       { "name": "Snabbinlägg", "price": "10-70 €" }
     ],
     "paymentTitle": "Betalningsmetoder",
-    "paymentMethods": "Kort och kontanter",
-    "healthBenefitsText": "Jag accepterar även hälsoförmåner:"
+    "paymentMethods": "Kort, kontanter och jag accepterar även hälsoförmåner:",
+    "healthBenefitsText": ""
   },
   "pricingInfo": {
     "title": "Om prissättningen",

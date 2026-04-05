@@ -532,7 +532,6 @@ export default function App() {
                 <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.paymentTitle')}</h3>
                 <p className="text-gray-700 mb-4">{t('pricing.paymentMethods')}</p>
                 
-                <p className="text-gray-700 mb-3">{t('pricing.healthBenefitsText')}</p>
                 <div className="flex flex-wrap gap-4 items-center">
                   <img src="/Edenred_logo_RGB_red.png" alt="Edenred" className="h-10 md:h-12 object-contain" />
                   <img src="/Epassi Logo.png" alt="Epassi" className="h-10 md:h-12 object-contain" />
@@ -625,9 +624,7 @@ export default function App() {
                   <p className="mb-2">
                     <strong>{t('contact.details.address')}:</strong>{' '}
                     <span className="text-gray-600">
-                      Pitkänlahdenkatu 13, {t('contact.details.city')}
-                      <br />
-                      {t('contact.details.addressDetails')}
+                      Pitkänlahdenkatu 13, {t('contact.details.city')}, {t('contact.details.addressDetails')}
                     </span>
                   </p>
                   <p className="mb-2">

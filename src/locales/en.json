@@ -94,8 +94,8 @@
       { "name": "Quick insoles", "price": "10-70 €" }
     ],
     "paymentTitle": "Payment Methods",
-    "paymentMethods": "Card and cash",
-    "healthBenefitsText": "I also accept health benefits:"
+    "paymentMethods": "Card, cash and I also accept health benefits:",
+    "healthBenefitsText": ""
   },
   "pricingInfo": {
     "title": "About Pricing",

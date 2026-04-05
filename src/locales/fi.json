@@ -40,7 +40,7 @@
       "💅 <strong>Kynnenoikaisuhoidot & kynsiproteesit</strong> – korjaavat ja suojaavat kynsiä",
       "💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat",
       "🦶 <strong>Ihon hoito</strong> – halkeamat, kovettumat, känsät",
-      " <strong>Syylänhoito - Jäädytyshoito tai Verrutop®</strong>",
+      "🦶 <strong>Syylänhoito - Jäädytyshoito tai Verrutop®</strong>",
       "🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong>",
       "🦶 <strong>Yksilölliset harjoitteet</strong>",
       "🩹 <strong>Urheilu- ja kinesioteippaus</strong>",
@@ -94,8 +94,8 @@
       { "name": "Pikapohjalliset", "price": "10-70 €" }
     ],
     "paymentTitle": "Maksutavat",
-    "paymentMethods": "Kortti ja käteinen",
-    "healthBenefitsText": "Minulla käyvät myös terveysedut:"
+    "paymentMethods": "Kortti, käteinen ja minulla käyvät myös terveysedut:",
+    "healthBenefitsText": ""
   },
   "pricingInfo": {
     "title": "Hinnoittelusta",
