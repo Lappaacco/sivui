@@ -72,12 +72,13 @@
       { "name": "Jalkaterapia / Jalkojenhoito 60 min", "price": "90 €" },
       { "name": "Jalkaterapia / Jalkojenhoito 75 min", "price": "110 €" },
       { "name": "Jalkaterapia / Jalkojenhoito 90 min", "price": "130 €" },
-      { "name": "Lasten jalkaterapia", "price": "50 €" },
+      { "name": "Lasten jalkaterapia n. 45 min", "price": "50 €" },
       { "name": "Diabeetikon jalkaterapia", "price": "80 €" },
-      { "name": "Syylänhoito (Verrutop®)", "price": "45 €" },
-      { "name": "Syylän jäädytyshoito", "price": "65 €" },
+      { "name": "Syylänhoito (Verrutop®) n. 45 min", "price": "45 €" },
+      { "name": "Syylän jäädytyshoito n. 30 min", "price": "65 €" },
       { "name": "Kynnenoikaisuhoito", "price": "60 € (toinen kynsi +20 €)" },
-      { "name": "Kynsiproteesi", "price": "60 € (toinen kynsi +20 €)" }
+      { "name": "Kynsiproteesi n. 45 min", "price": "60 € (toinen kynsi +20 €)" },
+      { "name": "Shoppailuvartti 15 min", "price": "0 €" }
     ],
     "additionalTitle": "Lisähinnasto",
     "additionalSubtitle": "(materiaalimaksu jalkaterapian yhteydessä)",

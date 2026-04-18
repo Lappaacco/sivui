@@ -72,12 +72,13 @@
       { "name": "Fotterapi / Fotvård 60 min", "price": "90 €" },
       { "name": "Fotterapi / Fotvård 75 min", "price": "110 €" },
       { "name": "Fotterapi / Fotvård 90 min", "price": "130 €" },
-      { "name": "Barnfotterapi", "price": "50 €" },
+      { "name": "Barnfotterapi ca 45 min", "price": "50 €" },
       { "name": "Diabetisk fotterapi", "price": "80 €" },
-      { "name": "Vårtbehandling (Verrutop®)", "price": "45 €" },
-      { "name": "Vårtfrysningsbehandling", "price": "65 €" },
+      { "name": "Vårtbehandling (Verrutop®) ca 45 min", "price": "45 €" },
+      { "name": "Vårtfrysningsbehandling ca 30 min", "price": "65 €" },
       { "name": "Nagelkorrigeringsbehandling", "price": "60 € (andra nageln +20 €)" },
-      { "name": "Nagelprotes", "price": "60 € (andra nageln +20 €)" }
+      { "name": "Nagelprotes ca 45 min", "price": "60 € (andra nageln +20 €)" },
+      { "name": "Shoppingkvart 15 min", "price": "0 €" }
     ],
     "additionalTitle": "Tilläggsprislista",
     "additionalSubtitle": "(materialavgift i samband med fotterapi)",
