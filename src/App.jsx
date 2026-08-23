@@ -535,7 +535,7 @@ export default function App() {
                 <div className="flex flex-wrap gap-4 items-center">
                   <img src="/Edenred_logo_RGB_red.png" alt="Edenred" className="h-10 md:h-12 object-contain" />
                   <img src="/Epassi Logo.png" alt="Epassi" className="h-10 md:h-12 object-contain" />
-                  <img src="/SmartumPayLogoBLACK.png" alt="Smartum" className="h-10 md:h-12 object-contain" />
+                  {/* <img src="/SmartumPayLogoBLACK.png" alt="Smartum" className="h-10 md:h-12 object-contain" /> */}
                 </div>
               </div>
             </div>
