@@ -19,7 +19,8 @@
   "hero": {
     "title": "Fotterapi i Vasa – hjälp vid fotbesvär",
     "subtitle": "Söker du en fotterapeut eller fotvård i Vasa? Du får sakkunnig hjälp till exempel vid hallux valgus, hammartå, framfots- och hälsmärtor samt hud- och nagelproblem. Välkommen till mottagningen för att få dina fotbesvär behandlade och ta hand om dina fötters hälsa.",
-    "bookButton": "Boka tid!"
+    "bookButton": "Boka tid!",
+    "imageAlt": "Ilojaloins fotterapimottagning"
   },
   "about": {
     "title": "Ilojaloin & jag",
@@ -32,7 +33,8 @@
     "title": "Fotterapi",
     "paragraph1": "En fotterapeut är en <strong>hälsovårdsproffs med examen från en yrkeshögskola</strong>. I Finland tar fotterapeututbildningen <strong>3,5 år</strong> och innehåller, utöver teoretiska studier, omfattande praktisk träning.",
     "paragraph2": "Utbildningen omfattar bland annat <strong>anatomi, fysiologi och biomekanik</strong>, undersökning av nedre extremiteterna, olika sjukdomar och fotbesvär samt förebyggande och behandling av dem. Kompetensen omfattar även <strong>behandling av hud-, nagel- och sårproblem, individuella sulor och tåortoser</strong> samt övningar som stödjer de nedre extremiteternas funktion.",
-    "paragraph3": "Målet med fotterapi är att <strong>förebygga och behandla fotbesvär, lindra smärta samt stödja rörligheten och de nedre extremiteternas funktionsförmåga</strong>. Behandling och handledning planeras alltid individuellt utifrån kundens behov."
+    "paragraph3": "Målet med fotterapi är att <strong>förebygga och behandla fotbesvär, lindra smärta samt stödja rörligheten och de nedre extremiteternas funktionsförmåga</strong>. Behandling och handledning planeras alltid individuellt utifrån kundens behov.",
+    "imageAlt": "Fotterapibehandling hos Ilojaloin"
   },
   "services": {
     "title": "Tjänster",
@@ -52,7 +54,8 @@
       "❤️ <strong>Fotterapi för specialgrupper</strong> – diabetes, reumatism, psoriasis etc.",
       "🙂 <strong>Föreläsningar</strong>"
     ],
-    "outro": "Varje behandling planeras enligt kundens behov och genomförs utan stress, med värme och professionalism. Man kan också komma till fotterapi utan egentligt besvär eller smärttillstånd. Även förebyggande vård är viktigt. Genom att känna till dina fötter kan du vårda dem väl och undvika problem som kan uppstå i framtiden. Fothälsan kan alltid förbättras och den påverkar hela välbefinnandet!"
+    "outro": "Varje behandling planeras enligt kundens behov och genomförs utan stress, med värme och professionalism. Man kan också komma till fotterapi utan egentligt besvär eller smärttillstånd. Även förebyggande vård är viktigt. Genom att känna till dina fötter kan du vårda dem väl och undvika problem som kan uppstå i framtiden. Fothälsan kan alltid förbättras och den påverkar hela välbefinnandet!",
+    "imageAlt": "Ilojaloins fotterapitjänster"
   },
   "hygiene": {
     "title": "Säkerhet och hygien",
@@ -138,11 +141,9 @@
     }
   },
   "gallery": {
-    "title": "Galleri",
+    "title": "Bilder från mottagningen",
     "description": "En titt på min mottagning och arbetsmiljö.",
     "images": [
-      { "caption": "" },
-      { "caption": "" },
       { "caption": "" },
       { "caption": "" },
       { "caption": "" },
@@ -176,7 +177,8 @@
       "title": "Nagelkorrigeringsbehandling",
       "paragraph1": "Med nagelkorrigeringsbehandling kan man lindra smärta och tryck som orsakas av en inväxt eller starkt böjd nagel. Vid behandlingen styrs nagelns tillväxt varsamt i rätt riktning.",
       "paragraph2": "På min mottagning använder jag titantrådskorrigering, som jag utifrån min erfarenhet har konstaterat vara den mest effektiva och kundvänligaste metoden. Titantråden fästs på nagelns yta och styr gradvis nageln att växa i en rakare form.",
-      "paragraph3": "Behandlingen tar vanligtvis cirka 6–12 månader, och kontrollbesök görs med 2–3 månaders mellanrum. Vid kontrollbesöket flyttas tråden i takt med nagelns tillväxt samt slipas och rengörs nageln. Behandlingen planeras alltid individuellt utifrån nagelns tillstånd."
+      "paragraph3": "Behandlingen tar vanligtvis cirka 6–12 månader, och kontrollbesök görs med 2–3 månaders mellanrum. Vid kontrollbesöket flyttas tråden i takt med nagelns tillväxt samt slipas och rengörs nageln. Behandlingen planeras alltid individuellt utifrån nagelns tillstånd.",
+      "imageCaption": "Titantrådskorrigering"
     },
     "nailProsthesis": {
       "title": "Nagelprotes",

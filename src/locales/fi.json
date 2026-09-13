@@ -19,7 +19,8 @@
   "hero": {
     "title": "Jalkaterapia Vaasa – apua jalkavaivoihin",
     "subtitle": "Etsitkö jalkaterapeuttia tai jalkahoitoa Vaasassa? Saat asiantuntevaa apua esimerkiksi vaivaisenluuhun, vasaravarpaisiin, päkiä- ja kantakipuihin sekä iho- ja kynsiongelmiin. Tervetuloa vastaanotolle hoitamaan jalkavaivoja ja huolehtimaan jalkojesi terveydestä.",
-    "bookButton": "Varaa aika!"
+    "bookButton": "Varaa aika!",
+    "imageAlt": "Ilojaloin jalkaterapian vastaanotto"
   },
   "about": {
     "title": "Ilojaloin & minä",
@@ -32,7 +33,8 @@
     "title": "Jalkaterapia",
     "paragraph1": "Jalkaterapeutti on <strong>ammattikorkeakoulun suorittanut terveydenhuollon ammattilainen</strong>. Suomessa jalkaterapeutin koulutus kestää <strong>3,5 vuotta</strong> ja sisältää teoriaopintojen lisäksi laajasti käytännön harjoittelua.",
     "paragraph2": "Koulutuksessa perehdytään muun muassa <strong>anatomiaan, fysiologiaan ja biomekaniikkaan</strong>, alaraajojen tutkimiseen, erilaisiin sairauksiin ja jalkavaivoihin sekä niiden ennaltaehkäisyyn ja hoitoon. Osaamiseen kuuluvat myös <strong>iho-, kynsi- ja haavaongelmien hoito, yksilölliset pohjalliset ja varvasorteesit</strong> sekä alaraajojen toimintaa tukevat harjoitteet.",
-    "paragraph3": "Jalkaterapian tavoitteena on <strong>ehkäistä ja hoitaa jalkavaivoja, lievittää kipua sekä tukea liikkumista ja alaraajojen toimintakykyä</strong>. Hoito ja ohjaus suunnitellaan aina yksilöllisesti asiakkaan tarpeiden mukaan."
+    "paragraph3": "Jalkaterapian tavoitteena on <strong>ehkäistä ja hoitaa jalkavaivoja, lievittää kipua sekä tukea liikkumista ja alaraajojen toimintakykyä</strong>. Hoito ja ohjaus suunnitellaan aina yksilöllisesti asiakkaan tarpeiden mukaan.",
+    "imageAlt": "Jalkaterapiahoito Ilojaloin"
   },
   "services": {
     "title": "Palvelut",
@@ -52,7 +54,8 @@
       "❤️ <strong>Erikoisryhmien jalkaterapia</strong> – diabetes, reuma, psoriasis jne.",
       "🙂 <strong>Luennot</strong>"
     ],
-    "outro": "Jokainen hoito suunnitellaan asiakkaan tarpeiden mukaan ja toteutetaan kiireettä, lämmöllä ja ammattitaidolla. Jalkaterapiaan voi tulla myös ilman varsinaista vaivaa tai kiputilaa. Myös ennaltaehkäisy on tärkeää. Tuntemalla jalkasi osaat hoitaa ne hyvin ja vältyt tulevaisuudessa mahdollisesti ilmeneviltä ongelmilta. Jalkaterveyttään voi aina parantaa ja se vaikuttaa koko hyvinvointiin!"
+    "outro": "Jokainen hoito suunnitellaan asiakkaan tarpeiden mukaan ja toteutetaan kiireettä, lämmöllä ja ammattitaidolla. Jalkaterapiaan voi tulla myös ilman varsinaista vaivaa tai kiputilaa. Myös ennaltaehkäisy on tärkeää. Tuntemalla jalkasi osaat hoitaa ne hyvin ja vältyt tulevaisuudessa mahdollisesti ilmeneviltä ongelmilta. Jalkaterveyttään voi aina parantaa ja se vaikuttaa koko hyvinvointiin!",
+    "imageAlt": "Jalkaterapiapalvelut Ilojaloin"
   },
   "hygiene": {
     "title": "Turvallisuus ja hygienia",
@@ -138,11 +141,9 @@
     }
   },
   "gallery": {
-    "title": "Galleria",
+    "title": "Kuvia vastaanotolta",
     "description": "Kurkistus vastaanottooni ja työskentely-ympäristööni.",
     "images": [
-      { "caption": "" },
-      { "caption": "" },
       { "caption": "" },
       { "caption": "" },
       { "caption": "" },
@@ -176,7 +177,8 @@
       "title": "Kynnenoikaisuhoito",
       "paragraph1": "Kynnenoikaisuhoidolla voidaan helpottaa sisäänkasvaneen tai voimakkaasti kaartuvan kynnen aiheuttamaa kipua ja painetta. Hoidossa kynnen kasvua ohjataan hellävaraisesti oikeaan suuntaan.",
       "paragraph2": "Käytän vastaanotollani titaanilankaoikaisua, jonka olen kokemukseni perusteella todennut tehokkaimmaksi ja asiakasystävällisimmäksi menetelmäksi. Titaanilanka kiinnitetään kynnen pinnalle, ja sen avulla kynttä ohjataan vähitellen kasvamaan suorempaan muotoon.",
-      "paragraph3": "Hoito kestää yleensä noin 6–12 kuukautta, ja kontrollissa käydään 2–3 kuukauden välein. Kontrollikäynnillä lankaa siirretään kynnen kasvun mukana sekä kynsi hiotaan ja puhdistetaan. Hoito suunnitellaan aina yksilöllisesti kynnen tilanteen mukaan."
+      "paragraph3": "Hoito kestää yleensä noin 6–12 kuukautta, ja kontrollissa käydään 2–3 kuukauden välein. Kontrollikäynnillä lankaa siirretään kynnen kasvun mukana sekä kynsi hiotaan ja puhdistetaan. Hoito suunnitellaan aina yksilöllisesti kynnen tilanteen mukaan.",
+      "imageCaption": "Titaanilankaoikaisu"
     },
     "nailProsthesis": {
       "title": "Kynsiproteesi",

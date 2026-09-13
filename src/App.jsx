@@ -434,7 +434,12 @@ export default function App() {
                   {t('hero.bookButton')}
                 </a>
               </div>
-              
+
+              <img
+                src="/images/etusivu.jpg"
+                alt={t('hero.imageAlt')}
+                className="mt-10 mx-auto rounded-lg shadow-xl w-full max-w-2xl h-auto"
+              />
             </div>
           </section>
 
@@ -454,6 +459,12 @@ export default function App() {
                 <div className="my-4" aria-hidden></div>
                 <p>{t('services.outro')}</p>
               </div>
+              <img
+                src="/images/palvelut.jpg"
+                alt={t('services.imageAlt')}
+                loading="lazy"
+                className="mt-8 mx-auto rounded-lg shadow-lg w-full max-w-2xl h-auto"
+              />
             </div>
           </section>
 
@@ -569,6 +580,12 @@ export default function App() {
                 <div className="my-4" aria-hidden></div>
                 <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph3') }}></p>
               </div>
+              <img
+                src="/images/jalkaterapia.jpg"
+                alt={t('footTherapy.imageAlt')}
+                loading="lazy"
+                className="mt-8 mx-auto rounded-lg shadow-lg w-full max-w-2xl h-auto"
+              />
             </div>
           </section>
 
@@ -962,7 +979,18 @@ export default function App() {
                 <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.nailCorrection.title')}</h3>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph2')}</p>
-                <p className="text-gray-700">{t('additionalInfo.nailCorrection.paragraph3')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph3')}</p>
+                <figure className="mx-auto max-w-md">
+                  <img
+                    src="/images/lisatietoa.jpg"
+                    alt={t('additionalInfo.nailCorrection.imageCaption')}
+                    loading="lazy"
+                    className="rounded-lg shadow-lg w-full h-auto"
+                  />
+                  <figcaption className="mt-2 text-sm text-gray-500 text-center italic">
+                    {t('additionalInfo.nailCorrection.imageCaption')}
+                  </figcaption>
+                </figure>
               </div>
 
               {/* Nail Prosthesis subsection */}

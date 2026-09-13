@@ -19,7 +19,8 @@
   "hero": {
     "title": "Podiatry in Vaasa – Help for Foot Problems",
     "subtitle": "Looking for a podiatrist or foot care in Vaasa? You'll get expert help with issues such as bunions, hammer toes, ball-of-foot and heel pain, as well as skin and nail problems. Welcome to the clinic to have your foot problems treated and to take care of your foot health.",
-    "bookButton": "Book Now!"
+    "bookButton": "Book Now!",
+    "imageAlt": "Ilojaloin podiatry clinic"
   },
   "about": {
     "title": "Ilojaloin & me",
@@ -32,7 +33,8 @@
     "title": "Podiatry",
     "paragraph1": "A podiatrist is a <strong>healthcare professional with a university of applied sciences degree</strong>. In Finland, podiatry education takes <strong>3.5 years</strong> and, in addition to theoretical studies, includes extensive practical training.",
     "paragraph2": "The training covers, among other things, <strong>anatomy, physiology, and biomechanics</strong>, examination of the lower limbs, various diseases and foot conditions, and their prevention and treatment. The skill set also includes <strong>treatment of skin, nail, and wound problems, custom insoles and toe orthotics</strong>, as well as exercises that support the function of the lower limbs.",
-    "paragraph3": "The goal of podiatry is to <strong>prevent and treat foot problems, relieve pain, and support mobility and lower-limb function</strong>. Treatment and guidance are always planned individually according to the client's needs."
+    "paragraph3": "The goal of podiatry is to <strong>prevent and treat foot problems, relieve pain, and support mobility and lower-limb function</strong>. Treatment and guidance are always planned individually according to the client's needs.",
+    "imageAlt": "Podiatry treatment at Ilojaloin"
   },
   "services": {
     "title": "Services",
@@ -52,7 +54,8 @@
       "❤️ <strong>Podiatry for special groups</strong> – diabetes, rheumatism, psoriasis, etc.",
       "🙂 <strong>Lectures</strong>"
     ],
-    "outro": "Each treatment is planned according to the client's needs and carried out without rush, with warmth and professionalism. You can also come for podiatry without a specific problem or pain condition. Prevention is also important. By knowing your feet, you can care for them properly and avoid potential future problems. Foot health can always be improved, and it affects overall well-being!"
+    "outro": "Each treatment is planned according to the client's needs and carried out without rush, with warmth and professionalism. You can also come for podiatry without a specific problem or pain condition. Prevention is also important. By knowing your feet, you can care for them properly and avoid potential future problems. Foot health can always be improved, and it affects overall well-being!",
+    "imageAlt": "Ilojaloin podiatry services"
   },
   "hygiene": {
     "title": "Safety and Hygiene",
@@ -138,11 +141,9 @@
     }
   },
   "gallery": {
-    "title": "Gallery",
+    "title": "Photos from My Practice",
     "description": "A glimpse into my practice and working environment.",
     "images": [
-      { "caption": "" },
-      { "caption": "" },
       { "caption": "" },
       { "caption": "" },
       { "caption": "" },
@@ -176,7 +177,8 @@
       "title": "Nail Correction Treatment",
       "paragraph1": "Nail correction treatment can relieve the pain and pressure caused by an ingrown or strongly curved toenail. The treatment gently guides the nail's growth in the right direction.",
       "paragraph2": "In my practice, I use titanium wire nail bracing, which I have found, based on my experience, to be the most effective and client-friendly method. The titanium wire is attached to the surface of the nail and gradually guides it to grow into a straighter shape.",
-      "paragraph3": "Treatment usually takes about 6–12 months, with check-up visits every 2–3 months. At each check-up, the wire is repositioned to follow the nail's growth, and the nail is filed and cleaned. Treatment is always planned individually according to the condition of the nail."
+      "paragraph3": "Treatment usually takes about 6–12 months, with check-up visits every 2–3 months. At each check-up, the wire is repositioned to follow the nail's growth, and the nail is filed and cleaned. Treatment is always planned individually according to the condition of the nail.",
+      "imageCaption": "Titanium wire nail bracing"
     },
     "nailProsthesis": {
       "title": "Nail Prosthesis",
