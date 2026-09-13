@@ -10,14 +10,15 @@
     "contact": "Yhteystiedot",
     "gallery": "Galleria",
     "additionalInfo": "Lisätietoa",
-    "booking": "Ajanvaraus"
+    "booking": "Ajanvaraus",
+    "cancellation": "Peruutusehdot"
   },
   "logo": {
     "subtitle": "Jalkaterapiapalvelut"
   },
   "hero": {
-    "title": "Jalkaterapiaa Vaasassa - Jalat kunnossa",
-    "subtitle": "Oli sinulla vaivasenluut, vasaravarvas, päkiä- tai kantakipuja, iho- tai kynsiongelmia tai haluat muuten vain tulla edistämään jalkojesi terveyttä, tervetuloa jalkaterapeutin vastaanotolle!",
+    "title": "Jalkaterapia Vaasa – apua jalkavaivoihin",
+    "subtitle": "Etsitkö jalkaterapeuttia tai jalkahoitoa Vaasassa? Saat asiantuntevaa apua esimerkiksi vaivaisenluuhun, vasaravarpaisiin, päkiä- ja kantakipuihin sekä iho- ja kynsiongelmiin. Tervetuloa vastaanotolle hoitamaan jalkavaivoja ja huolehtimaan jalkojesi terveydestä.",
     "bookButton": "Varaa aika!"
   },
   "about": {
@@ -25,27 +26,28 @@
     "paragraph1": "Olen <strong>Satu Paunonen, jalkaterapeutti ja yrittäjä Vaasasta</strong> – sekä neljän lapsen äiti. Liikunta, luovuus ja perhe pitävät minut tasapainossa ja ihmisläheinen työ on minulle sydämen asia. Luonteeltani olen rauhallinen, ystävällinen ja peruspositiivinen. Olen utelias ja uuden oppimisesta innostuva ihminen. Rakastan kehittää ammattitaitoani ja pidän siitä, että jalkojen hoito on ala, jossa ei koskaan tule valmiiksi – aina on jotain uutta opittavaa.",
     "paragraph2": "Päädyin jalkaterapeutiksi omien kokemusteni kautta. Olen lapsesta asti kärsinyt lattajaloista ja erilaisista jalkavaivoista. Niiden myötä ymmärsin, miten suuri merkitys jaloilla on kokonaisvaltaiseen hyvinvointiin. Halusin oppia, miten voisin auttaa itseäni – ja samalla muita – voimaan paremmin.",
     "paragraph3": "Valmistuin <strong>jalkaterapeutiksi vuonna 2015 Mikkelin ammattikorkeakoulusta</strong> ja olen työskennellyt siitä lähtien <strong>Vaasan keskussairaalassa sisätautien poliklinikalla</strong>. Työssäni olen erikoistunut <strong>haavanhoitoon, diabeetikkojen ja reumaa sairastavien jalkaterapiaan sekä erilaisten kipujen ja virheasentojen hoitoon</strong>. Tämän työkokemuksen myötä voit istua hoitotuoliini täysin luottavaisin mielin – kaikenlaiset jalat on nähty.",
-    "paragraph4": "Yrittäjyys on ollut mielessäni jo pitkään – ajatus vapaudesta tehdä työtä omien arvojen mukaisesti, luovasti ja ihmisläheisesti. Ilojaloin syntyi halusta auttaa ihmisiä voimaan paremmin ja edistää jalkojen terveyttä laajasti ja ennakoivasti. Haluan, että jokainen kohtaaminen on askel kohti kevyempää, kivuttomampaa arkea."
+    "paragraph4": "Yrittäjyys on ollut mielessäni jo pitkään – ajatus vapaudesta tehdä työtä omien arvojen mukaisesti, luovasti ja ihmisläheisesti. Ilojaloin syntyi halusta auttaa ihmisiä voimaan paremmin ja edistää jalkoterveyttä laajasti. Haluan, että jokainen kohtaaminen on askel kohti kevyempää, kivuttomampaa arkea."
   },
   "footTherapy": {
     "title": "Jalkaterapia",
-    "paragraph1": "Jalkaterapeutiksi valmistuminen edellyttää <strong>terveydenhuollon koulutusta</strong>. Suomessa koulutus järjestetään <strong>ammattikorkeakouluissa</strong>, ja se kestää tyypillisesti 3,5 vuotta, sisältäen sekä <strong>teoriaopintoja, että laajaa käytännön harjoittelua</strong>. Opintojen aikana opiskelija perehtyy <strong>ihmisen anatomiaan, fysiologiaan ja biomekaniikkaan</strong> sekä erilaisiin jalkoihin vaikuttaviin sairauksiin. Lisäksi koulutus kattaa jalkojen tutkimisen ja analysoinnin, terveyden ylläpidon ja ennaltaehkäisevän hoidon, haavojen, ihomuutosten ja kynsiongelmien hoidon, yksilöllisten tukien, pohjallisten ja varvasorteesien valmistamisen sekä liikunta- ja harjoitusohjelmien suunnittelun jalan ja alaraajojen tukemiseksi.",
-    "paragraph2": "Jalkaterapia on kokonaisvaltaista hyvinvointia jaloillesi. Se auttaa <strong>ehkäisemään ja hoitamaan erilaisia jalkavaivoja, kiputiloja ja virheasentoja</strong>, parantaa liikkumiskykyä, lievittää kipua ja edistää arjen sujuvuutta. Koska jokainen jalka on yksilöllinen, hoito suunnitellaan aina asiakkaan tarpeiden mukaan."
+    "paragraph1": "Jalkaterapeutti on <strong>ammattikorkeakoulun suorittanut terveydenhuollon ammattilainen</strong>. Suomessa jalkaterapeutin koulutus kestää <strong>3,5 vuotta</strong> ja sisältää teoriaopintojen lisäksi laajasti käytännön harjoittelua.",
+    "paragraph2": "Koulutuksessa perehdytään muun muassa <strong>anatomiaan, fysiologiaan ja biomekaniikkaan</strong>, alaraajojen tutkimiseen, erilaisiin sairauksiin ja jalkavaivoihin sekä niiden ennaltaehkäisyyn ja hoitoon. Osaamiseen kuuluvat myös <strong>iho-, kynsi- ja haavaongelmien hoito, yksilölliset pohjalliset ja varvasorteesit</strong> sekä alaraajojen toimintaa tukevat harjoitteet.",
+    "paragraph3": "Jalkaterapian tavoitteena on <strong>ehkäistä ja hoitaa jalkavaivoja, lievittää kipua sekä tukea liikkumista ja alaraajojen toimintakykyä</strong>. Hoito ja ohjaus suunnitellaan aina yksilöllisesti asiakkaan tarpeiden mukaan."
   },
   "services": {
     "title": "Palvelut",
-    "intro": "Ilojaloissa tarjoan <strong>monipuolisia jalkaterapiapalveluja</strong>, kuten:",
+    "intro": "Ilojaloin tarjoaa <strong>monipuolisia jalkaterapiapalveluja</strong>, kuten:",
     "items": [
       "🦶 <strong>Tutkimukset ja jalka-analyysit</strong> – kartoitetaan jalkojen kunto ja mahdolliset ongelmakohdat",
-      "💅 <strong>Kynnenoikaisuhoidot & kynsiproteesit</strong> – korjaavat ja suojaavat kynsiä",
-      "💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat",
       "🦶 <strong>Ihon hoito</strong> – halkeamat, kovettumat, känsät",
       "🦶 <strong>Syylänhoito - Jäädytyshoito tai Verrutop®</strong>",
+      "💅 <strong>Kynnenoikaisuhoidot & kynsiproteesit</strong> – korjaavat ja suojaavat kynsiä",
+      "💅 <strong>Kynsien lyhentäminen & ohentaminen</strong> - hankalatkin kynnet hoituvat",
       "🦶 <strong>Apu kynsisieneen tai jalkasilsaan</strong>",
       "🦶 <strong>Yksilölliset harjoitteet</strong>",
       "🩹 <strong>Urheilu- ja kinesioteippaus</strong>",
       "🩰 <strong>Pikapohjalliset ja yksilölliset varvasorteesit silikonimassasta</strong>",
-      "👟 <strong>Kenkäohjaus</strong> – tarkistetaan kenkien sopivuus, suositellaan sopivaa mallia tai ominaisuutta ja mahdollisuus tilata laadukkaita paljasjalkakenkiä kauttani",
+      "👟 <strong>Omahoidon ohjaus ja kenkäohjaus</strong>",
       "🛍️ <strong>Laadukkaat omahoitotuotteet</strong> – kotihoitoon ja jalkaterveyden ylläpitoon",
       "❤️ <strong>Erikoisryhmien jalkaterapia</strong> – diabetes, reuma, psoriasis jne.",
       "🙂 <strong>Luennot</strong>"
@@ -95,13 +97,11 @@
   },
   "pricingInfo": {
     "title": "Hinnoittelusta",
-    "question": "Miksi vastaanottoni hinnat ovat tätä tasoa?",
-    "paragraph1": "Olen korkeakoulutettu alaraajojen asiantuntija, ja hinnoitteluni perustuu osaamiseen, vastuuseen ja siihen, miten kohtaan jokaisen asiakkaan.",
-    "paragraph2": "Vastaanotolla olen 100 % läsnä sinua varten. En vastaa puheluihin tai hoida muita asioita käynnin aikana, vaan keskityn täysin sinun jalkojesi ja alaraajojesi hoitoon. Työskentelen tehokkaasti, mutta en kiirehdi – näin aikasi tulee käytettyä mahdollisimman hyvin ja saamme usein paljon aikaan jo lyhyemmälläkin käynnillä.",
-    "paragraph3": "Kysyn aina toiveesi ja tarpeesi: mitä haluat erityisesti hoidettavan ja miten haluat ajan priorisoitavan. Hoito suunnitellaan yhdessä sinun kanssasi.",
-    "paragraph4": "Käynnin jälkeen huolehdin perusteellisesta siivouksesta ja välinehuollosta, jotta jokainen asiakas saa turvallisen ja hygieenisen hoitoympäristön. Terveydenhuollon ammattilaisena minua sitoo salassapitovelvollisuus sekä kirjaamisvelvollisuus, ja käyntisi tiedot kirjataan Kanta-järjestelmään. Tämäkin työ tapahtuu vastaanottoajan ulkopuolella ja on osa kokonaisuutta.",
-    "paragraph5": "Lisäksi yrittäjänä vastaan muun muassa järjestelmistä, välinehuollon laitteista, siivoustarvikkeista sekä muista yritystoiminnan kuluista.",
-    "paragraph6": "Hinnoitteluni heijastaa ennen kaikkea sitä, että saat asiantuntevaa, rauhallista ja yksilöllistä hoitoa, jossa sinun hyvinvointisi on keskiössä."
+    "question": "Mitä vastaanottokäynnin hinta sisältää?",
+    "paragraph1": "Olen korkeakoulutettu jalkaterapeutti ja alaraajojen terveyden asiantuntija. Vastaanotollani saat kiireetöntä, yksilöllistä ja juuri sinun tarpeisiisi suunniteltua hoitoa.",
+    "paragraph2": "Käynnin aikana keskityn täysin sinuun ja siihen, mikä on jalkojesi hyvinvoinnin kannalta olennaista. Työskentelen tehokkaasti, mutta ilman kiireen tuntua.",
+    "paragraph3": "Hintaan sisältyy vastaanottoajan lisäksi asianmukainen kirjaaminen Kanta-järjestelmään sekä huolellinen välinehuolto ja hygieniasta huolehtiminen.",
+    "paragraph4": "Tavoitteeni on, että saat jokaisesta käynnistä mahdollisimman paljon hyötyä – turvallisesti ja ammattitaidolla."
   },
   "contact": {
     "title": "Yhteystiedot",
@@ -171,6 +171,19 @@
       "paragraph1": "Käytän ammattimaista jäädytyslaitetta, joka tuottaa jopa –89 °C nestetyppeä. Jäädytyksessä syyläsolut tuhotaan kylmän avulla. Hoidon jälkeen iho alkaa parantaa itseään alhaalta päin, ja yleensä parin viikon kuluessa syylä kuoriutuu pois ja tilalle muodostuu tervettä ihoa.",
       "paragraph2": "Jos kyseessä on kookas tai sitkeä syylä, jäädytyshoitoja voidaan tarvita useampi.",
       "paragraph3": "Jäädytys voi tuntua hetkellisesti kivuliaalta. Lapsilla on mahdollisuus käyttää ennen hoitoa puuduttavaa Emla-laastaria, joka helpottaa hoidon aikaisia tuntemuksia."
+    },
+    "nailCorrection": {
+      "title": "Kynnenoikaisuhoito",
+      "paragraph1": "Kynnenoikaisuhoidolla voidaan helpottaa sisäänkasvaneen tai voimakkaasti kaartuvan kynnen aiheuttamaa kipua ja painetta. Hoidossa kynnen kasvua ohjataan hellävaraisesti oikeaan suuntaan.",
+      "paragraph2": "Käytän vastaanotollani titaanilankaoikaisua, jonka olen kokemukseni perusteella todennut tehokkaimmaksi ja asiakasystävällisimmäksi menetelmäksi. Titaanilanka kiinnitetään kynnen pinnalle, ja sen avulla kynttä ohjataan vähitellen kasvamaan suorempaan muotoon.",
+      "paragraph3": "Hoito kestää yleensä noin 6–12 kuukautta, ja kontrollissa käydään 2–3 kuukauden välein. Kontrollikäynnillä lankaa siirretään kynnen kasvun mukana sekä kynsi hiotaan ja puhdistetaan. Hoito suunnitellaan aina yksilöllisesti kynnen tilanteen mukaan."
+    },
+    "nailProsthesis": {
+      "title": "Kynsiproteesi",
+      "paragraph1": "Kynsiproteesilla voidaan korvata osittain vaurioitunutta tai puuttuvaa kynttä ja saada kynnestä siistin ja luonnollisen näköinen. Proteesi suojaa kynnen aluetta ja voi samalla ohjata uuden kynnen kasvua. Hoito suunnitellaan aina yksilöllisesti kynnen tilanteen mukaan.",
+      "paragraph2": "Kynsiproteesin kanssa on tärkeää seurata kynnen ja ihon kuntoa säännöllisesti. Ensimmäinen kontrollikäynti on noin kuukauden kuluttua proteesin laitosta. Tämän jälkeen kontrolliväli sovitaan yksilöllisesti.",
+      "paragraph3": "Kynsiproteesin päällä voi käyttää tavallista kynsilakkaa, mutta ei geelilakkaa. Kynsilakka suositellaan vaihtamaan noin kerran viikossa käyttäen asetonitonta kynsilakanpoistoainetta. Lakanvaihdon yhteydessä on hyvä tarkistaa kynsi huolellisesti. Proteesin alla tai sen ympärillä ei saa näkyä poikkeavia värimuutoksia.",
+      "paragraph4": "Jos kynnessä tai sen ympärillä ilmenee kipua, punoitusta, turvotusta, värimuutoksia, hajua tai eritettä, ota yhteyttä ja tule näyttämään kynttä. Myös proteesin irtoaminen tai rikkoutuminen on hyvä tarkistuttaa – irronnutta proteesia ei tule liimata itse takaisin."
     }
   },
   "bookingSection": {
@@ -181,6 +194,13 @@
     "failed": "Avaa ajanvaraus Vellossa",
     "openBooking": "Avaa ajanvaraus",
     "clickToOpen": "Klikkaa nappia avataksesi ajanvarauksen"
+  },
+  "cancellation": {
+    "title": "Peruutusehdot",
+    "paragraph1": "Jos et pääse varaamallesi ajalle, peruutathan tai siirrät ajan viimeistään 24 tuntia ennen vastaanottoa.",
+    "paragraph2": "Jos sairastut äkillisesti, soita mahdollisimman pian – siirretään aikasi yhdessä sopivaan ajankohtaan. Ethän tule flunssaisena vastaanotolle!",
+    "paragraph3": "Saapumatta jätetystä ja peruuttamattomasta ajasta veloitetaan 100 % palvelun hinnasta.",
+    "paragraph4": "Vastaanottoaika on varattu juuri sinulle. Kun peruutuksesta ilmoitetaan ajoissa, vapautunut aika voidaan tarjota toiselle sitä tarvitsevalle. Pienyrittäjälle peruuttamatta jäänyt aika on myös menetettyä tuloa."
   },
   "footer": {
     "rights": "Ilojaloin Jalkaterapiapalvelut. Kaikki oikeudet pidätetään.",
@@ -194,4 +214,3 @@
     "description": "Jalkaterapia Vaasassa - Ilojaloin tarjoaa ammattitaitoista jalkahoitoa, kynnenoikaisua, syylänhoitoa ja haavanhoitoa. Jalkaterapeutti Satu Paunonen palvelee Vaasan alueella. Varaa aika helposti!"
   }
 }
-

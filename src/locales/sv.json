@@ -10,14 +10,15 @@
     "contact": "Kontakt",
     "gallery": "Galleri",
     "additionalInfo": "Mer information",
-    "booking": "Boka tid"
+    "booking": "Boka tid",
+    "cancellation": "Avbokningsvillkor"
   },
   "logo": {
     "subtitle": "Fotterapitjänster"
   },
   "hero": {
-    "title": "Fotterapi i Vasa - Friska fötter",
-    "subtitle": "Har du hallux valgus, hammartå, smärtor i fotsula eller häl, hud- eller nagelproblem, eller vill du helt enkelt främja dina fötters hälsa - välkommen till fotterapeutens mottagning!",
+    "title": "Fotterapi i Vasa – hjälp vid fotbesvär",
+    "subtitle": "Söker du en fotterapeut eller fotvård i Vasa? Du får sakkunnig hjälp till exempel vid hallux valgus, hammartå, framfots- och hälsmärtor samt hud- och nagelproblem. Välkommen till mottagningen för att få dina fotbesvär behandlade och ta hand om dina fötters hälsa.",
     "bookButton": "Boka tid!"
   },
   "about": {
@@ -25,27 +26,28 @@
     "paragraph1": "Jag är <strong>Satu Paunonen, fotterapeut och företagare från Vasa</strong> – samt mamma till fyra barn. Motion, kreativitet och familj håller mig i balans och människonära arbete är en hjärteangelägenhet för mig. Till min natur är jag lugn, vänlig och grundpositiv. Jag är nyfiken och en person som blir entusiastisk över att lära nytt. Jag älskar att utveckla min kompetens och uppskattar att fotvård är ett område där man aldrig blir färdig – det finns alltid något nytt att lära.",
     "paragraph2": "Jag blev fotterapeut genom mina egna erfarenheter. Jag har lidit av plattfötter och olika fotbesvär sedan barndomen. Genom dem förstod jag hur stor betydelse fötterna har för det övergripande välbefinnandet. Jag ville lära mig hur jag kunde hjälpa mig själv – och samtidigt andra – att må bättre.",
     "paragraph3": "Jag utexaminerades som <strong>fotterapeut år 2015 från Mikkeli yrkeshögskola</strong> och har sedan dess arbetat på <strong>Vasa centralsjukhus internmedicinska poliklinik</strong>. I mitt arbete har jag specialiserat mig på <strong>sårvård, fotterapi för diabetiker och reumatiker samt behandling av olika smärtor och felställningar</strong>. Tack vare denna arbetserfarenhet kan du sitta i min behandlingsstol med fullt förtroende – alla slags fötter har setts.",
-    "paragraph4": "Företagande har funnits i mina tankar länge – tanken på friheten att arbeta enligt mina egna värderingar, kreativt och människonära. Ilojaloin föddes ur viljan att hjälpa människor må bättre och främja fothälsa brett och förebyggande. Jag vill att varje möte ska vara ett steg mot en lättare, smärtfriare vardag."
+    "paragraph4": "Företagande har funnits i mina tankar länge – tanken på friheten att arbeta enligt mina egna värderingar, kreativt och människonära. Ilojaloin föddes ur viljan att hjälpa människor må bättre och främja fothälsan brett. Jag vill att varje möte ska vara ett steg mot en lättare, smärtfriare vardag."
   },
   "footTherapy": {
     "title": "Fotterapi",
-    "paragraph1": "Att utexamineras som fotterapeut kräver <strong>hälsovårdsutbildning</strong>. I Finland anordnas utbildningen vid <strong>yrkeshögskolor</strong> och varar vanligtvis 3,5 år, inklusive både <strong>teoretiska studier och omfattande praktisk träning</strong>. Under studierna fördjupar sig studenten i <strong>människans anatomi, fysiologi och biomekanik</strong> samt olika sjukdomar som påverkar fötterna. Dessutom täcker utbildningen undersökning och analys av fötter, upprätthållande av hälsa och förebyggande vård, behandling av sår, hudförändringar och nagelproblem, tillverkning av individuella stöd, sulor och tåavdelare samt planering av tränings- och övningsprogram för att stödja fot och nedre extremiteter.",
-    "paragraph2": "Fotterapi är helhetsbetonat välbefinnande för dina fötter. Det hjälper till att <strong>förebygga och behandla olika fotbesvär, smärttillstånd och felställningar</strong>, förbättrar rörligheten, lindrar smärta och främjar vardagens smidig het. Eftersom varje fot är unik planeras behandlingen alltid enligt kundens behov."
+    "paragraph1": "En fotterapeut är en <strong>hälsovårdsproffs med examen från en yrkeshögskola</strong>. I Finland tar fotterapeututbildningen <strong>3,5 år</strong> och innehåller, utöver teoretiska studier, omfattande praktisk träning.",
+    "paragraph2": "Utbildningen omfattar bland annat <strong>anatomi, fysiologi och biomekanik</strong>, undersökning av nedre extremiteterna, olika sjukdomar och fotbesvär samt förebyggande och behandling av dem. Kompetensen omfattar även <strong>behandling av hud-, nagel- och sårproblem, individuella sulor och tåortoser</strong> samt övningar som stödjer de nedre extremiteternas funktion.",
+    "paragraph3": "Målet med fotterapi är att <strong>förebygga och behandla fotbesvär, lindra smärta samt stödja rörligheten och de nedre extremiteternas funktionsförmåga</strong>. Behandling och handledning planeras alltid individuellt utifrån kundens behov."
   },
   "services": {
     "title": "Tjänster",
-    "intro": "På Ilojaloin erbjuder jag <strong>mångsidiga fotterapitjänster</strong>, såsom:",
+    "intro": "Ilojaloin erbjuder <strong>mångsidiga fotterapitjänster</strong>, såsom:",
     "items": [
-      "🦶 <strong>Undersökningar och fotanalyser</strong> – vi kartlägger fötterns tillstånd och eventuella problemområden",
+      "🦶 <strong>Undersökningar och fotanalyser</strong> – vi kartlägger fötternas tillstånd och eventuella problemområden",
+      "🦶 <strong>Hudvård</strong> – sprickor, förhårdnader, liktornar",
+      "🦶 <strong>Vårtbehandling – frysbehandling eller Verrutop®</strong>",
       "💅 <strong>Nagelkorrigeringsbehandlingar & nagelproteser</strong> – korrigerar och skyddar naglarna",
-      "💅 <strong>Förkortning & tunnande av naglar</strong> - även svåra naglar kan behandlas",
-      "🦶 <strong>Hudvård</strong> – sprickor, förhårdningar, liktornar",
-      " <strong>Vårtbehandling - Frysbehandling eller Verrutop®</strong>",
+      "💅 <strong>Förkortning & förtunning av naglar</strong> – även svåra naglar kan behandlas",
       "🦶 <strong>Hjälp med nagelsvamp eller fotsvamp</strong>",
       "🦶 <strong>Individuella övningar</strong>",
       "🩹 <strong>Sport- och kinesiotejpning</strong>",
-      "🩰 <strong>Snabbsulor och individuella tåavdelare av silikonmassa</strong>",
-      "👟 <strong>Skorådgivning</strong> – vi kontrollerar skors passform, rekommenderar lämplig modell eller egenskap och möjlighet att beställa högkvalitativa barfotaskor genom mig",
+      "🩰 <strong>Snabbsulor och individuella tåortoser av silikonmassa</strong>",
+      "👟 <strong>Egenvårds- och skorådgivning</strong>",
       "🛍️ <strong>Högkvalitativa hemvårdsprodukter</strong> – för hemvård och upprätthållande av fothälsa",
       "❤️ <strong>Fotterapi för specialgrupper</strong> – diabetes, reumatism, psoriasis etc.",
       "🙂 <strong>Föreläsningar</strong>"
@@ -95,13 +97,11 @@
   },
   "pricingInfo": {
     "title": "Om prissättningen",
-    "question": "Varför är mina mottagningspriser på denna nivå?",
-    "paragraph1": "Jag är en högskoleutbildad specialist på nedre extremiteter, och min prissättning baserar sig på kompetens, ansvar och hur jag möter varje kund.",
-    "paragraph2": "På mottagningen är jag 100 % närvarande för dig. Jag svarar inte på telefonsamtal eller sköter andra ärenden under besöket, utan koncentrerar mig helt på vården av dina fötter och nedre extremiteter. Jag arbetar effektivt men inte stressat – på så sätt används din tid optimalt och vi hinner ofta åstadkomma mycket även under ett kortare besök.",
-    "paragraph3": "Jag frågar alltid om dina önskemål och behov: vad du särskilt vill få vårdat och hur du vill prioritera tiden. Vården planeras tillsammans med dig.",
-    "paragraph4": "Efter besöket sköter jag grundlig städning och instrumentvård, så att varje kund får en säker och hygienisk vårdmiljö. Som hälsovårdspersonal är jag bunden av sekretess och dokumentationsskyldighet, och uppgifterna från ditt besök registreras i Kanta-systemet. Detta arbete sker utanför mottagningstiden och är en del av helheten.",
-    "paragraph5": "Dessutom ansvarar jag som företagare bland annat för system, instrumentvårdsutrustning, städmaterial samt andra kostnader för verksamheten.",
-    "paragraph6": "Min prissättning återspeglar framför allt att du får sakkunnig, lugn och individuell vård där ditt välbefinnande står i centrum."
+    "question": "Vad ingår i priset för ett mottagningsbesök?",
+    "paragraph1": "Jag är en högskoleutbildad fotterapeut och specialist på de nedre extremiteternas hälsa. På min mottagning får du lugn, individuell vård som planeras utifrån just dina behov.",
+    "paragraph2": "Under besöket fokuserar jag helt på dig och på det som är viktigast för dina fötters välbefinnande. Jag arbetar effektivt, men utan att det känns stressigt.",
+    "paragraph3": "Utöver själva mottagningstiden ingår i priset korrekt dokumentation i Kanta-systemet samt noggrann instrumentvård och hygien.",
+    "paragraph4": "Mitt mål är att du ska få ut så mycket som möjligt av varje besök – tryggt och med yrkeskunnighet."
   },
   "contact": {
     "title": "Kontakt",
@@ -154,7 +154,7 @@
     "title": "Mer information",
     "wart": {
       "title": "Vårtor",
-      "paragraph1": "Vårtor är ofarliga hudt umörer som orsakas av human papillomavirus (HPV). De är mycket vanliga och kan förekomma i alla åldrar.",
+      "paragraph1": "Vårtor är ofarliga hudtumörer som orsakas av human papillomavirus (HPV). De är mycket vanliga och kan förekomma i alla åldrar.",
       "paragraph2": "Alla vårtor behöver inte nödvändigtvis behandlas. Ofta är det möjligt att låta kroppen bilda nödvändiga antikroppar, varvid vårtan försvinner av sig själv med tiden.",
       "paragraph3": "Ofta är vårtan dock belägen på ett tryckområde – till exempel på fotsulan – vilket kan orsaka smärta när man går. I sådana situationer är behandling motiverad för att påskynda vårtans försvinnande och lindra smärtan."
     },
@@ -162,7 +162,7 @@
       "title": "Behandling av vårtor",
       "paragraph1": "Jag har att erbjuda två olika behandlingsmetoder för behandling av vårtor. Båda är professionella produkter och avsedda endast för professionellt bruk:",
       "method1": "Syrabehandling Verrutop®",
-      "method2": "Frysbehandling av vårtor (effektivare än apotek självbehandlingsmetoder)",
+      "method2": "Frysbehandling av vårtor (effektivare än apotekets självbehandlingsmetoder)",
       "paragraph2": "Båda behandlingarna inkluderar inledningsvis mekanisk avlägsnande av vårtvävnad, vilket förbättrar behandlingens effektivitet och slutresultat.",
       "paragraph3": "Det finns inte alltid en enda omedelbart effektiv behandling för vårtor. Ofta krävs flera behandlingstillfällen och besök på mottagningen. Ibland kan slutresultatet vara att en liten del av vårtan kvarstår, men merparten kan avlägsnas och smärtan lindras avsevärt."
     },
@@ -171,6 +171,19 @@
       "paragraph1": "Jag använder en professionell frysutrustning som producerar flytande kväve upp till –89 °C. Vid frysning förstörs vårtcellerna med hjälp av kyla. Efter behandlingen börjar huden läka sig själv från botten, och vanligtvis inom ett par veckor flagnar vårtan bort och ersätts av frisk hud.",
       "paragraph2": "Om det handlar om en stor eller envis vårta kan flera frysbehandlingar behövas.",
       "paragraph3": "Frysningen kan kännas tillfälligt smärtsam. Barn har möjlighet att använda ett bedövande Emla-plåster före behandlingen, vilket lindrar känslorna under behandlingen."
+    },
+    "nailCorrection": {
+      "title": "Nagelkorrigeringsbehandling",
+      "paragraph1": "Med nagelkorrigeringsbehandling kan man lindra smärta och tryck som orsakas av en inväxt eller starkt böjd nagel. Vid behandlingen styrs nagelns tillväxt varsamt i rätt riktning.",
+      "paragraph2": "På min mottagning använder jag titantrådskorrigering, som jag utifrån min erfarenhet har konstaterat vara den mest effektiva och kundvänligaste metoden. Titantråden fästs på nagelns yta och styr gradvis nageln att växa i en rakare form.",
+      "paragraph3": "Behandlingen tar vanligtvis cirka 6–12 månader, och kontrollbesök görs med 2–3 månaders mellanrum. Vid kontrollbesöket flyttas tråden i takt med nagelns tillväxt samt slipas och rengörs nageln. Behandlingen planeras alltid individuellt utifrån nagelns tillstånd."
+    },
+    "nailProsthesis": {
+      "title": "Nagelprotes",
+      "paragraph1": "Med en nagelprotes kan man ersätta en delvis skadad eller saknad nagel och få den att se snygg och naturlig ut. Protesen skyddar nagelområdet och kan samtidigt styra tillväxten av en ny nagel. Behandlingen planeras alltid individuellt utifrån nagelns tillstånd.",
+      "paragraph2": "Med en nagelprotes är det viktigt att regelbundet följa upp nagelns och den omgivande hudens tillstånd. Det första kontrollbesöket sker cirka en månad efter att protesen har satts på. Därefter avtalas kontrollintervallet individuellt.",
+      "paragraph3": "På nagelprotesen kan man använda vanligt nagellack, men inte gellack. Det rekommenderas att byta nagellack ungefär en gång i veckan med hjälp av acetonfritt nagellacksborttagningsmedel. I samband med lackbytet är det bra att noggrant kontrollera nageln – det får inte synas avvikande färgförändringar under eller kring protesen.",
+      "paragraph4": "Om det uppstår smärta, rodnad, svullnad, färgförändringar, lukt eller flytning i eller kring nageln, ta kontakt och kom in för att visa upp nageln. Det är också bra att låta kontrollera om protesen lossnar eller går sönder – en lös protes ska aldrig limmas fast själv."
     }
   },
   "bookingSection": {
@@ -181,6 +194,13 @@
     "failed": "Öppna bokning i Vello",
     "openBooking": "Öppna bokning",
     "clickToOpen": "Klicka på knappen för att öppna bokningen"
+  },
+  "cancellation": {
+    "title": "Avbokningsvillkor",
+    "paragraph1": "Om du inte kan komma till din bokade tid, vänligen avboka eller flytta tiden senast 24 timmar före mottagningen.",
+    "paragraph2": "Om du blir akut sjuk, ring så snart som möjligt – då hittar vi tillsammans en ny tidpunkt som passar dig. Kom inte till mottagningen om du är förkyld!",
+    "paragraph3": "För en uteblivet besök eller en avbokning som inte skett i tid debiteras 100 % av tjänstens pris.",
+    "paragraph4": "Mottagningstiden är reserverad just för dig. När en avbokning meddelas i tid kan den lediga tiden erbjudas till någon annan som behöver den. För en småföretagare innebär en obokad tid också en förlorad inkomst."
   },
   "footer": {
     "rights": "Ilojaloin Fotterapitjänster. Alla rättigheter förbehålls.",
@@ -194,4 +214,3 @@
     "description": "Fotterapi i Vasa - Ilojaloin erbjuder professionell fotvård, nagelkorrigering, vårtbehandling och sårbehandling. Fotterapeut Satu Paunonen betjänar Vasaregionen. Boka tid enkelt!"
   }
 }
-

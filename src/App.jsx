@@ -362,6 +362,7 @@ export default function App() {
           <NavItem label={t('nav.gallery')} targetId="gallery" active={activeSection === 'gallery'} onClick={handleNavClick} />
           <NavItem label={t('nav.additionalInfo')} targetId="additionalInfo" active={activeSection === 'additionalInfo'} onClick={handleNavClick} />
           <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+          <NavItem label={t('nav.cancellation')} targetId="cancellation" active={activeSection === 'cancellation'} onClick={handleNavClick} />
         </nav>
       )}
       <div className="flex min-h-screen">
@@ -394,6 +395,7 @@ export default function App() {
             <NavItem label={t('nav.gallery')} targetId="gallery" active={activeSection === 'gallery'} onClick={handleNavClick} />
             <NavItem label={t('nav.additionalInfo')} targetId="additionalInfo" active={activeSection === 'additionalInfo'} onClick={handleNavClick} />
             <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
+            <NavItem label={t('nav.cancellation')} targetId="cancellation" active={activeSection === 'cancellation'} onClick={handleNavClick} />
           </div>
           {/* Kielivalitsin desktop */}
             <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
@@ -425,6 +427,7 @@ export default function App() {
                     // Track booking conversion when user clicks to open Vello
                     if (window.gtag) {
                       window.gtag('event', 'conversion', {'send_to': 'AW-17958980715/ALQKCK67u_0bEOuYwfNC'});
+                      window.gtag('event', 'ads_conversion_Varaa_tapaaminen_1');
                     }
                   }}
                 >
@@ -550,9 +553,7 @@ export default function App() {
                 <p className="mb-4">{t('pricingInfo.paragraph1')}</p>
                 <p className="mb-4">{t('pricingInfo.paragraph2')}</p>
                 <p className="mb-4">{t('pricingInfo.paragraph3')}</p>
-                <p className="mb-4">{t('pricingInfo.paragraph4')}</p>
-                <p className="mb-4">{t('pricingInfo.paragraph5')}</p>
-                <p className="font-semibold">{t('pricingInfo.paragraph6')}</p>
+                <p className="font-semibold">{t('pricingInfo.paragraph4')}</p>
               </div>
             </div>
           </section>
@@ -565,6 +566,8 @@ export default function App() {
                 <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph1') }}></p>
                 <div className="my-4" aria-hidden></div>
                 <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph2') }}></p>
+                <div className="my-4" aria-hidden></div>
+                <p dangerouslySetInnerHTML={{ __html: t('footTherapy.paragraph3') }}></p>
               </div>
             </div>
           </section>
@@ -947,11 +950,28 @@ export default function App() {
               </div>
 
               {/* Freezing Treatment subsection */}
-              <div>
+              <div className="mb-12">
                 <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.freezingTreatment.title')}</h3>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.freezingTreatment.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.freezingTreatment.paragraph2')}</p>
                 <p className="text-gray-700">{t('additionalInfo.freezingTreatment.paragraph3')}</p>
+              </div>
+
+              {/* Nail Correction subsection */}
+              <div className="mb-12">
+                <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.nailCorrection.title')}</h3>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph1')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph2')}</p>
+                <p className="text-gray-700">{t('additionalInfo.nailCorrection.paragraph3')}</p>
+              </div>
+
+              {/* Nail Prosthesis subsection */}
+              <div>
+                <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.nailProsthesis.title')}</h3>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.nailProsthesis.paragraph1')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.nailProsthesis.paragraph2')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.nailProsthesis.paragraph3')}</p>
+                <p className="text-gray-700">{t('additionalInfo.nailProsthesis.paragraph4')}</p>
               </div>
             </div>
           </section>
@@ -974,6 +994,7 @@ export default function App() {
                   // Track booking conversion when user opens Vello modal
                   if (window.gtag) {
                     window.gtag('event', 'conversion', {'send_to': 'AW-17958980715/ALQKCK67u_0bEOuYwfNC'});
+                    window.gtag('event', 'ads_conversion_Varaa_tapaaminen_1');
                   }
                 }}
                 className="relative cursor-pointer rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow group"
@@ -1061,6 +1082,19 @@ export default function App() {
               </div>
             </div>
           )}
+
+          {/* Cancellation Policy section */}
+          <section data-section="cancellation" className="py-12 md:py-20 px-4 bg-white">
+            <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('cancellation.title')}</h2>
+              <div className="prose max-w-full">
+                <p className="mb-4">{t('cancellation.paragraph1')}</p>
+                <p className="mb-4">{t('cancellation.paragraph2')}</p>
+                <p className="mb-4">{t('cancellation.paragraph3')}</p>
+                <p>{t('cancellation.paragraph4')}</p>
+              </div>
+            </div>
+          </section>
 
           <footer className="py-6 bg-primary text-white text-center">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto px-4">

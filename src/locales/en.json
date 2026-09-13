@@ -10,14 +10,15 @@
     "contact": "Contact",
     "gallery": "Gallery",
     "additionalInfo": "Additional Info",
-    "booking": "Book Appointment"
+    "booking": "Book Appointment",
+    "cancellation": "Cancellation Policy"
   },
   "logo": {
     "subtitle": "Podiatry Services"
   },
   "hero": {
-    "title": "Podiatry in Vaasa - Healthy Feet",
-    "subtitle": "Whether you have bunions, hammer toes, ball or heel pain, skin or nail problems, or simply want to promote your foot health - welcome to the foot therapist's office!",
+    "title": "Podiatry in Vaasa – Help for Foot Problems",
+    "subtitle": "Looking for a podiatrist or foot care in Vaasa? You'll get expert help with issues such as bunions, hammer toes, ball-of-foot and heel pain, as well as skin and nail problems. Welcome to the clinic to have your foot problems treated and to take care of your foot health.",
     "bookButton": "Book Now!"
   },
   "about": {
@@ -25,27 +26,28 @@
     "paragraph1": "I am <strong>Satu Paunonen, a podiatrist and entrepreneur from Vaasa</strong> – and a mother of four children. Exercise, creativity, and family keep me balanced, and working with people is close to my heart. By nature, I am calm, friendly, and fundamentally positive. I'm curious and enthusiastic about learning new things. I love developing my professional skills and appreciate that podiatry is a field where you never stop learning – there's always something new to discover.",
     "paragraph2": "I became a podiatrist through my own experiences. I've suffered from flat feet and various foot problems since childhood. Through these experiences, I realized how important feet are for overall well-being. I wanted to learn how I could help myself – and others – feel better.",
     "paragraph3": "I graduated as a <strong>podiatrist in 2015 from Mikkeli University of Applied Sciences</strong> and have since worked at <strong>Vaasa Central Hospital's internal medicine outpatient clinic</strong>. In my work, I've specialized in <strong>wound care, podiatry for diabetic and rheumatic patients, and treatment of various pain conditions and structural problems</strong>. Thanks to this experience, you can sit in my treatment chair with complete confidence – I've seen all kinds of feet.",
-    "paragraph4": "Entrepreneurship has been on my mind for a long time – the freedom to work according to my own values, creatively and with a people-centered approach. Ilojaloin was born from my desire to help people feel better and promote foot health in a broad, preventive way. I want every visit to be a step towards a lighter, pain-free everyday life."
+    "paragraph4": "Entrepreneurship has been on my mind for a long time – the freedom to work according to my own values, creatively and with a people-centered approach. Ilojaloin was born from a desire to help people feel better and to promote foot health broadly. I want every visit to be a step towards a lighter, pain-free everyday life."
   },
   "footTherapy": {
     "title": "Podiatry",
-    "paragraph1": "Becoming a podiatrist requires <strong>healthcare education</strong> spanning <strong>3.5 years</strong>. The curriculum includes anatomy, physiology, and biomechanics. This enables me to understand how feet function, why problems develop, and how to prevent and treat them. I'm qualified to treat people with diabetes, rheumatism, circulation issues, and other special conditions.",
-    "paragraph2": "Podiatry is preventive care that promotes mobility and quality of life. Regular foot, nail, and skin care prevents problems before they become serious. My goal is for every visit to bring relief, and in the long run, keep you on your feet."
+    "paragraph1": "A podiatrist is a <strong>healthcare professional with a university of applied sciences degree</strong>. In Finland, podiatry education takes <strong>3.5 years</strong> and, in addition to theoretical studies, includes extensive practical training.",
+    "paragraph2": "The training covers, among other things, <strong>anatomy, physiology, and biomechanics</strong>, examination of the lower limbs, various diseases and foot conditions, and their prevention and treatment. The skill set also includes <strong>treatment of skin, nail, and wound problems, custom insoles and toe orthotics</strong>, as well as exercises that support the function of the lower limbs.",
+    "paragraph3": "The goal of podiatry is to <strong>prevent and treat foot problems, relieve pain, and support mobility and lower-limb function</strong>. Treatment and guidance are always planned individually according to the client's needs."
   },
   "services": {
     "title": "Services",
-    "intro": "At Ilojaloin, I offer <strong>comprehensive podiatry services</strong>, such as:",
+    "intro": "Ilojaloin offers <strong>a wide range of podiatry services</strong>, such as:",
     "items": [
       "🦶 <strong>Examinations and foot analyses</strong> – assessment of foot health and potential problem areas",
+      "🦶 <strong>Skin care</strong> – cracks, calluses, corns",
+      "🦶 <strong>Wart treatment – freezing treatment or Verrutop®</strong>",
       "💅 <strong>Nail correction treatments & nail prosthetics</strong> – corrective and protective nail care",
       "💅 <strong>Nail trimming & thinning</strong> – even challenging nails can be treated",
-      "🦶 <strong>Skin care</strong> – cracks, calluses, corns",
-      " <strong>Wart treatment - Freezing treatment or Verrutop®</strong>",
       "🦶 <strong>Help with nail fungus or athlete's foot</strong>",
       "🦶 <strong>Individual exercise programs</strong>",
       "🩹 <strong>Sports and kinesio taping</strong>",
-      "🩰 <strong>Quick insoles and custom toe orthotics from silicone</strong>",
-      "👟 <strong>Shoe counseling</strong> – checking shoe fit, recommending suitable models or features, and the possibility to order quality barefoot shoes through me",
+      "🩰 <strong>Quick insoles and custom toe orthotics made from silicone</strong>",
+      "👟 <strong>Self-care and footwear guidance</strong>",
       "🛍️ <strong>Quality home care products</strong> – for home care and maintaining foot health",
       "❤️ <strong>Podiatry for special groups</strong> – diabetes, rheumatism, psoriasis, etc.",
       "🙂 <strong>Lectures</strong>"
@@ -95,13 +97,11 @@
   },
   "pricingInfo": {
     "title": "About Pricing",
-    "question": "Why are my practice prices at this level?",
-    "paragraph1": "I am a university-educated lower limb specialist, and my pricing is based on expertise, responsibility, and how I meet each client.",
-    "paragraph2": "At the practice, I am 100% present for you. I don't answer phone calls or handle other matters during the appointment, but focus entirely on caring for your feet and lower limbs. I work efficiently but without rushing – this way your time is used optimally and we often accomplish a lot even in a shorter appointment.",
-    "paragraph3": "I always ask about your wishes and needs: what you particularly want treated and how you want to prioritize the time. Treatment is planned together with you.",
-    "paragraph4": "After the appointment, I take care of thorough cleaning and instrument maintenance, so that every client receives a safe and hygienic treatment environment. As a healthcare professional, I am bound by confidentiality and documentation obligations, and your appointment information is recorded in the Kanta system. This work happens outside of appointment time and is part of the whole.",
-    "paragraph5": "Additionally, as an entrepreneur, I am responsible for systems, instrument maintenance equipment, cleaning supplies, and other business expenses.",
-    "paragraph6": "My pricing primarily reflects that you receive expert, calm, and personalized care where your well-being is at the center."
+    "question": "What does the price of an appointment include?",
+    "paragraph1": "I am a university-educated podiatrist and a specialist in lower-limb health. At my practice, you'll receive unhurried, individual care planned specifically around your needs.",
+    "paragraph2": "During your appointment, I focus entirely on you and on what matters most for your foot health. I work efficiently, but without any sense of rushing.",
+    "paragraph3": "In addition to the appointment itself, the price includes proper documentation in the Kanta system, as well as careful instrument maintenance and hygiene.",
+    "paragraph4": "My goal is for you to get as much benefit as possible from every visit – safely and with professional expertise."
   },
   "contact": {
     "title": "Contact",
@@ -171,6 +171,19 @@
       "paragraph1": "I use professional freezing equipment that produces liquid nitrogen up to –89 °C. During freezing, wart cells are destroyed with the help of cold. After treatment, the skin begins to heal itself from the bottom, and usually within a couple of weeks the wart peels off and is replaced by healthy skin.",
       "paragraph2": "If it is a large or stubborn wart, multiple freezing treatments may be needed.",
       "paragraph3": "Freezing can feel temporarily painful. Children have the option to use a numbing Emla patch before treatment, which eases the sensations during treatment."
+    },
+    "nailCorrection": {
+      "title": "Nail Correction Treatment",
+      "paragraph1": "Nail correction treatment can relieve the pain and pressure caused by an ingrown or strongly curved toenail. The treatment gently guides the nail's growth in the right direction.",
+      "paragraph2": "In my practice, I use titanium wire nail bracing, which I have found, based on my experience, to be the most effective and client-friendly method. The titanium wire is attached to the surface of the nail and gradually guides it to grow into a straighter shape.",
+      "paragraph3": "Treatment usually takes about 6–12 months, with check-up visits every 2–3 months. At each check-up, the wire is repositioned to follow the nail's growth, and the nail is filed and cleaned. Treatment is always planned individually according to the condition of the nail."
+    },
+    "nailProsthesis": {
+      "title": "Nail Prosthesis",
+      "paragraph1": "A nail prosthesis can replace a partially damaged or missing nail, giving it a neat, natural appearance. The prosthesis protects the nail area and can also guide the growth of a new nail. Treatment is always planned individually according to the condition of the nail.",
+      "paragraph2": "With a nail prosthesis, it's important to regularly monitor the condition of the nail and surrounding skin. The first check-up takes place about a month after the prosthesis is fitted. After that, the check-up interval is agreed individually.",
+      "paragraph3": "Regular nail polish can be worn over a nail prosthesis, but not gel polish. It's recommended to change the polish about once a week using an acetone-free nail polish remover. When changing the polish, carefully check the nail – there should be no unusual discoloration under or around the prosthesis.",
+      "paragraph4": "If pain, redness, swelling, discoloration, odor, or discharge appears in or around the nail, please get in touch and come in to have it checked. It's also a good idea to have the nail checked if the prosthesis comes loose or breaks – a detached prosthesis should never be glued back on yourself."
     }
   },
   "bookingSection": {
@@ -181,6 +194,13 @@
     "failed": "Open Vello booking",
     "openBooking": "Open Booking",
     "clickToOpen": "Click the button to open the booking system"
+  },
+  "cancellation": {
+    "title": "Cancellation Policy",
+    "paragraph1": "If you're unable to make your scheduled appointment, please cancel or reschedule it at least 24 hours in advance.",
+    "paragraph2": "If you suddenly fall ill, please call as soon as possible – we'll find a suitable new time together. Please don't come to your appointment with flu symptoms!",
+    "paragraph3": "A no-show or a cancellation made after the deadline will be charged at 100% of the service price.",
+    "paragraph4": "Your appointment is reserved just for you. When a cancellation is reported in good time, the freed-up slot can be offered to someone else who needs it. For a small business, a missed appointment also means lost income."
   },
   "footer": {
     "rights": "Ilojaloin Podiatry. All rights reserved.",
@@ -194,4 +214,3 @@
     "description": "Professional podiatry in Vaasa - Ilojaloin offers expert foot care, nail correction, wart treatment, and wound care. Podiatrist Satu Paunonen. Book your appointment today!"
   }
 }
-
