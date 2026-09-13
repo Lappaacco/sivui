@@ -410,7 +410,7 @@ export default function App() {
         {/* Pääsisältö */}
         <main className="flex-1 overflow-x-hidden">
           {/* Hero-osio (täysleveä tausta, sisällä keskitetty sisältö max-w-6xl) */}
-          <section data-section="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white">
+          <section data-section="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white pb-10 md:pb-0">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
               <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" width="320" height="320" fetchpriority="high" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">{t('hero.title')}</h1>
@@ -463,7 +463,7 @@ export default function App() {
                 src="/images/palvelut.jpg"
                 alt={t('services.imageAlt')}
                 loading="lazy"
-                className="mt-8 mx-auto rounded-lg shadow-lg w-full max-w-2xl h-auto"
+                className="mt-8 mx-auto md:mx-0 rounded-lg shadow-lg w-full max-w-2xl h-auto"
               />
             </div>
           </section>
@@ -584,7 +584,7 @@ export default function App() {
                 src="/images/jalkaterapia.jpg"
                 alt={t('footTherapy.imageAlt')}
                 loading="lazy"
-                className="mt-8 mx-auto rounded-lg shadow-lg w-full max-w-2xl h-auto"
+                className="mt-8 mx-auto md:mx-0 rounded-lg shadow-lg w-full max-w-2xl h-auto"
               />
             </div>
           </section>
