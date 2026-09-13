@@ -808,9 +808,8 @@ export default function App() {
           {/* Gallery section */}
           <section data-section="gallery" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
-              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-4">{t('gallery.title')}</h2>
-              <p className="text-gray-600 mb-8">{t('gallery.description')}</p>
-              
+              <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('gallery.title')}</h2>
+
               {/* Thumbnail grid */}
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {t('gallery.images', { returnObjects: true }).map((img, index) => (
@@ -980,14 +979,14 @@ export default function App() {
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph2')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailCorrection.paragraph3')}</p>
-                <figure className="mx-auto max-w-md">
+                <figure className="mx-auto md:mx-0 max-w-md">
                   <img
                     src="/images/lisatietoa.jpg"
                     alt={t('additionalInfo.nailCorrection.imageCaption')}
                     loading="lazy"
                     className="rounded-lg shadow-lg w-full h-auto"
                   />
-                  <figcaption className="mt-2 text-sm text-gray-500 text-center italic">
+                  <figcaption className="mt-2 text-sm text-gray-500 text-center md:text-left italic">
                     {t('additionalInfo.nailCorrection.imageCaption')}
                   </figcaption>
                 </figure>
