@@ -994,12 +994,23 @@ export default function App() {
               </div>
 
               {/* Nail Prosthesis subsection */}
-              <div>
+              <div className="mb-12">
                 <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.nailProsthesis.title')}</h3>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailProsthesis.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailProsthesis.paragraph2')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.nailProsthesis.paragraph3')}</p>
                 <p className="text-gray-700">{t('additionalInfo.nailProsthesis.paragraph4')}</p>
+              </div>
+
+              {/* Toe Orthoses subsection */}
+              <div>
+                <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.toeOrthoses.title')}</h3>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph1')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph2')}</p>
+                <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-3">{t('additionalInfo.toeOrthoses.question')}</h4>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph3')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph4')}</p>
+                <p className="text-gray-700">{t('additionalInfo.toeOrthoses.paragraph5')}</p>
               </div>
             </div>
           </section>

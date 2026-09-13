@@ -186,6 +186,15 @@
       "paragraph2": "Kynsiproteesin kanssa on tärkeää seurata kynnen ja ihon kuntoa säännöllisesti. Ensimmäinen kontrollikäynti on noin kuukauden kuluttua proteesin laitosta. Tämän jälkeen kontrolliväli sovitaan yksilöllisesti.",
       "paragraph3": "Kynsiproteesin päällä voi käyttää tavallista kynsilakkaa, mutta ei geelilakkaa. Kynsilakka suositellaan vaihtamaan noin kerran viikossa käyttäen asetonitonta kynsilakanpoistoainetta. Lakanvaihdon yhteydessä on hyvä tarkistaa kynsi huolellisesti. Proteesin alla tai sen ympärillä ei saa näkyä poikkeavia värimuutoksia.",
       "paragraph4": "Jos kynnessä tai sen ympärillä ilmenee kipua, punoitusta, turvotusta, värimuutoksia, hajua tai eritettä, ota yhteyttä ja tule näyttämään kynttä. Myös proteesin irtoaminen tai rikkoutuminen on hyvä tarkistuttaa – irronnutta proteesia ei tule liimata itse takaisin."
+    },
+    "toeOrthoses": {
+      "title": "Varvasortoosit ja orteesiterapia",
+      "paragraph1": "Yksilöllinen varvasortoosi auttaa suojaamaan, tukemaan ja ohjaamaan varpaita. Se valmistetaan vastaanotolla pehmeästä silikonimassasta suoraan sinun jalkasi ja tarpeesi mukaan.",
+      "paragraph2": "Varvasortoosista voi olla apua esimerkiksi vaivaisenluun, vasaravarpaiden, päällekkäisten tai kiertyneiden varpaiden sekä varpaiden välisten känsien ja hankaumien hoidossa. Ortoosilla voidaan vähentää painetta ja hankausta, suojata kipeää kohtaa sekä tarvittaessa ohjata varpaita parempaan asentoon.",
+      "question": "Mitä orteesiterapia tarkoittaa?",
+      "paragraph3": "Orteesiterapia ei ole vain varvasortoosin valmistamista. Jalkaterapeutti arvioi ensin varpaiden ja jalkaterän rakenteen, liikkuvuuden ja toiminnan sekä sen, millainen ortoosi palvelee juuri sinun tarpeitasi.",
+      "paragraph4": "Tarvittaessa hoitoon yhdistetään jalkineohjausta, harjoitteita, mobilisointia tai muuta jalkaterapiaa. Ortoosin istuvuutta ja vaikutusta seurataan, ja sitä voidaan muokata hoidon edetessä.",
+      "paragraph5": "Jokainen varvasortoosi valmistetaan yksilöllisesti – juuri sinun jalkaasi varten."
     }
   },
   "bookingSection": {
