@@ -96,7 +96,14 @@
     ],
     "paymentTitle": "Payment Methods",
     "paymentMethods": "Card, cash and I also accept health benefits:",
-    "healthBenefitsText": ""
+    "healthBenefitsText": "",
+    "discountsTitle": "Discounts",
+    "discountsIntro": "By showing a membership card:",
+    "discounts": [
+      { "text": "Members of Pohjanmaan Diabeetikot ry / Österbottens diabetiker rf get -15% off treatment prices" },
+      { "text": "The association also reimburses members €20 / year for foot therapy" },
+      { "text": "Members of Vaasan Reumayhdistys ry / Vasa Reumaförening rf get -15% off treatment prices" }
+    ]
   },
   "pricingInfo": {
     "title": "About Pricing",

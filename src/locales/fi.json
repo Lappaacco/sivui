@@ -96,7 +96,14 @@
     ],
     "paymentTitle": "Maksutavat",
     "paymentMethods": "Kortti, käteinen ja minulla käyvät myös terveysedut:",
-    "healthBenefitsText": ""
+    "healthBenefitsText": "",
+    "discountsTitle": "Alennukset",
+    "discountsIntro": "Jäsenkorttia näyttämällä:",
+    "discounts": [
+      { "text": "Pohjanmaan Diabeetikot ry / Österbottens diabetiker rf jäsen -15 % hoidon hinnasta" },
+      { "text": "Lisäksi yhdistys korvaa jäsenelle 20 € / vuosi jalkaterapiasta" },
+      { "text": "Vaasan Reumayhdistys ry / Vasa Reumaförening rf jäsen -15 % hoidon hinnasta" }
+    ]
   },
   "pricingInfo": {
     "title": "Hinnoittelusta",

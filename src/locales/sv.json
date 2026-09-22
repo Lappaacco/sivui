@@ -96,7 +96,14 @@
     ],
     "paymentTitle": "Betalningsmetoder",
     "paymentMethods": "Kort, kontanter och jag accepterar även hälsoförmåner:",
-    "healthBenefitsText": ""
+    "healthBenefitsText": "",
+    "discountsTitle": "Rabatter",
+    "discountsIntro": "Genom att visa medlemskort:",
+    "discounts": [
+      { "text": "Medlemmar i Pohjanmaan Diabeetikot ry / Österbottens diabetiker rf -15 % på behandlingspriset" },
+      { "text": "Föreningen ersätter dessutom medlemmen 20 € / år för fotterapi" },
+      { "text": "Medlemmar i Vaasan Reumayhdistys ry / Vasa Reumaförening rf -15 % på behandlingspriset" }
+    ]
   },
   "pricingInfo": {
     "title": "Om prissättningen",
