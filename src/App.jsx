@@ -552,9 +552,9 @@ export default function App() {
                   {/* <img src="/SmartumPayLogoBLACK.png" alt="Smartum" className="h-10 md:h-12 object-contain" /> */}
                 </div>
 
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-2">{t('pricing.discountsTitle')}</h4>
-                  <p className="text-gray-700 mb-2">{t('pricing.discountsIntro')}</p>
+                <div className="mt-12">
+                  <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.discountsTitle')}</h3>
+                  <p className="text-gray-700 mb-4">{t('pricing.discountsIntro')}</p>
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
                     {t('pricing.discounts', { returnObjects: true }).map((item, index) => (
                       <li key={index}>{item.text}</li>
