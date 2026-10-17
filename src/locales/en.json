@@ -94,6 +94,11 @@
       { "name": "Silicone orthosis", "price": "20-50 €" },
       { "name": "Quick insoles", "price": "10-70 €" }
     ],
+    "surchargesTitle": "Surcharges",
+    "surcharges": [
+      { "name": "Acute appointment", "price": "+40 % on the service price" },
+      { "name": "Evening surcharge (appointments starting after 4 pm) and Saturday / public holiday surcharge", "price": "+5 €" }
+    ],
     "paymentTitle": "Payment Methods",
     "paymentMethods": "Card, cash and I also accept health benefits:",
     "healthBenefitsText": "",

@@ -94,6 +94,11 @@
       { "name": "Silikoniorteesi", "price": "20-50 €" },
       { "name": "Pikapohjalliset", "price": "10-70 €" }
     ],
+    "surchargesTitle": "Lisämaksut",
+    "surcharges": [
+      { "name": "Akuuttiaika", "price": "+40 % palvelun hintaan" },
+      { "name": "Iltalisä (klo 16 jälkeen alkavat ajat) sekä lauantai- ja pyhälisä", "price": "+5 €" }
+    ],
     "paymentTitle": "Maksutavat",
     "paymentMethods": "Kortti, käteinen ja minulla käyvät myös terveysedut:",
     "healthBenefitsText": "",

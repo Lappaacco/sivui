@@ -541,6 +541,43 @@ export default function App() {
                 </div>
               </div>
 
+              {/* Lisämaksut */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.surchargesTitle')}</h3>
+
+                {/* Desktop taulukko */}
+                <div className="hidden md:block overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300 bg-white">
+                    <thead>
+                      <tr className="bg-primaryLight">
+                        <th className="px-4 py-3 text-left font-semibold border border-gray-300">{t('pricing.serviceLabel')}</th>
+                        <th className="px-4 py-3 text-right font-semibold border border-gray-300">{t('pricing.priceLabel')}</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {t('pricing.surcharges', { returnObjects: true }).map((item, index) => (
+                        <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                          <td className="px-4 py-3 border border-gray-300">{item.name}</td>
+                          <td className="px-4 py-3 text-right border border-gray-300 font-semibold">{item.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Mobiili korttinäkymä - hinnat oikealla, kaikki rivittyy */}
+                <div className="md:hidden space-y-3">
+                  {t('pricing.surcharges', { returnObjects: true }).map((item, index) => (
+                    <div key={index} className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                      <div className="flex justify-between items-start gap-3">
+                        <div className="text-sm text-gray-700 break-words flex-1">{item.name}</div>
+                        <div className="text-sm font-semibold text-gray-800 break-words text-right min-w-0 max-w-[45%]">{item.price}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* Payment Methods Section */}
               <div className="mt-12">
                 <h3 className="text-2xl font-heading text-primary mb-4">{t('pricing.paymentTitle')}</h3>

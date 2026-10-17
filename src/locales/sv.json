@@ -94,6 +94,11 @@
       { "name": "Silikonortos", "price": "20-50 €" },
       { "name": "Snabbinlägg", "price": "10-70 €" }
     ],
+    "surchargesTitle": "Tilläggsavgifter",
+    "surcharges": [
+      { "name": "Akuttid", "price": "+40 % på tjänstens pris" },
+      { "name": "Kvällstillägg (tider som börjar efter kl. 16) samt lördags- och helgdagstillägg", "price": "+5 €" }
+    ],
     "paymentTitle": "Betalningsmetoder",
     "paymentMethods": "Kort, kontanter och jag accepterar även hälsoförmåner:",
     "healthBenefitsText": "",
