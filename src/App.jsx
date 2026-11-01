@@ -1204,13 +1204,13 @@ export default function App() {
               </div>
 
               {/* Toe Orthoses subsection */}
-              <div>
+              <div className="flow-root">
                 <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.toeOrthoses.title')}</h3>
                 <img
                   src="/images/ortoosi.jpg"
                   alt={t('additionalInfo.toeOrthoses.title')}
                   loading="lazy"
-                  className="mb-4 mx-auto md:mx-0 rounded-lg shadow-lg w-full max-w-md h-auto"
+                  className="mb-4 mx-auto rounded-lg shadow-lg w-full max-w-md h-auto md:float-left md:mr-8 md:mb-4 md:w-72"
                 />
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph2')}</p>
