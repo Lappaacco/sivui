@@ -93,7 +93,7 @@
       { "name": "Syylänhoito", "price": "20 €" },
       { "name": "Kynnenoikaisu", "price": "20 €" },
       { "name": "Kynsiproteesi", "price": "20 €" },
-      { "name": "Silikoniorteesi", "price": "20-50 €" },
+      { "name": "Silikoniortoosi", "price": "20-50 €" },
       { "name": "Pikapohjalliset", "price": "10-70 €" }
     ],
     "surchargesTitle": "Lisämaksut",
@@ -202,11 +202,11 @@
       "paragraph4": "Jos kynnessä tai sen ympärillä ilmenee kipua, punoitusta, turvotusta, värimuutoksia, hajua tai eritettä, ota yhteyttä ja tule näyttämään kynttä. Myös proteesin irtoaminen tai rikkoutuminen on hyvä tarkistuttaa – irronnutta proteesia ei tule liimata itse takaisin."
     },
     "toeOrthoses": {
-      "title": "Varvasortoosit ja orteesiterapia",
+      "title": "Varvasortoosit ja ortoositerapia",
       "paragraph1": "Yksilöllinen varvasortoosi auttaa suojaamaan, tukemaan ja ohjaamaan varpaita. Se valmistetaan vastaanotolla pehmeästä silikonimassasta suoraan sinun jalkasi ja tarpeesi mukaan.",
       "paragraph2": "Varvasortoosista voi olla apua esimerkiksi vaivaisenluun, vasaravarpaiden, päällekkäisten tai kiertyneiden varpaiden sekä varpaiden välisten känsien ja hankaumien hoidossa. Ortoosilla voidaan vähentää painetta ja hankausta, suojata kipeää kohtaa sekä tarvittaessa ohjata varpaita parempaan asentoon.",
-      "question": "Mitä orteesiterapia tarkoittaa?",
-      "paragraph3": "Orteesiterapia ei ole vain varvasortoosin valmistamista. Jalkaterapeutti arvioi ensin varpaiden ja jalkaterän rakenteen, liikkuvuuden ja toiminnan sekä sen, millainen ortoosi palvelee juuri sinun tarpeitasi.",
+      "question": "Mitä ortoositerapia tarkoittaa?",
+      "paragraph3": "Ortoositerapia ei ole vain varvasortoosin valmistamista. Jalkaterapeutti arvioi ensin varpaiden ja jalkaterän rakenteen, liikkuvuuden ja toiminnan sekä sen, millainen ortoosi palvelee juuri sinun tarpeitasi.",
       "paragraph4": "Tarvittaessa hoitoon yhdistetään jalkineohjausta, harjoitteita, mobilisointia tai muuta jalkaterapiaa. Ortoosin istuvuutta ja vaikutusta seurataan, ja sitä voidaan muokata hoidon edetessä.",
       "paragraph5": "Jokainen varvasortoosi valmistetaan yksilöllisesti – juuri sinun jalkaasi varten.",
       "imageCaption": "Varvasortoosi"
