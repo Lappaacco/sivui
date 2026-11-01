@@ -1204,20 +1204,25 @@ export default function App() {
               </div>
 
               {/* Toe Orthoses subsection */}
-              <div className="flow-root">
+              <div>
                 <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.toeOrthoses.title')}</h3>
-                <img
-                  src="/images/ortoosi.jpg"
-                  alt={t('additionalInfo.toeOrthoses.title')}
-                  loading="lazy"
-                  className="mb-4 mx-auto rounded-lg shadow-lg w-full max-w-md h-auto md:float-left md:mr-8 md:mb-4 md:w-72"
-                />
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph2')}</p>
                 <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-3">{t('additionalInfo.toeOrthoses.question')}</h4>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph3')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph4')}</p>
-                <p className="text-gray-700">{t('additionalInfo.toeOrthoses.paragraph5')}</p>
+                <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph5')}</p>
+                <figure className="mx-auto md:mx-0 max-w-md">
+                  <img
+                    src="/images/ortoosi.jpg"
+                    alt={t('additionalInfo.toeOrthoses.imageCaption')}
+                    loading="lazy"
+                    className="rounded-lg shadow-lg w-full h-auto"
+                  />
+                  <figcaption className="mt-2 text-sm text-gray-500 text-center md:text-left italic">
+                    {t('additionalInfo.toeOrthoses.imageCaption')}
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </section>
