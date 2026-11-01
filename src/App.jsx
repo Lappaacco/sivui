@@ -713,7 +713,23 @@ export default function App() {
                   {reviews.length > INITIAL_REVIEW_COUNT && (
                     <button
                       type="button"
-                      onClick={() => setShowAllReviews(!showAllReviews)}
+                      onClick={() => {
+                        const collapsing = showAllReviews;
+                        setShowAllReviews(!showAllReviews);
+                        // "Näytä vähemmän": palataan osion alkuun, koska sivun sisältö lyhenee ja näkymä jäisi muuten alempiin osioihin
+                        if (collapsing) {
+                          setTimeout(() => {
+                            const element = document.querySelector('[data-section="reviews"]');
+                            if (element) {
+                              const offset = window.innerWidth < 768 ? 80 : 20;
+                              window.scrollTo({
+                                top: element.getBoundingClientRect().top + window.pageYOffset - offset,
+                                behavior: 'smooth'
+                              });
+                            }
+                          }, 50);
+                        }
+                      }}
                       aria-expanded={showAllReviews}
                       className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primaryLight transition-colors"
                     >
