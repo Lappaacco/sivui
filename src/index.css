@@ -83,3 +83,12 @@ html {
 	border: 0 !important;
 	display: block !important;
 }
+
+/* Mobiilivalikon enimmäiskorkeus = näkyvä alue headerin alla.
+   100vh on puhelimilla suurempi kuin näkyvä alue (osoitepalkki), jolloin valikon alaosa jäisi piiloon;
+   dynaaminen 100dvh seuraa osoitepalkin näkymistä. vh toimii varalla vanhoissa selaimissa. */
+.mobile-menu {
+	max-height: calc(100vh - 73px - 16px);
+	max-height: calc(100dvh - 73px - 16px);
+	padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}

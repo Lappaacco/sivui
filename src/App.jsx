@@ -395,7 +395,7 @@ export default function App() {
       </header>
       {/* Mobiilivalikon lista. max-h + overflow: pitkä valikko ei saa jäädä ruudun alareunan taakse, jotta viimeisetkin kohdat ovat valittavissa */}
       {mobileMenuOpen && (
-        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10 max-h-[calc(100vh-73px)] max-h-[calc(100dvh-73px)] overflow-y-auto overscroll-contain">
+        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10 mobile-menu overflow-y-auto overscroll-contain">
           <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
           <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
