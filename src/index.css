@@ -84,11 +84,19 @@ html {
 	display: block !important;
 }
 
-/* Mobiilivalikon enimmäiskorkeus = näkyvä alue headerin alla.
-   100vh on puhelimilla suurempi kuin näkyvä alue (osoitepalkki), jolloin valikon alaosa jäisi piiloon;
-   dynaaminen 100dvh seuraa osoitepalkin näkymistä. vh toimii varalla vanhoissa selaimissa. */
-.mobile-menu {
-	max-height: calc(100vh - 73px - 16px);
-	max-height: calc(100dvh - 73px - 16px);
-	padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+/* Työpöydän sivupalkki: tiivistyy näytön korkeuden mukaan, jotta kaikki kohdat mahtuvat ilman vierityspalkkia.
+   Tasot ovat tässä järjestyksessä (matalin viimeisenä), jotta pienempi korkeus voittaa. */
+@media (min-width: 768px) and (max-height: 900px) {
+	.nav-item { padding-top: 0.375rem; padding-bottom: 0.375rem; margin-top: 0.25rem; }
+	.nav-logo { padding: 1rem; }
+}
+@media (min-width: 768px) and (max-height: 820px) {
+	.nav-item { padding-top: 0.25rem; padding-bottom: 0.25rem; margin-top: 0.125rem; }
+	.nav-logo { padding: 0.75rem 1rem; }
+	.nav-lang { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+	.nav-lang > div:first-child { margin-bottom: 0.25rem; }
+}
+@media (min-width: 768px) and (max-height: 700px) {
+	.nav-item { font-size: 0.875rem; line-height: 1.25rem; padding-top: 0.2rem; padding-bottom: 0.2rem; margin-top: 0.1rem; }
+	.nav-logo { padding: 0.5rem 1rem; }
 }

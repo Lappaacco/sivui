@@ -35,7 +35,7 @@ function Stars({ score, label }) {
  */
 function NavItem({ label, targetId, active, onClick }) {
   const baseClasses =
-    'block px-4 py-2 mt-2 md:[@media(max-height:900px)]:py-1.5 md:[@media(max-height:900px)]:mt-1 rounded-lg transition-colors font-semibold font-heading cursor-pointer select-none';
+    'nav-item block px-4 py-2 mt-2 rounded-lg transition-colors font-semibold font-heading cursor-pointer select-none';
   const activeClasses = 'bg-primary text-white shadow';
   const inactiveClasses = 'text-primary hover:bg-primaryLight hover:text-white';
   const className = `${baseClasses} ${active ? activeClasses : inactiveClasses}`;
@@ -269,6 +269,16 @@ export default function App() {
     };
   }, [velloModalOpen]);
 
+  // Lukitse taustasivun vieritys kun mobiilivalikko on auki
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [mobileMenuOpen]);
+
   // Focus mobile menu when it opens
   useEffect(() => {
     if (mobileMenuOpen && mobileMenuRef.current) {
@@ -347,7 +357,7 @@ export default function App() {
   return (
     <>
       {/* Mobiiliotsikko */}
-      <header className="md:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 z-20">
+      <header className="md:hidden bg-white border-b border-gray-200 px-4 h-[73px] flex items-center justify-between sticky top-0 z-20">
         <div
           onClick={() => {
             const element = document.querySelector('[data-section="home"]');
@@ -393,9 +403,9 @@ export default function App() {
         </button>
         </div>
       </header>
-      {/* Mobiilivalikon lista. max-h + overflow: pitkä valikko ei saa jäädä ruudun alareunan taakse, jotta viimeisetkin kohdat ovat valittavissa */}
+      {/* Mobiilivalikon lista: koko ruudun paneeli headerin alla (ei näytä sivua läpi) ja vierittyy tarvittaessa */}
       {mobileMenuOpen && (
-        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10 mobile-menu overflow-y-auto overscroll-contain">
+        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden fixed inset-x-0 top-[73px] bottom-0 z-10 bg-white px-4 pt-1 pb-6 space-y-1 overflow-y-auto overscroll-contain">
           <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
           <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
@@ -413,7 +423,7 @@ export default function App() {
       )}
       <div className="flex min-h-screen">
   {/* Sivupalkki tablet- ja desktop-koissa */}
-  <nav className="hidden md:block w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0 overflow-y-auto">
+  <nav className="hidden md:flex md:flex-col w-56 bg-white border-r border-gray-200 shadow-md sticky top-0 h-screen flex-shrink-0 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div
             onClick={() => {
               const element = document.querySelector('[data-section="home"]');
@@ -421,7 +431,7 @@ export default function App() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
-            className="p-6 flex items-center gap-3 cursor-pointer"
+            className="nav-logo p-6 flex items-center gap-3 cursor-pointer"
           >
             <img src="/ilojaloin.svg" alt="Ilojaloin - logo" className="w-12 h-12" />
             <div>
@@ -444,13 +454,21 @@ export default function App() {
             <NavItem label={t('nav.booking')} targetId="booking" active={activeSection === 'booking'} onClick={handleNavClick} />
             <NavItem label={t('nav.cancellation')} targetId="cancellation" active={activeSection === 'cancellation'} onClick={handleNavClick} />
           </div>
-          {/* Kielivalitsin desktop */}
-            <div className="px-4 mt-4 pb-4 border-t border-gray-200 pt-4">
-              <div className="text-xs text-gray-500 mb-2 font-heading">Kieli / Språk / Language</div>
-              <div className="flex flex-col gap-1">
-              <button onClick={() => changeLanguage('fi')} className={`px-3 py-2 rounded text-sm font-semibold transition text-left ${i18n.language === 'fi' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Suomi</button>
-              <button onClick={() => changeLanguage('sv')} className={`px-3 py-2 rounded text-sm font-semibold transition text-left ${i18n.language === 'sv' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>Svenska</button>
-              <button onClick={() => changeLanguage('en')} className={`px-3 py-2 rounded text-sm font-semibold transition text-left ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}>English</button>
+          {/* Kielivalitsin desktop (yksi rivi, jotta sivupalkki mahtuu ilman vierityspalkkia) */}
+          <div className="nav-lang px-4 mt-auto pb-4 border-t border-gray-200 pt-3">
+            <div className="text-xs text-gray-500 mb-2 font-heading">Kieli / Språk / Language</div>
+            <div className="flex gap-1">
+              {[['fi', 'FI', 'Suomi'], ['sv', 'SV', 'Svenska'], ['en', 'EN', 'English']].map(([lng, code, name]) => (
+                <button
+                  key={lng}
+                  onClick={() => changeLanguage(lng)}
+                  title={name}
+                  aria-label={name}
+                  className={`flex-1 px-2 py-1.5 rounded text-sm font-semibold transition ${i18n.language === lng ? 'bg-primary text-white' : 'text-primary hover:bg-primaryLight hover:text-white'}`}
+                >
+                  {code}
+                </button>
+              ))}
             </div>
           </div>
         </nav>
