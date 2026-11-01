@@ -464,12 +464,14 @@ export default function App() {
               <p className="text-md md:text-lg lg:text-xl max-w-2xl mx-auto">
                 {t('hero.subtitle')}
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              {/* inline-grid: molemmat napit saavat saman leveyden (leveämmän napin mukaan) */}
+              <div className="mt-8 flex justify-center">
+              <div className="inline-grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href={`${VELLO_PROFILE_URL}?locale=${velloLocale}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                  className="inline-flex items-center justify-center text-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
                   onClick={() => {
                     // Track booking conversion when user clicks to open Vello
                     if (window.gtag) {
@@ -484,10 +486,11 @@ export default function App() {
                   href={`${VELLO_PROFILE_URL}/lahjakortit?locale=${velloLocale}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 md:px-10 md:py-5 md:text-xl border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                  className="inline-flex items-center justify-center text-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
                 >
                   {t('hero.giftCardButton')}
                 </a>
+              </div>
               </div>
 
               <img
