@@ -7,6 +7,7 @@
     "hygiene": "Säkerhet & hygien",
     "pricing": "Prislista",
     "pricingInfo": "Om prissättningen",
+    "reviews": "Recensioner",
     "contact": "Kontakt",
     "gallery": "Galleri",
     "additionalInfo": "Mer information",
@@ -20,6 +21,7 @@
     "title": "Fotterapi i Vasa – hjälp vid fotbesvär",
     "subtitle": "Söker du en fotterapeut eller fotvård i Vasa? Du får sakkunnig hjälp till exempel vid hallux valgus, hammartå, framfots- och hälsmärtor samt hud- och nagelproblem. Välkommen till mottagningen för att få dina fotbesvär behandlade och ta hand om dina fötters hälsa.",
     "bookButton": "Boka tid!",
+    "giftCardButton": "Köp presentkort!",
     "imageAlt": "Ilojaloins fotterapimottagning"
   },
   "about": {
@@ -217,6 +219,16 @@
     "failed": "Öppna bokning i Vello",
     "openBooking": "Öppna bokning",
     "clickToOpen": "Klicka på knappen för att öppna bokningen"
+  },
+  "reviews": {
+    "title": "Recensioner",
+    "starsLabel": "{{score}} / 5 stjärnor",
+    "count_one": "{{count}} recension på Vello",
+    "count_other": "{{count}} recensioner på Vello",
+    "showMore": "Visa fler recensioner",
+    "showLess": "Visa färre",
+    "readAll": "Läs alla recensioner på Vello",
+    "originalLanguageNote": "Recensionerna visas på originalspråket (finska)."
   },
   "cancellation": {
     "title": "Avbokningsvillkor",

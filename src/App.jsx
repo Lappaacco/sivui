@@ -1,5 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import reviewData from './data/reviews.json';
+
+const VELLO_PROFILE_URL = 'https://vello.fi/ilojaloin-jalkaterapia';
+const INITIAL_REVIEW_COUNT = 6;
+
+/** Tähtiarvosteluikoni (täytetty tai tyhjä). */
+function Star({ filled }) {
+  return (
+    <svg
+      className={`w-5 h-5 ${filled ? 'text-yellow-400' : 'text-gray-300'}`}
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      aria-hidden="true"
+    >
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+    </svg>
+  );
+}
+
+function Stars({ score, label }) {
+  return (
+    <div className="flex items-center gap-0.5" role="img" aria-label={label}>
+      {[1, 2, 3, 4, 5].map((n) => (
+        <Star key={n} filled={n <= Math.round(score)} />
+      ))}
+    </div>
+  );
+}
 
 /**
  * Navigaatiolinkin komponentti. Vastaanottaa tekstin, kohteen ankkurin,
@@ -7,7 +35,7 @@ import { useTranslation } from 'react-i18next';
  */
 function NavItem({ label, targetId, active, onClick }) {
   const baseClasses =
-    'block px-4 py-2 mt-2 rounded-lg transition-colors font-semibold font-heading cursor-pointer select-none';
+    'block px-4 py-2 mt-2 md:[@media(max-height:900px)]:py-1.5 md:[@media(max-height:900px)]:mt-1 rounded-lg transition-colors font-semibold font-heading cursor-pointer select-none';
   const activeClasses = 'bg-primary text-white shadow';
   const inactiveClasses = 'text-primary hover:bg-primaryLight hover:text-white';
   const className = `${baseClasses} ${active ? activeClasses : inactiveClasses}`;
@@ -62,6 +90,7 @@ export default function App() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [showAllReviews, setShowAllReviews] = useState(false);
   const mobileMenuRef = useRef(null);
   const velloRef = useRef(null);
 
@@ -114,6 +143,16 @@ export default function App() {
 
   const currentYear = new Date().getFullYear();
 
+  // Vellon kieli (fi / sv / en) nykyisen i18n-kielen mukaan
+  const velloLocale = i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi';
+
+  // Arvostelut haetaan Vellosta buildin yhteydessä (scripts/fetch-reviews.mjs)
+  const reviews = reviewData.reviews || [];
+  const hasReviews = reviews.length > 0;
+  const visibleReviews = showAllReviews ? reviews : reviews.slice(0, INITIAL_REVIEW_COUNT);
+  const formatReviewDate = (isoDate) =>
+    new Date(isoDate).toLocaleDateString(i18n.language, { year: 'numeric', month: 'long' });
+
   // Kielenvaihtofunktio
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -135,6 +174,12 @@ export default function App() {
           current = sec.getAttribute('data-section') || current;
           break;
         }
+      }
+      // Sivun lopussa viimeinen osio (Peruutusehdot) on lyhyt eikä koskaan yllä
+      // ruudun yläreunaan, joten valitaan se aktiiviseksi kun sivun pohja on saavutettu.
+      const atBottom = window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4;
+      if (atBottom && sections.length > 0) {
+        current = sections[sections.length - 1].getAttribute('data-section') || current;
       }
       setActiveSection((prev) => (prev === current ? prev : current));
       ticking = false;
@@ -348,13 +393,14 @@ export default function App() {
         </button>
         </div>
       </header>
-      {/* Mobiilivalikon lista */}
+      {/* Mobiilivalikon lista. max-h + overflow: pitkä valikko ei saa jäädä ruudun alareunan taakse, jotta viimeisetkin kohdat ovat valittavissa */}
       {mobileMenuOpen && (
-        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10">
+        <nav ref={mobileMenuRef} tabIndex={-1} className="md:hidden bg-white border-b border-gray-200 px-4 py-2 space-y-1 shadow-sm sticky top-[73px] z-10 max-h-[calc(100vh-73px)] max-h-[calc(100dvh-73px)] overflow-y-auto overscroll-contain">
           <NavItem label={t('nav.home')} targetId="home" active={activeSection === 'home'} onClick={handleNavClick} />
           <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
           <NavItem label={t('nav.pricingInfo')} targetId="pricingInfo" active={activeSection === 'pricingInfo'} onClick={handleNavClick} />
+          {hasReviews && <NavItem label={t('nav.reviews')} targetId="reviews" active={activeSection === 'reviews'} onClick={handleNavClick} />}
           <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
           <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
           <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
@@ -388,6 +434,7 @@ export default function App() {
             <NavItem label={t('nav.services')} targetId="services" active={activeSection === 'services'} onClick={handleNavClick} />
             <NavItem label={t('nav.pricing')} targetId="pricing" active={activeSection === 'pricing'} onClick={handleNavClick} />
             <NavItem label={t('nav.pricingInfo')} targetId="pricingInfo" active={activeSection === 'pricingInfo'} onClick={handleNavClick} />
+            {hasReviews && <NavItem label={t('nav.reviews')} targetId="reviews" active={activeSection === 'reviews'} onClick={handleNavClick} />}
             <NavItem label={t('nav.footTherapy')} targetId="jalkaterapia" active={activeSection === 'jalkaterapia'} onClick={handleNavClick} />
             <NavItem label={t('nav.about')} targetId="about" active={activeSection === 'about'} onClick={handleNavClick} />
             <NavItem label={t('nav.hygiene')} targetId="hygienia" active={activeSection === 'hygienia'} onClick={handleNavClick} />
@@ -417,9 +464,9 @@ export default function App() {
               <p className="text-md md:text-lg lg:text-xl max-w-2xl mx-auto">
                 {t('hero.subtitle')}
               </p>
-              <div className="mt-8 flex justify-center">
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href={`https://vello.fi/ilojaloin-jalkaterapia?locale=${i18n.language === 'sv' ? 'sv' : i18n.language === 'en' ? 'en' : 'fi'}`}
+                  href={`${VELLO_PROFILE_URL}?locale=${velloLocale}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
@@ -432,6 +479,14 @@ export default function App() {
                   }}
                 >
                   {t('hero.bookButton')}
+                </a>
+                <a
+                  href={`${VELLO_PROFILE_URL}/lahjakortit?locale=${velloLocale}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 md:px-10 md:py-5 md:text-xl border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-primary focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                >
+                  {t('hero.giftCardButton')}
                 </a>
               </div>
 
@@ -616,8 +671,71 @@ export default function App() {
             </div>
           </section>
 
+          {/* Arvostelut (haettu Vellosta buildin yhteydessä) */}
+          {hasReviews && (
+            <section data-section="reviews" className="py-12 md:py-20 px-4 bg-offwhite">
+              <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
+                <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('reviews.title')}</h2>
+
+                {reviewData.rating && (
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8">
+                    <div className="text-4xl font-heading text-primary">
+                      {reviewData.rating.toLocaleString(i18n.language, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
+                      <span className="text-xl text-gray-500"> / 5</span>
+                    </div>
+                    <Stars score={reviewData.rating} label={t('reviews.starsLabel', { score: reviewData.rating.toFixed(1) })} />
+                    {reviewData.count && (
+                      <div className="text-gray-600">{t('reviews.count', { count: reviewData.count })}</div>
+                    )}
+                  </div>
+                )}
+
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                  {visibleReviews.map((review) => (
+                    <figure key={review.id} className="bg-white rounded-lg p-5 shadow-sm border border-gray-200 flex flex-col">
+                      <Stars score={review.score} label={t('reviews.starsLabel', { score: review.score })} />
+                      <blockquote className="mt-3 text-gray-700 whitespace-pre-line break-words flex-1">
+                        {review.text}
+                      </blockquote>
+                      <figcaption className="mt-4 text-sm text-gray-500">
+                        <span className="font-semibold text-gray-700">{review.author}</span>
+                        {' · '}
+                        {formatReviewDate(review.created)}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                  {reviews.length > INITIAL_REVIEW_COUNT && (
+                    <button
+                      type="button"
+                      onClick={() => setShowAllReviews(!showAllReviews)}
+                      aria-expanded={showAllReviews}
+                      className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primaryLight transition-colors"
+                    >
+                      {showAllReviews ? t('reviews.showLess') : t('reviews.showMore')}
+                    </button>
+                  )}
+                  <a
+                    href={`${VELLO_PROFILE_URL}?locale=${velloLocale}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    {t('reviews.readAll')}
+                  </a>
+                </div>
+
+                {i18n.language !== 'fi' && (
+                  <p className="mt-4 text-sm text-gray-500 italic">{t('reviews.originalLanguageNote')}</p>
+                )}
+              </div>
+            </section>
+          )}
+
           {/* Jalkaterapia section */}
-          <section data-section="jalkaterapia" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="jalkaterapia" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('footTherapy.title')}</h2>
               <div className="prose max-w-full">
@@ -637,7 +755,7 @@ export default function App() {
           </section>
 
           {/* About section */}
-          <section data-section="about" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="about" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('about.title')}</h2>
               <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -664,7 +782,7 @@ export default function App() {
           </section>
 
           {/* Turvallisuus ja hygienia section */}
-          <section data-section="hygienia" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="hygienia" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('hygiene.title')}</h2>
               <div className="prose max-w-full">
@@ -683,7 +801,7 @@ export default function App() {
           </section>
 
           {/* Yhteystieto-osio */}
-          <section data-section="contact" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="contact" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
@@ -853,7 +971,7 @@ export default function App() {
           </section>
 
           {/* Gallery section */}
-          <section data-section="gallery" className="py-12 md:py-20 px-4 bg-offwhite">
+          <section data-section="gallery" className="py-12 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('gallery.title')}</h2>
 
@@ -988,7 +1106,7 @@ export default function App() {
           )}
 
           {/* Additional Info section */}
-          <section data-section="additionalInfo" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="additionalInfo" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-8">{t('additionalInfo.title')}</h2>
               
@@ -1062,7 +1180,7 @@ export default function App() {
           </section>
 
           {/* Booking (täysleveä tausta, sisällä keskitetty container) */}
-          <section data-section="booking" className="py-16 md:py-20 px-4 bg-offwhite">
+          <section data-section="booking" className="py-16 md:py-20 px-4 bg-white">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl font-heading text-primary mb-6">{t('bookingSection.title')}</h2>
               <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('bookingSection.description') }} />
@@ -1169,7 +1287,7 @@ export default function App() {
           )}
 
           {/* Cancellation Policy section */}
-          <section data-section="cancellation" className="py-12 md:py-20 px-4 bg-white">
+          <section data-section="cancellation" className="py-12 md:py-20 px-4 bg-offwhite">
             <div className="max-w-screen-xl lg:max-w-screen-2xl mx-auto w-full">
               <h2 className="text-3xl md:text-4xl font-heading text-primary mb-6">{t('cancellation.title')}</h2>
               <div className="prose max-w-full">

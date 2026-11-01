@@ -7,6 +7,7 @@
     "hygiene": "Safety & Hygiene",
     "pricing": "Pricing",
     "pricingInfo": "About Pricing",
+    "reviews": "Reviews",
     "contact": "Contact",
     "gallery": "Gallery",
     "additionalInfo": "Additional Info",
@@ -20,6 +21,7 @@
     "title": "Podiatry in Vaasa – Help for Foot Problems",
     "subtitle": "Looking for a podiatrist or foot care in Vaasa? You'll get expert help with issues such as bunions, hammer toes, ball-of-foot and heel pain, as well as skin and nail problems. Welcome to the clinic to have your foot problems treated and to take care of your foot health.",
     "bookButton": "Book Now!",
+    "giftCardButton": "Buy a gift card!",
     "imageAlt": "Ilojaloin podiatry clinic"
   },
   "about": {
@@ -217,6 +219,16 @@
     "failed": "Open Vello booking",
     "openBooking": "Open Booking",
     "clickToOpen": "Click the button to open the booking system"
+  },
+  "reviews": {
+    "title": "Reviews",
+    "starsLabel": "{{score}} out of 5 stars",
+    "count_one": "{{count}} review on Vello",
+    "count_other": "{{count}} reviews on Vello",
+    "showMore": "Show more reviews",
+    "showLess": "Show fewer",
+    "readAll": "Read all reviews on Vello",
+    "originalLanguageNote": "Reviews are shown in their original language (Finnish)."
   },
   "cancellation": {
     "title": "Cancellation Policy",
