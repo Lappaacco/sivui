@@ -1206,6 +1206,12 @@ export default function App() {
               {/* Toe Orthoses subsection */}
               <div>
                 <h3 className="text-xl md:text-2xl font-heading text-primary mb-4">{t('additionalInfo.toeOrthoses.title')}</h3>
+                <img
+                  src="/images/ortoosi.jpg"
+                  alt={t('additionalInfo.toeOrthoses.title')}
+                  loading="lazy"
+                  className="mb-4 mx-auto md:mx-0 rounded-lg shadow-lg w-full max-w-md h-auto"
+                />
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph1')}</p>
                 <p className="text-gray-700 mb-4">{t('additionalInfo.toeOrthoses.paragraph2')}</p>
                 <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-3">{t('additionalInfo.toeOrthoses.question')}</h4>
