@@ -475,7 +475,7 @@ export default function App() {
         {/* Pääsisältö */}
         <main className="flex-1 overflow-x-hidden">
           {/* Hero-osio (täysleveä tausta, sisällä keskitetty sisältö max-w-6xl) */}
-          <section data-section="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white pb-10 md:pb-0">
+          <section data-section="home" className="relative min-h-screen flex items-center justify-center bg-primaryLight text-white pb-10 md:pb-12">
             <div className="text-center px-4 max-w-screen-xl lg:max-w-screen-2xl mx-auto">
               <img src="/Ilojaloinvalk.svg" alt="Ilojaloin - logo" width="320" height="320" fetchpriority="high" className="mx-auto mb-6 w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80 max-w-full h-auto" />
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading mb-4">{t('hero.title')}</h1>
@@ -484,7 +484,7 @@ export default function App() {
               </p>
               {/* inline-grid: molemmat napit saavat saman leveyden (leveämmän napin mukaan) */}
               <div className="mt-8 flex justify-center">
-              <div className="inline-grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="inline-grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
                 <a
                   href={`${VELLO_PROFILE_URL}?locale=${velloLocale}`}
                   target="_blank"
@@ -500,14 +500,17 @@ export default function App() {
                 >
                   {t('hero.bookButton')}
                 </a>
-                <a
-                  href={`${VELLO_PROFILE_URL}/lahjakortit?locale=${velloLocale}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center text-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
-                >
-                  {t('hero.giftCardButton')}
-                </a>
+                <div className="flex flex-col">
+                  <a
+                    href={`${VELLO_PROFILE_URL}/lahjakortit?locale=${velloLocale}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center text-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                  >
+                    {t('hero.giftCardButton')}
+                  </a>
+                  <p className="mt-2 text-sm md:text-base font-semibold">{t('hero.giftCardDiscount')}</p>
+                </div>
               </div>
               </div>
 
