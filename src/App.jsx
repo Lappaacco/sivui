@@ -509,7 +509,9 @@ export default function App() {
                   >
                     {t('hero.giftCardButton')}
                   </a>
-                  <p className="mt-2 text-sm md:text-base font-semibold">{t('hero.giftCardDiscount')}</p>
+                  <span className="mt-3 self-center inline-block -rotate-2 rounded-full bg-accentYellow text-primary border-2 border-white px-4 py-1 text-base md:text-xl font-extrabold tracking-wide shadow-lg">
+                    {t('hero.giftCardDiscount')}
+                  </span>
                 </div>
               </div>
               </div>
