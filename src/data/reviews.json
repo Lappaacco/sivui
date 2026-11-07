@@ -1,7 +1,14 @@
 {
-  "rating": 4.738,
-  "count": 141,
+  "rating": 4.736,
+  "count": 144,
   "reviews": [
+    {
+      "id": "5707511f-c515-4ae9-ad28-41e65e20ef6b",
+      "score": 5,
+      "text": "Hoito oli ripeää ja asianmukaista ja kynsi on lähtenyt suoristumaan hyvin.",
+      "author": "Janne A",
+      "created": "2026-11-06"
+    },
     {
       "id": "b0104ede-406d-485c-88a7-b9f0c1a79cf4",
       "score": 5,

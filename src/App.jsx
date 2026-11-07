@@ -484,7 +484,7 @@ export default function App() {
               </p>
               {/* inline-grid: molemmat napit saavat saman leveyden (leveämmän napin mukaan) */}
               <div className="mt-8 flex justify-center">
-              <div className="inline-grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
+              <div className="inline-grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href={`${VELLO_PROFILE_URL}?locale=${velloLocale}`}
                   target="_blank"
@@ -500,19 +500,14 @@ export default function App() {
                 >
                   {t('hero.bookButton')}
                 </a>
-                <div className="flex flex-col">
-                  <a
-                    href={`${VELLO_PROFILE_URL}/lahjakortit?locale=${velloLocale}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center text-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
-                  >
-                    {t('hero.giftCardButton')}
-                  </a>
-                  <span className="mt-3 self-center inline-block -rotate-2 rounded-full bg-accentYellow text-primary border-2 border-white px-4 py-1 text-base md:text-xl font-extrabold tracking-wide shadow-lg">
-                    {t('hero.giftCardDiscount')}
-                  </span>
-                </div>
+                <a
+                  href={`${VELLO_PROFILE_URL}/lahjakortit?locale=${velloLocale}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center text-center px-6 py-3 md:px-10 md:py-5 md:text-xl bg-white text-primary font-semibold rounded-md shadow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-white transition-all"
+                >
+                  {t('hero.giftCardButton')}
+                </a>
               </div>
               </div>
 
